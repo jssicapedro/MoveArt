@@ -1,0 +1,189 @@
+html{
+    overflow-x: hidden;
+}
+
+main {
+    width: 100vw;
+    color: var(--preto);
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    z-index: 0;
+}
+
+.about, .advisors, .calendar, .calendar_mobile{
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img_banner h1{
+    color: var(--branco);
+    font-size: 70pt;
+    font-family: var(--amaranth);
+}
+
+.advisors, .calendar{
+    flex-direction: column;
+}
+
+.advisors h2, .calendar h2, .calendar_mobile h2{
+    color: var(--preto);
+    font-size: 40pt;
+    font-family: var(--amaranth);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.advisors_prof h3{
+    text-align: center;
+    font-family: var(--amaranth);
+}
+
+/* ---------------------------------- */
+
+.img_banner{
+    width: 100vw;
+    height: 400px;
+    background-image: url(img/ballet.png);
+    background-position: center 60%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about{
+    margin:50px
+}
+
+.about .txt{
+    width: 50%;
+    color: var(--preto);
+    font-size: 16pt;
+    font-family: var(--roboto);
+}
+
+.about img{
+    width: 400px;
+}
+
+.advisors .advisors_prof{
+    display: flex;
+    flex-direction: row;
+}
+
+.advisors_prof{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.advisors_prof .grafic1, .grafic2, .grafic3{
+    position: absolute;
+    width: 200px;
+    z-index: 1;
+}
+
+.advisors_prof .grafic1{
+    rotate: 10deg;
+}
+
+.advisors_prof .grafic2{
+    rotate: 60deg;
+}
+
+.advisors_prof .grafic3{
+    rotate: 110deg;
+}
+
+.advisors_prof .prof{
+    width: 200px;
+    border-radius: 50%;
+    z-index: 2;
+    position: relative;
+}
+
+.calendar, .calendar_mobile{
+    margin-bottom: 30px;
+}
+
+#carousel{
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-inner {
+    width: 60vw!important;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 2%;
+}
+
+.calendar_mobile{
+    display: none;
+}
+
+/* modal image */
+
+.image{
+    width: 100%;
+}
+
+.image img{
+    width: 100%;
+}
+
+.modal {
+    text-align: center;
+}
+
+.modal-dialog {
+    margin: auto;
+}
+
+.modal-content {
+    width: 95vw;
+    margin: auto;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 100%;
+        margin: 1.75rem auto;
+    }
+}
+
+@media( max-width: 1000px ){
+    .img_banner{
+        height: 25vh;
+    }
+    .about, .advisors, .calendar_mobile{
+        width: 80vw;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about .txt{
+        width: auto;
+    }
+    .calendar{
+        display: none;
+    }
+    .calendar_mobile{
+        display: block;
+    }
+}
+
+@media( max-width: 840px ){
+    .advisors_prof{
+        justify-content: space-around;
+    }
+}
