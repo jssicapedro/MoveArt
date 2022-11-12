@@ -48,14 +48,33 @@ main {
 
 .img_banner{
     width: 100vw;
-    height: 400px;
-    background-image: url(img/ballet.png);
+    height: 45vh;
     background-position: center 60%;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* .img_banner .ballet{
+    background-image: url(img/ballet/ballet.png);
+}
+
+.img_banner .hiphop{
+    background-image: url(img/hiphop/hiphop.png);
+}
+
+.img_banner .oriental{
+    background-image: url(img/oriental/oriental.png);
+}
+
+.img_banner .espanhola{
+    background-image: url(img/espanhola/espanhola.png);
+}
+
+.img_banner .folclore{
+    background-image: url(img/folclore/folclore.png);
+} */
 
 .about{
     margin:50px
@@ -69,7 +88,7 @@ main {
 }
 
 .about img{
-    width: 400px;
+    width: 350px;
 }
 
 .advisors .advisors_prof{
