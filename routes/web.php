@@ -25,3 +25,5 @@ Route::get('/oriental', [PageController::class, 'oriental'])->name('oriental');
 Route::get('/espanhola', [PageController::class, 'espanhola'])->name('espanhola');
 
 Route::get('/folclore', [PageController::class, 'folclore'])->name('folclore');
+
+Route::get('/inscricoes', [PageController::class, 'inscricoes'])->name('inscricoes');

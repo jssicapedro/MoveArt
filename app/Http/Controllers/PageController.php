@@ -30,4 +30,8 @@ class PageController extends Controller
         return view('folclore');
     }
 
+    public function inscricoes(){
+        return view('inscricoes');
+    }
+
 }
