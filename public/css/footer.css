@@ -1,0 +1,115 @@
+footer {
+    display: flex;
+    margin: auto;
+    background-color: #dadada;
+    flex-direction: column;
+}
+
+section#first, section#second, section#third{
+    display: flex;
+    height: auto;
+    width: 80vw;
+    align-content: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+hr
+{
+    width: 80vw;
+    margin: 0 auto;
+}
+.logo {
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 190px;
+    object-fit: cover;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    min-height: 55px;
+    margin-bottom: 0;
+}
+.menu ul li
+{
+    display: flex;
+    padding: 10px;
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-size: 14pt;
+    align-items: center;
+}
+.redes_sociais ul
+{
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+}
+.redes_sociais ul li
+{
+    width: 50px;
+}
+.redes_sociais ul li img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.quem_somos ul, .suporte ul, .produtos ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 55px;
+}
+
+.quem_somos ul li, .suporte ul li, .produtos ul li
+{
+    display: flex;
+    font-size: 14pt;
+    font-family: "Poppins";
+    font-weight: 200;
+    text-align: left;
+}
+.quem_somos h3, .suporte h3, .produtos h3
+{
+    font-size: 18pt;
+    font-family: "Poppins";
+    font-weight: 400;
+}
+.quem_somos ul li a, .suporte ul li a, .produtos ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+.pagamentos ul
+{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+.pagamentos ul li
+{
+    width: 60px;
+}
+.pagamentos ul li img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.direito
+{
+    font-style: italic;
+    font-family: 'Poppins';
+    font-size: 9pt;
+    padding: 10px;
+}

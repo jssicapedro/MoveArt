@@ -31,6 +31,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/comum.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('css/footer.css')}}">
 
 </head>
 
