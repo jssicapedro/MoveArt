@@ -26,6 +26,7 @@ Route::get('/espanhola', [PageController::class, 'espanhola'])->name('espanhola'
 
 Route::get('/folclore', [PageController::class, 'folclore'])->name('folclore');
 
-
-
 Route::get('/contactos', [PageController::class, 'contactos'])->name('contactos');
+
+Route::get('/inscricoes', [PageController::class, 'inscricoes'])->name('inscricoes');
+

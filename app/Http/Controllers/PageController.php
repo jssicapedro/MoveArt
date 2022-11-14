@@ -30,10 +30,11 @@ class PageController extends Controller
         return view('folclore');
     }
 
-
-
-
     public function contactos(){
         return view('contactos');
+    }
+
+    public function inscricoes(){
+        return view('inscricoes');
     }
 }
