@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 
 /*
@@ -24,3 +25,7 @@ Route::get('/oriental', [PageController::class, 'oriental'])->name('oriental');
 Route::get('/espanhola', [PageController::class, 'espanhola'])->name('espanhola');
 
 Route::get('/folclore', [PageController::class, 'folclore'])->name('folclore');
+
+
+
+Route::get('/contactos', [PageController::class, 'contactos'])->name('contactos');
