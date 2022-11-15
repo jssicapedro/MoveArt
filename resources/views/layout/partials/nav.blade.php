@@ -36,7 +36,7 @@
               <a class="nav-link" href="#">Loja</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ asset('inscricao') }}">Inscrição</a>
+              <a class="nav-link" href="{{ asset('inscricoes') }}">Inscrição</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ asset('login') }}">Login</a>
