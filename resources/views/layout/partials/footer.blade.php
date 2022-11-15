@@ -67,6 +67,16 @@
                     <li><a href="">Contactos</a></li>
                 </ul>
             </div>
+            <div class="suporte">
+                <h3>Suporte</h3>
+                <ul>
+                    <li><a href="">Termos e condições</a></li>
+                    <li><a href="">Portes de Envio</a></li>
+                    <li><a href="">Login</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="produtos_pagamentos">
             <div class="produtos">
                 <h3>Produtos</h3>
                 <ul>
@@ -75,18 +85,6 @@
                     <li><a href="">Acessórios</a></li>
                     <li><a href="">Workshops</a></li>
                     <li><a href="">Bilhetes eventos</a></li>
-                </ul>
-            </div>
-        </div>
-
-        </div>
-        <div class="produtos_pagamentos">
-            <div class="suporte">
-                <h3>Suporte</h3>
-                <ul>
-                    <li><a href="">Termos e condições</a></li>
-                    <li><a href="">Portes de Envio</a></li>
-                    <li><a href="">Login</a></li>
                 </ul>
             </div>
             <div class="pagamentos">
@@ -98,9 +96,7 @@
                     <li><img src="{{asset('img/footer/icons8-mb-way-480.png')}}" alt=""></li>
                     <li><img src="{{asset('img/footer/icons8-visa-480.png')}}" alt=""></li>
                 </ul>
-
             </div>
-        </div>
         </div>
     </section>
     <section id="third">

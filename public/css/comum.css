@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
+   /*  border: 1px solid red; */
 }
 
 :root {
@@ -18,8 +18,9 @@
     --poppins: 'Poppins', sans-serif;
 }
 
-main{
+html{
     font-family: var(--poppins);
+    background-color: var(--branco);
 }
 
 p{
