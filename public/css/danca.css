@@ -69,11 +69,14 @@ main {
 .img_banner{
     width: 100vw;
     height: 45vh;
-    background-position: center 60%;
+    background-position: center -25vh;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .about{
