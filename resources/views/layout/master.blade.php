@@ -28,6 +28,8 @@
   <link href="{{ asset('css/danca.css') }}" rel="stylesheet">
   <link href="{{ asset('css/nav.css') }}" rel="stylesheet">
 
+  {{-- contactos CSS Files --}}
+  <link rel="stylesheet" href="{{asset("css/contactos.css")}}">
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/comum.css') }}" rel="stylesheet">
@@ -58,7 +60,7 @@
   <!-- Imagem para "fullscreen" -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" i ntegrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+  <script src="{{ asset('js/contactos/contactos.js') }}"></script>
   <script type="text/javascript">
     var nav = document.querySelector('nav');
 
