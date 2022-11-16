@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class, 'index'])->name('/');
+
+Route::get('/ballet', [PageController::class, 'ballet'])->name('ballet');
+
+Route::get('/hiphop', [PageController::class, 'hiphop'])->name('hiphop');
+
+Route::get('/oriental', [PageController::class, 'oriental'])->name('oriental');
+
+Route::get('/espanhola', [PageController::class, 'espanhola'])->name('espanhola');
+
+Route::get('/folclore', [PageController::class, 'folclore'])->name('folclore');
+
+Route::get('/contactos', [PageController::class, 'contactos'])->name('contactos');
+
+Route::get('/inscricoes', [PageController::class, 'inscricoes'])->name('inscricoes');
+
