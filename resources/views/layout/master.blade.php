@@ -26,9 +26,8 @@
 
   <!-- danca CSS Files -->
   <link href="{{ asset('css/danca.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/nav.css') }}" rel="stylesheet">
-
-
+ <!-- inscrição CSS Files -->
+<link rel="stylesheet" href="{{ asset('css/inscricoes.css')}}">
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/comum.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/footer.css')}}">
