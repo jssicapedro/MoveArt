@@ -23,22 +23,6 @@ html{
     background-color: var(--branco);
 }
 
-p{
-    font-size: 16px;
-}
-
-h1{
-    font-size: 25px;
-}
-
-h2{
-    font-size: 22px;
-}
-
-h3{
-    font-size: 20px;
-}
-
 main{
     padding: 20px 0;
 }
