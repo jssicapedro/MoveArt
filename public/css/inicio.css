@@ -40,11 +40,10 @@
 }
 
 hr {
-
-  border: 0;
-  color: #E6AB97;
+  padding-bottom: 5px;
+  background: #E6AB97;
   opacity: 100%;
-
+  border: 0px;
 }
 
 
@@ -53,6 +52,10 @@ hr {
   object-position: center;
   height: 50vh;
   overflow: hidden !important;
+}
+
+.carousel-inner{
+  width: 100%!important;
 }
 
 #about_us {
@@ -123,6 +126,10 @@ hr {
 .button:hover{
   background-color: #696969;
   color:#fff;
+}
+
+#join_us{
+  width: 100%;
 }
 
 @media screen and (max-width: 1000px){
