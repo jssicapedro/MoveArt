@@ -176,9 +176,9 @@ button {
 	margin-bottom: 40px;
 }
 .gallery .gallery-filter .filter-item{
-	color: #ffffff;
+	color: #d68e70;
 	font-size: 17px;
-  border: 2px solid white;
+  border: 2px solid #d6a996;
 	text-transform: uppercase;
 	display: inline-block;
   border-radius: 20px;
