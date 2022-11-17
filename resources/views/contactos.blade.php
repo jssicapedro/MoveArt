@@ -16,7 +16,9 @@
     <div style="margin: 50px"></div>
     {{-- fim de espaço --}}
     {{-- texto --}}
-        <div class="sobre_nos_contactos">
+    
+        <h2> Sobre nós </h2>
+        <div class="sobre_nos_contactos">      
             <div class="sobre_nos_contactos_img">
                 <img src="{{asset('img/contactos/sobre_nos/sobre_nos.png')}}">
             </div>
@@ -33,7 +35,7 @@
         {{-- fim de espaço --}}
         <div class="container">
         <section class="splide funcionario_contactos" aria-labelledby="carousel-heading">
-            <h2 id="carousel-heading" style="margin-bottom: 100px">Foncionarios</h2>
+            <h3 id="carousel-heading" style="margin-bottom: 100px">Foncionarios</h3>
       
             <div class="splide__track">
               <ul class="splide__list">
