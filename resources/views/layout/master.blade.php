@@ -44,6 +44,8 @@
   <link rel="stylesheet" href="{{asset('css/footer.css')}}">
   <link href="{{ asset('css/inicio.css') }}" rel="stylesheet">
 
+  <link href="{{ asset('css/mapaaulas.css') }}" rel="stylesheet">
+
 </head>
 
 
@@ -83,6 +85,7 @@
   </script>
 
   <script src="{{ asset('js/inicio/inicio.js') }}"></script>
+  <script src="{{ asset('js/mapaaulas/mapaaulas.js') }}"></script>
 </body>
 
 </html>
