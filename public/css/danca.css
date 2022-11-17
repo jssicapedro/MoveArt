@@ -27,6 +27,26 @@ main {
     font-family: var(--amaranth);
 }
 
+.ballet{
+    background-image: linear-gradient(#ffffff65,#00000073),url('../img/dancas/ballet/ballet.png');
+}
+
+.hiphop{
+    background-image: linear-gradient(#ffffff65,#00000073),url('../img/dancas/hiphop/hiphop.png');
+}
+
+.espanhola{
+    background-image: linear-gradient(#ffffff65,#00000073),url('../img/dancas/espanhola/espanhola.png');
+}
+
+.oriental{
+    background-image: linear-gradient(#ffffff65,#00000073),url('../img/dancas/oriental/oriental.png');
+}
+
+.folclore{
+    background-image: linear-gradient(#ffffff65,#00000073),url('../img/dancas/folclore/folclore.png');
+}
+
 .advisors, .calendar{
     flex-direction: column;
 }
@@ -49,35 +69,18 @@ main {
 .img_banner{
     width: 100vw;
     height: 45vh;
-    background-position: center 60%;
+    background-position: center -25vh;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-/* .img_banner .ballet{
-    background-image: url(img/ballet/ballet.png);
-}
-
-.img_banner .hiphop{
-    background-image: url(img/hiphop/hiphop.png);
-}
-
-.img_banner .oriental{
-    background-image: url(img/oriental/oriental.png);
-}
-
-.img_banner .espanhola{
-    background-image: url(img/espanhola/espanhola.png);
-}
-
-.img_banner .folclore{
-    background-image: url(img/folclore/folclore.png);
-} */
 
 .about{
-    margin:50px
+    margin: 0 50px;
 }
 
 .about .txt{
@@ -171,18 +174,22 @@ main {
 .modal-content {
     width: 95vw;
     margin: auto;
+    display: flex;
+    align-items: flex-end;
 }
 
-@media (min-width: 576px) {
-    .modal-dialog {
-        max-width: 100%;
-        margin: 1.75rem auto;
-    }
+.close{
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
 }
 
 @media( max-width: 1000px ){
     .img_banner{
         height: 25vh;
+    }
+    .about{
+        margin-top: 25px;
     }
     .about, .advisors, .calendar_mobile{
         width: 80vw;
@@ -204,5 +211,12 @@ main {
 @media( max-width: 840px ){
     .advisors_prof{
         justify-content: space-around;
+    }
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 100%;
+        margin: 1.75rem auto;
     }
 }

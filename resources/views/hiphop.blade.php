@@ -4,7 +4,7 @@
 
 @section('hero')
 <section id="hero" class="inner-page d-flex align-items-center">
-    <div class="img_banner" style="background-image: linear-gradient(#F6D4A065,#00000073), url({{ asset('img/dancas/hiphop/hiphop.png')}}">
+    <div class="img_banner hiphop">
         <h1>Hip-Hop</h1>
     </div>
 </section>
