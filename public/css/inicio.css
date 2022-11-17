@@ -132,6 +132,18 @@ hr {
   width: 100%;
 }
 
+.containe {
+  width: 275px!important;
+}
+
+#splide1 .splide__arrows--ltr button, #splide1 .splide__arrows--next button{
+  display: block!important;
+}
+
+.splide__list li{
+  margin-left: 0;
+}
+
 @media screen and (max-width: 1000px){
   .hero_img {
     background-image: url('../img/inicio/hero_img2.png');

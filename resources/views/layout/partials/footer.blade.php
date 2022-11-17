@@ -20,7 +20,7 @@
             </ul>
         </div>
     </section>
-    <hr>
+    <hr class="footer_divissor">
     <section id="second">
         <div class="quem_somos">
             <h3>Quem somos?</h3>
