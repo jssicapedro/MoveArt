@@ -215,7 +215,7 @@ button {
 }
 
 
-#imagem {
+#mapaaulas_imagem {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/mapaaulas/imagem.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -225,7 +225,7 @@ button {
   width: 100%;
 }
 
-#imagem .section__title{
+#mapaaulas_imagem .section__title{
   color: white;
 }
 
