@@ -92,7 +92,7 @@
                 <div class="col-xl-6 col-md-6 order-xl-last order-md-last order-first" id="about_text">
 
                     <div>
-                        <hr style="width:60px; height:23px; text-align:left;margin-left:0; margin-top:0; padding-bottom: 5px;" id="first-hr">
+                        <hr style="width:60px; height:23px; text-align:left; padding-bottom: 5px;" id="first-hr">
                         <h2 class="pb-2">Sobre Nós</h2>
 
                         <div class="pb-2 p_about">
@@ -397,7 +397,7 @@
                     <div class="row ban-row" style="background-color: white;">
 
                         <div class="col-xl-4 col-sm-12 col_h2 pb-2">
-                            <hr style="width:60px; height:23px; margin-left:0; padding-bottom: 5px;" id="left_hr">
+                            <hr style="width:60px; height:23px;" id="left_hr">
                             <h2>Junta-te A Nós!</h2>
                         </div>
                         <div class="col-xl-4 col-sm-12 col_p d-flex justify-content-center align-items-center">

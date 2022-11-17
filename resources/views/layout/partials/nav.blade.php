@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default navbar-expand-lg py-2 navbar-light fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ asset('/') }}">
           <img src="{{ asset('img/logo/logoBallet_p.png') }}" style="height: 50px;" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nave navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{{ asset('index') }}">Início</a>
+              <a class="nav-link" href="{{ asset('/') }}">Início</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="" role="button"

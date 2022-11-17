@@ -221,7 +221,12 @@ hr {
       }
 }
 
-
+#left_hr{
+  margin: 0 0 20px 0 !important;
+}
+#first-hr{
+  margin: 0 0 20px 0 !important;
+}
 
 @media screen and (max-width: 987px) {
   .group_equipa2 .box-container .row .box {
@@ -275,9 +280,6 @@ hr {
   .join_col_text{
     width: 90vw !important;
     padding: 0;
-  }
-  #left_hr{
-    margin: auto auto 20px auto;
   }
   .ban-row{
     width: 100%;
