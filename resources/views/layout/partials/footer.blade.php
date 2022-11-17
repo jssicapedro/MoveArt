@@ -5,10 +5,10 @@
         </div>
         <div class="menu">
             <ul>
-                <li>Danças</li>
-                <li>Mapa de Aulas</li>
-                <li>Loja</li>
-                <li>Inscrição</li>
+                <li><a href="{{ asset('ballet') }}">Danças</a></li>
+                <li><a href="{{ asset('mapaaulas') }}">Mapa de Aulas</a></li>
+                <li><a href="#">Loja</a></li>
+                <li><a href="{{ asset('inscricoes') }}">Inscrição</a></li>
             </ul>
         </div>
         <div class="redes_sociais">
@@ -25,9 +25,9 @@
         <div class="quem_somos">
             <h3>Quem somos?</h3>
             <ul>
-                <li><a href="">Sobre nós</a></li>
-                <li><a href="">Localização</a></li>
-                <li><a href="">Contactos</a></li>
+                <li><a href="{{ asset('contactos') }}">Sobre nós</a></li>
+                <li><a href="{{ asset('contactos') }}">Localização</a></li>
+                <li><a href="{{ asset('contactos') }}">Contactos</a></li>
             </ul>
         </div>
         <div class="suporte">

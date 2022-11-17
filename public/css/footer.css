@@ -37,8 +37,10 @@ hr
     min-height: 55px;
     margin-bottom: 0;
 }
-.menu ul li
+.menu ul li a
 {
+    color: black;
+    text-decoration: none;
     display: flex;
     padding: 10px;
     font-family: 'Poppins';

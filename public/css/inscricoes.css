@@ -82,6 +82,7 @@ button#enviar {
 
 button#tirar {
     background-color: #dadada;
+    border: 1px solid #dadada;
     box-shadow: 0px 3px 0px #b5b5b5;
 }
 
