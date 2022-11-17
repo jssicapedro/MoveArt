@@ -37,4 +37,8 @@ class PageController extends Controller
     public function inscricoes(){
         return view('inscricoes');
     }
+
+    public function mapaaulas(){
+        return view('mapaaulas');
+    }
 }

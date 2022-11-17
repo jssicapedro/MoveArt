@@ -21,7 +21,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
   <!-- ### SlideShow ### -->
-  <link rel="stylesheet" href="{{ asset('js/splide/disc/css/splide.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('js/splide/dist/css/splide.min.css') }}">
   <script src="{{ asset('js/splide/dist/js/splide.min.js') }}"></script>
 
   <!-- danca CSS Files -->
@@ -31,6 +31,8 @@
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/comum.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+
+  <link href="{{ asset('css/mapaaulas.css') }}" rel="stylesheet">
 
 </head>
 
@@ -69,6 +71,8 @@
       }
     });
   </script>
+
+  <script src="{{ asset('js/mapaaulas/mapaaulas.js') }}"></script>
 </body>
 
 </html>
