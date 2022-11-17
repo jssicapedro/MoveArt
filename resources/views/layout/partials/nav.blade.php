@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default navbar-expand-lg py-2 navbar-light fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ asset('/') }}">
           <img src="{{ asset('img/logo/logoBallet_p.png') }}" style="height: 50px;" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
