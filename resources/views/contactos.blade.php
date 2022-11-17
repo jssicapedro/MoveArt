@@ -31,17 +31,92 @@
         {{-- espaço --}}
         <div style="margin: 50px"></div>
         {{-- fim de espaço --}}
-
-        <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="container">
+        <section class="splide funcionario_contactos" aria-labelledby="carousel-heading">
+            <h2 id="carousel-heading" style="margin-bottom: 100px">Foncionarios</h2>
+      
             <div class="splide__track">
-                  <ul class="splide__list">
-                      <li class="splide__slide"> <img src="{{asset('img/contactos/foncionarios/imagem1.jpg')}}" style="width: 300px"> </li>
-                      <li class="splide__slide">Slide 02</li>
-                      <li class="splide__slide">Slide 03</li>
-                  </ul>
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="card_slide">
+                    <div class="img">
+                      <img src="{{asset('img/contactos/foncionarios/imagem1.jpg')}}" style="width: 300px">
+                    </div>
+                  </div>
+                  <div class="txt">
+                    Jéssica Rodrigues
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="card_slide">
+                    <div class="img">
+                      <img src="{{asset('img/contactos/foncionarios/imagem2.jpg')}}" style="width: 300px">
+                    </div>
+                  </div>
+                  <div class="txt">
+                    Nuno Alves
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="card_slide">
+                    <div class="img">
+                      <img src="{{asset('img/contactos/foncionarios/imagem3.jpg')}}" style="width: 300px">
+                    </div>
+                  </div>
+                  <div class="txt">Beatriz Sousa</div>
+                </li>
+                <li class="splide__slide">
+                  <div class="card_slide">
+                    <div class="img">
+                      <img src="{{asset('img/contactos/foncionarios/imagem4.jpg')}}" style="width: 300px">
+                    </div>
+                  </div>
+                  <div class="txt">Ema Pinto</div>
+                </li>
+                <li class="splide__slide">
+                  <div class="card_slide">
+                    <div class="img">
+                      <img src="{{asset('img/contactos/foncionarios/imagem5.jpg')}}" style="width: 300px">
+                    </div>
+                  </div>
+                  <div class="txt">Antonio Rodrigues</div>
+                </li>
+                <li class="splide__slide">
+                    <div class="card_slide">
+                      <div class="img">
+                        <img src="{{asset('img/contactos/foncionarios/imagem6.jpg')}}" style="width: 300px">
+                      </div>
+                    </div>
+                    <div class="txt">Rui Pavia</div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="card_slide">
+                      <div class="img">
+                        <img src="{{asset('img/contactos/foncionarios/imagem7.jpg')}}" style="width: 300px">
+                      </div>
+                    </div>
+                    <div class="txt">Nicol Povua</div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="card_slide">
+                      <div class="img">
+                        <img src="{{asset('img/contactos/foncionarios/imagem8.jpg')}}" style="width: 300px">
+                      </div>
+                    </div>
+                    <div class="txt">Saiman Saraiva</div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="card_slide">
+                      <div class="img">
+                        <img src="{{asset('img/contactos/foncionarios/imagem9.jpg')}}" style="width: 300px">
+                      </div>
+                    </div>
+                    <div class="txt">Bernardo Oliveira</div>
+                  </li>
+              </ul>
             </div>
           </section>
-
+        </div>
         {{-- espaço --}}
         <div style="margin: 50px"></div>
         {{-- fim de espaço --}}

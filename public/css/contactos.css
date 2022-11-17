@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+/* *{
     border: 1px solid red;
-}
+} */
 /* introdução */
 .imagem_principal_contactos {
     width: 100%;
@@ -37,7 +37,53 @@ width: 300px;
     
 }
 
+/* card  */
 
+.splide{
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    height: 40vh;
+    width: 100%;
+}
+
+.funcionario_contactos .card_slide {
+    width: 300px;
+    height: 265px;
+    display: flex;
+}
+
+.funcionario_contactos .card_slide .img {
+    width: 200px;
+    height: 250px;
+    position: relative;
+}
+
+.funcionario_contactos .card_slide .img img {
+    width: 100%!important;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 5%;
+}
+
+.funcionario_contactos .card_slide .txt {
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.splide__list li {
+    margin-left: 5%
+} 
+.splide__track {
+    width: 100%;
+}
+.splide__arrow--prev, .splide__arrow--next{
+    display: none;
+}
 /* mapa contactos */
 
 .contactos_mapa_contactos iframe{
@@ -52,4 +98,30 @@ width: 300px;
 .contactos_mapa_contactos p{
     font-size: 18pt;
     width: 400px;
+}
+@media( max-width: 1000px ){
+    .sobre_nos_contactos{
+        display: flex;
+        flex-direction: column;
+        gap: none;
+    }
+    .contactos_mapa_contactos{
+        display: flex;
+        flex-direction: column;
+    } 
+    .splide__list li {
+        margin-left: 10%
+    }
+    }
+@media( max-width: 700px){
+    .sobre_nos_contactos_img img{
+        width: 200px;
+    }
+    .contactos_mapa_contactos iframe{
+        width: 300px;
+        height: 300px;
+    } 
+    .splide__list li {
+        margin-left: 15%
+    } 
 }
