@@ -2,6 +2,10 @@
 
 @section('title', 'MoveArt - Início')
 
+@section('links')
+<link href="{{ asset('css/inicio.css') }}" rel="stylesheet">
+@endsection
+
 @section('hero')
 <section id="hero_image">
     <div class="hero_img">
@@ -485,4 +489,8 @@
     </section>
     <!-- end events -->
 
+@endsection
+
+@section('links')
+<script src="{{ asset('js/inicio/inicio.js') }}"></script>
 @endsection

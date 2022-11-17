@@ -2,6 +2,10 @@
 
 @section('title', 'MoveArt - Contactos')
 
+@section('links')
+<link rel="stylesheet" href="{{asset("css/contactos.css")}}">
+@endsection
+
 @section('hero')
 
 {{-- inicio --}}

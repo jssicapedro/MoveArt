@@ -34,15 +34,14 @@
   <!-- danca CSS Files -->
   <link href="{{ asset('css/danca.css') }}" rel="stylesheet">
 
-  {{-- contactos CSS Files --}}
-  <link rel="stylesheet" href="{{asset("css/contactos.css")}}">
-
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/comum.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/footer.css')}}">
-  <link href="{{ asset('css/inicio.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/mapaaulas.css') }}" rel="stylesheet">
+
+
+
+   @yield('links')
 
 </head>
 
@@ -82,8 +81,8 @@
     });
   </script>
 
-  <script src="{{ asset('js/inicio/inicio.js') }}"></script>
-  <script src="{{ asset('js/mapaaulas/mapaaulas.js') }}"></script>
+   @yield('script')
+
 </body>
 
 </html>
