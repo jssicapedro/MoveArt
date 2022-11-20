@@ -2,6 +2,10 @@
 
 @section('title', 'MoveArt - Ballet')
 
+@section('links')
+<link rel="stylesheet" href="{{asset("css/danca.css")}}">
+@endsection
+
 @section('hero')
 <section id="hero" class="inner-page d-flex align-items-center">
     <div class="img_banner ballet">

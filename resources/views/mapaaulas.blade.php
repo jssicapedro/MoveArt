@@ -17,7 +17,7 @@
 @section('main')
 
 <section class="gallery">
-    <div class="container">
+    <div class="container mapaaulas_container">
         <h2 class="section__title">
             Calendário
         </h2>
@@ -83,6 +83,6 @@
 
 @endsection
 
-@section('links')
+@section('script')
 <script src="{{ asset('js/mapaaulas/mapaaulas.js') }}"></script>
 @endsection

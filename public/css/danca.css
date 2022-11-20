@@ -68,8 +68,8 @@ main {
 
 .img_banner{
     width: 100vw;
-    height: 45vh;
-    background-position: center -25vh;
+    height: 65vh;
+    background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;

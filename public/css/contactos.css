@@ -9,7 +9,8 @@
     height: 300px;
     object-fit: cover;
     background-position: center;
-    background-size:2000px; ;
+    background-size:2000px; 
+    background-image: url('../img/contactos/intrudocao/intrudocao.jpg');
   }
 .imagem_principal_contactos h1{
     font-size: 40pt;
@@ -25,6 +26,12 @@
     display: flex;
     gap: 100px;
     align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.h2_contactos{
+    text-align: center;
 }
 
 .sobre_nos_contactos_img img{
@@ -86,6 +93,9 @@ width: 300px;
 }
 /* mapa contactos */
 
+.h4_contactos{
+    text-align: center;
+}
 .contactos_mapa_contactos iframe{
     width: 500px;
 }
@@ -93,6 +103,8 @@ width: 300px;
     display: flex;
     gap: 100px;
     align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .contactos_mapa_contactos p{

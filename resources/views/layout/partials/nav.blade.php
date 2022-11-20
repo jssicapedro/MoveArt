@@ -33,7 +33,7 @@
               <a class="nav-link" href="{{ asset('contactos') }}">Contactos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Loja</a>
+              <a class="nav-link" target="_blank" href="http://moveloja.epizy.com">Loja</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ asset('inscricoes') }}">Inscrição</a>
