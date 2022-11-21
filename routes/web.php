@@ -30,5 +30,5 @@ Route::get('/contactos', [PageController::class, 'contactos'])->name('contactos'
 
 Route::get('/inscricoes', [PageController::class, 'inscricoes'])->name('inscricoes');
 
-Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('Mapaaulas');
+Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
