@@ -70,8 +70,8 @@
             <div class="suporte">
                 <h3>Suporte</h3>
                 <ul>
-                <li><a target="_blank" href="http://moveloja.epizy.com/?page_id=3&preview=true">Termos e condições</a></li>
-                <li><a target="_blank" href="http://moveloja.epizy.com/?page_id=13&preview=true">Portes de Envio</a></li>
+                <li><a target="_blank" href="http://moveloja.epizy.com/privacy-policy/">Termos e condições</a></li>
+                <li><a target="_blank" href="http://moveloja.epizy.com/refund_returns/">Portes de Envio</a></li>
                 <li><a target="_blank" href="http://moveloja.epizy.com/wp-login.php">Login</a></li>
                 </ul>
             </div>
