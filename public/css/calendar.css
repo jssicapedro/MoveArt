@@ -1,11 +1,13 @@
 table, tr, th, td{
-    border: 1px solid red;
+    border: 2px solid var(--preto);
 }
 table{
     width: 100%;
     text-align: center;
 }
 td{
+    width: 100px;
+    height: 50px!important;
     padding: 10px;
     margin: 5px;
 }
