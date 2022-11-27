@@ -35,7 +35,7 @@
   <link href="{{ asset('css/comum.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/footer.css')}}">
 
-   @yield('links')
+  @yield('links')
 
 </head>
 
@@ -65,6 +65,7 @@
   <script src="{{ asset('js/contactos/contactos.js') }}"></script>
   <script type="text/javascript">
     var nav = document.querySelector('nav');
+    var mode = document.getElementById("mode");
 
     window.addEventListener('scroll', function() {
       if (window.pageYOffset > 50) {
@@ -73,9 +74,18 @@
         nav.classList.remove('bg-light', 'shadow');
       }
     });
+
+   /*  mode.onclick = () => {
+      document.body.classList.toggle("light-mode");
+      if (document.body.classList.contains("light-mode")) {
+        mode.src = "{{asset('img/darkMode/sun.png')}}";
+      } else {
+        mode.src = "{{asset('img/darkMode/moon.png')}}";
+      } 
+    }*/
   </script>
 
-   @yield('script')
+  @yield('script')
 
 </body>
 

@@ -9,6 +9,7 @@
 
 :root {
     --branco: #f4f4f4;
+    --branco_footer: #dadada;
     --preto: #000;
     --rosa: #eeb2b5;
     --amarelo: #f7d5a1;
@@ -18,6 +19,16 @@
 
     --poppins: 'Poppins', sans-serif;
 }
+.light-mode {
+    --branco: #747474;
+    --branco_footer: #585858;
+    --preto: #ffffff;
+    --rosa: #eb9ea2;
+    --amarelo: #f7c780;
+    --castanho: #d8987d;
+    --rosaE: #d37dda;
+    --roxo: #b693f7;
+  }
 
 html{
     font-family: var(--poppins);
@@ -27,4 +38,10 @@ html{
 
 main{
     padding: 20px 0;
+}
+
+header nav #mode{
+    width: 45px;
+  height: 45px;
+  cursor: pointer;
 }

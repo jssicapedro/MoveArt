@@ -42,6 +42,8 @@
               <a class="nav-link" href="{{ asset('login') }}">Login</a>
             </li>
           </ul>
+          <!-- <img id="mode" src="img/darkMode/moon.png"
+                alt="botão para alterar o tema do site"> -->
         </div>
       </div>
 </nav>
