@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,26 +14,18 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', [PageController::class, 'index'])->name('/');
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/ballet', [PageController::class, 'ballet'])->name('ballet');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/hiphop', [PageController::class, 'hiphop'])->name('hiphop');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-Route::get('/oriental', [PageController::class, 'oriental'])->name('oriental');
-
-Route::get('/espanhola', [PageController::class, 'espanhola'])->name('espanhola');
-
-Route::get('/folclore', [PageController::class, 'folclore'])->name('folclore');
-
-Route::get('/contactos', [PageController::class, 'contactos'])->name('contactos');
-
-Route::get('/inscricoes', [PageController::class, 'inscricoes'])->name('inscricoes');
-
-Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('Mapaaulas');
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+require __DIR__.'/auth.php';
