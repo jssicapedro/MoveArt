@@ -32,3 +32,7 @@ Route::get('/inscricoes', [PageController::class, 'inscricoes'])->name('inscrico
 
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('Mapaaulas');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
