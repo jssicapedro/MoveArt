@@ -28,8 +28,14 @@ class User extends Authenticatable
         'modalidade',
         'type_insc',
         'metod_pag',
-        'pass',
-    ];
+    ];/* colunas de preenchimento possivel */
+
+    function pais(){
+
+        return $this->hasone( pais::class, 'pais_id', 'id');
+    }
+
+/* select * from = user:: */
 
     /**
      * The attributes that should be hidden for serialization.
@@ -37,7 +43,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
+        'pass',
         'remember_token',
     ];
 
