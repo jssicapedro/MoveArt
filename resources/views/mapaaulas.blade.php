@@ -2,6 +2,10 @@
 
 @section('title', 'MoveArt - Mapa de Aulas')
 
+@section('links')
+<link href="{{ asset('css/mapaaulas.css') }}" rel="stylesheet">
+@endsection
+
 @section('hero')
 <section id="hero" class="inner-page d-flex align-items-center">
     <div class="img_banner mapadeaulas">
@@ -13,7 +17,7 @@
 @section('main')
 
 <section class="gallery">
-    <div class="container">
+    <div class="container mapaaulas_container">
         <h2 class="section__title">
             Calendário
         </h2>
@@ -77,4 +81,8 @@
     </div>
 </section>
 
+@endsection
+
+@section('script')
+<script src="{{ asset('js/mapaaulas/mapaaulas.js') }}"></script>
 @endsection

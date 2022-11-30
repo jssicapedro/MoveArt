@@ -2,6 +2,10 @@
 
 @section('title', 'MoveArt - Inscrições')
 
+@section('links')
+<link href="{{ asset('css/inscricoes.css') }}" rel="stylesheet">
+@endsection
+
 @section('hero')
 <section id="benner_inscricoes">
         <div class="info">
