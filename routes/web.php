@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,14 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class, 'index'])->name('/');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
+Route::get('/ballet', [PageController::class, 'ballet'])->name('ballet');
 
 Route::get('/hiphop', [PageController::class, 'hiphop'])->name('hiphop');
 
@@ -37,5 +32,3 @@ Route::get('/inscricoes', [PageController::class, 'inscricoes'])->name('inscrico
 
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
-
-require __DIR__.'/auth.php';
