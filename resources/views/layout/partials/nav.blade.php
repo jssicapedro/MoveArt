@@ -38,8 +38,29 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ asset('inscricoes') }}">Inscrição</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ asset('login') }}">Login</a>
+            <li class="nav-item dropdown">
+              @auth
+              <a class="nav-link dropdown-toggle" href="" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Olá, {{ Auth::user()->primeiro }}
+              </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                      {{ __('Logout') }}
+                    </a>
+                  </li>
+                </ul>
+
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                      @csrf
+                  </form>
+              </div>
+              @else
+                <a class="nav-link" href="{{ asset('login') }}">Login</a>
+              @endauth
             </li>
           </ul>
           <!-- <img id="mode" src="img/darkMode/moon.png"

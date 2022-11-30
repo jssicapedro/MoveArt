@@ -28,6 +28,7 @@ class User extends Authenticatable
         'modalidade',
         'type_insc',
         'metod_pag',
+        'password',
     ];/* colunas de preenchimento possivel */
 
     function pais(){
@@ -43,7 +44,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'pass',
+        'password',
         'remember_token',
     ];
 
