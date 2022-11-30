@@ -23,12 +23,12 @@ return new class extends Migration
             $table->date('data_nasc');
             $table->string('cc', 9)->unique()->nullable();
             $table->string('nif', 9)->nullable();
-            $table->enum('genero', ['feminino', 'masculino', 'outro', 'nao divulgar']);
+            $table->enum('genero', ['feminino', 'masculino', 'outro', 'nao_divulgar']);
             $table->enum('perfil', ['aluno', 'admin', 'professor'])->default('aluno');
             $table->string('localidade', 30)->nullable();
             $table->string('rua', 30)->nullable();
             $table->string('cod_postal', 8)->nullable();
-            $table->string('pass');
+            $table->string('password');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
