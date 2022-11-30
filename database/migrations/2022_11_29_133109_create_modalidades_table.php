@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('modalidade');
             $table->text('descricao');
+            $table->text('valor_mensal');
+            $table->text('valor_anual');
             $table->timestamps();
         });
     }

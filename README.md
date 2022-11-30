@@ -9,3 +9,15 @@
     <li>Execute "composer update"</li>
     <li>Depois da atualização execute "php artisan key:generate"</li>
 </ol>
+
+<h1>BASE DE DADOS</h1>
+<p>Para obter a BD seja criada, escreva <code>php artisan migrate:fresh</code> <pre>(caso já tenha a base de dados criada e alguns utilizadores, para a atualizar deve escrever <code>php artisan migrate</code> )</pre></p>
+
+
+<h1>Login</h1>
+<ol>
+    <li>Deve instalar o ui do Laravel, para isso escreva <code>composer require laravel/ui</code> no terminal</li>
+    <li>De seguida deve <code>npm install</code></li>
+    <li>Depois <code>npm run build</code></li>
+    <li>E por ultimo npm dev</li>
+</ol>
