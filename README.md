@@ -19,5 +19,5 @@
     <li>Deve instalar o ui do Laravel, para isso escreva <pre>composer require laravel/ui</pre> no terminal</li>
     <li>De seguida deve <pre>npm install</pre></li>
     <li>Depois <pre>npm run build</pre></li>
-    <li>E por ultimo npm dev</li>
+    <li>E por ultimo <pre>npm run dev</pre></li>
 </ol>
