@@ -24,24 +24,18 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-<!-- bootstrap icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
   <!-- ### SlideShow ### -->
   <link rel="stylesheet" href="{{ asset('js/splide/dist/css/splide.min.css') }}">
   <script src="{{ asset('js/splide/dist/js/splide.min.js') }}"></script>
 
-  <!-- danca CSS Files -->
-  <link href="{{ asset('css/danca.css') }}" rel="stylesheet">
-
-
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/comum.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/footer.css')}}">
 
-
-
-   @yield('links')
+  @yield('links')
 
 </head>
 
@@ -71,6 +65,7 @@
   <script src="{{ asset('js/contactos/contactos.js') }}"></script>
   <script type="text/javascript">
     var nav = document.querySelector('nav');
+    var mode = document.getElementById("mode");
 
     window.addEventListener('scroll', function() {
       if (window.pageYOffset > 50) {
@@ -79,9 +74,18 @@
         nav.classList.remove('bg-light', 'shadow');
       }
     });
+
+   /*  mode.onclick = () => {
+      document.body.classList.toggle("light-mode");
+      if (document.body.classList.contains("light-mode")) {
+        mode.src = "{{asset('img/darkMode/sun.png')}}";
+      } else {
+        mode.src = "{{asset('img/darkMode/moon.png')}}";
+      } 
+    }*/
   </script>
 
-   @yield('script')
+  @yield('script')
 
 </body>
 

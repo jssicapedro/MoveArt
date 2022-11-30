@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class PageController extends Controller
 {
@@ -11,6 +12,10 @@ class PageController extends Controller
     }
 
     public function ballet(){
+
+        $user = User::first();
+
+      
         return view('ballet');
     }
 

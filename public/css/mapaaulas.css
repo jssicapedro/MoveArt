@@ -15,15 +15,15 @@
 :root {
 
 
-  --branco: #f4f4f4;
+  /* --branco: #f4f4f4;
   --preto: #000;
-  --rosa: #eeb2b5;
+  --rosa: var(--rosa);
   --amarelo: #f7d5a1;
   --castanho: #d6a996;
   --rosaE: #d296d6;
   --roxo: #c7adf7;
 
-  --poppins: 'Poppins', sans-serif;
+  --poppins: 'Poppins', sans-serif; */
 
   /*========== Margenes Bottom ==========*/
   --mb-0-5: .5rem;
@@ -39,7 +39,7 @@
   --z-fixed: 100;
 }
 
-@media screen and (min-width: 968px) {
+/* @media screen and (min-width: 968px) {
   :root {
     --branco: #f4f4f4;
     --preto: #000;
@@ -50,7 +50,7 @@
     --roxo: #c7adf7;
     --poppins: 'Poppins', sans-serif;
   }
-}
+} */
 
 /*=============== BASE ===============*/
 * {
@@ -118,7 +118,7 @@ button {
   outline: none;
 }
 
-.container {
+.mapaaulas_container {
   max-width: 1000px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
@@ -156,7 +156,7 @@ button {
   margin: 0 auto;
   width: 67px;
   height: 1px;
-  background-color: #d6a996;
+  background-color:  var(--castanho);
 }
 
 
@@ -176,9 +176,9 @@ button {
 	margin-bottom: 40px;
 }
 .gallery .gallery-filter .filter-item{
-	color: #ffffff;
+	color: var(--preto);
 	font-size: 17px;
-  border: 2px solid white;
+  border: 2px solid var(--branco);
 	text-transform: uppercase;
 	display: inline-block;
   border-radius: 20px;
@@ -189,9 +189,9 @@ button {
 	transition: all 0.3s ease;
 }
 .gallery .gallery-filter .filter-item.active{
-	color: white;
-	border-color : #eeb2b5;
-  background:#d6a996;
+	color: var(--branco);
+	border-color : var(--rosa);
+  background: var(--castanho);
 }
 .gallery .gallery-item{
 	display: block;
@@ -226,7 +226,7 @@ button {
 }
 
 #mapaaulas_imagem .section__title{
-  color: white;
+  color: var(--branco);
 }
 
 #textoimagem {
@@ -235,7 +235,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--branco);
 }
 
 #textoimagem button {
@@ -243,7 +243,7 @@ button {
   outline: 0;
   display: inline-block;
   padding: 10px 25px;
-  color: black;
+  color: var(--preto);
   background-color: #ddd;
   text-align: center;
   cursor: pointer;

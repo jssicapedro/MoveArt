@@ -7,7 +7,7 @@
             <ul>
                 <li><a href="{{ asset('ballet') }}">Danças</a></li>
                 <li><a href="{{ asset('mapaaulas') }}">Mapa de Aulas</a></li>
-                <li><a href="#">Loja</a></li>
+                <li><a target="_blank" href="http://moveloja.epizy.com">Loja</a></li>
                 <li><a href="{{ asset('inscricoes') }}">Inscrição</a></li>
             </ul>
         </div>
@@ -33,9 +33,9 @@
         <div class="suporte">
             <h3>Suporte</h3>
             <ul>
-                <li><a href="">Termos e condições</a></li>
-                <li><a href="">Portes de Envio</a></li>
-                <li><a href="">Login</a></li>
+                <li><a target="_blank" href="http://moveloja.epizy.com/?page_id=3&preview=true">Termos e condições</a></li>
+                <li><a target="_blank" href="http://moveloja.epizy.com/?page_id=13&preview=true">Portes de Envio</a></li>
+                <li><a target="_blank" href="http://moveloja.epizy.com/wp-login.php">Login</a></li>
             </ul>
         </div>
         <div class="produtos">
@@ -62,17 +62,17 @@
             <div class="quem_somos">
                 <h3>Quem somos?</h3>
                 <ul>
-                    <li><a href="">Sobre nós</a></li>
-                    <li><a href="">Localização</a></li>
-                    <li><a href="">Contactos</a></li>
+                <li><a href="{{ asset('contactos') }}">Sobre nós</a></li>
+                <li><a href="{{ asset('contactos') }}">Localização</a></li>
+                <li><a href="{{ asset('contactos') }}">Contactos</a></li>
                 </ul>
             </div>
             <div class="suporte">
                 <h3>Suporte</h3>
                 <ul>
-                    <li><a href="">Termos e condições</a></li>
-                    <li><a href="">Portes de Envio</a></li>
-                    <li><a href="">Login</a></li>
+                <li><a target="_blank" href="http://moveloja.epizy.com/privacy-policy/">Termos e condições</a></li>
+                <li><a target="_blank" href="http://moveloja.epizy.com/refund_returns/">Portes de Envio</a></li>
+                <li><a target="_blank" href="http://moveloja.epizy.com/wp-login.php">Login</a></li>
                 </ul>
             </div>
         </div>

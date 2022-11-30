@@ -1,0 +1,28 @@
+table, tr, th, td{
+    border: 2px solid var(--preto);
+}
+table{
+    width: 100%;
+    text-align: center;
+}
+td{
+    width: 100px;
+    height: 50px!important;
+    padding: 10px;
+    margin: 5px;
+}
+.calendar_ballet{
+    background-color: var(--rosa);
+}
+.calendar_hiphop{
+    background-color: var(--amarelo);
+}
+.calendar_oriental{
+    background-color: var(--castanho);
+}
+.calendar_espanhola{
+    background-color: var(--rosaE);
+}
+.calendar_folclore{
+    background-color: var(--roxo);
+}
