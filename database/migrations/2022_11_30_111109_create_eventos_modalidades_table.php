@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('eventos_modalidades', function (Blueprint $table) {
-            $table->integer('evento_id')->foreign('evento_id')->references('id')->on('eventos');
-            $table->integer('modalidade_id')->foreign('modalidade_id')->references('id')->on('modalidades');
-            $table->timestamps();
+            $table->bigInteger('eventos_id')->unsigned();
+            $table->foreign('eventos_id')->references('id')->on('eventos');
+            $table->bigInteger('modalidades_id')->unsigned();
+            $table->foreign('modalidades_id')->references('id')->on('modalidades');
         });
     }
 

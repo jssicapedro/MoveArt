@@ -20,8 +20,6 @@ return new class extends Migration
             $table->string('localizacao',150);
             $table->string('foto');
             $table->text('descricao');
-            $table->integer('user_id')->foreign('user_id')->references('id')->on('users');
-            $table->integer('id_modalidade')->foreign('id_modalidade')->references('id')->on('modalidades');
             $table->timestamps();
         });
     }

@@ -28,11 +28,7 @@ return new class extends Migration
             $table->string('localidade', 30)->nullable();
             $table->string('rua', 30)->nullable();
             $table->string('cod_postal', 8)->nullable();
-            //$table->integer('modalidade_id')->foreign('modalidade_id')->references('id')->on('modalidades');
-            $table->integer('inscricao_id')->foreign('inscricao_id')->references('id')->on('inscricoes');
-            $table->integer('evento_id')->foreign('evento_id')->references('id')->on('eventos');
             $table->string('pass');
-
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
