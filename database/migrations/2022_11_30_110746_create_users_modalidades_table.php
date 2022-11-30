@@ -13,15 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('eventos', function (Blueprint $table) {
-            $table->id();
-            $table->string('nome', 150);
-            $table->datetime('data')->format('dd/MM/yyyy hh:mm:ss');
-            $table->string('localizacao',150);
-            $table->string('foto');
-            $table->text('descricao');
+        Schema::create('users_modalidades', function (Blueprint $table) {
             $table->integer('user_id')->foreign('user_id')->references('id')->on('users');
-            $table->integer('id_modalidade')->foreign('id_modalidade')->references('id')->on('modalidades');
+            $table->integer('modalidade_id')->foreign('modalidade_id')->references('id')->on('modalidades');
             $table->timestamps();
         });
     }
@@ -33,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('eventos');
+        Schema::dropIfExists('users_modalidades');
     }
 };

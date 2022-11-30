@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('pedidos_professores', function (Blueprint $table) {
             $table->id();
-            $table->varchar("primeiro", 150);
-            $table->varchar("apelido", 150);
+            $table->string("primeiro", 150);
+            $table->string("apelido", 150);
             $table->string('telefone', 9);
             $table->string("cv");
             $table->string("email");
