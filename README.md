@@ -11,13 +11,13 @@
 </ol>
 
 <h1>BASE DE DADOS</h1>
-<p>Para obter a BD seja criada, escreva <code>php artisan migrate:fresh</code> <pre>(caso já tenha a base de dados criada e alguns utilizadores, para a atualizar deve escrever <code>php artisan migrate</code> )</pre></p>
+<p>Para obter a BD seja criada, escreva <pre>php artisan migrate:fresh</pre> (caso já tenha a base de dados criada e alguns utilizadores, para a atualizar deve escrever <pre>php artisan migrate</pre> )</p>
 
 
 <h1>Login</h1>
 <ol>
-    <li>Deve instalar o ui do Laravel, para isso escreva <code>composer require laravel/ui</code> no terminal</li>
-    <li>De seguida deve <code>npm install</code></li>
-    <li>Depois <code>npm run build</code></li>
+    <li>Deve instalar o ui do Laravel, para isso escreva <pre>composer require laravel/ui</pre> no terminal</li>
+    <li>De seguida deve <pre>npm install</pre></li>
+    <li>Depois <pre>npm run build</pre></li>
     <li>E por ultimo npm dev</li>
 </ol>
