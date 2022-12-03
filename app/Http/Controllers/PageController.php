@@ -46,4 +46,8 @@ class PageController extends Controller
     public function mapaaulas(){
         return view('mapaaulas');
     }
+
+    public function modalidades(){
+        return view('admin/modalidades');
+    }
 }

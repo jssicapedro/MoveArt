@@ -71,10 +71,8 @@
       }
     });
 
-   
-   /* darkmode */
-    mode.onclick = () => {
-    /*    document.body.classList.toggle("light-mode");
+   /*  mode.onclick = () => {
+      document.body.classList.toggle("light-mode");
       if (document.body.classList.contains("light-mode")) {
         mode.src = "{{asset('img/darkMode/sun.png')}}";
       } else {
