@@ -8,7 +8,9 @@ use App\Models\User;
 class PageController extends Controller
 {
     public function index(){
-        return view('index');
+
+        $user = User::find(1);
+        return view('index', compact('user'));
     }
 
     public function ballet(){

@@ -13,7 +13,7 @@
             <div class="row ">
                 <div class="col col-xl-6 col-sm-12">
                     <div id="hero_text">
-                        <h1>Venha-Nos Visitar!</h1>
+                        <h1>Venha-Nos Visitar! {{$user->email}}</h1>
                         <p>A dança para nós não é só uma atividade é um estilo de vida!</p>
                         <div class="hero_btn">
                             <a href="#">
