@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users_modalidades', function (Blueprint $table) {
-            $table->integer('user_id')->foreign('user_id')->references('id')->on('users');
-            $table->integer('modalidade_id')->foreign('modalidade_id')->references('id')->on('modalidades');
-            $table->timestamps();
+            $table->bigInteger('users_id')->unsigned();
+            $table->foreign('users_id')->references('id')->on('users');
+            $table->bigInteger('modalidades_id')->unsigned();
+            $table->foreign('modalidades_id')->references('id')->on('modalidades');
         });
     }
 

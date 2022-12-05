@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('nome',150);
             $table->string('email',150);
+            $table->double('valor');
+            $table->string('telefone', 9);
             $table->text('mensagem');
             $table->timestamps();
         });

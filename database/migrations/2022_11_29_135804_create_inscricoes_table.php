@@ -18,8 +18,6 @@ return new class extends Migration
             $table->date('data_inicio');
             $table->date('data_fim');
             $table->enum('type_insc', ['anual', 'mensal']);
-            $table->integer('user_id')->foreign('user_id')->references('id')->on('users');
-            $table->integer('id_modalidade')->foreign('id_modalidade')->references('id')->on('modalidades');
             $table->timestamps();
         });
     }
