@@ -16,8 +16,24 @@
 
 <h1>Login</h1>
 <ol>
-    <li>Deve instalar o ui do Laravel, para isso escreva <pre>composer require laravel/ui</pre> no terminal</li>
-    <li>De seguida deve <pre>npm install</pre></li>
-    <li>Depois <pre>npm run build</pre></li>
-    <li>E por ultimo <pre>npm run dev</pre></li>
+    <li>Deve instalar o ui do Laravel, para isso execute, no terminal</li>
+    <pre>composer require laravel/ui</pre> 
+    <li>De seguida deve </li>
+    <pre>npm install</pre>
+    <li>Depois </li>
+    <pre>npm run build</pre>
+    <li>E por ultimo </li>
+    <pre>npm run dev</pre>
+</ol>
+
+<h1>Seeder</h1>
+<p>| o Seeder serve para que todos os elementos da BD sejam possíveis de transferir de maquina para maquina. Assim, não é necessário a exportação diária de toda a base de dados</p>
+<ol>
+    <li>Para criar um Seeder </li>
+    <pre>php artisan make:seeder <i>nome do ficheiro</i></pre> 
+    <li>Deve então escrever o conteúdo no novo ficheiro criado</li>
+    <li>Por fim deve ser chamado o Seeder novo no ficheiro <b>DatabaseSeeder.php</b> </li>
+    <pre>public function run()<br>{<br>$this->call([<br>UsersSeeder::class,<br>]);<br>}</pre>
+    <li>Para importar para a máquina</li>
+    <pre>php artisan db:seed</pre>
 </ol>
