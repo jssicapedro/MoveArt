@@ -47,5 +47,9 @@ class PageController extends Controller
         return view('mapaaulas');
     }
 
+    public function perfil(){
+        return view('perfil');
+    }
+
     
 }

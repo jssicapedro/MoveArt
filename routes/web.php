@@ -32,3 +32,5 @@ Route::get('/inscricoes', [PageController::class, 'inscricoes'])->name('inscrico
 
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
+Route::get('/perfil', [PageController::class, 'perfil'])->name('perfil');
+
