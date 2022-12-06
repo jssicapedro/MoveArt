@@ -37,7 +37,11 @@
         <div>
             <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/ballet/ballet_prof_.png') }}" alt="">
             <img class="prof" src="{{ asset('img/dancas/ballet/orientadores(3).png') }}" alt="">
-            <h3>>{{$user->primeiro}}</h3>
+
+            <!-- <img class="prof" src="{{ asset('img/dancas/ballet/'.$user->primeiro) }}" alt=""> -->
+
+
+            <h3>{{$user->primeiro}}</h3>
         </div>
         @endforeach
         @else
