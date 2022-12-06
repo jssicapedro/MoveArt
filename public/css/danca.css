@@ -22,7 +22,7 @@ main {
 }
 
 .img_banner h1{
-    color: var(--branco);
+    color: #fff;
     font-size: 70pt;
     font-family: var(--amaranth);
 }

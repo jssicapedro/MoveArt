@@ -18,10 +18,16 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'primeiro',
+        'apelido',
         'email',
+        'data_nasc',
+        'genero',
+        'perfil',
         'password',
-    ];
+    ];/* colunas de preenchimento possivel */
+
+/* select * from = user:: */
 
     /**
      * The attributes that should be hidden for serialization.
@@ -29,8 +35,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        
     ];
 
     /**
