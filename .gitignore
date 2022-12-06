@@ -17,3 +17,5 @@ composer.log
 /.fleet
 /.idea
 /.vscode
+composer.json
+composer.lock
