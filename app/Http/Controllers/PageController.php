@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Modalidade;
+
 
 class PageController extends Controller
 {
@@ -14,8 +16,10 @@ class PageController extends Controller
     public function ballet(){
 
         $user = user::all();
+        $modalidade = modalidade::all();
       
-        return view('ballet', compact('user'));
+        return view('ballet', compact('user'), compact('modalidade'));
+
     }
 
     public function hiphop(){
@@ -44,9 +48,5 @@ class PageController extends Controller
 
     public function mapaaulas(){
         return view('mapaaulas');
-    }
-
-    public function modalidades(){
-        return view('admin/modalidades');
     }
 }
