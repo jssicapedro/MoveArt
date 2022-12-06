@@ -17,22 +17,35 @@
 @section('main')
 <div class="about">
     <div class="txt">
-        <!-- <p>O Ballet é uma dança é o estilo de dança mais popular no
+        <p>O Ballet é uma dança é o estilo de dança mais popular no
             mundo que exige muita técnica e precisão nos movimentos, com
             a ajuda dos nossos profissionais vais aprender e ser um dos
             melhores. </p>
         <br>
         <p>A nossa Instituição já foi premiada com ouro em 2020 e 2021.
             Queres ser o próximo? Vem connosco e entra nesta aventura.
-        </p> -->
-        {{$modalidade->modalidade}}
+        </p>
     </div>
     <img src="{{ asset('img/dancas/ballet/ballet_app.png') }}" alt="Criança a treinar ballet de tutu dentro de uma forma irregular sem background e com borda de cor de rosa">
 </div>
 <div class="advisors">
     <h2>Orientadores</h2>
     <div class="advisors_prof">
+        @if (count($user))
+        @foreach($user as $user)
         <div>
+            <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/ballet/ballet_prof_.png') }}" alt="">
+            <img class="prof" src="{{ asset('img/dancas/ballet/orientadores(3).png') }}" alt="">
+            <h3>{{$user->primeiro}}</h3>
+        </div>
+        @endforeach
+        @else
+        <h6>Não existem categorias registadas</h6>
+        @endif
+
+
+
+        <!-- <div>
             <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/ballet/ballet_prof_.png') }}" alt="">
             <img class="prof" src="{{ asset('img/dancas/ballet/orientadores(3).png') }}" alt="">
             <h3>Andreia</h3>
@@ -46,7 +59,7 @@
             <img class="grafic3" style="position: absolute;" src="{{ asset('img/dancas/ballet/ballet_prof_.png') }}" alt="">
             <img class="prof" src="{{ asset('img/dancas/ballet/orientadores(1).png') }}" alt="">
             <h3>André</h3>
-        </div>
+        </div> -->
     </div>
 </div>
 <div class="calendar">
