@@ -33,7 +33,7 @@
     <pre>php artisan make:seeder <i>nome do ficheiro</i></pre> 
     <li>Deve então escrever o conteúdo no novo ficheiro criado</li>
     <li>Por fim deve ser chamado o Seeder novo no ficheiro <b>DatabaseSeeder.php</b> </li>
-    <pre>public function run()<br>{<br>$this->call([<br>UsersSeeder::class,<br>]);<br>}</pre>
+    <pre>public function run()<br> { <br>  $this->call([<br>   UsersSeeder::class,  <br>  ]);<br> }</pre>
     <li>Para importar para a máquina</li>
     <pre>php artisan db:seed</pre>
 </ol>
