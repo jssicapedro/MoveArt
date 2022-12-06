@@ -22,19 +22,10 @@ class User extends Authenticatable
         'apelido',
         'email',
         'data_nasc',
-        'cc',
         'genero',
         'perfil',
-        'modalidade',
-        'type_insc',
-        'metod_pag',
         'password',
     ];/* colunas de preenchimento possivel */
-
-    function pais(){
-
-        return $this->hasone( pais::class, 'pais_id', 'id');
-    }
 
 /* select * from = user:: */
 
@@ -44,8 +35,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        
     ];
 
     /**

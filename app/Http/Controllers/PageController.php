@@ -13,10 +13,9 @@ class PageController extends Controller
 
     public function ballet(){
 
-        $user = User::first();
-
+        $user = user::all();
       
-        return view('ballet');
+        return view('ballet', compact('user'));
     }
 
     public function hiphop(){
@@ -45,5 +44,9 @@ class PageController extends Controller
 
     public function mapaaulas(){
         return view('mapaaulas');
+    }
+
+    public function modalidades(){
+        return view('admin/modalidades');
     }
 }
