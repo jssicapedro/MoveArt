@@ -13,14 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('eventos', function (Blueprint $table) {
-            $table->id();
-            $table->string('nome', 150);
-            $table->datetime('data');
-            $table->string('localizacao',150);
-            $table->string('foto');
-            $table->text('descricao');
-            $table->timestamps();
+        Schema::table('inscricoes', function (Blueprint $table) {
+            $table->bigInteger('users_id')->unsigned();
+            $table->foreign('users_id')->references('id')->on('users');
         });
     }
 
@@ -31,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('eventos');
+        Schema::table('inscricoes', function (Blueprint $table) {
+            //
+        });
     }
 };
