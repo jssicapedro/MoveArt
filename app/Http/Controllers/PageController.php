@@ -12,8 +12,9 @@ class PageController extends Controller
 {
     public function index(){
         $evento = Evento::all();
+        $modalidade = Modalidade::all();
         
-        return view('index', compact('evento'));
+        return view('index', compact('evento'), compact('modalidade'));
     }
 
     public function ballet(){

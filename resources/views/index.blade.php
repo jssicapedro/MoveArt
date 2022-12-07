@@ -319,7 +319,8 @@
 
             <div class="splide__track">
                 <ul class="splide__list">
-
+                    @if (count($modalidade))
+                    @foreach($modalidade as $modalidades)
                     <li class="splide__slide img-box">
                         <div class="containe">
                             <div class="content">
@@ -327,65 +328,17 @@
                                     <div class="content-overlay"></div>
                                     <img class="content-image" src="{{ asset('img/inicio/Ballet.jpg') }}">
                                     <div class="content-details fadeIn-bottom">
-                                        <h2 class="content-title">Ballet</h2>
+                                        <h2 class="content-title">{{$modalidades->modalidade}}</h2>
                                     </div>
                                 </a>
                             </div>
                         </div>
                     </li>
-
-                   <li class="splide__slide img-box">
-                        <div class="containe">
-                            <div class="content">
-                                <a href="{{ asset('hiphop') }}" target="_blank">
-                                    <div class="content-overlay"></div>
-                                    <img class="content-image" src="{{ asset('img/inicio/Hip-Hop.jpg') }}">
-                                    <div class="content-details fadeIn-bottom">
-                                        <h2 class="content-title">Hip-Hop</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="splide__slide img-box">
-                        <div class="containe">
-                            <div class="content">
-                                <a href="{{ asset('oriental') }}" target="_blank">
-                                    <div class="content-overlay"></div>
-                                    <img class="content-image" src="{{ asset('img/inicio/Dança_Oriental.jpg') }}">
-                                    <div class="content-details fadeIn-bottom">
-                                        <h2 class="content-title">Dança Oriental</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="splide__slide img-box">
-                        <div class="containe">
-                            <div class="content">
-                                <a href="{{ asset('espanhola') }}" target="_blank">
-                                    <div class="content-overlay"></div>
-                                    <img class="content-image" src="{{ asset('img/inicio/Dança_Espanhola.jpg') }}">
-                                    <div class="content-details fadeIn-bottom">
-                                        <h2 class="content-title">Dança Espanhola</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="splide__slide img-box">
-                        <div class="containe">
-                            <div class="content">
-                                <a href="{{ asset('folclore') }}" target="_blank">
-                                    <div class="content-overlay"></div>
-                                    <img class="content-image" src="{{ asset('img/inicio/Folclore.jpg') }}">
-                                    <div class="content-details fadeIn-bottom">
-                                        <h2 class="content-title">Folclore</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
+                    @endforeach
+                    @else
+                    <h6>Não existem categorias registadas</h6>
+                    @endif    
+                  
                 </ul>
             </div>
         </section>
