@@ -225,6 +225,21 @@ hr {
 }
 
 @media screen and (max-width: 987px) {
+
+  #hero_text h1 {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 67px;
+}
+  #hero_text p {
+    font-size: 25px;
+    line-height: 36px;
+      margin-bottom: 3rem;
+
+}
+  #left_hr{
+    margin: 0 auto 20px auto !important;
+  }
   .group_equipa2 .box-container .row .box {
     display: none;
 

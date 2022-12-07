@@ -439,7 +439,7 @@
             <div class="row">
 
 
-                <div class="col-xl-4 col-md-4 col-sm-12 car_col">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 car_col">
                     <div class="card">
                         <div class="card-body">
                             <div class="details_event d-flex justify-content-start">
@@ -456,7 +456,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-md-4 col-sm-12 car_col">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 car_col">
                     <div class="card">
                         <div class="card-body">
                             <div class="details_event d-flex justify-content-start">
@@ -472,7 +472,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-md-4 col-sm-12 car_col">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 car_col car_col">
                     <div class="card">
                         <div class="card-body">
                             <div class="details_event d-flex justify-content-start">
