@@ -5,12 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Modalidade;
+use App\Models\Evento;
 
 
 class PageController extends Controller
 {
     public function index(){
-        return view('index');
+        $evento = Evento::all();
+        
+        return view('index', compact('evento'));
     }
 
     public function ballet(){

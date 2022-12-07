@@ -438,56 +438,31 @@
 
             <div class="row">
 
-
+                @if (count($evento))
+                @foreach($evento as $eventos)
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 car_col">
                     <div class="card">
                         <div class="card-body">
                             <div class="details_event d-flex justify-content-start">
-                                <h6><i class="bi bi-calendar4-event"></i> 12/12/2022</h6>
-                                <h6><i class="bi bi-clock"></i> 20:30</h6>
-                                <h6><i class="bi bi-geo-alt-fill"></i> Leiria</h6>
+                                <h6><i class="bi bi-calendar4-event"></i> {{ date('d-m-Y', strtotime($eventos->data))}}</h6>
+                                <h6><i class="bi bi-clock"></i> {{ date('H:m', strtotime($eventos->data))}}</h6>
+                                <h6><i class="bi bi-geo-alt-fill"></i> {{$eventos->localizacao}}</h6>
                             </div>
-                            <h3>A Bela Adormecida</h3>
+                            <h3>{{$eventos->nome}}</h3>
                         </div>
                         <div class="img_event position-relative" style="border-radius: 4px;">
                             <img src="{{ asset('img/inicio/evento1.jpg') }}" class="card-img-top position-absolute bottom-0"
-                                alt="Evento-A bela adormecida">
+                                alt="{{$eventos->nome}}">
                         </div>
                     </div>
                 </div>
+                @endforeach
+                @else
+                <h6>Não existem categorias registadas</h6>
+                @endif
+                
 
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 car_col">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="details_event d-flex justify-content-start">
-                                <h6><i class="bi bi-calendar4-event"></i> 03/12/2022</h6>
-                                <h6><i class="bi bi-clock"></i> 14:45</h6>
-                                <h6><i class="bi bi-geo-alt-fill"></i> Leiria</h6>
-                            </div>
-                            <h3>House vs Hip-Hop</h3>
-                        </div>
-                        <div class="img_event" style="border-radius: 4px;">
-                            <img src="{{ asset('img/inicio/evento2.jpg') }}" class="card-img-top" alt="Evento de Hip-Hop">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 car_col car_col">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="details_event d-flex justify-content-start">
-                                <h6><i class="bi bi-calendar4-event"></i> 29/11/2022</h6>
-                                <h6><i class="bi bi-clock"></i> 16:00</h6>
-                                <h6><i class="bi bi-geo-alt-fill"></i> Leiria</h6>
-                            </div>
-                            <h3>Dança Espanhola</h3>
-                        </div>
-                        <div class="img_event" style="border-radius: 4px;">
-                            <img src="{{ asset('img/inicio/evento3.jpg') }}" class="card-img-top" alt="Evento de dança espanhola">
-                        </div>
-                    </div>
-                </div>
-
+               
             </div>
         </div>
     </section>
