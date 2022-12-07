@@ -115,17 +115,21 @@
                     <h2>Modo de pagamento:</h2>
                 </div>
                 <ul>
-                    <li><input type="radio" name="paypal" id="paypal">
-                        <img src="./img/icons8-paypal-480.png" alt="">
+                    <li>
+                        <input type="radio" name="paypal" id="paypal">
+                        <img src="{{asset('img/inscricoes/paypal.png')}}" alt="">
                     </li>
-                    <li><input type="radio" name="mbway" id="mbway">
-                        <img src="./img/icons8-mb-way-480.png" alt="">
+                    <li>
+                        <input type="radio" name="mbway" id="mbway">
+                        <img src="{{asset('img/inscricoes/mb_way.png')}}" alt="">
                     </li>
-                    <li><input type="radio" name="multibanco" id="multibanco">
-                        <img src="./img/icons8-multibanco-480.png" alt="">
+                    <li>
+                        <input type="radio" name="multibanco" id="multibanco">
+                        <img src="{{asset('img/inscricoes/multibanco.png')}}" alt="">
                     </li>
-                    <li><input type="radio" name="visa" id="visa">
-                        <img src="./img/icons8-visa-480.png" alt="">
+                    <li>
+                        <input type="radio" name="visa" id="visa">
+                        <img src="{{asset('img/inscricoes/visa.png')}}" alt="">
                     </li>
                 </ul>
             </div>
