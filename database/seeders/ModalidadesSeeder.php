@@ -19,8 +19,8 @@ class ModalidadesSeeder extends Seeder
             [
                 'modalidade' => 'ballet',
                 'descricao' => 'O Ballet é uma dança é o estilo de dança mais popular no mundo que exige muita técnica e precisão nos movimentos, com a ajuda dos nossos profissionais vais aprender e ser um dos melhores.<br>A nossa Instituição já foi premiada com ouro em 2020 e 2021. Queres ser o próximo? Vem connosco e entra nesta aventura.',
-                'valor_mensal' => '45',
-                'valor_anual' => '500',
+                'valor_mensal' => '75',
+                'valor_anual' => '880',
             ],
             [
                 'modalidade' => 'hiphop',
