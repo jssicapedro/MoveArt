@@ -6,7 +6,9 @@
 <link href="{{ asset('css/perfil.css') }}" rel="stylesheet">
 @endsection
 
-
+<div class="conteiner">
+    
+</div>
 
 
 
