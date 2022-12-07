@@ -25,7 +25,7 @@
 
 <h1>Mailtrap</h1>
 <h2>Acesso</h2>
-<i>Email:</i> moveartt2022@gmail.com
+<i>Email:</i> moveartt2022@gmail.com<br>
 <i>Pass:</i> @Moveart2022
 <ol>
     <li>Abra o ficheiro .env e substitua de <i>mail_mailer</i> até <i>mail_encryption</i> por</li>
