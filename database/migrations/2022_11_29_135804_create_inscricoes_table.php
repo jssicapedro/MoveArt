@@ -18,6 +18,10 @@ return new class extends Migration
             $table->date('data_inicio');
             $table->date('data_fim');
             $table->enum('type_insc', ['anual', 'mensal']);
+            $table->unsignedBigInteger('modalidade_id');
+            $table->foreign('modalidade_id')->references('id')->on('modalidades');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
