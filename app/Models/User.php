@@ -24,7 +24,7 @@ class User extends Authenticatable
         'data_nasc',
         'genero',
         'perfil',
-        'password',
+       
     ];/* colunas de preenchimento possivel */
 
 /* select * from = user:: */
@@ -35,7 +35,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        
+        'password',
     ];
 
     /**
@@ -46,4 +46,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function modalidade(){
+        return $this->belongsToMany(Modalidade::class, "users_modalidades");
+    }   
 }

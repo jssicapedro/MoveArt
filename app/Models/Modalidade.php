@@ -15,4 +15,13 @@ class Modalidade extends Model
         'valor_mensal',
         'valor_anual',
     ];
+
+
+    public function profs(){
+        return $this->belongsToMany(User::class, "users_modalidades");
+    }
+
+    public function eventos(){
+        return $this->belongsToMany(Evento::class, "eventos_modalidades");
+    }
 }

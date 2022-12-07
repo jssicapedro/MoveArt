@@ -42,3 +42,6 @@
     <li>Para importar para a máquina</li>
     <pre>php artisan db:seed</pre>
 </ol>
+<h2>Caso sejam alteradas as base de dados</h2>
+<p>Execute</p>
+<pre>php artisan migrate:fresh --seed</pre>
