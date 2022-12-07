@@ -43,7 +43,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('x%7tE8vD'),
         ],
         [
-            'primeiro' => 'Luisa',
+            'primeiro' => 'Luísa',
             'apelido' => 'Suares',
             'email' => 'luisaSuares@gmail.com',
             'data_nasc' => '1998-05-12',
