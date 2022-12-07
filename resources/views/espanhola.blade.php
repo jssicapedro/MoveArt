@@ -17,9 +17,10 @@
 @section('main')
 <div class="about">
     <div class="txt">
-        <p>A dança espanhola é conhecida pelos movimentos elegantes. A dança espanhola mais conhecida é o Flamingo, e é esta à qual a MoveArt dá mais atenção.</p>
+    {!! $modalidade->descricao !!}
+        <!-- <p>A dança espanhola é conhecida pelos movimentos elegantes. A dança espanhola mais conhecida é o Flamingo, e é esta à qual a MoveArt dá mais atenção.</p>
         <br>
-        <p>A nossa Instituição foi premiada em 2018 como a melhor escola de Leiria de Flamingo. Aprende esta modalidade com os nosso profissionais de topo.</p>
+        <p>A nossa Instituição foi premiada em 2018 como a melhor escola de Leiria de Flamingo. Aprende esta modalidade com os nosso profissionais de topo.</p> -->
     </div>
     <img src="{{ asset('img/dancas/espanhola/espanhola_app.png') }}" alt="Criança a treinar espanhola de tutu dentro de uma forma irregular sem background e com borda de cor de rosa">
 </div>

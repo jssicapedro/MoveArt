@@ -17,9 +17,10 @@
 @section('main')
 <div class="about">
     <div class="txt">
-        <p>O hip-hop contem uma variedade de estilos, nestas aulas vais aprender principalmente breakdance e popping. Participamos todos os meses nas batalhas da região.</p>
+    {!! $modalidade->descricao !!}
+        <!-- <p>O hip-hop contem uma variedade de estilos, nestas aulas vais aprender principalmente breakdance e popping. Participamos todos os meses nas batalhas da região.</p>
         <br>
-        <p>Já ganhamos vários nacionais, o europeu três anos seguidos (2019, 2020, 2021) e um mundial em 2022.</p>
+        <p>Já ganhamos vários nacionais, o europeu três anos seguidos (2019, 2020, 2021) e um mundial em 2022.</p> -->
     </div>
     <img src="{{ asset('img/dancas/hiphop/hiphop_app.png') }}" alt="Criança a treinar hiphop de tutu dentro de uma forma irregular sem background e com borda de cor de rosa">
 </div>

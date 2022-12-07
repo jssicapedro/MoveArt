@@ -17,14 +17,15 @@
 @section('main')
 <div class="about">
     <div class="txt">
-        <p>O Ballet é uma dança é o estilo de dança mais popular no
+        {!! $modalidade->descricao !!}
+        <!-- <p>O Ballet é uma dança é o estilo de dança mais popular no
             mundo que exige muita técnica e precisão nos movimentos, com
             a ajuda dos nossos profissionais vais aprender e ser um dos
             melhores. </p>
         <br>
         <p>A nossa Instituição já foi premiada com ouro em 2020 e 2021.
             Queres ser o próximo? Vem connosco e entra nesta aventura.
-        </p>
+        </p> -->
     </div>
     <img src="{{ asset('img/dancas/ballet/ballet_app.png') }}" alt="Criança a treinar ballet de tutu dentro de uma forma irregular sem background e com borda de cor de rosa">
 </div>

@@ -17,9 +17,10 @@
 @section('main')
 <div class="about">
     <div class="txt">
-        <p>Não te fiques apenas pelo que conheces e aprende novas culturas. A nossa escola implementou esta dança só em 2021 mas já contamos com varias conquistas.</p>
+    {!! $modalidade->descricao !!}
+        <!-- <p>Não te fiques apenas pelo que conheces e aprende novas culturas. A nossa escola implementou esta dança só em 2021 mas já contamos com varias conquistas.</p>
         <br>
-        <p>Contamos com profissionais nativos e professores experientes.</p>
+        <p>Contamos com profissionais nativos e professores experientes.</p> -->
     </div>
     <img src="{{ asset('img/dancas/oriental/oriental_app.png') }}" alt="Criança a treinar oriental de tutu dentro de uma forma irregular sem background e com borda de cor de rosa">
 </div>

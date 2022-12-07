@@ -17,9 +17,10 @@
 @section('main')
 <div class="about">
     <div class="txt">
-        <p>Leva a tradição sempre contigo, juntos vamos levar a tradição aos eventos nacionais e internacionais que temos ao longo do ano.</p>
+    {!! $modalidade->descricao !!}
+        <!-- <p>Leva a tradição sempre contigo, juntos vamos levar a tradição aos eventos nacionais e internacionais que temos ao longo do ano.</p>
         <br>
-        <p>Vamos, juntos, mostrar a nossa tradição. Aprende folclore com os melhores profissionais.</p>
+        <p>Vamos, juntos, mostrar a nossa tradição. Aprende folclore com os melhores profissionais.</p> -->
     </div>
     <img src="{{ asset('img/dancas/folclore/folclore_app.png') }}" alt="Criança a treinar folclore de tutu dentro de uma forma irregular sem background e com borda de cor de rosa">
 </div>
