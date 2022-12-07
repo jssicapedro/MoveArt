@@ -23,6 +23,20 @@
     <pre>npm run dev</pre>
 </ol>
 
+<h1>Mailtrap</h1>
+<h2>Acesso</h2>
+<i>Email:</i> moveartt2022@gmail.com
+<i>Pass:</i> @Moveart2022
+<ol>
+    <li>Abra o ficheiro .env e substitua de <i>mail_mailer</i> até <i>mail_encryption</i> por</li>
+    <pre>MAIL_MAILER=smtp</pre>
+    <pre>MAIL_HOST=smtp.mailtrap.io</pre>
+    <pre>MAIL_PORT=2525</pre>
+    <pre>MAIL_USERNAME=59abf1a8520122</pre>
+    <pre>MAIL_PASSWORD=a7099ca5dadf10</pre>
+    <pre>MAIL_ENCRYPTION=tls</pre>
+</ol>
+
 <h1>BASE DE DADOS</h1>
 <ol>
     <li>Para que a BD seja criada, execute</li>
