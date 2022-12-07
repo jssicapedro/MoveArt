@@ -13,7 +13,7 @@ loadMoreBtn.onclick = () => {
     }
 }
 
-var splide = new Splide( '#splide1', {
+var splide = new Splide( '.splide', {
     type   : 'loop',
     perPage: 3,
     focus  : 'center',
@@ -34,4 +34,4 @@ var splide = new Splide( '#splide1', {
       },
   } );
   
-  new Splide( '#splide1' ).mount();
+  splide.mount();
