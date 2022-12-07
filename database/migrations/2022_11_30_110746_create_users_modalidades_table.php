@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users_modalidades', function (Blueprint $table) {
-            $table->bigInteger('users_id')->unsigned();
-            $table->foreign('users_id')->references('id')->on('users');
-            $table->bigInteger('modalidades_id')->unsigned();
-            $table->foreign('modalidades_id')->references('id')->on('modalidades');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->bigInteger('modalidade_id')->unsigned();
+            $table->foreign('modalidade_id')->references('id')->on('modalidades');
         });
     }
 
