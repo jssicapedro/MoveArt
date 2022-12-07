@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('eventos_users', function (Blueprint $table) {
-            $table->bigInteger('users_id')->unsigned();
-            $table->foreign('users_id')->references('id')->on('users');
-            $table->bigInteger('eventos_id')->unsigned();
-            $table->foreign('eventos_id')->references('id')->on('eventos');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('evento_id');
+            $table->foreign('evento_id')->references('id')->on('eventos');
         });
     }
 
