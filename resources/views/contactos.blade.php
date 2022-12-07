@@ -6,6 +6,9 @@
 <link rel="stylesheet" href="{{asset("css/contactos.css")}}">
 @endsection
 
+@section('script')
+<script src="{{ asset('js/contactos/contactos.js') }}"></script>
+@endsection
 @section('hero')
 
 {{-- inicio --}}

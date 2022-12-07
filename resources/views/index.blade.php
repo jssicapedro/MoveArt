@@ -6,6 +6,10 @@
 <link href="{{ asset('css/inicio.css') }}" rel="stylesheet">
 @endsection
 
+@section('script')
+<script src="{{ asset('js/inicio/inicio.js') }}"></script>
+@endsection
+
 @section('hero')
 <section id="hero_image">
     <div class="hero_img">
@@ -109,7 +113,7 @@
                         </div>
 
                         <div class="d-flex justify-content-start">
-                            <a href="#">
+                            <a href="{{ asset('contactos') }}">
                                 <div class="button">Saiba Mais</div>
                             </a>
                         </div>
@@ -311,7 +315,7 @@
         <h2 style="text-align: center;">Modalidades</h2>
     </div>
     <div class="container spl" style="padding-bottom: 120px;">
-        <section class="splide" id="splide1" aria-labelledby="carousel-heading ">
+        <section class="splide" aria-labelledby="carousel-heading ">
 
             <div class="splide__track">
                 <ul class="splide__list">
@@ -319,7 +323,7 @@
                     <li class="splide__slide img-box">
                         <div class="containe">
                             <div class="content">
-                                <a href="#" target="_blank">
+                                <a href="{{ asset('ballet') }}" target="_blank">
                                     <div class="content-overlay"></div>
                                     <img class="content-image" src="{{ asset('img/inicio/Ballet.jpg') }}">
                                     <div class="content-details fadeIn-bottom">
@@ -333,7 +337,7 @@
                    <li class="splide__slide img-box">
                         <div class="containe">
                             <div class="content">
-                                <a href="#" target="_blank">
+                                <a href="{{ asset('hiphop') }}" target="_blank">
                                     <div class="content-overlay"></div>
                                     <img class="content-image" src="{{ asset('img/inicio/Hip-Hop.jpg') }}">
                                     <div class="content-details fadeIn-bottom">
@@ -346,7 +350,7 @@
                     <li class="splide__slide img-box">
                         <div class="containe">
                             <div class="content">
-                                <a href="#" target="_blank">
+                                <a href="{{ asset('oriental') }}" target="_blank">
                                     <div class="content-overlay"></div>
                                     <img class="content-image" src="{{ asset('img/inicio/Dança_Oriental.jpg') }}">
                                     <div class="content-details fadeIn-bottom">
@@ -359,7 +363,7 @@
                     <li class="splide__slide img-box">
                         <div class="containe">
                             <div class="content">
-                                <a href="#" target="_blank">
+                                <a href="{{ asset('espanhola') }}" target="_blank">
                                     <div class="content-overlay"></div>
                                     <img class="content-image" src="{{ asset('img/inicio/Dança_Espanhola.jpg') }}">
                                     <div class="content-details fadeIn-bottom">
@@ -372,7 +376,7 @@
                     <li class="splide__slide img-box">
                         <div class="containe">
                             <div class="content">
-                                <a href="#" target="_blank">
+                                <a href="{{ asset('folclore') }}" target="_blank">
                                     <div class="content-overlay"></div>
                                     <img class="content-image" src="{{ asset('img/inicio/Folclore.jpg') }}">
                                     <div class="content-details fadeIn-bottom">
@@ -409,7 +413,7 @@
                         </div>
                         <div class="col-xl-4 col-sm-12 d-flex justify-content-center align-items-center">
                             <div class="pink_btn">
-                                <a href="#">
+                                <a href="{{ asset('inscricoes') }}">
                                     <div class="button">Saiba Mais</div>
                                 </a>
                             </div>
@@ -491,6 +495,3 @@
 
 @endsection
 
-@section('links')
-<script src="{{ asset('js/inicio/inicio.js') }}"></script>
-@endsection
