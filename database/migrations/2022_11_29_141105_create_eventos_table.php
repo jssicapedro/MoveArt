@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('nome', 150);
             $table->datetime('data');
             $table->string('localizacao',150);
-            $table->string('foto');
-            $table->text('descricao');
+            $table->string('foto')->nullable();
+            $table->text('descricao')->nullable();
             $table->timestamps();
         });
     }

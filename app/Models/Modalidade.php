@@ -19,5 +19,9 @@ class Modalidade extends Model
 
     public function profs(){
         return $this->belongsToMany(User::class, "users_modalidades");
-        }
+    }
+
+    public function eventos(){
+        return $this->belongsToMany(Evento::class, "eventos_modalidades");
+    }
 }

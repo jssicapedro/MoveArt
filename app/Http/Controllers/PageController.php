@@ -10,7 +10,7 @@ use App\Models\Modalidade;
 class PageController extends Controller
 {
     public function index(){
-        return view('index', compact('user'));
+        return view('index');
     }
 
     public function ballet(){
