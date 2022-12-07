@@ -26,7 +26,18 @@
 <div class="advisors">
     <h2>Orientadores</h2>
     <div class="advisors_prof">
+    @if (count($profs))
+        @foreach($profs as $user)
         <div>
+            <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/hiphop/hiphop_prof_.png') }}" alt="">
+            <img class="prof" src="{{ asset('img/dancas/hiphop/orientadores(3).png') }}" alt="">
+            <h3>{{$user->primeiro}}</h3>
+        </div>
+        @endforeach
+        @else
+        <h6>Não existem categorias registadas</h6>
+        @endif
+        <!-- <div>
             <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/hiphop/hiphop_prof_.png') }}" alt="">
             <img class="prof" src="{{ asset('img/dancas/hiphop/orientadores(3).png') }}" alt="">
             <h3>Beatriz</h3>
@@ -40,7 +51,7 @@
             <img class="grafic3" style="position: absolute;" src="{{ asset('img/dancas/hiphop/hiphop_prof_.png') }}" alt="">
             <img class="prof" src="{{ asset('img/dancas/hiphop/orientadores(1).png') }}" alt="">
             <h3>Mauro</h3>
-        </div>
+        </div> -->
     </div>
 </div>
 <div class="calendar">

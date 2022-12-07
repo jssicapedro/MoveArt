@@ -31,8 +31,8 @@
 <div class="advisors">
     <h2>Orientadores</h2>
     <div class="advisors_prof">
-        @if (count($user))
-        @foreach($user as $user)
+        @if (count($profs))
+        @foreach($profs as $user)
         <div>
             <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/ballet/ballet_prof_.png') }}" alt="">
             <img class="prof" src="{{ asset('img/dancas/ballet/orientadores(3).png') }}" alt="">
