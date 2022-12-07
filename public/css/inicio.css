@@ -350,10 +350,8 @@ hr {
   top: 0;
   bottom: 0;
   right: 0;
-  opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  -moz-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s;
+  opacity: 1;
+  
 }
 
 .content:hover .content-overlay{
@@ -372,7 +370,7 @@ hr {
   width: 100%;
   top: 50%;
   left: 50%;
-  opacity: 0;
+  opacity: 1;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -381,11 +379,7 @@ hr {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.content:hover .content-details{
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-}
+
 
 .content-details h2{
   color: rgb(230, 230, 230);
@@ -395,6 +389,32 @@ hr {
   text-transform: uppercase;
 }
 
-.fadeIn-bottom{
-  top: 80%;
+
+@media screen and (min-width: 1024px){
+  .fadeIn-bottom{
+    top: 80%;
+  }
+  .content:hover .content-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+  .content:hover .content-overlay{
+    opacity: 1;
+  }
+  .content .content-overlay{
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  }
+  .content-details {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
 }
