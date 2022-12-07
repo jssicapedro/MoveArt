@@ -12,7 +12,6 @@ class PageController extends Controller
     public function index(){
         return view('index');
     }
-
     public function ballet(){
         $modalidade = Modalidade::where('modalidade', 'ballet')->first();
         $profs = $modalidade->profs;
@@ -53,7 +52,9 @@ class PageController extends Controller
     }
 
     public function inscricoes(){
-        return view('inscricoes');
+
+        $preco = Modalidade::where('modalidade', 'ballet')->first();;
+        return view('inscricoes', compact('preco'));
     }
 
     public function mapaaulas(){
