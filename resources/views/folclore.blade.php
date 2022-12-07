@@ -18,9 +18,6 @@
 <div class="about">
     <div class="txt">
     {!! $modalidade->descricao !!}
-        <!-- <p>Leva a tradição sempre contigo, juntos vamos levar a tradição aos eventos nacionais e internacionais que temos ao longo do ano.</p>
-        <br>
-        <p>Vamos, juntos, mostrar a nossa tradição. Aprende folclore com os melhores profissionais.</p> -->
     </div>
     <img src="{{ asset('img/dancas/folclore/folclore_app.png') }}" alt="Criança a treinar folclore de tutu dentro de uma forma irregular sem background e com borda de cor de rosa">
 </div>
@@ -38,21 +35,6 @@
         @else
         <h6>Não existem categorias registadas</h6>
         @endif
-        <!-- <div>
-            <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/folclore/folclore_prof_.png') }}" alt="">
-            <img class="prof" src="{{ asset('img/dancas/folclore/orientadores(3).png') }}" alt="">
-            <h3>Adriana</h3>
-        </div>
-        <div>
-            <img class="grafic2" style="position: absolute;" src="{{ asset('img/dancas/folclore/folclore_prof_.png') }}" alt="">
-            <img class="prof" src="{{ asset('img/dancas/folclore/orientadores(2).png') }}" alt="">
-            <h3>Hélder</h3>
-        </div>
-        <div>
-            <img class="grafic3" style="position: absolute;" src="{{ asset('img/dancas/folclore/folclore_prof_.png') }}" alt="">
-            <img class="prof" src="{{ asset('img/dancas/folclore/orientadores(1).png') }}" alt="">
-            <h3>João</h3>
-        </div> -->
     </div>
 </div>
 <div class="calendar">

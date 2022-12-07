@@ -18,9 +18,6 @@
 <div class="about">
     <div class="txt">
     {!! $modalidade->descricao !!}
-        <!-- <p>O hip-hop contem uma variedade de estilos, nestas aulas vais aprender principalmente breakdance e popping. Participamos todos os meses nas batalhas da região.</p>
-        <br>
-        <p>Já ganhamos vários nacionais, o europeu três anos seguidos (2019, 2020, 2021) e um mundial em 2022.</p> -->
     </div>
     <img src="{{ asset('img/dancas/hiphop/hiphop_app.png') }}" alt="Criança a treinar hiphop de tutu dentro de uma forma irregular sem background e com borda de cor de rosa">
 </div>
@@ -38,21 +35,6 @@
         @else
         <h6>Não existem categorias registadas</h6>
         @endif
-        <!-- <div>
-            <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/hiphop/hiphop_prof_.png') }}" alt="">
-            <img class="prof" src="{{ asset('img/dancas/hiphop/orientadores(3).png') }}" alt="">
-            <h3>Beatriz</h3>
-        </div>
-        <div>
-            <img class="grafic2" style="position: absolute;" src="{{ asset('img/dancas/hiphop/hiphop_prof_.png') }}" alt="">
-            <img class="prof" src="{{ asset('img/dancas/hiphop/orientadores(2).png') }}" alt="">
-            <h3>Rodrigo</h3>
-        </div>
-        <div>
-            <img class="grafic3" style="position: absolute;" src="{{ asset('img/dancas/hiphop/hiphop_prof_.png') }}" alt="">
-            <img class="prof" src="{{ asset('img/dancas/hiphop/orientadores(1).png') }}" alt="">
-            <h3>Mauro</h3>
-        </div> -->
     </div>
 </div>
 <div class="calendar">
