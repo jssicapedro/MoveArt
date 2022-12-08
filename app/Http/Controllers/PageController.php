@@ -59,4 +59,24 @@ class PageController extends Controller
     public function mapaaulas(){
         return view('mapaaulas');
     }
+
+    public function notifications(){
+        return view('landingPages/notifications');
+    }
+
+    public function landingA(){
+        return view('landingPages/landingA');
+    }
+
+    public function landingD(){
+        return view('landingPages/landingD');
+    }
+
+    public function eventos(){
+        return view('landingPages/eventos');
+    }
+
+    public function natal(){
+        return view('landingPages/natal');
+    }
 }

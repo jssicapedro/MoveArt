@@ -32,9 +32,21 @@ Route::get('/inscricoes', [PageController::class, 'inscricoes'])->name('inscrico
 
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
+// landing pages Jéssica>Adriana>Diogo>Beatriz>Tiago
+
+Route::get('/notificacoes', [PageController::class, 'notifications'])->name('notifications');
+
+Route::get('/landingA', [PageController::class, 'landingA'])->name('landingA');
+
+Route::get('/landingD', [PageController::class, 'landingD'])->name('landingD');
+
+Route::get('/eventos', [PageController::class, 'eventos'])->name('eventos');
+
+Route::get('/natal', [PageController::class, 'natal'])->name('natal');
+
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
+/* Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades'); */

@@ -1,0 +1,47 @@
+.erro {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 70px; */
+    margin: 42px auto 0;
+}
+
+.erro .img {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c8b19349;
+  z-index: -3;
+}
+
+ h1 {
+  font-weight: bolder;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+}
+@media (max-width: 900px) {
+  .erro{
+    flex-direction: column-reverse;
+    width: 100vw;
+  }
+  .erro .discription {
+    width: 100%;
+    text-align: center;
+  }
+  .erro img{
+    width: 70%;
+  }
+  .img{
+    display: flex;
+    justify-content: center;
+  }
+}
