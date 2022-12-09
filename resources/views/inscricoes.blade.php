@@ -100,7 +100,7 @@
                     <div class="card_img"></div>
                     <div class="card_img--hover"></div>
                     <div class="card_info">
-                        <span class="card_epoca">Mensa</span>
+                        <span class="card_epoca">Mensal</span>
                         <input type="radio" name="mensal" id="mensal">
                         <h3 class="card_preco">{{$preco->valor_mensal}}€</h3>
 

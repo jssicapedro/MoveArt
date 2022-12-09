@@ -274,19 +274,46 @@ span.cv {
 {
     width: 100%;
 }
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     #form_prof .row {
         display: flex;
         flex-direction: column;
 
     }
-
+    .cards{
+        width: 100%!important;
+        justify-content: flex-start;
+        gap: 30px;
+    }
     .col-6 {
         margin: 10px 0;
     }
-
     .col-6,
     .col-5 {
         width: 100%;
     }
+    .tp_pagamento ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+    .tp_pagamento ul li{
+        width: 10%;
+    }
 }
+@media (max-width: 600px) {
+   .cards{
+    flex-direction: column;
+    height: 65vh;
+    justify-content: space-around;
+    align-items: center;
+   }
+   .cart{
+    width: 90%;
+   }
+}
+@media (max-width: 500px) {
+    .tp_pagamento ul li{
+        width: 15%;
+    }
+ }

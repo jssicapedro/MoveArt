@@ -53,7 +53,7 @@ class PageController extends Controller
 
     public function inscricoes(){
 
-        $preco = Modalidade::all();
+        $preco = Modalidade::all()->first();
         return view('inscricoes', compact('preco'));
     }
 
