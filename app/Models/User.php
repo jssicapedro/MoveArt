@@ -22,8 +22,13 @@ class User extends Authenticatable
         'apelido',
         'email',
         'data_nasc',
+        'cc',
         'genero',
         'perfil',
+        'modalidade',
+        'type_insc',
+        'metod_pag',
+        'password'
        
     ];/* colunas de preenchimento possivel */
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,6 @@ Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas'
 
 Route::get('/perfil', [PageController::class, 'perfil'])->name('perfil');
 
-Route::get('/perfil', [PageController::class, 'perfil'])->name('perfil');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
