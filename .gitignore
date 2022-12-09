@@ -17,4 +17,5 @@ composer.log
 /.fleet
 /.idea
 /.vscode
-fazer.txt
+composer.json
+composer.lock
