@@ -34,3 +34,4 @@ Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas'
 
 Route::get('/perfil', [PageController::class, 'perfil'])->name('perfil');
 
+Route::get('/perfil', [PageController::class, 'perfil'])->name('perfil');
