@@ -74,7 +74,7 @@
         <div class="row danca">
             <div class="col-6">
                 <label for="tp_danca">Tipo de Dança:</label>
-                <select id="tp_danca" class="form-control">
+                <select class=" tp_danca form-control">
                     <option value="hip-hop">Hip-Hop</option>
                     <option value="Ballet">Ballet</option>
                     <option value="Folclore">Folclore</option>
@@ -177,7 +177,7 @@
                 </div>
                 <div class="col-6">
                     <label for="tp_modalidade">Tipo de Modalidade:</label>
-                    <select id="tp_modalidade" class="form-control">
+                    <select id="tp_modalidade" class="form-control ">
                         <option value="hip-hop">Hip-Hop</option>
                         <option value="Ballet">Ballet</option>
                         <option value="Folclore">Folclore</option>
@@ -246,10 +246,10 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button type="submit" class="btn btn-primary" id="enviar">Submeter
+                    <button type="submit" class="btn btn-primary" id="sub">Submeter
                         <i class="fa-solid fa-square-check"></i>
                     </button>
-                    <button type="reset" class="btn btn-secondary" id="tirar">Limpar
+                    <button type="reset" class="btn btn-secondary" id="limpar">Limpar
                         <i class="fa-solid fa-brush"></i>
                     </button>
                 </div>
@@ -257,4 +257,13 @@
         </form>
     </div>
 </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jQuery/3.3.1/jQuery.min.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+    $(document).on('change','.tp_danca.form-control',function(){
+        console.log("funciona");
+    });
+ });
+
+</script>
 @endsection
