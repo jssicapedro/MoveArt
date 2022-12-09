@@ -97,7 +97,6 @@
                 </article>
 
                 <article class="cart card--2">
-                    <div class="card_info-hover"></div>
                     <div class="card_img"></div>
                     <div class="card_img--hover"></div>
                     <div class="card_info">
@@ -257,11 +256,14 @@
         </form>
     </div>
 </section>
-<script src="https://ajax.googleapis.com/ajax/libs/jQuery/3.3.1/jQuery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 <script type="text/javascript">
  $(document).ready(function(){
-    $(document).on('change','.tp_danca.form-control',function(){
+    $(document).on('change','.tp_danca',function(){
         console.log("funciona");
+    
+    var dan_id=$(this).val();
+    console.log(dan_id);
     });
  });
 
