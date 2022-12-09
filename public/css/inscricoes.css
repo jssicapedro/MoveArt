@@ -119,13 +119,13 @@ input#email {
     font-size: 14pt;
 }
 
-button#enviar {
+button#enviar,#sub {
     background-color: #f19fc5;
     border: 1px solid #f19fc5;
     box-shadow: 0px 3px 0px #bc7d9a;
 }
 
-button#tirar {
+button#tirar,#limpar {
     background-color: #dadada;
     border: 1px solid #dadada;
     box-shadow: 0px 3px 0px #b5b5b5;

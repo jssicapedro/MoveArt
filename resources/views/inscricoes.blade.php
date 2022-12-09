@@ -100,7 +100,7 @@
                     <div class="card_img"></div>
                     <div class="card_img--hover"></div>
                     <div class="card_info">
-                        <span class="card_epoca">Mensal</span>
+                        <span class="card_epoca">Mensa</span>
                         <input type="radio" name="mensal" id="mensal">
                         <h3 class="card_preco">{{$preco->valor_mensal}}€</h3>
 
@@ -256,6 +256,8 @@
         </form>
     </div>
 </section>
+@endsection
+@section('script')
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 <script type="text/javascript">
  $(document).ready(function(){
