@@ -150,6 +150,15 @@ class UsersSeeder extends Seeder
             'perfil'=> 'professor',
             'password'=> bcrypt('03h9THp$'),
         ],
+        [
+            'primeiro' => 'Jessica',
+            'apelido' => 'Pedro',
+            'email' => 'jessicapedro@gmail.com',
+            'data_nasc' => '2002-06-15',
+            'genero' => 'feminino',
+            'perfil'=> 'admin',
+            'password'=> bcrypt('jpeuneh9#'),
+        ],
     ]);
     }
 }

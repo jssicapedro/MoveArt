@@ -6,6 +6,14 @@
 <link href="{{ asset('css/perfil.css') }}" rel="stylesheet">
 @endsection
 
+@section('hero')
+
+<div class="titulo_perfil">
+    <h1>Meu Perfil</h1>
+</div>
+
+@endsection
+
 @section('main')
 
 <div class="container todas_informacoes_perfil">
@@ -14,6 +22,7 @@
     </div>
 
     <div class="texto_perfil">
+      <h2>Nome</h2>
         <div class="row">
             <div class="primeiro_nome_perfil col-6">
                 <p>Diogo</p>
@@ -24,19 +33,20 @@
                 <p>Santos</p>
             </div>
         </div>
-    
+        <hr>
+        <h3>Email</h3>
         <div class="email_da_pessoa_perfil">
             <p>ptdiogohd@gmail.com</p>
         </div>
-    
-    
+        <hr>
+        <h4>numero</h4>
         <div class="contacto_da_pessoa_perfil">
             <p>914960317</p>
         </div>
 
         <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Launch static backdrop modal
+        Edita aqui
   </button>
   
   <!-- Modal -->
@@ -57,7 +67,7 @@
       </div>
     </div>
   </div>
-    </div> 
+  </div> 
     
     
 
