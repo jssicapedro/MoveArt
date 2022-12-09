@@ -23,7 +23,8 @@ class User extends Authenticatable
         'email',
         'data_nasc',
         'genero',
-        'perfil','kk',
+        'perfil',
+        'password',
        
     ];/* colunas de preenchimento possivel */
 
