@@ -15,8 +15,8 @@
 }
 
 .todas_informacoes_perfil{
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-evenly; */
     margin-top: 100px;
 }
 
@@ -27,10 +27,10 @@
 }
 
 .texto_perfil p{
-    font-size:  25pt;
+    font-size:  15pt;
 }
 
 .texto_perfil h2, .texto_perfil h3, .texto_perfil h4{
-    font-size:  30pt;
+    font-size:  20pt;
 }
 
