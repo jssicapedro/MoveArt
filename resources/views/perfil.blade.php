@@ -24,27 +24,30 @@
     <div class="texto_perfil">
       <div class="row">
         <h2>Nome</h2>
-          <div class="primeiro_nome_perfil col-4">
+          <div class="primeiro_nome_perfil col-6">
               <p>Primeiro: {{ Auth::user()->primeiro }}</p>
           </div>
     
     
-          <div class="apelido_nome_perfil col-4">
+          <div class="apelido_nome_perfil col-6">
             <p>Apelido: {{ Auth::user()->apelido }}</p>
           </div>
-        
-        
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-6">
           <h3>Email</h3>
-          <div class="email_da_pessoa_perfil col-4">
+          <div class="email_da_pessoa_perfil ">
             <p>{{ Auth::user()->email }}</p>
           </div>
-      </div>
-        <hr>
+          </div>
+      <div class="col-6">
         <h4>numero</h4>
-        <div class="contacto_da_pessoa_perfil">
+        <div class="contacto_da_pessoa_perfil ">
             <p>{{ Auth::user()->telefone }}</p>
         </div>
-
+      </div>
+</div>
         <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Edita aqui

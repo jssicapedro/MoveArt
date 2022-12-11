@@ -156,6 +156,7 @@ class UsersSeeder extends Seeder
             'email' => 'jessicapedro@gmail.com',
             'data_nasc' => '2002-06-15',
             'genero' => 'feminino',
+            'telefone' => '956854758',
             'perfil'=> 'admin',
             'password'=> bcrypt('jpeuneh9#'),
         ],
