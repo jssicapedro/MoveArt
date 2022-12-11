@@ -1,5 +1,3 @@
-<!-- max-width -->
-<!-- trocar o display none das modalidades normal e mobile -->
 <!DOCTYPE html>
 <html lang="pt">
 

@@ -28,7 +28,7 @@
     --castanho: #d8987d;
     --rosaE: #d37dda;
     --roxo: #b693f7;
-  }
+}
 
 html{
     font-family: var(--poppins);
@@ -44,4 +44,57 @@ header nav #mode{
     width: 45px;
   height: 45px;
   cursor: pointer;
+}
+
+.load{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--branco);
+}
+
+#loading{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    /*change these sizes to fit into your project*/
+    width:100px;
+    height:100px;
+    z-index: 100000;
+}
+
+#loading hr{
+    border:0;
+    margin:0;
+    width:40%;
+    height:40%;
+    position:absolute;
+    border-radius:50%;
+    animation:spin 2s ease infinite;
+}
+    
+#loading :first-child{
+    background: var(--rosa);
+    animation-delay:-1.5s
+}
+
+#loading :nth-child(2){
+    background:var(--amarelo);
+    animation-delay:-1s;
+}
+
+#loading :nth-child(3){
+    background: var(--castanho);
+    animation-delay:-0.5s;
+}
+
+#loading :last-child{
+    background: var(--roxo);
+}
+    
+@keyframes spin{
+    0%,100%{transform:translate(0)}
+    25%{transform:translate(160%)}
+    50%{transform:translate(160%, 160%)}
+    75%{transform:translate(0, 160%)}
 }

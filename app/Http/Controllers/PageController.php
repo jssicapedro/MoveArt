@@ -79,4 +79,8 @@ class PageController extends Controller
     public function natal(){
         return view('landingPages/natal');
     }
+
+    public function preloader(){
+        return view('preloader');
+    }
 }

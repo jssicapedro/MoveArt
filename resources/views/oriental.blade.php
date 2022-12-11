@@ -3,7 +3,7 @@
 @section('title', 'MoveArt - Danças Orientais')
 
 @section('links')
-<link rel="stylesheet" href="{{asset("css/danca.css")}}">
+<link rel="stylesheet" href="{{asset('css/danca.css')}}">
 @endsection
 
 @section('hero')

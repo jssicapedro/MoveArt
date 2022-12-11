@@ -32,6 +32,13 @@ Route::get('/inscricoes', [PageController::class, 'inscricoes'])->name('inscrico
 
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
+
+
+Route::get('/preloader', [PageController::class, 'preloader'])->name('preloader');
+
+
+
+
 // landing pages Jéssica>Adriana>Diogo>Beatriz>Tiago
 
 Route::get('/notificacoes', [PageController::class, 'notifications'])->name('notifications');
