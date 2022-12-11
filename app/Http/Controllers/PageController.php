@@ -9,6 +9,9 @@ use App\Models\Modalidade;
 
 class PageController extends Controller
 {
+
+
+    /* ------- Front ------- */
     public function index(){
         return view('index');
     }
@@ -60,6 +63,7 @@ class PageController extends Controller
         return view('mapaaulas');
     }
 
+    /* ------- landingPages ------- */
     public function notifications(){
         return view('landingPages/notifications');
     }
@@ -80,7 +84,8 @@ class PageController extends Controller
         return view('landingPages/natal');
     }
 
-    public function preloader(){
-        return view('preloader');
+    /* ------- back ------- */
+    public function modalidades(){
+        return view('admin/modalidades');
     }
 }
