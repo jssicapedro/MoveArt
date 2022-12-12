@@ -265,7 +265,6 @@
         $(document).on('change', '.tp_danca', function() {
             var mod_id = $(this).val();
             var div = $(this).parent();
-            console.log(div);
             var op = " ";
             $.ajax({
                 type: 'GET',
@@ -278,7 +277,6 @@
                 success: function(data) {
 
                     var price = data.valor_mensal;
-                    console.log(price);
                     div.find("span.valor_mensal").html(price);
                 },
                 error: function() {}
@@ -287,7 +285,6 @@
         $(document).on('change', '.tp_danca', function() {
             var mod_id = $(this).val();
             var div = $(this).parent();
-            console.log(div);
             var op = " ";
             $.ajax({
                 type: 'GET',
@@ -300,7 +297,6 @@
                 success: function(data) {
 
                     var price = data.valor_anual;
-                    console.log(price);
                     div.find("span.valor_anual").html(price);
                 },
                 error: function() {}
