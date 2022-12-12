@@ -37,11 +37,11 @@
      <!-- start about us -->
     <section id="about_us">
 
-        <div class="container">
+        <div class="container d-flex align-items-center justify-content-center">
 
             <div class="row sli_all  d-flex align-items-center justify-content-center">
 
-                <div class="col-xl-6 col-md-6 columslider">
+                <div class="col-xl-6 col-md-6 columslider d-flex justify-content-end">
 
 
                     <div id="carouselExampleControls" class="carouselHero carousel slide" data-bs-ride="carousel">
@@ -100,8 +100,10 @@
                 <div class="col-xl-6 col-md-6 order-xl-last order-md-last order-first" id="about_text">
 
                     <div>
-                        <hr style="width:60px; height:23px; text-align:left; padding-bottom: 5px;" id="first-hr">
-                        <h2 class="pb-2">Sobre Nós</h2>
+                        <div class="text32  hr_class1">
+                            <h2>Eventos</h2>
+                            <hr style="width:85px; height:2px; text-align:center; margin:0 0 25px 0;">
+                    </div>
 
                         <div class="pb-2 p_about">
                             <p>Esta instituição de dança foi planeada e desenvolvida para guiar os utilizadores
@@ -167,9 +169,11 @@
                 </div>
 
                 <div class="col-xl-4 col-md-4 col-12 img_box text_box p-0">
-                    <div class="text-center" style="margin: 50px;">
-                        <hr style="width:60px; height:23px; text-align:center; padding-bottom: 5px;" class="hr_all">
-                        <h2>A Nossa Equipa</h2>
+                    <div class="text-center margin_img_people">
+                        <div class="text31  hr_class1">
+                        <h2 style="text-align: center;">A Nossa Equipa</h2>
+                        <hr style="width:85px; height:1px; text-align:center;margin:0px auto 2px auto;">
+                </div>
                         <p>Trabalhamos em equipa para tornar a sua experiência inesquecivel.</p>
                     </div>
                 </div>
@@ -223,8 +227,10 @@
             <div class="row">
                 <div class="col-12 img_box text_box p-0">
                     <div class="text-center" style="margin: 70px 20px 40px 20px;">
-                        <hr style="width:60px !important; height:23px !important; text-align:center !important; padding-bottom: 20px ;" class="hr_all">
-                        <h2>A Nossa Equipa</h2>
+                        <div class="text31  hr_class1">
+                            <h2 style="text-align: center;">A Nossa Equipa</h2>
+                            <hr style="width:85px; height:1px; text-align:center;margin:0px auto 2px auto;">
+                    </div>
                         <p>Trabalhamos em equipa para tornar a sua experiência inesquecivel.</p>
                     </div>
                 </div>
@@ -311,10 +317,12 @@
 
     <!-- start modalidades -->
     <div class="container mod d-grid" style="margin-top: 100px; margin-bottom: 0;">
-        <hr style="width:60px !important; height:23px !important; text-align:center !important;" class="hr_all">
-        <h2 style="text-align: center;">Modalidades</h2>
+        <div class="text31  hr_class1">
+            <h2 style="text-align: center;">Modalidades</h2>
+            <hr style="width:85px; height:2px; text-align:center;margin:0px auto 2px auto;">
     </div>
-    <div class="container spl" style="padding-bottom: 120px;">
+    </div>
+    <div class="container spl text-center" style="padding-bottom: 120px;">
         <section class="splide" aria-labelledby="carousel-heading ">
 
             <div class="splide__track">
@@ -345,40 +353,37 @@
     </div>
     <!-- end modalidades -->
 
+       
+            <!-- start join us -->
+            <section id="join_us">
 
-
-
-    <!-- start join us -->
-    <section id="join_us">
-
-        <div class="banner-image ">
-
-            <div class="banner-image d-flex justify-content-center align-items-center">
-                <div>
-                    <div class="row ban-row" style="background-color: white;">
-
-                        <div class="col-xl-4 col-sm-12 col_h2 pb-2">
-                            <hr style="width:60px; height:23px;" id="left_hr">
-                            <h2>Junta-te A Nós!</h2>
-                        </div>
-                        <div class="col-xl-4 col-sm-12 col_p d-flex justify-content-center align-items-center">
-                            <p>Deixa a dança fazer parte da tua vida e junta-te a nós!</p>
-                        </div>
-                        <div class="col-xl-4 col-sm-12 d-flex justify-content-center align-items-center">
-                            <div class="pink_btn">
-                                <a href="{{ asset('inscricoes') }}">
-                                    <div class="button">Saiba Mais</div>
-                                </a>
+                <div class="banner-image1">
+        
+                    <div class="banner-image1 d-flex justify-content-center align-items-center">
+                        <div>
+                            <div class="row text-center" style="background-color: white;">
+        
+                                <div class="col-xl-12 col-sm-12 col_h21">
+                                   
+                                    <div class="text31  hr_class1">
+                                        <h2 style="text-align: center;">Junta-te A Nós!</h2>
+                                        <hr style="width:85px; height:2px; text-align:center;margin:0px auto 2px auto;">
+                                </div>
+                                    <p>Deixa a dança fazer parte da tua vida e junta-te a nós!</p>
+                                    <div class="pink_btn">
+                                        <a href="{{ asset('inscricoes') }}">
+                                            <div class="button">Saiba Mais</div>
+                                        </a>
+                                    </div>
+                                </div>
+        
                             </div>
                         </div>
-
                     </div>
                 </div>
-            </div>
-        </div>
-
-    </section>
-    <!-- end join us -->
+        
+            </section>
+            <!-- end join us -->
 
 
 
@@ -386,14 +391,16 @@
     <!-- start events -->
     <section id="events">
         <div class="container d-grid events_cont">
-            <hr style="width:60px; height:23px; text-align:center;margin:16px auto 16px auto">
-            <h2 class="pb-4" style="text-align: center;">Eventos</h2>
+            <div class="text31  hr_class1">
+                <h2 style="text-align: center;">Eventos</h2>
+                <hr style="width:85px; height:2px; text-align:center; margin:0px auto 25px auto;">
+        </div>
 
             <div class="row">
 
                 @if (count($evento))
                 @foreach($evento as $eventos)
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 car_col">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 car_col d-flex justify-content-center align-items-top">
                     <div class="card">
                         <div class="card-body">
                             <div class="details_event d-flex justify-content-start">
