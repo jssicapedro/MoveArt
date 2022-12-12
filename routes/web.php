@@ -30,7 +30,9 @@ Route::get('/contactos', [PageController::class, 'contactos'])->name('contactos'
 
 Route::get('/inscricoes', [App\Http\Controllers\InscricaoController::class, 'inscricoes'])->name('inscricoes');
 
-Route::get('/pqmensal', [App\Http\Controllers\InscricaoController::class, 'pqmensal']);
+Route::get('/precomensal', [App\Http\Controllers\InscricaoController::class, 'precomensal']);
+
+Route::get('/precoanual', [App\Http\Controllers\InscricaoController::class, 'precoanual']);
 
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 

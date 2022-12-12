@@ -74,42 +74,39 @@
         <div class="row danca">
             <div class="col-6">
                 <label for="tp_danca">Tipo de Dança:</label>
-                <select class=" tp_danca form-control">
+                <div class="card_tp_inscricao">
+                    <select class=" tp_danca form-control">
                     @foreach($modalidade as $mod)
                     <option value="{{$mod->id}}">{{$mod->modalidade}}</option>
                     @endforeach
-                    <!-- <option value="hip-hop">Hip-Hop</option>
-                    <option value="Ballet">Ballet</option>
-                    <option value="Folclore">Folclore</option>
-                    <option value="danca_espanhola">Dança Espanhola</option>
-                    <option value="danca_oriental">Dança Oriental</option> -->
                 </select>
+                    <section class="cards">
+                        <article class="cart card--1">
+                            <div class="card_img"></div>
+                            <div class="card_img--hover"></div>
+                            <div class="card_info_1">
+                                <span class="card_epoca">Anual</span>
+                                <input type="radio" name="anual" id="anual">
+                                <h3 class="card_preco_1">
+                                    <span class="valor_anual"></span>€
+                                </h3>
+
+                            </div>
+                        </article>
+                        <article class="cart card--2">
+                            <div class="card_img"></div>
+                            <div class="card_img--hover"></div>
+                            <div class="card_info_2">
+                                <span class="card_epoca">Mensal</span>
+                                <input type="radio" name="mensal" id="mensal">
+                                <h3 class="card_preco_2">
+                                    <span class="valor_mensal"></span>€
+                                </h3>
+                            </div>
+                        </article>
+                    </section>
+                </div>
             </div>
-        </div>
-        <div class="card_tp_inscricao">
-            <section class="cards">
-                <article class="cart card--1">
-                    <div class="card_img"></div>
-                    <div class="card_img--hover"></div>
-                    <div class="card_info">
-                        <span class="card_epoca">Anual</span>
-                        <input type="radio" name="anual" id="anual">
-                        <h3 class="card_preco">€</h3>
-
-                    </div>
-                </article>
-
-                <article class="cart card--2">
-                    <div class="card_img"></div>
-                    <div class="card_img--hover"></div>
-                    <div class="card_info">
-                        <span class="card_epoca">Mensal</span>
-                        <input type="radio" name="mensal" id="mensal">
-                        <h3 class="card_preco">€</h3>
-
-                    </div>
-                </article>
-            </section>
         </div>
         <div class="tp_pagamento">
             <div class="titulo">
@@ -264,26 +261,51 @@
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
- $(document).ready(function(){
-    $(document).on('change','.tp_danca',function(){
-    var dan_id=$(this).val();
+    $(document).ready(function() {
+        $(document).on('change', '.tp_danca', function() {
+            var mod_id = $(this).val();
+            var div = $(this).parent();
+            console.log(div);
+            var op = " ";
+            $.ajax({
+                type: 'GET',
+                url: '/precomensal',
+                data: {
+                    'id': mod_id
+                },
+                dataType: 'json',
+                contentType: 'json',
+                success: function(data) {
 
-    $.ajax({
-        type:'GET',
-        url:'/pqmensal',
-        data:{'id':dan_id},
-        dataType: 'json',
-        contentType: 'json',
-        success:function(data){
+                    var price = data.valor_mensal;
+                    console.log(price);
+                    div.find("span.valor_mensal").html(price);
+                },
+                error: function() {}
+            });
+        });
+        $(document).on('change', '.tp_danca', function() {
+            var mod_id = $(this).val();
+            var div = $(this).parent();
+            console.log(div);
+            var op = " ";
+            $.ajax({
+                type: 'GET',
+                url: '/precoanual',
+                data: {
+                    'id': mod_id
+                },
+                dataType: 'json',
+                contentType: 'json',
+                success: function(data) {
 
-            console.log('success');
-            console.log(data);
-            console.log(data.length,dan_id);
-        },
-        error:function(){}
+                    var price = data.valor_anual;
+                    console.log(price);
+                    div.find("span.valor_anual").html(price);
+                },
+                error: function() {}
+            });
+        });
     });
-    });
- });
-
 </script>
 @endsection
