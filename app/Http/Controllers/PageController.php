@@ -10,6 +10,9 @@ use App\Models\Evento;
 
 class PageController extends Controller
 {
+
+
+    /* ------- Front ------- */
     public function index(){
         $evento = Evento::all();
         $modalidade = Modalidade::all();
@@ -64,6 +67,7 @@ class PageController extends Controller
         return view('mapaaulas');
     }
 
+    /* ------- landingPages ------- */
     public function notifications(){
         return view('landingPages/notifications');
     }
@@ -82,5 +86,10 @@ class PageController extends Controller
 
     public function natal(){
         return view('landingPages/natal');
+    }
+
+    /* ------- back ------- */
+    public function modalidades(){
+        return view('admin/modalidades');
     }
 }

@@ -47,7 +47,6 @@
 
 
 <body>
-
     <!-- ======= Header ======= -->
     @include('layout.partials.header ')
 
@@ -59,7 +58,6 @@
     <main id="main">
         @yield('main')
     </main><!-- End Main -->
-
 
 
     <!-- ======= Footer ======= -->

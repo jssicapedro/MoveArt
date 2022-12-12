@@ -13,7 +13,7 @@
 
     <!--Banner-->
     <header class="header">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ asset('/') }}">
             <img src="{{ asset('img/landingpages/landingT/Logo_Hip-Hop_Preto.png') }}" width="190" height="190" alt="">
         </a> 
     </header>
@@ -30,7 +30,7 @@
                 <div class="titulos1">
                     <div class="promocao">
                         <h1>Promoção de Natal</h1>
-                        <a href="#" class="shopnow-btn">Loja</a>
+                        <a href="http://moveloja.epizy.com" target="blanck_" class="shopnow-btn">Loja</a>
                     </div>
                 </div>
             </div>

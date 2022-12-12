@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Erro')
+@section('title', 'Erro 404')
 
 @section('links')
 <link rel="stylesheet" href="{{asset('css/error404.css')}}">
