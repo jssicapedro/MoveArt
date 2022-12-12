@@ -86,7 +86,7 @@
                             <div class="card_img--hover"></div>
                             <div class="card_info_1">
                                 <span class="card_epoca">Anual</span>
-                                <input type="radio" name="anual" id="anual">
+                                <input type="radio" name="tp_ins" value="anual" id="anual">
                                 <h3 class="card_preco_1">
                                     <span class="valor_anual"></span>€
                                 </h3>
@@ -98,7 +98,7 @@
                             <div class="card_img--hover"></div>
                             <div class="card_info_2">
                                 <span class="card_epoca">Mensal</span>
-                                <input type="radio" name="mensal" id="mensal">
+                                <input type="radio" name="tp_ins" value="mensal" id="mensal">
                                 <h3 class="card_preco_2">
                                     <span class="valor_mensal"></span>€
                                 </h3>
@@ -114,19 +114,19 @@
             </div>
             <ul>
                 <li>
-                    <input type="radio" name="paypal" id="paypal">
+                    <input type="radio" name="pagamento" value="paypal" id="paypal">
                     <img src="{{asset('img/inscricoes/paypal.png')}}" alt="">
                 </li>
                 <li>
-                    <input type="radio" name="mbway" id="mbway">
+                    <input type="radio" name="pagamento" value="mbway" id="mbway">
                     <img src="{{asset('img/inscricoes/mb_way.png')}}" alt="">
                 </li>
                 <li>
-                    <input type="radio" name="multibanco" id="multibanco">
+                    <input type="radio" name="pagamento" value="multibanco" id="multibanco">
                     <img src="{{asset('img/inscricoes/multibanco.png')}}" alt="">
                 </li>
                 <li>
-                    <input type="radio" name="visa" id="visa">
+                    <input type="radio" name="pagamento" value="visa" id="visa">
                     <img src="{{asset('img/inscricoes/visa.png')}}" alt="">
                 </li>
             </ul>
