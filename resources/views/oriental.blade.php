@@ -17,9 +17,7 @@
 @section('main')
 <div class="about">
     <div class="txt">
-        <p>Não te fiques apenas pelo que conheces e aprende novas culturas. A nossa escola implementou esta dança só em 2021 mas já contamos com varias conquistas.</p>
-        <br>
-        <p>Contamos com profissionais nativos e professores experientes.</p>
+    {!! $modalidade->descricao !!}
     </div>
     <img src="{{ asset('img/dancas/oriental/oriental_app.png') }}" alt="Criança a treinar oriental de tutu dentro de uma forma irregular sem background e com borda de cor de rosa">
 </div>
@@ -37,21 +35,6 @@
         @else
         <h6>Não existem categorias registadas</h6>
         @endif
-        <!-- <div>
-            <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/oriental/oriental_prof_.png') }}" alt="">
-            <img class="prof" src="{{ asset('img/dancas/oriental/orientadores(3).png') }}" alt="">
-            <h3>Denise</h3>
-        </div>
-        <div>
-            <img class="grafic2" style="position: absolute;" src="{{ asset('img/dancas/oriental/oriental_prof_.png') }}" alt="">
-            <img class="prof" src="{{ asset('img/dancas/oriental/orientadores(2).png') }}" alt="">
-            <h3>Sandra</h3>
-        </div>
-        <div>
-            <img class="grafic3" style="position: absolute;" src="{{ asset('img/dancas/oriental/oriental_prof_.png') }}" alt="">
-            <img class="prof" src="{{ asset('img/dancas/oriental/orientadores(1).png') }}" alt="">
-            <h3>Carina</h3>
-        </div> -->
     </div>
 </div>
 <div class="calendar">

@@ -69,5 +69,23 @@ class PageController extends Controller
         return view('perfil');
     }
 
-    
+    public function notifications(){
+        return view('landingPages/notifications');
+    }
+
+    public function landingA(){
+        return view('landingPages/landingA');
+    }
+
+    public function landingD(){
+        return view('landingPages/landingD');
+    }
+
+    public function eventos(){
+        return view('landingPages/eventos');
+    }
+
+    public function natal(){
+        return view('landingPages/natal');
+    }
 }

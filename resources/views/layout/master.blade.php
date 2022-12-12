@@ -27,6 +27,9 @@
   <link href="{{ asset('css/comum.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/footer.css')}}">
   
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- ### SlideShow ### -->
   <link rel="stylesheet" href="{{asset('js/splide/dist/css/splide.min.css')}}">
   <script src="{{asset('js/splide/dist/js/splide.min.js')}}"></script>

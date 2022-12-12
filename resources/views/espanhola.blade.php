@@ -17,9 +17,7 @@
 @section('main')
 <div class="about">
     <div class="txt">
-        <p>A dança espanhola é conhecida pelos movimentos elegantes. A dança espanhola mais conhecida é o Flamingo, e é esta à qual a MoveArt dá mais atenção.</p>
-        <br>
-        <p>A nossa Instituição foi premiada em 2018 como a melhor escola de Leiria de Flamingo. Aprende esta modalidade com os nosso profissionais de topo.</p>
+    {!! $modalidade->descricao !!}
     </div>
     <img src="{{ asset('img/dancas/espanhola/espanhola_app.png') }}" alt="Criança a treinar espanhola de tutu dentro de uma forma irregular sem background e com borda de cor de rosa">
 </div>
@@ -37,21 +35,6 @@
         @else
         <h6>Não existem categorias registadas</h6>
         @endif
-        <!-- <div>
-            <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/espanhola/espanhola_prof_.png') }}" alt="">
-            <img class="prof" src="{{ asset('img/dancas/espanhola/orientadores(3).png') }}" alt="">
-            <h3>Catrina</h3>
-        </div>
-        <div>
-            <img class="grafic2" style="position: absolute;" src="{{ asset('img/dancas/espanhola/espanhola_prof_.png') }}" alt="">
-            <img class="prof" src="{{ asset('img/dancas/espanhola/orientadores(2).png') }}" alt="">
-            <h3>Íris</h3>
-        </div>
-        <div>
-            <img class="grafic3" style="position: absolute;" src="{{ asset('img/dancas/espanhola/espanhola_prof_.png') }}" alt="">
-            <img class="prof" src="{{ asset('img/dancas/espanhola/orientadores(1).png') }}" alt="">
-            <h3>Afonso</h3>
-        </div> -->
     </div>
 </div>
 <div class="calendar">

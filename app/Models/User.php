@@ -25,11 +25,7 @@ class User extends Authenticatable
         'cc',
         'genero',
         'perfil',
-        'modalidade',
-        'type_insc',
-        'metod_pag',
-        'password'
-       
+        'password',       
     ];/* colunas de preenchimento possivel */
 
 /* select * from = user:: */

@@ -1,0 +1,582 @@
+/* roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* amaranth */
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --branco: #f4f4f4;
+    --preto: #000;
+    --rosa: #eeb2b5;
+    --amarelo: #f7d5a1;
+    --castanho: #d6a996;
+    --rosaE: #d296d6;
+    --roxo: #c7adf7;
+
+    --roboto: 'Roboto', sans-serif;
+    --amaranth: 'Amaranth', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--preto);
+    background-color: var(--branco);
+}
+
+header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+header img{
+    width: 250px;
+}
+
+header,
+main {
+    max-width: 80vw;
+}
+
+h1 {
+    font-family: var(--amaranth);
+    font-size: 100px;
+}
+
+h2 {
+    font-family: var(--roboto);
+    font-sizie: 55px;
+}
+
+h3 {
+    font-family: var(--amaranth);
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.modalidades,
+.professores,
+.eventos,
+.novidades,
+footer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro .slogan_ {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.intro .slogan_ a {
+    width: 200px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 56px;
+    text-decoration: none;
+    color: var(--preto);
+    background-color: var(--rosa);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px #00000026;
+    font-family: var(--roboto) !important;
+    font-size: 20px;
+}
+
+.intro .slogan_ a:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--rosaE);
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+
+.intro .slogan_ a:hover {
+    color: #fff;
+}
+
+.intro .slogan_ a:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.intro .slogan_ a:active {
+    top: 2px;
+}
+
+/* modalidades */
+a{
+    color: var(--preto);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--preto);
+    transform: scale(1.1);
+    transition: transform 0.4s ease-in-out;
+}
+
+.modalidades .baralho {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.modalidades .card {
+    width: 250px;
+    border: 1px solid #393939;
+}
+
+.modalidades .card .img {
+    width: 250px;
+    height: 250px;
+    z-index: 1;
+}
+
+.modalidades .card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center bottom;
+}
+
+.modalidades .ballet,
+.hiphop,
+.rancho,
+.oriental,
+.espanhola {
+    background-color: var(--branco);
+}
+
+.modalidades .ballet .card-body {
+    width: 100%;
+    background-color: var(--rosa);
+}
+
+.modalidades .hiphop .card-body {
+    width: 100%;
+    background-color: var(--amarelo);
+}
+
+.modalidades .rancho .card-body {
+    width: 100%;
+    background-color: var(--castanho);
+}
+
+.modalidades .oriental .card-body {
+    width: 100%;
+    background-color: var(--rosaE);
+}
+
+.modalidades .espanhola .card-body {
+    width: 100%;
+    background-color: var(--roxo);
+}
+
+.modalidades .card-body {
+    text-align: center;
+}
+
+/* professores */
+.prof {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.prof .card_p {
+    width: 200px;
+    height: 285px;
+    background: #FFFFFF;
+    border-radius: 35px;
+    margin: 20px;
+}
+
+.prof .card_p img:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease-in-out;
+}
+
+.prof .card_p img {
+    width: 200px;
+    height: 202px;
+    object-fit: cover;
+    border-radius: 30px;
+    background: linear-gradient(140deg, rgba(247,213,161,1) 0%, rgba(199,173,247,1) 100%);
+}
+
+.prof .card_p .cont {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 0;
+}
+
+.prof .card_p .cont h1 {
+    font-family: var(--amaranth);
+    font-size: 20px;
+}
+
+.prof .card_p .cont h2 {
+    font-family: var(--roboto);
+    font-weight: 200;
+    font-size: 20px;
+}
+
+/* os nossos eventos */
+.card_event {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card_event .img-even:hover{
+    transform: scale(1.1);
+    transition: transform 0.4s ease-in-out;
+}
+
+.even {
+    background-color: #fff;
+    width: 270px;
+    height: 325px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+}
+
+.even .img-even {
+    width: 255px;
+    height: 184px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.evento{
+    background: url('../img/landingpages/notifications/arlivre.jpg');
+    background-size: 110%;
+    background-position: center;
+}
+
+.evento1{
+    background: url('../img/landingpages/notifications/naopares.jpg');
+    background-size: 110%;
+    background-position: center;
+}
+
+.evento2{
+    background: url('../img/landingpages/notifications/moverte.jpg');
+    background-size: 110%;
+    background-position: center;
+}
+
+
+.even .img-even .dia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    background-color: #ffffff50;
+    border: 2px solid #fff;
+    border-radius: 15px 29px 15px 15px;
+    color: #fff;
+    font-weight: bold;
+    font-family: var(--roboto);
+}
+
+.even .img-even .dia p {
+    text-align: center;
+    margin: 0;
+}
+
+.even .desc-even {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 133px;
+    gap: 13px;
+}
+
+.even .desc-even h1 {
+    font-family: var(--amaranth);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.even .desc-even h2 {
+    font-family: var(--robot);
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.even .desc-even h2 span img {
+    width: 15px;
+    display: flex;
+}
+
+.even .desc-even a {
+    width: 144px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.even:nth-child(1) a {
+    background-color: var(--amarelo);
+}
+
+.even:nth-child(2) a {
+    background-color: var(--castanho);
+}
+
+.even:nth-child(3) a {
+    background-color: var(--rosaE);
+}
+
+/* novidades */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form .squar {
+    border: 1px solid var(--preto);
+    width: 340px;
+    height: 325px;
+    left: 70px;
+    position: relative;
+}
+
+.form .squar img {
+    width: 435px;
+    height: 326px;
+    object-fit: cover;
+    position: relative;
+    right: 70px;
+    z-index: 3;
+}
+
+.form .form_form {
+    background-color: #D9D9D9;
+    width: 580px;
+    height: 300px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form .form_form .form_cont {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form .form_form h1.novidades_h1 {
+    font-family: var(--roboto);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.form .form_form .dados {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form .form_form .dados .mb-3 {
+    margin: 0 !important;
+}
+
+.form .form_form .form_cont .dados label {
+    font-family: var(--roboto);
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.form .form_form .form_cont .dados input {
+    height: 30px;
+}
+
+.form .form_form .form_cont .btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.form .form_form .form_cont .btn button {
+    margin-top: 20px;
+    width: 125px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #C7ADF7;
+    border: 0px;
+    color: #fff;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+footer img {
+    width: 180px;
+}
+
+footer .redes {
+    margin: 10px 0;
+    display: flex;
+    gap: 40px;
+}
+
+footer .redes a {
+    text-decoration: none;
+}
+
+footer .redes a img {
+    width: 20px;
+}
+
+footer .hr {
+    width: 90%;
+    height: 1px;
+    border: 1px solid #00000059;
+    margin: 10px 0;
+}
+
+/* mobile */
+@media (max-width:1800px){
+    header,main{
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .intro .slogan_ a:after {
+       clear: both;
+    }
+    
+    .intro .slogan_ a:hover {
+       clear: both;
+    }
+    
+    .intro .slogan_ a:hover:after {
+       clear: both;
+    }
+    
+    .intro .slogan_ a:active {
+       clear: both;
+    }
+}
+
+@media (max-width: 1200px) {
+    header,
+    main {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 1030px) {
+    header,
+    main {
+        width: 80vw;
+    }
+
+    .intro {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .intro .slogan_ {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .form {
+        flex-direction: column;
+    }
+
+    .form .squar {
+        width: 90%;
+        height: 165px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .form .squar img {
+        width: 75%;
+        position: relative;
+        right: 0px;
+        z-index: 3;
+        top: -25px;
+    }
+
+    footer {
+        margin: 20px 0;
+    }
+}
