@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --header-height: 3.5rem;
+
+  /*Cores*/
+  --first-color:#780000;
+  --button-color: hsl(0, 0%, 17%);
+  --button-color-alt: hsl(0, 0%, 21%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --text-color-light: hsl(0, 0%, 55%);
+  --body-color: hsl(0, 0%, 99%);
+  --container-color: #fff;
+  --border-color: hsl(0, 0%, 94%);
+
+  /*Fontes*/
+  --body-font: 'Roboto', sans-serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*weight das fontes*/
+  --font-medium: 500;
+  --font-bold: 700;
+
+  /*Margens de baixo*/
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem!important;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body,
+button,
+input {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.section {
+  padding: 6.5rem 0 1rem;
+}
+
+.section__titulo {
+  position: relative;
+  margin-bottom: var(--mb-3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.section__titulo::before {
+  content: '';
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 67px;
+  height: 1px;
+  background-color: var(--first-color);
+}
+
+
+/*Butoes*/
+.button {
+  display: inline-block;
+  background-color: var(--button-color);
+  color: #FFF;
+  padding: 1.25rem 2rem;
+  font-weight: var(--font-medium);
+  transition: .3s;
+  font-size: 13px;
+}
+
+
+/*BANNER*/
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 7%;
+  background-color: #ffffff;
+  z-index: 100000;
+}
+.header #logo{
+  font-size: 3.5rem;
+  color: black;
+}
+
+.banner{
+  background:url('../img/landingpages/landingT/nice-christmas-background-white-background-with-copy-space.jpg');
+  background-size: cover;
+  background-position: center;
+  margin-top: 6%;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.titulo{
+  flex: 1 1 45rem;
+}
+.titulos1 h1{
+  font-size: 70px;
+  letter-spacing: 3px;
+  color: rgb(189 0 0);
+  font-weight: 900;
+}
+.textos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.titulos1{
+  flex:1 1 30rem;
+}
+.titulos1 p{
+  font-size: 18px;
+  color: rgb(189 0 0);
+  font-weight: 500;
+}
+.titulos1 i{
+  font-size: 2rem;
+}
+.promocao{
+  background: #780000;
+  padding: 2rem 2rem;
+  
+}
+.promocao h1{
+  color: white;
+}
+.promocao p{
+  color: white;
+  font-size: 1.5rem;
+  padding: .5rem 0;
+}
+.promocao span{
+  color: white;
+  font-size: 1.7rem;
+  margin-right: 1rem;
+}
+.shopnow-btn{
+  display: block;
+  padding: 1rem 2rem;
+  background-color: white;
+  width: 40%;
+  border-radius: 15px;
+  margin-left: 30%;
+  color: rgb(189 0 0);
+  margin-top: 6%;
+  font-size: 1.7rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight:900;
+}
+
+/*Destaques*/
+.destaques__container {
+  row-gap: 2.5rem;
+}
+
+.destaques__card {
+  position: relative;
+  text-align: center;
+  background-color: var(--container-color);
+  padding-top: 2rem;
+  border: 1px solid var(--border-color);
+  overflow-y: hidden;
+  transition: .3s;
+}
+
+.destaques__tag {
+  background-color: #1adb00;
+  padding: .5rem 1rem;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  position: absolute;
+  transform: rotate(-90deg);
+  left: -1rem;
+  top: 3rem;
+  font-weight:900;
+}
+
+.destaques__img {
+  height: 300px;
+  margin-bottom: var(--mb-1);
+  margin-top: -7%;
+  width: 100%;
+}
+
+.destaques_titulo {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-bold);
+}
+
+.destaques_titulo {
+  text-transform: uppercase;
+  margin-bottom: var(--mb-0-75);
+}
+
+
+
+/*Produtos*/
+.produtos__container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.produtos__card {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.25rem 0;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: .3s;
+}
+
+.produtos_titulo, 
+.preco_produtos {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.produtos_titulo {
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top: 6%;
+}
+
+.preco_produtos {
+  color: hsl(0deg 100% 38%);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/*Newsletter*/
+.newsletter__bg {
+  background-color: var(--first-color);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  row-gap: 2.5rem;
+}
+
+.newsletter__title {
+  font-size: var(--h1-font-size);
+  color: hsl(0deg 0% 100%);
+  margin-bottom: var(--mb-1-5);
+}
+
+.newsletter__description {
+  color: hsl(0, 0%, 35%);
+}
+
+.newsletter_subscreve {
+  display: flex;
+  flex-direction: column;
+  row-gap: .75rem;
+}
+
+.newsletter__input {
+  border: none;
+  outline: none;
+  background-color: hsl(0, 0%, 94%);
+  padding: 1.25rem 1rem;
+  color: hsl(0, 0%, 15%);
+}
+
+/*=============== FOOTER ===============*/
+
+
+.footer__copy {
+  display: block;
+  margin: 3.5rem 0 1rem 0;
+  text-align: center;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+
+/*Responsivo*/
+
+@media screen and (min-width: 576px) {
+  .home__img-bg {
+    width: 340px;
+  }
+
+  .destaques__container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  
+  .home__container {
+    padding-top: 6rem;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+  }
+  .home__img-bg {
+    order: 1;
+    transform: translate(1.5rem, -6rem);
+  }
+
+
+  .destaques_titulo, .destaques__price {
+    font-size: 13px;
+  }
+
+  .story__container,
+  .testimonial__container,
+  .newsletter__bg {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  
+  .produtos__container {
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .produtos__card {
+    padding: 2rem 0;
+  }
+  .produtos__img {
+    height: 205px;
+    width: 100%;
+    margin-top: -10%;
+  }
+
+  .newsletter__bg {
+    text-align: initial;
+    column-gap: 2rem;
+    padding: 4.5rem;
+  }
+  .newsletter_subscreve {
+    flex-direction: row;
+  }
+  .newsletter__input {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .home__container {
+    column-gap: 2rem;
+  }
+  .home__img-bg {
+    width: 650px;
+    height: 680px;
+  }
+  .home__img {
+    width: 650px;
+    height: 680px;
+  }
+
+  .home__data {
+    padding: 0 0 8rem 6rem;
+  }
+
+  .destaques__container {
+    grid-template-columns: repeat(3, 312px);
+    padding-top: 2rem;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}
+
+
+@media (max-width:768px) {
+  html{
+      font-size: 50%;
+  }
+  #menu-bar{
+      display: initial;
+  }
+  .header{
+      padding: 2rem;
+  }
+  .navbar{
+      position: absolute;
+      top: 100%;
+      width: 50rem;
+      background: var(--maincolor);
+      height: 100vh;
+      left:100%;
+  }
+
+}

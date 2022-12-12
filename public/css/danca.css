@@ -36,7 +36,7 @@ main {
 }
 
 .espanhola{
-    background-image: linear-gradient(#ffffff65,#00000073),url('../img/dancas/espanhola/espanhola.png');
+    background-image: linear-gradient(#ffffff65,#00000073),url('../img/dancas/espanhola/1.png');
 }
 
 .oriental{
@@ -44,7 +44,7 @@ main {
 }
 
 .folclore{
-    background-image: linear-gradient(#ffffff65,#00000073),url('../img/dancas/folclore/folclore.png');
+    background-image: linear-gradient(#ffffff65,#00000073),url('../img/dancas/folclore/1.png');
 }
 
 .advisors, .calendar{
@@ -68,7 +68,7 @@ main {
 
 .img_banner{
     width: 100vw;
-    height: 65vh;
+    height: 70vh;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -77,6 +77,7 @@ main {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 0px 8px 20px 5px #00000033;
 }
 
 .about{

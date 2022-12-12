@@ -34,14 +34,9 @@
 #about_text {
   padding-left: 80px;
 }
-
-hr {
-  padding-bottom: 5px;
-  background: #E6AB97;
-  opacity: 100%;
-  border: 0px;
+#about_text p {
+  width: 80%;
 }
-
 
 .carouselHero .carousel-item img {
   object-fit: cover !important;
@@ -66,8 +61,11 @@ hr {
 }
 
 .card {
-  background-color: #F7F7F7;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   border: 0;
+  height: 85%;
+  width: 90%;
 }
 
 .img_event {
@@ -171,8 +169,8 @@ hr {
   margin: 0;
 }
 .events_cont{
-  margin-top: 44px; 
-  margin-bottom: 80px;
+  margin-top: 80px; 
+  margin-bottom: 0px;
 }
   .ban-row{
     width: 45vw;
@@ -184,7 +182,7 @@ hr {
 }
 
 
-@media screen and (min-width: 956px) {
+@media screen and (min-width: 986px) {
   .text_box{
     display: flex;
     justify-content: center;
@@ -217,14 +215,34 @@ hr {
       }
 }
 
-#left_hr{
-  margin: 0 0 20px 0 !important;
+.slide{
+  width: 80%;
 }
-#first-hr{
-  margin: 0 0 20px 0 !important;
+@media screen and (max-width: 768px){
+  .slide{
+    width: 100%;
+    padding: 40px 0;
+  }
+  #about_text {
+    padding: 0;
 }
 
-@media screen and (max-width: 987px) {
+#about_text p {
+  width: 100%;
+}
+}
+@media screen and (max-width: 582px) {
+  #about_text{
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 986px) {
+
+  #hero_text h1 {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 67px;
+}
   .group_equipa2 .box-container .row .box {
     display: none;
 
@@ -254,9 +272,7 @@ hr {
     background-color: #a4796a;
     color:#fff;
   }
-  #about_text{
-    padding: 0 10px 50px 10px;
-  }
+
   #about_us {
     margin: 50px 0 20px 0;
   }
@@ -296,8 +312,8 @@ hr {
     height: 300px;
   }
   .events_cont{
-    margin-top: 40px; 
-    margin-bottom: 30px;
+    margin-top: 60px; 
+    margin-bottom: 0px;
   }
   .details_event h6{
     font-size: 14px;
@@ -417,4 +433,85 @@ hr {
     -moz-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
   }
+}
+
+
+
+
+
+
+
+
+.banner-image1 {
+  height: 80vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.416), rgba(0, 0, 0, 0.416)),
+  url('../img/inicio/img.jpg');
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+.col_h21{
+  padding: 80px;
+}
+.text31 h2{
+  font-size: 32px;
+  font-weight: bold;
+  color: #261301;
+  display: flex;
+  justify-content: center;
+}
+.text32 h2{
+  font-size: 32px;
+  font-weight: bold;
+  color: #261301;
+  display: flex;
+  justify-content: left;
+
+}
+.hr_class1 hr{
+  color: #E6AB97;
+  background-color: #E6AB97;
+  opacity: 1;
+  height: 5px !important;
+}
+
+.text31{
+  padding: 0 0 20px 0 ;
+}
+
+
+@media screen and (max-width: 726px){
+  .card {
+    height: 85%;
+    width: 100%;
+  }
+  .car_col {
+    padding-bottom: 0;
+    height: auto;
+}
+  .col_h21{
+    padding: 30px;
+    width: 100vw !important;
+
+  }
+}
+@media screen and (max-width: 1293px) {
+  .img_box{
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+    overflow: hidden;
+  } 
+}
+.margin_img_people{
+  margin: 0px 50px;
+}
+#hero_text p {
+  font-size: 25px;
+  line-height: 36px;
+  margin-bottom: 3rem;
+}
+#about_text p{
+  margin-bottom: 2rem;
 }

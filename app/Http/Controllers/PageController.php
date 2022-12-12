@@ -5,12 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Modalidade;
+use App\Models\Evento;
 
 
 class PageController extends Controller
 {
+
+
+    /* ------- Front ------- */
     public function index(){
-        return view('index');
+        $evento = Evento::all();
+        $modalidade = Modalidade::all();
+        
+        return view('index', compact('evento'), compact('modalidade'));
     }
     public function ballet(){
         $modalidade = Modalidade::where('modalidade', 'ballet')->first();
@@ -56,4 +63,30 @@ class PageController extends Controller
     }
 
     protected $table='modalidade';
+
+    /* ------- landingPages ------- */
+    public function notifications(){
+        return view('landingPages/notifications');
+    }
+
+    public function landingA(){
+        return view('landingPages/landingA');
+    }
+
+    public function landingD(){
+        return view('landingPages/landingD');
+    }
+
+    public function eventos(){
+        return view('landingPages/eventos');
+    }
+
+    public function natal(){
+        return view('landingPages/natal');
+    }
+
+    /* ------- back ------- */
+    public function modalidades(){
+        return view('admin/modalidades');
+    }
 }

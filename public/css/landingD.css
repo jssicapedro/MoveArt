@@ -1,0 +1,365 @@
+html {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.espaco {
+  margin: 200px;
+}
+
+
+
+/* primeiro espaco */
+.primeiro_espaco_escondido{
+  display: none !important;
+}
+
+.primeiro_espaco {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 200px;
+
+}
+
+.primeiro_espaco_texto h1 {
+  color: #d296d6;
+  font-size: 100pt;
+}
+
+.primeiro_espaco_texto h2 {
+  font-size: 75pt;
+}
+
+.primeiro_espaco_texto p {
+  font-size: 25pt;
+}
+
+/*Botão*/
+.ponto-1 {
+  width: 90%;
+
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+.btn-6 {
+  background: rgb(247, 150, 192);
+  background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+
+.btn-6 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-6:before,
+.btn-6:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 1px;
+  box-shadow:
+    -1px -1px 20px 0px rgba(255, 255, 255, 1),
+    -4px -4px 5px 0px rgba(255, 255, 255, 1),
+    7px 7px 20px 0px rgba(0, 0, 0, .4),
+    4px 4px 5px 0px rgba(0, 0, 0, .3);
+}
+
+.btn-6:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+
+.btn-6:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+
+.btn-6:hover {
+  background: transparent;
+  color: #76aef1;
+  box-shadow: none;
+}
+
+.btn-6:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+
+.btn-6:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+
+.btn-6 span:before,
+.btn-6 span:after {
+  position: absolute;
+  content: "";
+  box-shadow:
+    -1px -1px 20px 0px rgba(255, 255, 255, 1),
+    -4px -4px 5px 0px rgba(255, 255, 255, 1),
+    7px 7px 20px 0px rgba(0, 0, 0, .4),
+    4px 4px 5px 0px rgba(0, 0, 0, .3);
+}
+
+.btn-6 span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+
+.btn-6 span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+
+.btn-6 span:hover:before {
+  width: 100%;
+}
+
+.btn-6 span:hover:after {
+  width: 100%;
+}
+
+.figura_1 {
+  width: 300px;
+  height: 300px;
+  background-image: linear-gradient(-215deg, #eeb2b5 0%, rgba(255, 255, 255, 0) 40%, rgba(0, 255, 255, 0) 60%, #f4f4f4 100%), linear-gradient(45deg, #f7d5a1 0%, #d296d6 100%);
+  margin-top: 50px;
+  margin-left: 50px;
+  /* Rotação */
+  transform: rotate(-45deg);
+}
+
+.img_figura_1 {
+  margin: -165px -40px;
+  transform: rotate(15deg);
+}
+
+/* segundo espaço */
+.cards_todos_estilos_de_dança {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+.card {
+  object-fit: cover;
+  border: none !important;
+}
+
+.card-img-top {
+  border: 1px solid black;
+  border-radius: 30px !important;
+}
+
+.btn-primary {
+  background: radial-gradient(circle, #d59cd1 0%, rgb(236 178 183) 100%);
+  border: none !important;
+  margin-left: 30%;
+}
+
+.card-title {
+  text-align: center;
+}
+
+/* terceiro espaço  */
+
+.segundo_espaço {
+  display: flex;
+  justify-content: space-around;
+}
+
+.segundo_espaço_testo h3 {
+  font-size: 65pt;
+  margin-top: 15%;
+}
+
+.segundo_espaço_testo p {
+  font-size: 25pt;
+  width: 85%;
+}
+
+.congunto_de_figuras {
+  display: flex;
+}
+
+.figura_2 {
+  width: 300px;
+  height: 300px;
+  background: rgb(210, 150, 214);
+  background: linear-gradient(315deg, rgba(210, 150, 214, 1) 0%, rgba(238, 178, 181, 1) 50%, rgba(199, 173, 247, 1) 100%);
+  margin-top: 150px;
+  border-radius: 100px;
+}
+
+.img_figura_2 {
+  margin: 0px -48px;
+}
+
+.figura_3 {
+  width: 150px;
+  height: 150px;
+  background: rgb(227, 167, 194);
+  background: linear-gradient(315deg, rgba(227, 167, 194, 1) 0%, rgba(238, 178, 181, 1) 50%, rgba(212, 174, 225, 1) 100%);
+  border-radius: 100px 0px 0px 0px;
+}
+
+.img_figura_3 img {
+  margin: -13px -15px;
+  transform: rotate(325deg);
+}
+
+.figura_4 {
+  width: 150px;
+  height: 150px;
+  background-image: linear-gradient(-215deg, #eeb2b5 0%, rgba(255, 255, 255, 0) 40%, rgba(0, 255, 255, 0) 60%, #f4f4f4 100%), linear-gradient(45deg, #f7d5a1 0%, #d296d6 100%);
+  margin-left: 150px;
+  border-radius: 0px 0px 100px 0px;
+}
+
+.img_figura_4 img {
+  margin: 12px 25px;
+  transform: rotate(16deg);
+}
+
+
+/* botão 2 */
+
+.ponto-2 {
+  width: 90%;
+
+}
+
+/* Formulario */
+
+.formolario_testo_inicial{
+  text-align: center;
+}
+
+.espaco_form{
+  margin-top: 2%;
+
+}
+
+.Caixa_formulario{
+  padding: 2%;
+  background-color: #fff;
+  border: 2px solid #d59cd1;
+}
+
+.btn-formolario{
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* footer */
+.cor_do_footer{
+  background-color: black;
+}
+.espaco_icons_footer{
+  margin-left: 2%;
+}
+
+
+/* Responsivo */
+.primeiro_espaco_escondido {
+  display: flex;
+  justify-content: space-around;
+}
+
+.primeiro_espaco_texto_escondido h1 {
+  color: #d296d6;
+  font-size: 100pt;
+}
+
+.primeiro_espaco_texto_escondido h2 {
+  font-size: 75pt;
+}
+
+.primeiro_espaco_texto_escondido p {
+  font-size: 25pt;
+}
+
+.figura_1_escondido {
+  width: 100%;
+  height: 400px;
+  background-image: linear-gradient(-215deg, #eeb2b5 0%, rgba(255, 255, 255, 0) 40%, rgba(0, 255, 255, 0) 60%, #f4f4f4 100%), linear-gradient(45deg, #f7d5a1 0%, #d296d6 100%);
+  display: flex;
+}
+
+.img_figura_1_escondido {
+  transform: rotate(30deg);
+    margin-top: -42px;
+}
+
+.img_figura_2_escondido {
+  transform: rotate(330deg);
+  margin-top: -42px;
+}
+.logotipo_da_landingpage img{
+  width: 200px;
+}
+
+@media(max-width:1000px){
+  .primeiro_espaco{
+    display: none;
+  }
+  .primeiro_espaco_escondido{
+    display: block !important;
+  }
+  .segundo_espaço {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .ponto-2,.ponto-1{
+    display: flex;
+    justify-content: center;
+
+    display: flex;
+    justify-content: center;
+  }
+  .espaco {
+    margin: 100px;
+  }
+}
+@media(max-width:750px){
+  .congunto_de_figuras_pequenas{
+    display: none;
+  }
+}
