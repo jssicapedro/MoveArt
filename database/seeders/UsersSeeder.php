@@ -15,7 +15,56 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-        User::insert([[
+        User::insert([
+        /* ADMIN */
+        [
+            'primeiro' => 'Jéssica',
+            'apelido' => 'Pedro',
+            'email' => 'jessica00pedro@gmail.com',
+            'data_nasc' => '2003-05-15',
+            'genero' => 'feminino',
+            'perfil'=> 'admin',
+            'password'=> bcrypt('moveart22'),
+        ],
+        [
+            'primeiro' => 'Adriana',
+            'apelido' => 'Valente',
+            'email' => 'adriana00valent@gmail.com',
+            'data_nasc' => '2003-03-25',
+            'genero' => 'feminino',
+            'perfil'=> 'admin',
+            'password'=> bcrypt('moveart22'),
+        ],
+        [
+            'primeiro' => 'Diogo',
+            'apelido' => 'Santos',
+            'email' => 'diogo00santos@gmail.com',
+            'data_nasc' => '2003-09-27',
+            'genero' => 'masculino',
+            'perfil'=> 'admin',
+            'password'=> bcrypt('moveart22'),
+        ],
+        [
+            'primeiro' => 'Beatriz',
+            'apelido' => 'Gameiro',
+            'email' => 'beatriz00gameiro@gmail.com',
+            'data_nasc' => '2003-09-07',
+            'genero' => 'feminino',
+            'perfil'=> 'admin',
+            'password'=> bcrypt('moveart22'),
+        ],
+        [
+            'primeiro' => 'Tiago',
+            'apelido' => 'Migueis',
+            'email' => 'tiago00migueis@gmail.com',
+            'data_nasc' => '2003-10-07',
+            'genero' => 'masculino',
+            'perfil'=> 'admin',
+            'password'=> bcrypt('moveart22'),
+        ],
+        
+        /* PROFESSOR */
+        [
             'primeiro' => 'Andreia',
             'apelido' => 'Dias',
             'email' => 'AndreiaDDias@gmail.com',
@@ -149,6 +198,17 @@ class UsersSeeder extends Seeder
             'genero' => 'masculino',
             'perfil'=> 'professor',
             'password'=> bcrypt('03h9THp$'),
+        ],
+
+        /* ALUNOS */
+        [
+            'primeiro' => 'Nelson',
+            'apelido' => 'Pedro',
+            'email' => 'PedroNelson@gmail.com',
+            'data_nasc' => '1975-01-06',
+            'genero' => 'Masculino',
+            'perfil'=> 'aluno',
+            'password'=> bcrypt('iVor587$'),
         ],
     ]);
     }

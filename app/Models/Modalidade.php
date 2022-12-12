@@ -17,6 +17,7 @@ class Modalidade extends Model
     ];
 
 
+    /* associação de muitos para muitos */
     public function profs(){
         return $this->belongsToMany(User::class, "users_modalidades");
     }
