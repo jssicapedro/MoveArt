@@ -1,0 +1,38 @@
+.active_nav {
+    background-color: #fff;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .6);
+  }
+
+  @media screen and (max-width: 991px){
+    .navbar-nav{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 25px;
+      }
+      .active_collapse .navbar-collapse{
+        background-color: rgba(255, 255, 255, 0.964);
+      }
+      .navbar-collapse{
+        margin-top: 0.5rem;
+      }
+      .nav-item{
+        padding: 0 !important;
+      }
+  }
+  .navbar-light .navbar-toggler {
+    color: transparent;
+    border-color: transparent;
+  }
+  .nav-item a {
+font-weight: 500;
+color: #261301;
+text-shadow: -1px -1px 1px white;
+  }
+  .nav-item a:hover {
+    font-weight: 500;
+    color: var(--castanho);
+      }
+  .nav-item{
+    padding: 17px 0 17px 17px;
+  }
