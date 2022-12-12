@@ -103,7 +103,7 @@ body {
   white-space: nowrap;
 }
 
-/* --------- curve outside ---------- */
+/* Seleçao Menu */
 .navigation ul li:hover a::before,
 .navigation ul li.hovered a::before {
   content: "";
@@ -448,14 +448,6 @@ body {
   font-size: 14px;
   color: var(--black2);
 }
-.dashboard_patrocinios table tr:hover {
-  background: var(--blue);
-  color: var(--white);
-}
-.dashboard_patrocinios table tr:hover td h4 span {
-  color: var(--white);
-}
-
 
 .baixo {
   position: relative;
