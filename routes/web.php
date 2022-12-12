@@ -27,6 +27,7 @@ Route::get('/natal', [PageController::class, 'natal'])->name('natal');
 
 
 Auth::routes();
+Route::get('/register', [PageController::class, 'inscricoes'])->name('register');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
