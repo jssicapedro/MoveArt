@@ -28,7 +28,9 @@ Route::get('/folclore', [PageController::class, 'folclore'])->name('folclore');
 
 Route::get('/contactos', [PageController::class, 'contactos'])->name('contactos');
 
-Route::get('/inscricoes', [PageController::class, 'inscricoes'])->name('inscricoes');
+Route::get('/inscricoes', [App\Http\Controllers\InscricaoController::class, 'inscricoes'])->name('inscricoes');
+
+Route::get('/pqmensal', [App\Http\Controllers\InscricaoController::class, 'pqmensal']);
 
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
@@ -39,3 +41,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
 
+/* Route::get('/inscricao', [App\Http\Controllers\InscricaoController::class, 'inscricao'])->name('inscricao'); */

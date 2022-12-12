@@ -51,13 +51,17 @@ class PageController extends Controller
         return view('contactos');
     }
 
-    public function inscricoes(){
+   /* public function inscricoes(){
 
-        $preco = Modalidade::all();
-        return view('inscricoes', compact('preco'));
-    }
+        protected $table='modalidades';
+
+         $preco = Modalidade::all();
+        return view('inscricoes', compact('preco')); 
+    }*/
 
     public function mapaaulas(){
         return view('mapaaulas');
     }
+
+    protected $table='modalidade';
 }

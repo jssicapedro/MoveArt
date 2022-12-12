@@ -75,11 +75,14 @@
             <div class="col-6">
                 <label for="tp_danca">Tipo de Dança:</label>
                 <select class=" tp_danca form-control">
-                    <option value="hip-hop">Hip-Hop</option>
+                    @foreach($modalidade as $mod)
+                    <option value="{{$mod->id}}">{{$mod->modalidade}}</option>
+                    @endforeach
+                    <!-- <option value="hip-hop">Hip-Hop</option>
                     <option value="Ballet">Ballet</option>
                     <option value="Folclore">Folclore</option>
                     <option value="danca_espanhola">Dança Espanhola</option>
-                    <option value="danca_oriental">Dança Oriental</option>
+                    <option value="danca_oriental">Dança Oriental</option> -->
                 </select>
             </div>
         </div>
@@ -91,7 +94,7 @@
                     <div class="card_info">
                         <span class="card_epoca">Anual</span>
                         <input type="radio" name="anual" id="anual">
-                        <h3 class="card_preco">{{$preco->valor_anual}}€</h3>
+                        <h3 class="card_preco">€</h3>
 
                     </div>
                 </article>
@@ -102,7 +105,7 @@
                     <div class="card_info">
                         <span class="card_epoca">Mensa</span>
                         <input type="radio" name="mensal" id="mensal">
-                        <h3 class="card_preco">{{$preco->valor_mensal}}€</h3>
+                        <h3 class="card_preco">€</h3>
 
                     </div>
                 </article>
@@ -259,13 +262,26 @@
 @endsection
 @section('script')
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
 <script type="text/javascript">
  $(document).ready(function(){
     $(document).on('change','.tp_danca',function(){
-        console.log("funciona");
-    
     var dan_id=$(this).val();
-    console.log(dan_id);
+
+    $.ajax({
+        type:'GET',
+        url:'/pqmensal',
+        data:{'id':dan_id},
+        dataType: 'json',
+        contentType: 'json',
+        success:function(data){
+
+            console.log('success');
+            console.log(data);
+            console.log(data.length,dan_id);
+        },
+        error:function(){}
+    });
     });
  });
 
