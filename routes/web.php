@@ -23,7 +23,7 @@ Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas'
 
 Auth::routes();
 
-Route::get('/inscricoes', [PageController::class, 'inscricoes'])->name('inscricoes');
+Route::get('/registo', [InscricaoController::class, 'inscricoes'])->name('register');
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
 
