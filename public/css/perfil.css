@@ -24,13 +24,15 @@
     height: 300px;
     width: 200px;
     border: 10px inset #a0a0a0;
+    display: flex;
 }
 
 .texto_perfil p{
     font-size:  15pt;
 }
 
-.texto_perfil h2, .texto_perfil h3, .texto_perfil h4{
+.texto_perfil h2, .texto_perfil h3, .texto_perfil h4, .texto_perfil h5, .texto_perfil h6{
     font-size:  20pt;
+    
 }
 
