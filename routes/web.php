@@ -32,6 +32,8 @@ Route::get('/inscricoes', [PageController::class, 'inscricoes'])->name('inscrico
 
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
+Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
+
 
 Auth::routes();
 

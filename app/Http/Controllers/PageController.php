@@ -46,4 +46,8 @@ class PageController extends Controller
     public function mapaaulas(){
         return view('mapaaulas');
     }
+
+    public function dashboardBO(){
+        return view('dashboardBO');
+    }
 }
