@@ -51,14 +51,6 @@ class PageController extends Controller
         return view('contactos');
     }
 
-   /* public function inscricoes(){
-
-        protected $table='modalidades';
-
-         $preco = Modalidade::all();
-        return view('inscricoes', compact('preco')); 
-    }*/
-
     public function mapaaulas(){
         return view('mapaaulas');
     }

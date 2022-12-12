@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\InscricaoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,19 +29,16 @@ Route::get('/folclore', [PageController::class, 'folclore'])->name('folclore');
 
 Route::get('/contactos', [PageController::class, 'contactos'])->name('contactos');
 
-Route::get('/inscricoes', [App\Http\Controllers\InscricaoController::class, 'inscricoes'])->name('inscricoes');
+Route::get('/inscricoes', [InscricaoController::class, 'inscricoes'])->name('inscricoes');
 
-Route::get('/precomensal', [App\Http\Controllers\InscricaoController::class, 'precomensal']);
+Route::get('/precomensal',[InscricaoController::class, 'precomensal']);
 
-Route::get('/precoanual', [App\Http\Controllers\InscricaoController::class, 'precoanual']);
+Route::get('/precoanual', [InscricaoController::class, 'precoanual']);
 
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
-
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
-
-/* Route::get('/inscricao', [App\Http\Controllers\InscricaoController::class, 'inscricao'])->name('inscricao'); */
