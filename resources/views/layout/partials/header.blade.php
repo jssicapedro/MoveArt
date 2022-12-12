@@ -5,5 +5,5 @@
 
         @include('layout.partials.nav')
 
-    </div>
+   {{--  </div> --}}
 </header><!-- End Header -->
