@@ -40,7 +40,6 @@
 
 
 <body>
-  @include('layout.partials.preload')
   <!-- ======= Header ======= -->
   @include('layout.partials.header')
 

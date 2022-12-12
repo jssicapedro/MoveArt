@@ -68,7 +68,7 @@ main {
 
 .img_banner{
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     background-position: center;
     background-size: cover;
     display: flex;

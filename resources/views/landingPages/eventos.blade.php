@@ -21,7 +21,7 @@
   <!-- start navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-light p-md-2">
     <div class="container">
-      <a class="navbar-brand p-0" href="#">
+      <a class="navbar-brand p-0" href="{{ asset('/') }}">
         <img src="{{asset('img/landingpages/landingB/Logo.png')}}" alt="" height="70">
       </a>
     </div>
