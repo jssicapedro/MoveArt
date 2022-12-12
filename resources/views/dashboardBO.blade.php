@@ -1,4 +1,4 @@
-<!--@extends('layout.master')-->
+@extends('layout.masterBO')
 
 @section('title', 'MoveArt - Dashboard')
 
