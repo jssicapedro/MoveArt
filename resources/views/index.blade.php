@@ -411,7 +411,7 @@
                             <h3>{{$eventos->nome}}</h3>
                         </div>
                         <div class="img_event position-relative" style="border-radius: 4px;">
-                            <img src="{{ asset('img/inicio/evento1.jpg') }}" class="card-img-top position-absolute bottom-0"
+                            <img src="{{ url('img/eventos/'.$eventos->foto) }}" class="card-img-top position-absolute bottom-0"
                                 alt="{{$eventos->nome}}">
                         </div>
                     </div>
