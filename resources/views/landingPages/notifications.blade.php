@@ -1,5 +1,3 @@
-<!-- max-width -->
-<!-- trocar o display none das modalidades normal e mobile -->
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -28,7 +26,9 @@
 
 <body>
     <header>
-        <img src="{{asset('img/logo/logoBallet_p.png')}}" alt="logótipo moveArt" class="logotipo">
+        <a href="{{ asset('/') }}">
+            <img src="{{asset('img/logo/logoBallet_p.png')}}" alt="logótipo moveArt" class="logotipo">
+        </a>
        <!--<img src="https://place-hold.it/50x50" alt="logótipo moveArt">--> 
    </header>
    <main>
@@ -242,7 +242,9 @@
        </div>
    </main>
    <footer>
-       <img src="{{asset('img/logo/logoBallet_p.png')}}" alt="logótipo moveArt" class="logotipo">
+       <a href="{{ asset('/') }}">
+            <img src="{{asset('img/logo/logoBallet_p.png')}}" alt="logótipo moveArt" class="logotipo">
+        </a>
        <div class="redes">
            <a href="">
                <img src="{{asset('img/landingpages/notifications/icons/facebook.svg')}}" alt="icon facebook">

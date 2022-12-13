@@ -19,7 +19,9 @@
 
 <body>
   <div class="logo">
-    <img src="{{asset('img/landingpages/landingAdr/Logo.png')}}" alt="">
+    <a href="{{ asset('/') }}">
+      <img src="{{asset('img/landingpages/landingAdr/Logo.png')}}" alt="">
+  </a>
   </div>
   <section id="inicio">
     <div class="title">

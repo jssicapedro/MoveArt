@@ -37,11 +37,11 @@
      <!-- start about us -->
     <section id="about_us">
 
-        <div class="container">
+        <div class="container d-flex align-items-center justify-content-center">
 
             <div class="row sli_all  d-flex align-items-center justify-content-center">
 
-                <div class="col-xl-6 col-md-6 columslider">
+                <div class="col-xl-6 col-md-6 columslider d-flex justify-content-end">
 
 
                     <div id="carouselExampleControls" class="carouselHero carousel slide" data-bs-ride="carousel">
@@ -100,8 +100,10 @@
                 <div class="col-xl-6 col-md-6 order-xl-last order-md-last order-first" id="about_text">
 
                     <div>
-                        <hr style="width:60px; height:23px; text-align:left; padding-bottom: 5px;" id="first-hr">
-                        <h2 class="pb-2">Sobre Nós</h2>
+                        <div class="text32  hr_class1">
+                            <h2>Eventos</h2>
+                            <hr style="width:85px; height:2px; text-align:center; margin:0 0 25px 0;">
+                    </div>
 
                         <div class="pb-2 p_about">
                             <p>Esta instituição de dança foi planeada e desenvolvida para guiar os utilizadores
@@ -167,9 +169,11 @@
                 </div>
 
                 <div class="col-xl-4 col-md-4 col-12 img_box text_box p-0">
-                    <div class="text-center" style="margin: 50px;">
-                        <hr style="width:60px; height:23px; text-align:center; padding-bottom: 5px;" class="hr_all">
-                        <h2>A Nossa Equipa</h2>
+                    <div class="text-center margin_img_people">
+                        <div class="text31  hr_class1">
+                        <h2 style="text-align: center;">A Nossa Equipa</h2>
+                        <hr style="width:85px; height:1px; text-align:center;margin:0px auto 2px auto;">
+                </div>
                         <p>Trabalhamos em equipa para tornar a sua experiência inesquecivel.</p>
                     </div>
                 </div>
@@ -223,8 +227,10 @@
             <div class="row">
                 <div class="col-12 img_box text_box p-0">
                     <div class="text-center" style="margin: 70px 20px 40px 20px;">
-                        <hr style="width:60px !important; height:23px !important; text-align:center !important; padding-bottom: 20px ;" class="hr_all">
-                        <h2>A Nossa Equipa</h2>
+                        <div class="text31  hr_class1">
+                            <h2 style="text-align: center;">A Nossa Equipa</h2>
+                            <hr style="width:85px; height:1px; text-align:center;margin:0px auto 2px auto;">
+                    </div>
                         <p>Trabalhamos em equipa para tornar a sua experiência inesquecivel.</p>
                     </div>
                 </div>
@@ -311,121 +317,74 @@
 
     <!-- start modalidades -->
     <div class="container mod d-grid" style="margin-top: 100px; margin-bottom: 0;">
-        <hr style="width:60px !important; height:23px !important; text-align:center !important;" class="hr_all">
-        <h2 style="text-align: center;">Modalidades</h2>
+        <div class="text31  hr_class1">
+            <h2 style="text-align: center;">Modalidades</h2>
+            <hr style="width:85px; height:2px; text-align:center;margin:0px auto 2px auto;">
     </div>
-    <div class="container spl" style="padding-bottom: 120px;">
+    </div>
+    <div class="container spl text-center" style="padding-bottom: 120px;">
         <section class="splide" aria-labelledby="carousel-heading ">
 
             <div class="splide__track">
                 <ul class="splide__list">
-
+                    @if (count($modalidade))
+                    @foreach($modalidade as $modalidades)
                     <li class="splide__slide img-box">
                         <div class="containe">
                             <div class="content">
                                 <a href="{{ asset('ballet') }}" target="_blank">
                                     <div class="content-overlay"></div>
-                                    <img class="content-image" src="{{ asset('img/inicio/Ballet.jpg') }}">
+                                    <img src="{{ url('img/eventos/'.$modalidades->foto_mensal) }}" class="card-img-top position-absolute bottom-0"
+                                    alt="{{$modalidades->modalidade}}">
                                     <div class="content-details fadeIn-bottom">
-                                        <h2 class="content-title">Ballet</h2>
+                                        <h2 class="content-title">{{$modalidades->modalidade}}</h2>
                                     </div>
                                 </a>
                             </div>
                         </div>
                     </li>
-
-                   <li class="splide__slide img-box">
-                        <div class="containe">
-                            <div class="content">
-                                <a href="{{ asset('hiphop') }}" target="_blank">
-                                    <div class="content-overlay"></div>
-                                    <img class="content-image" src="{{ asset('img/inicio/Hip-Hop.jpg') }}">
-                                    <div class="content-details fadeIn-bottom">
-                                        <h2 class="content-title">Hip-Hop</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="splide__slide img-box">
-                        <div class="containe">
-                            <div class="content">
-                                <a href="{{ asset('oriental') }}" target="_blank">
-                                    <div class="content-overlay"></div>
-                                    <img class="content-image" src="{{ asset('img/inicio/Dança_Oriental.jpg') }}">
-                                    <div class="content-details fadeIn-bottom">
-                                        <h2 class="content-title">Dança Oriental</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="splide__slide img-box">
-                        <div class="containe">
-                            <div class="content">
-                                <a href="{{ asset('espanhola') }}" target="_blank">
-                                    <div class="content-overlay"></div>
-                                    <img class="content-image" src="{{ asset('img/inicio/Dança_Espanhola.jpg') }}">
-                                    <div class="content-details fadeIn-bottom">
-                                        <h2 class="content-title">Dança Espanhola</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="splide__slide img-box">
-                        <div class="containe">
-                            <div class="content">
-                                <a href="{{ asset('folclore') }}" target="_blank">
-                                    <div class="content-overlay"></div>
-                                    <img class="content-image" src="{{ asset('img/inicio/Folclore.jpg') }}">
-                                    <div class="content-details fadeIn-bottom">
-                                        <h2 class="content-title">Folclore</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
+                    @endforeach
+                    @else
+                    <h6>Não existem categorias registadas</h6>
+                    @endif    
+                  
                 </ul>
             </div>
         </section>
     </div>
     <!-- end modalidades -->
 
+       
+            <!-- start join us -->
+            <section id="join_us">
 
-
-
-    <!-- start join us -->
-    <section id="join_us">
-
-        <div class="banner-image ">
-
-            <div class="banner-image d-flex justify-content-center align-items-center">
-                <div>
-                    <div class="row ban-row" style="background-color: white;">
-
-                        <div class="col-xl-4 col-sm-12 col_h2 pb-2">
-                            <hr style="width:60px; height:23px;" id="left_hr">
-                            <h2>Junta-te A Nós!</h2>
-                        </div>
-                        <div class="col-xl-4 col-sm-12 col_p d-flex justify-content-center align-items-center">
-                            <p>Deixa a dança fazer parte da tua vida e junta-te a nós!</p>
-                        </div>
-                        <div class="col-xl-4 col-sm-12 d-flex justify-content-center align-items-center">
-                            <div class="pink_btn">
-                                <a href="{{ asset('inscricoes') }}">
-                                    <div class="button">Saiba Mais</div>
-                                </a>
+                <div class="banner-image1">
+        
+                    <div class="banner-image1 d-flex justify-content-center align-items-center">
+                        <div>
+                            <div class="row text-center" style="background-color: white;">
+        
+                                <div class="col-xl-12 col-sm-12 col_h21">
+                                   
+                                    <div class="text31  hr_class1">
+                                        <h2 style="text-align: center;">Junta-te A Nós!</h2>
+                                        <hr style="width:85px; height:2px; text-align:center;margin:0px auto 2px auto;">
+                                </div>
+                                    <p>Deixa a dança fazer parte da tua vida e junta-te a nós!</p>
+                                    <div class="pink_btn">
+                                        <a href="{{ asset('inscricoes') }}">
+                                            <div class="button">Saiba Mais</div>
+                                        </a>
+                                    </div>
+                                </div>
+        
                             </div>
                         </div>
-
                     </div>
                 </div>
-            </div>
-        </div>
-
-    </section>
-    <!-- end join us -->
+        
+            </section>
+            <!-- end join us -->
 
 
 
@@ -433,61 +392,38 @@
     <!-- start events -->
     <section id="events">
         <div class="container d-grid events_cont">
-            <hr style="width:60px; height:23px; text-align:center;margin:16px auto 16px auto">
-            <h2 class="pb-4" style="text-align: center;">Eventos</h2>
+            <div class="text31  hr_class1">
+                <h2 style="text-align: center;">Eventos</h2>
+                <hr style="width:85px; height:2px; text-align:center; margin:0px auto 25px auto;">
+        </div>
 
             <div class="row">
 
-
-                <div class="col-xl-4 col-md-4 col-sm-12 car_col">
+                @if (count($evento))
+                @foreach($evento as $eventos)
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 car_col d-flex justify-content-center align-items-top">
                     <div class="card">
                         <div class="card-body">
                             <div class="details_event d-flex justify-content-start">
-                                <h6><i class="bi bi-calendar4-event"></i> 12/12/2022</h6>
-                                <h6><i class="bi bi-clock"></i> 20:30</h6>
-                                <h6><i class="bi bi-geo-alt-fill"></i> Leiria</h6>
+                                <h6><i class="bi bi-calendar4-event"></i> {{ date('d-m-Y', strtotime($eventos->data))}}</h6>
+                                <h6><i class="bi bi-clock"></i> {{ date('H:m', strtotime($eventos->data))}}</h6>
+                                <h6><i class="bi bi-geo-alt-fill"></i> {{$eventos->localizacao}}</h6>
                             </div>
-                            <h3>A Bela Adormecida</h3>
+                            <h3>{{$eventos->nome}}</h3>
                         </div>
                         <div class="img_event position-relative" style="border-radius: 4px;">
-                            <img src="{{ asset('img/inicio/evento1.jpg') }}" class="card-img-top position-absolute bottom-0"
-                                alt="Evento-A bela adormecida">
+                            <img src="{{ url('img/eventos/'.$eventos->foto) }}"
+                                alt="{{$eventos->nome}}">
                         </div>
                     </div>
                 </div>
+                @endforeach
+                @else
+                <h6>Não existem categorias registadas</h6>
+                @endif
+                
 
-                <div class="col-xl-4 col-md-4 col-sm-12 car_col">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="details_event d-flex justify-content-start">
-                                <h6><i class="bi bi-calendar4-event"></i> 03/12/2022</h6>
-                                <h6><i class="bi bi-clock"></i> 14:45</h6>
-                                <h6><i class="bi bi-geo-alt-fill"></i> Leiria</h6>
-                            </div>
-                            <h3>House vs Hip-Hop</h3>
-                        </div>
-                        <div class="img_event" style="border-radius: 4px;">
-                            <img src="{{ asset('img/inicio/evento2.jpg') }}" class="card-img-top" alt="Evento de Hip-Hop">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-4 col-sm-12 car_col">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="details_event d-flex justify-content-start">
-                                <h6><i class="bi bi-calendar4-event"></i> 29/11/2022</h6>
-                                <h6><i class="bi bi-clock"></i> 16:00</h6>
-                                <h6><i class="bi bi-geo-alt-fill"></i> Leiria</h6>
-                            </div>
-                            <h3>Dança Espanhola</h3>
-                        </div>
-                        <div class="img_event" style="border-radius: 4px;">
-                            <img src="{{ asset('img/inicio/evento3.jpg') }}" class="card-img-top" alt="Evento de dança espanhola">
-                        </div>
-                    </div>
-                </div>
-
+               
             </div>
         </div>
     </section>

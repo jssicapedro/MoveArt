@@ -119,13 +119,13 @@ input#email {
     font-size: 14pt;
 }
 
-button#enviar {
+button#enviar,#sub {
     background-color: #f19fc5;
     border: 1px solid #f19fc5;
     box-shadow: 0px 3px 0px #bc7d9a;
 }
 
-button#tirar {
+button#tirar,#limpar {
     background-color: #dadada;
     border: 1px solid #dadada;
     box-shadow: 0px 3px 0px #b5b5b5;
@@ -161,7 +161,6 @@ span.cv {
 }
 
 .cards {
-    width: 70%;
     height: 278px;
     margin: 10px;
     display: flex;
@@ -187,7 +186,8 @@ span.cv {
     border-top-right-radius: 12px;
 }
 
-.card_info-hover {
+.card_info_1-hover,
+.card_info_2-hover {
     position: absolute;
     padding: 16px;
     width: 100%;
@@ -212,7 +212,7 @@ span.cv {
     margin-right: 25px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
     background-color: #fff;
-    width: 33.3%;
+    width: 38%;
     position: relative;
     border-radius: 12px;
     overflow: hidden;
@@ -224,7 +224,9 @@ span.cv {
     transform: scale(1.1, 1.1);
 }
 
-.card_info {
+.card_info_1,
+.card_info_2
+{
     z-index: 2;
     background-color: #fff;
     border-bottom-left-radius: 12px;
@@ -240,8 +242,8 @@ span.cv {
     font-weight: 500;
     color: #868686;
 }
-
-.card_preco {
+.card_preco_1,
+.card_preco_2 {
     margin-top: 5px;
     font-size: 14pt;
     font-weight: 400;
@@ -253,12 +255,14 @@ span.cv {
     opacity: 0.3;
 }
 
-.cart:hover .card_info {
+.cart:hover .card_info_1,
+.cart:hover .card_info_2 {
     background-color: transparent;
     position: relative;
 }
 
-.cart:hover .card_info-hover {
+.cart:hover .card_info_1-hover
+.cart:hover .card_info_2-hover {
     opacity: 1;
 }
 .tp_pagamento ul
@@ -274,19 +278,46 @@ span.cv {
 {
     width: 100%;
 }
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     #form_prof .row {
         display: flex;
         flex-direction: column;
 
     }
-
+    .cards{
+        width: 100%!important;
+        justify-content: flex-start;
+        gap: 30px;
+    }
     .col-6 {
         margin: 10px 0;
     }
-
     .col-6,
     .col-5 {
         width: 100%;
     }
+    .tp_pagamento ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+    .tp_pagamento ul li{
+        width: 10%;
+    }
 }
+@media (max-width: 600px) {
+   .cards{
+    flex-direction: column;
+    height: 65vh;
+    justify-content: space-around;
+    align-items: center;
+   }
+   .cart{
+    width: 90%;
+   }
+}
+@media (max-width: 500px) {
+    .tp_pagamento ul li{
+        width: 15%;
+    }
+ }
