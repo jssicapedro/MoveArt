@@ -59,3 +59,8 @@
 <h2>Caso sejam alteradas as base de dados</h2>
 <p>Execute</p>
 <pre>php artisan migrate:fresh --seed</pre>
+
+<h1>Imagens da Base de Dados</h1>
+<p>De modo a todos os elementos do grupo terem acesso ás imagens da base de dados, pede-se que descarreguem as diretorias para <b>storage>app>public</b></p>
+<p>De seguida devem executar o comando abaixo:</p>
+<pre>php artisan storage:link</pre>
