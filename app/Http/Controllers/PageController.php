@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Modalidade;
 use App\Models\Evento;
+use App\Models\Patrocinio;
 
 
 class PageController extends Controller
@@ -90,6 +91,11 @@ class PageController extends Controller
         return view('admin/modalidades');
     }
     public function dashboardBO(){
-        return view('dashboardBO');
+        $evento = Evento::all();
+        $modalidade = Modalidade::all();
+        $users = User::all();
+        $patrocinios = Patrocinio::all();
+        
+        return view('dashboardBO', compact('evento','modalidade','users','patrocinios'));
     }
 }
