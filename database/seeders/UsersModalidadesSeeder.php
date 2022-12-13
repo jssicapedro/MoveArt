@@ -17,63 +17,63 @@ class UsersModalidadesSeeder extends Seeder
     {
         UserModalidade::insert([
             [
-                'user_id' => '1',
-                'modalidade_id' => '1', 
-            ],
-            [
-                'user_id' => '2',
-                'modalidade_id' => '1', 
-            ],
-            [
-                'user_id' => '3',
-                'modalidade_id' => '1', 
-            ],
-            [
-                'user_id' => '4',
-                'modalidade_id' => '2', 
-            ],
-            [
-                'user_id' => '5',
-                'modalidade_id' => '2', 
-            ],
-            [
                 'user_id' => '6',
-                'modalidade_id' => '2', 
+                'modalidade_id' => '1', 
             ],
             [
                 'user_id' => '7',
-                'modalidade_id' => '3', 
+                'modalidade_id' => '1', 
             ],
             [
                 'user_id' => '8',
-                'modalidade_id' => '3', 
+                'modalidade_id' => '1', 
             ],
             [
                 'user_id' => '9',
-                'modalidade_id' => '3', 
+                'modalidade_id' => '2', 
             ],
             [
                 'user_id' => '10',
-                'modalidade_id' => '4', 
+                'modalidade_id' => '2', 
             ],
             [
                 'user_id' => '11',
-                'modalidade_id' => '4', 
+                'modalidade_id' => '2', 
             ],
             [
                 'user_id' => '12',
-                'modalidade_id' => '4', 
+                'modalidade_id' => '3', 
             ],
             [
                 'user_id' => '13',
-                'modalidade_id' => '5', 
+                'modalidade_id' => '3', 
             ],
             [
                 'user_id' => '14',
-                'modalidade_id' => '5', 
+                'modalidade_id' => '3', 
             ],
             [
                 'user_id' => '15',
+                'modalidade_id' => '4', 
+            ],
+            [
+                'user_id' => '16',
+                'modalidade_id' => '4', 
+            ],
+            [
+                'user_id' => '17',
+                'modalidade_id' => '4', 
+            ],
+            [
+                'user_id' => '18',
+                'modalidade_id' => '5', 
+            ],
+            [
+                'user_id' => '19',
+                'modalidade_id' => '5', 
+            ],
+            [
+                'user_id' => '20',
                 'modalidade_id' => '5', 
             ],
         ]);

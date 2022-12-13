@@ -3,7 +3,7 @@
 
         <a href="{{ asset('index') }}" class="logo me-auto"><img src="{{ asset('img/logo/logoBallet_p.png') }}" alt="" class="img-fluid"></a> -->
 
-        @include('layout.partials.nav')
+        @include('layout.partials.navBO')
 
-   {{--  </div> --}}
+    </div>
 </header><!-- End Header -->
