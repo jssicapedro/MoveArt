@@ -18,6 +18,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'foto',
         'primeiro',
         'apelido',
         'email',
@@ -25,7 +26,6 @@ class User extends Authenticatable
         'genero',
         'perfil',
         'password',
-       
     ];/* colunas de preenchimento possivel */
 
 /* select * from = user:: */

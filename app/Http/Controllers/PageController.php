@@ -20,35 +20,35 @@ class PageController extends Controller
         return view('index', compact('evento'), compact('modalidade'));
     }
     public function ballet(){
-        $modalidade = Modalidade::where('modalidade', 'ballet')->first();
+        $modalidade = Modalidade::where('modalidade', 'Ballet')->first();
         $profs = $modalidade->profs;
       
         return view('ballet', compact('profs'), compact('modalidade'));
     }
 
     public function hiphop(){
-        $modalidade = Modalidade::where('modalidade', 'hiphop')->first();
+        $modalidade = Modalidade::where('modalidade', 'Hip-Hop')->first();
         $profs = $modalidade->profs;
       
         return view('hiphop', compact('profs'), compact('modalidade'));
     }
 
     public function espanhola(){
-        $modalidade = Modalidade::where('modalidade', 'espanhola')->first();
+        $modalidade = Modalidade::where('modalidade', 'Dança Espanhola')->first();
         $profs = $modalidade->profs;
       
         return view('espanhola', compact('profs'), compact('modalidade'));
     }
 
     public function oriental(){
-        $modalidade = Modalidade::where('modalidade', 'oriental')->first();
+        $modalidade = Modalidade::where('modalidade', 'Danças Orientais')->first();
         $profs = $modalidade->profs;
       
         return view('oriental', compact('profs'), compact('modalidade'));
     }
 
     public function folclore(){
-        $modalidade = Modalidade::where('modalidade', 'folclore')->first();
+        $modalidade = Modalidade::where('modalidade', 'Folclore')->first();
         $profs = $modalidade->profs;
       
         return view('folclore', compact('profs'), compact('modalidade'));

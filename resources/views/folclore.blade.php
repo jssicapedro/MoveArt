@@ -25,11 +25,12 @@
     <h2>Orientadores</h2>
     <div class="advisors_prof">
     @if (count($profs))
-        @foreach($profs as $user)
+        @foreach($profs as $prof)
         <div>
             <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/folclore/folclore_prof_.png') }}" alt="">
             <img class="prof" src="{{ asset('img/dancas/folclore/orientadores(3).png') }}" alt="">
-            <h3>{{$user->primeiro}}</h3>
+            <!-- <img class="prof" src="{{ url('storage/professores/'.$prof->foto) }}" alt=""> -->
+            <h3>{{$prof->primeiro}} {{$prof->apelido}}</h3>
         </div>
         @endforeach
         @else
