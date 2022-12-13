@@ -88,7 +88,7 @@
                                 <span class="card_epoca">Anual</span>
                                 <input type="radio" name="tp_ins" value="anual" id="anual">
                                 <h3 class="card_preco_1">
-                                    <span class="valor_anual"></span>€
+                                    <span class="valor_anual">880</span>€
                                 </h3>
 
                             </div>
@@ -100,7 +100,7 @@
                                 <span class="card_epoca">Mensal</span>
                                 <input type="radio" name="tp_ins" value="mensal" id="mensal">
                                 <h3 class="card_preco_2">
-                                    <span class="valor_mensal"></span>€
+                                    <span class="valor_mensal">75</span>€
                                 </h3>
                             </div>
                         </article>
