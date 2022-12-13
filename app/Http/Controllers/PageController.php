@@ -62,6 +62,15 @@ class PageController extends Controller
         return view('mapaaulas');
     }
 
+
+    public function login(){
+        return view('login');
+    }
+
+    public function perfil(){
+        return view('perfil');
+    }
+
     protected $table='modalidade';
 
     /* ------- landingPages ------- */

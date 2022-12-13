@@ -219,7 +219,7 @@ class UsersSeeder extends Seeder
             'perfil'=> 'professor',
             'password'=> bcrypt('03h9THp$'),
         ],
-
+        
         /* ALUNOS */
         [
             'foto' => null,
@@ -230,6 +230,7 @@ class UsersSeeder extends Seeder
             'genero' => 'Masculino',
             'perfil'=> 'aluno',
             'password'=> bcrypt('iVor587$'),
+
         ],
     ]);
     }

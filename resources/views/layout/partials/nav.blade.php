@@ -51,6 +51,7 @@
                                     document.getElementById('logout-form').submit();">
                       {{ __('Logout') }}
                     </a>
+                    <a class="dropdown-item" href="{{ asset('perfil') }}"> Perfil</a>
                   </li>
                 </ul>
 

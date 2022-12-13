@@ -23,9 +23,10 @@ class User extends Authenticatable
         'apelido',
         'email',
         'data_nasc',
+        'cc',
         'genero',
         'perfil',
-        'password',
+        'password',       
     ];/* colunas de preenchimento possivel */
 
 /* select * from = user:: */

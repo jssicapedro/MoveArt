@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\InscricaoController;
 
 /* ------- Front ------- */
@@ -21,6 +22,13 @@ Route::get('/precoanual', [InscricaoController::class, 'precoanual']);
 
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
+Route::get('/perfil', [PageController::class, 'perfil'])->name('perfil');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// landing pages Jéssica>Adriana>Diogo>Beatriz>Tiago
 
 Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
 
@@ -51,4 +59,3 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 /* ------- Back ------- */
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
-

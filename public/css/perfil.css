@@ -1,0 +1,63 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.titulo_perfil h1 {
+    font-size: 40pt;
+    padding-top: 100px;
+    text-align: center;
+
+}
+
+.todas_informacoes_perfil {
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.infurmcoes_fundamental_perfil{
+    display: flex!important;
+    justify-content: space-evenly!important;
+}
+
+.foto_perfil_perfil img {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    margin-top: 25px;
+    margin-right: 100px; 
+}
+
+.bloco_total_de_texto_perfil{
+    margin-left: 50px;
+}
+
+.nome_da_pessoa_perfil p{
+    font-size: 20pt;
+    margin-top: 25px;
+}
+.genero_da_pessoa_perfil p, .perfil_da_pessoa_perfil p{
+    font-size: 14pt;
+}
+.botoes_iguais_perfil{
+    margin-top: 25px;
+}
+/*  localidade  */
+
+.segundo_bloco_total_perfil{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    
+}
+
+.segundo_bloco_total_perfil h2{
+    font-size: 35pt;
+}
+
+.segundo_bloco_total_perfil p{
+    font-size: 18pt
+}
