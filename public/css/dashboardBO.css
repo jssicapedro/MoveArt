@@ -504,7 +504,7 @@ body {
   text-align: end;
 }
 .baixo .dashboard_funcionarios table tr td:nth-child(2) {
-  text-align: end;
+  text-align: center;
 }
 .baixo .dashboard_funcionarios table tr td:nth-child(3) {
   text-align: center;
@@ -523,10 +523,14 @@ body {
   text-align: end;
 }
 .alunosModalidade table tr td:nth-child(2) {
-  text-align: end;
+  text-align: center;
 }
 .alunosModalidade table tr td:nth-child(3) {
   text-align: center;
+}
+
+tbody{
+  font-weight: 400;
 }
 
 
