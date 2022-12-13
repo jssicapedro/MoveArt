@@ -20,6 +20,7 @@
 
 .infurmcoes_fundamental_perfil{
     display: flex!important;
+    justify-content: space-evenly!important;
 }
 
 .foto_perfil_perfil img {
@@ -27,7 +28,7 @@
     width: 150px;
     border-radius: 100%;
     margin-top: 25px;
-    margin-right: 10px; 
+    margin-right: 100px; 
 }
 
 .bloco_total_de_texto_perfil{
