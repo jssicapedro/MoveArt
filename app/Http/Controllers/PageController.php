@@ -88,5 +88,9 @@ class PageController extends Controller
     /* ------- back ------- */
     public function modalidades(){
         return view('admin/modalidades');
+
+    public function dashboardBO(){
+        return view('dashboardBO');
+
     }
 }

@@ -21,6 +21,11 @@ Route::get('/precoanual', [InscricaoController::class, 'precoanual']);
 
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
+
+Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
+
+
+
 Auth::routes();
 
 Route::get('/registo', [InscricaoController::class, 'inscricoes'])->name('register');
