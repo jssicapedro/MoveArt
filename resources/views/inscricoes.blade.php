@@ -76,14 +76,14 @@
                 <label for="tp_danca">Tipo de Dança:</label>
                 <div class="card_tp_inscricao">
                     <select class=" tp_danca form-control">
-                    @foreach($modalidade as $mod)
-                    <option value="{{$mod->id}}">{{$mod->modalidade}}</option>
-                    @endforeach
-                </select>
+                        @foreach($modalidade as $mod)
+                        <option value="{{$mod->id}}">{{$mod->modalidade}}</option>
+                        @endforeach
+                    </select>
                     <section class="cards">
                         <article class="cart card--1">
-                            <div class="card_img"></div>
-                            <div class="card_img--hover"></div>
+                            <div class="card_img" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
+                            <div class="card_img--hover" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
                             <div class="card_info_1">
                                 <span class="card_epoca">Anual</span>
                                 <input type="radio" name="tp_ins" value="anual" id="anual">
@@ -94,8 +94,8 @@
                             </div>
                         </article>
                         <article class="cart card--2">
-                            <div class="card_img"></div>
-                            <div class="card_img--hover"></div>
+                            <div class="card_img" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
+                            <div class="card_img--hover" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
                             <div class="card_info_2">
                                 <span class="card_epoca">Mensal</span>
                                 <input type="radio" name="tp_ins" value="mensal" id="mensal">
