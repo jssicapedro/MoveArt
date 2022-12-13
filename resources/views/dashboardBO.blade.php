@@ -82,16 +82,14 @@
 
                     <tbody>
                         <tr>
+                        @if (count($modalidade))
+                        @foreach($modalidade as $modalidades)
+                            <td>{{$modalidades->modalidade}}</td>
                             <td>X</td>
-                            <td>X</td>
-                        </tr>
-                        <tr>
-                            <td>X</td>
-                            <td>X</td>
-                        </tr>
-                        <tr>
-                            <td>X</td>
-                            <td>X</td>
+                            @endforeach
+                    @else
+                    <h6>Não existem categorias registadas</h6>
+                    @endif  
                         </tr>
                     </tbody>
                 </table>
