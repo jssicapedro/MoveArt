@@ -334,7 +334,8 @@
                             <div class="content">
                                 <a href="{{ asset('ballet') }}" target="_blank">
                                     <div class="content-overlay"></div>
-                                    <img class="content-image" src="{{ asset('img/inicio/Ballet.jpg') }}">
+                                    <img src="{{ url('img/eventos/'.$modalidades->foto_mensal) }}" class="card-img-top position-absolute bottom-0"
+                                    alt="{{$modalidades->modalidade}}">
                                     <div class="content-details fadeIn-bottom">
                                         <h2 class="content-title">{{$modalidades->modalidade}}</h2>
                                     </div>
@@ -411,7 +412,7 @@
                             <h3>{{$eventos->nome}}</h3>
                         </div>
                         <div class="img_event position-relative" style="border-radius: 4px;">
-                            <img src="{{ url('img/eventos/'.$eventos->foto) }}" class="card-img-top position-absolute bottom-0"
+                            <img src="{{ url('img/eventos/'.$eventos->foto) }}"
                                 alt="{{$eventos->nome}}">
                         </div>
                     </div>
