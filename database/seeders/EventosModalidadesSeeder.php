@@ -24,6 +24,10 @@ class EventosModalidadesSeeder extends Seeder
                 'evento_id' => '2',
                 'modalidade_id' => '2',
             ],
+            [
+                'evento_id' => '3',
+                'modalidade_id' => '3',
+            ],
         ]);
     }
 }

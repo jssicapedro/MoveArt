@@ -17,10 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('modalidade');
             $table->text('descricao');
+            $table->string('foto_desc')->nullable();
             $table->text('valor_mensal');
             $table->string('foto_mensal')->nullable();
             $table->text('valor_anual');
-            $table->sting('foto_anual')->nullable();
+            $table->string('foto_anual')->nullable();
             $table->timestamps();
         });
     }

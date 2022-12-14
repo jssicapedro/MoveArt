@@ -1,11 +1,14 @@
-/*banner*/
 .img_banner h1{
     color: var(--branco);
     font-size: 70pt;
     font-family: var(--amaranth);
 }
 
-.mapadeaulas{
+#hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
     background-image: linear-gradient(#ffffff65,#00000073),url('../img/mapaaulas/banner.jpg');
 }
 

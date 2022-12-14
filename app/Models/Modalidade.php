@@ -12,8 +12,11 @@ class Modalidade extends Model
     protected $fillable = [
         'modalidade',
         'descricao',
+        'foto_desc',
         'valor_mensal',
+        'foto_mensal',
         'valor_anual',
+        'foto_anual',
     ];
 
 

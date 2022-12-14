@@ -19,7 +19,7 @@
     <div class="txt">
     {!! $modalidade->descricao !!}
     </div>
-    <img src="{{ asset('img/dancas/hiphop/hiphop_app.png') }}" alt="Criança a treinar hiphop de tutu dentro de uma forma irregular sem background e com borda de cor de rosa">
+    <img src="{{ url('storage/modalidades/'.$modalidade->foto_desc) }}" alt="Criança a treinar hiphop de tutu dentro de uma forma irregular sem background e com borda de cor de rosa">
 </div>
 <div class="advisors">
     <h2>Orientadores</h2>
@@ -28,7 +28,7 @@
         @foreach($profs as $prof)
         <div>
             <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/hiphop/hiphop_prof_.png') }}" alt="">
-            <img class="prof" src="{{ url('img/professores/'.$prof->foto) }}" alt="">
+            <img class="prof" src="{{ url('storage/professores/'.$prof->foto) }}" alt="">
             <h3>{{$prof->primeiro}} {{$prof->apelido}}</h3>
         </div>
         @endforeach

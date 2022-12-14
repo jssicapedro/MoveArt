@@ -332,9 +332,9 @@
                     <li class="splide__slide img-box">
                         <div class="containe">
                             <div class="content">
-                                <a href="{{ asset('ballet') }}" target="_blank">
+                                <a href="{{ asset('.$modalidades->modalidade.') }}" target="_blank">
                                     <div class="content-overlay"></div>
-                                    <img src="{{ url('img/eventos/'.$modalidades->foto_mensal) }}" class="card-img-top position-absolute bottom-0"
+                                    <img src="{{ url('storage/modalidades/'.$modalidades->foto_mensal) }}" class="content-image"
                                     alt="{{$modalidades->modalidade}}">
                                     <div class="content-details fadeIn-bottom">
                                         <h2 class="content-title">{{$modalidades->modalidade}}</h2>

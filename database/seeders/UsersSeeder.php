@@ -70,7 +70,7 @@ class UsersSeeder extends Seeder
         
         /* PROFESSOR */
         [
-            'foto' => 'AndreiaDias.png',
+            'foto' => '6.png',
             'primeiro' => 'Andreia',
             'apelido' => 'Dias',
             'email' => 'AndreiaDDias@gmail.com',
@@ -80,7 +80,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('s%m#h17G'),
         ],
         [
-            'foto' => 'BeatrizMelo.png',
+            'foto' => '7.png',
             'primeiro' => 'Beatriz',
             'apelido' => 'Melo',
             'email' => 'BeaMelo@gmail.com',
@@ -90,7 +90,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('bS1%T3^z'),
         ],
         [
-            'foto' => 'AndreRodrigues.png',
+            'foto' => '8.png',
             'primeiro' => 'André',
             'apelido' => 'Rodrigues',
             'email' => 'rodriguesDre@gmail.com',
@@ -100,7 +100,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('x%7tE8vD'),
         ],
         [
-            'foto' => 'LuisaSuares.png',
+            'foto' => '9.png',
             'primeiro' => 'Luísa',
             'apelido' => 'Suares',
             'email' => 'luisaSuares@gmail.com',
@@ -110,7 +110,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('3!2IaWA5'),
         ],
         [
-            'foto' => 'NunoAlves.png',
+            'foto' => '10.png',
             'primeiro' => 'Nuno',
             'apelido' => 'Alves',
             'email' => 'alvesnuno@gmail.com',
@@ -120,7 +120,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('60&R4dpC'),
         ],
         [
-            'foto' => 'MauroPinto.png',
+            'foto' => '11.png',
             'primeiro' => 'Mauro',
             'apelido' => 'Pinto',
             'email' => 'maauroP@gmail.com',
@@ -130,7 +130,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('8486^KwC'),
         ],
         [
-            'foto' => 'CatarinaAlves.png',
+            'foto' => '12.png',
             'primeiro' => 'Catarina',
             'apelido' => 'Alves',
             'email' => 'AlvesCat@gmail.com',
@@ -140,7 +140,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('y!oV244!'),
         ],
         [
-            'foto' => 'IrisFaria.png',
+            'foto' => '13.png',
             'primeiro' => 'Íris',
             'apelido' => 'Faria',
             'email' => 'iris_F@gmail.com',
@@ -150,7 +150,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('3$mI52gB'),
         ],
         [
-            'foto' => 'AfonsoPinheiro.png',
+            'foto' => '14.png',
             'primeiro' => 'Afonso',
             'apelido' => 'Pinheiro',
             'email' => 'pin_a@gmail.com',
@@ -160,7 +160,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('I097!4p3'),
         ],
         [
-            'foto' => 'DenisePereira.png',
+            'foto' => '15.png',
             'primeiro' => 'Denise',
             'apelido' => 'Pereira',
             'email' => 'pereiraDen@gmail.com',
@@ -170,7 +170,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('671Pr0#H'),
         ],
         [
-            'foto' => 'SandraJoao.png',
+            'foto' => '16.png',
             'primeiro' => 'Sandra',
             'apelido' => 'João',
             'email' => 'sandrajoao1@gmail.com',
@@ -180,7 +180,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('v#H87X0m'),
         ],
         [
-            'foto' => 'CarinaJoao.png',
+            'foto' => '17.png',
             'primeiro' => 'Carina',
             'apelido' => 'João',
             'email' => 'carinajoao@gmail.com',
@@ -190,7 +190,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('4G5vl3T*'),
         ],
         [
-            'foto' => 'AdrianaFernandes.png',
+            'foto' => '18.png',
             'primeiro' => 'Adriana',
             'apelido' => 'Fernandes',
             'email' => 'fernandes@gmail.com',
@@ -200,7 +200,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('N!85rr3Y'),
         ],
         [
-            'foto' => 'HelderHenriques.png',
+            'foto' => '19.png',
             'primeiro' => 'Hélder',
             'apelido' => 'Henriques',
             'email' => 'Hhenriques@gmail.com',
@@ -210,7 +210,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('03h9THp$'),
         ],
         [
-            'foto' => 'JoaoHenriques.png',
+            'foto' => '20.png',
             'primeiro' => 'João',
             'apelido' => 'Henriques',
             'email' => 'henriquesJoao@gmail.com',
