@@ -25,7 +25,7 @@
             <div class="estatistica">
                 <div class="caixa">
                     <div>
-                        <div class="valor">X</div>
+                        <div class="valor">{{$users->count()}}</div>
                         <div class="nome">Funcionários</div>
                     </div>
 
@@ -35,7 +35,7 @@
                 </div>
                 <div class="caixa">
                     <div>
-                        <div class="valor">X</div>
+                        <div class="valor">{{$modalidade->count()}}</div>
                         <div class="nome">Modalidades</div>
                     </div>
 
@@ -45,7 +45,7 @@
                 </div>
                 <div class="caixa">
                     <div>
-                        <div class="valor">X</div>
+                        <div class="valor">{{$patrocinios->count()}}</div>
                         <div class="nome">Patrocínios</div>
                     </div>
 
@@ -55,7 +55,7 @@
                 </div>
                 <div class="caixa">
                     <div>
-                        <div class="valor">X</div>
+                        <div class="valor">{{$evento->count()}}</div>
                         <div class="nome">Eventos</div>
                     </div>
 
@@ -80,17 +80,18 @@
                         </tr>
                     </thead>
 
+                    
                     <tbody>
-                        <tr>
-                        @if (count($modalidade))
-                        @foreach($modalidade as $modalidades)
-                            <td>{{$modalidades->modalidade}}</td>
-                            <td>X</td>
-                            @endforeach
+                    @if (count($modalidade))
+                    @foreach($modalidade as $modalidades)
+                    <tr>
+                        <td>{{$modalidades->modalidade}}</td>
+                        <td></td>
+                    </tr>
+                    @endforeach
                     @else
                     <h6>Não existem categorias registadas</h6>
-                    @endif  
-                        </tr>
+                    @endif
                     </tbody>
                 </table>
             </div>
@@ -111,32 +112,26 @@
                         <tr>
                             <td>Nome</td>
                             <td>Email</td>
-                            <td>Modalidade</td>
+                            <td>Data Nascimento</td>
+                            <td>Género</td>
                             <td>Função</td>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                        </tr>
-
-                        <tr>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                        </tr>
-
-                        <tr>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                        </tr>
+                    @if (isset($users))
+                    @foreach($users as $user)
+                    <tr>
+                        <td>{{$user->primeiro}}</td>
+                        <td>{{$user->email}}</td>
+                        <td>{{$user->data_nasc}}</td>
+                        <td>{{$user->genero}}</td>
+                        <td>{{$user->perfil}}</td>
+                    </tr>
+                    @endforeach
+                    @else
+                    <h6>Não existem categorias registadas</h6>
+                    @endif
                     </tbody>
                 </table>
             </div>
@@ -146,7 +141,7 @@
                 <div class="dashboard_subtitulo">
                     <h2>Eventos</h2>
                 </div>
-
+               
                 <table>
                     <thead>
                         <tr>
@@ -156,12 +151,22 @@
                         </tr>
                     </thead>
 
+                    
                     <tbody>
-                        <tr>
-
-                        </tr>
+                    @if (count($evento))
+                    @foreach($evento as $eventos)
+                    <tr>
+                        <td><img src="{{ asset('img/inicio/Ballet.jpg') }}" width="50px"></td>
+                        <td>{{$eventos->nome}}</td>
+                        <td></td>
+                    </tr>
+                    @endforeach
+                    @else
+                    <h6>Não existem categorias registadas</h6>
+                    @endif
                     </tbody>
                 </table>
+
             </div>
 
             <div>
@@ -181,10 +186,16 @@
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>X</td>
-                            <td>X</td>
-                        </tr>
+                    @if (isset($patrocinios))
+                    @foreach($patrocinios as $patrocinio)
+                    <tr>
+                        <td>{{$patrocinio->nome}}</td>
+                        <td>{{$patrocinio->valor}}€</td>
+                    </tr>
+                    @endforeach
+                    @else
+                    <h6>Não existem categorias registadas</h6>
+                    @endif
                     </tbody>
                 </table>
             </div>
