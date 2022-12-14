@@ -60,7 +60,8 @@ class PageController extends Controller
     }
 
     public function mapaaulas(){
-        return view('mapaaulas');
+        $modalidade = Modalidade::all();
+        return view('mapaaulas', compact('modalidade'));
     }
 
 
