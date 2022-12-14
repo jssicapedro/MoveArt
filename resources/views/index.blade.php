@@ -332,7 +332,7 @@
                     <li class="splide__slide img-box">
                         <div class="containe">
                             <div class="content">
-                                <a href="{{ asset('ballet') }}" target="_blank">
+                                <a href="{{ asset('.$modalidades->modalidade.') }}" target="_blank">
                                     <div class="content-overlay"></div>
                                     <img src="{{ url('storage/modalidades/'.$modalidades->foto_mensal) }}" class="content-image"
                                     alt="{{$modalidades->modalidade}}">
