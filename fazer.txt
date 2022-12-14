@@ -1,1 +1,6 @@
-colocar imagens na storage>app>public como fiz no dia 13/12
+fazer login
+alterar landing pages
+separar pedido professor
+separar patrocinio
+começar o Back
+adicionar campo de foto_horario nas modalidades
