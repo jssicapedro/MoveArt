@@ -13,6 +13,11 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+    <!-- CSS -->
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/comum.css') }}">
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -21,7 +26,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <img src="{{ asset('img/logo/logoBallet_p.png') }}" style="height: 50px;" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -72,9 +77,14 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="main_login">
             @yield('content')
         </main>
+
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        @include('layout.partials.footer')
+    </footer><!-- End Footer -->
     </div>
 </body>
 </html>

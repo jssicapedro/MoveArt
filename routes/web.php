@@ -28,15 +28,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// landing pages Jéssica>Adriana>Diogo>Beatriz>Tiago
-
-Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
-
-
-
-Auth::routes();
-
 Route::get('/registo', [InscricaoController::class, 'inscricoes'])->name('register');
+
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
 
@@ -59,3 +52,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 /* ------- Back ------- */
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
+Route::get('/admin/patrocinios', [PageController::class, 'patrocinios'])->name('patrocinios');

@@ -96,9 +96,6 @@ class PageController extends Controller
     }
 
     /* ------- back ------- */
-    public function modalidades(){
-        return view('admin/modalidades');
-    }
     public function dashboardBO(){
         $evento = Evento::all();
         $modalidade = Modalidade::all();
@@ -106,5 +103,13 @@ class PageController extends Controller
         $patrocinios = Patrocinio::all();
         
         return view('dashboardBO', compact('evento','modalidade','users','patrocinios'));
+    }
+
+    public function modalidades(){
+        return view('admin/modalidades');
+    }
+
+    public function patrocinios(){
+        return view('admin/patrocinios');
     }
 }

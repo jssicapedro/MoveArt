@@ -3,7 +3,7 @@
 @section('title', 'MoveArt - Dashboard')
 
 @section('links')
-<link href="{{ asset('css/dashboardBO.css') }}" rel="stylesheet">
+<!-- <link href="{{ asset('css/dashboardBO.css') }}" rel="stylesheet"> -->
 @endsection
 
 @section('main')
