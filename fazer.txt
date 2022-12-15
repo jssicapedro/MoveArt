@@ -1,4 +1,4 @@
-fazer login
+fazer login (login.bade.php -> navbar/main/footer (layouts > app.blade.php))
 alterar landing pages
 separar pedido professor
 separar patrocinio
