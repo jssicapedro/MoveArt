@@ -4,6 +4,7 @@
  */
 .main_login{
     width: 80vw!important;
+    height: 75vh;
     display: flex;
     margin: auto;
 }
@@ -18,6 +19,8 @@
 
 .main_login img{
     width: 50%;
+    animation: go-back 1.2s;
+    filter: drop-shadow(5px 5px 5px rgb(71, 71, 71));
 }
 
 .form_login{
@@ -54,20 +57,42 @@ form{
 }
 
 .submit button{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 56px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--branco);
     background-color: var(--rosa);
     border: 1px solid var(--rosa);
-    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px #00000026;
+    font-family: var(--roboto) !important;
     font-size: 20px;
 }
 
 .submit button:hover{
     color: #fff;
+    background-color: var(--rosa);
+    border: 1px solid var(--rosa);
+    transform: scale(1.02);
+    transition: transform 0.4s ease-in-out;
+}
+
+.submit button:active {
+    top: 2px;
+    background-color: var(--rosaE);
+}
+
+.submit button:hover:after{
+    left: 0;
+    width: 100%;
+}
+
+.submit button:after{
     position: absolute;
     content: "";
     width: 0;
@@ -83,23 +108,28 @@ form{
     transition: all 0.3s ease;
 }
 
-.submit button:hover:after{
-    left: 0;
-    width: 100%;
+.submit button:click {
+    background-color: var(--rosaE);
 }
 
-.submit button:after{
-    /* position: absolute;
-    content: "";
-    width: 0;
-    height: 100%;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    background-color: var(--rosaE);
-    border-radius: 5px;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-        7px 7px 20px 0px rgba(0, 0, 0, .1),
-        4px 4px 5px 0px rgba(0, 0, 0, .1);
-    transition: all 0.3s ease; */
+.btn-primary{
+    --bs-btn-active-bg: var(--rosaE)!important;
+    --bs-btn-active-border-color: var(--rosaE)!important;
+}
+
+
+.justify-content-center {
+    height: calc( 100vh - 55vh);
+}
+
+@keyframes go-back {
+    0% {
+        transform: translateX(-1000px);
+    }
+    80% {
+        transform: translateX(90px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }

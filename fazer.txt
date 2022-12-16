@@ -1,4 +1,4 @@
-fazer login (login.bade.php -> navbar/main/footer (layouts > app.blade.php)) ------> ✅ ------> adicionar animação
+fazer login (login.bade.php -> navbar/main/footer (layouts > app.blade.php)) ------> 2hrs✅ ------> adicionar animação
 alterar landing page
 separar pedido professor
 separar patrocinio

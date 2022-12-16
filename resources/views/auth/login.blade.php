@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="login_page">
-    <img src="{{ asset('img/login/Choreographer-rafiki_amarelo.png') }}" alt="imagem de login" class="image">
+    <img src="{{ asset('img/login/Choreographer-amico.png') }}" alt="imagem de login" class="image">
     <div class="form_login">
         <form method="POST" action="{{ route('login') }}">
             @csrf
