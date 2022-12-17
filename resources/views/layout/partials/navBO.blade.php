@@ -22,7 +22,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="{{ asset('admin/users') }}">
                     <span class="icon">
                         <ion-icon name="people-outline"></ion-icon>
                     </span>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Pagination\Paginator;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Modalidade;
@@ -108,6 +109,10 @@ class PageController extends Controller
         return view('dashboardBO', compact('evento','modalidade','users','patrocinios'));
     }
     public function users(){
-        return view('admin/users');
+        Paginator::useBootstrap();
+
+        $users = User::paginate(10);
+
+        return view('admin/users', compact('users'));
     }
 }
