@@ -22,13 +22,13 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- ### SlideShow ### -->
-  <link rel="stylesheet" href="{{asset('js/splide/dist/css/splide.min.css')}}">
-  <script src="{{asset('js/splide/dist/js/splide.min.js')}}"></script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- ### SlideShow ### -->
+    <link rel="stylesheet" href="{{ asset('js/splide/dist/css/splide.min.css') }}">
+    <script src="{{ asset('js/splide/dist/js/splide.min.js') }}"></script>
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
@@ -82,7 +82,7 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
 
-<script src="{{ asset('js/nav.js') }}"></script>
+    <script src="{{ asset('js/nav.js') }}"></script>
 
     <!-- ======= Pages Script ======= -->
     @yield('script')
