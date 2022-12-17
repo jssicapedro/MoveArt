@@ -3,10 +3,11 @@
 }
  */
 .main_login{
-    width: 80vw!important;
+    width: 75vw!important;
     height: 75vh;
     display: flex;
     margin: auto;
+    padding: 0 45px;
 }
 
 .login_page{
@@ -17,8 +18,12 @@
     width: 100%;
 }
 
+.login_page .img{
+    width: 50vw;
+}
+
 .main_login img{
-    width: 50%;
+    width: 70%;
     animation: go-back 1.2s;
     filter: drop-shadow(5px 5px 5px rgb(71, 71, 71));
 }
@@ -40,15 +45,42 @@ form{
     justify-content: space-around;
 }
 
+.email,
+.pass{
+    margin-bottom: 25px;
+}
+
 .email label,
 .pass label{
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .remember_forget{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input#email,
+input#password{
+    border-bottom: 2px solid var(--rosa);
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-radius: 0;
+}
+
+input#email:active,
+input#password:active,
+input#email:focus,
+input#password:focus,
+input#email:hover,
+input#password:hover {
+    box-shadow: 0 0 0 0;
+	outline: 0;
+	border-bottom-color: var(--amarelo);
 }
 
 .submit{
@@ -70,26 +102,28 @@ form{
     border: 1px solid var(--rosa);
     border-radius: 10px;
     box-shadow: 5px 5px 10px 1px #00000026;
-    font-family: var(--roboto) !important;
+    font-family: var(--poppins) !important;
     font-size: 20px;
 }
 
 .submit button:hover{
     color: #fff;
     background-color: var(--rosa);
-    border: 1px solid var(--rosa);
+    border: 1px solid var(--amarelo);
     transform: scale(1.02);
     transition: transform 0.4s ease-in-out;
 }
 
 .submit button:active {
     top: 2px;
-    background-color: var(--rosaE);
+    background-color: var(--amarelo);
+    border: 1px solid var(--amarelo);
 }
 
 .submit button:hover:after{
     left: 0;
     width: 100%;
+    border: 1px solid var(--amarelo);
 }
 
 .submit button:after{
@@ -100,7 +134,8 @@ form{
     top: 0;
     right: 0;
     z-index: -1;
-    background-color: var(--rosaE);
+    background-color: var(--amarelo);
+    border: 1px solid var(--amarelo);
     border-radius: 5px;
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
         7px 7px 20px 0px rgba(0, 0, 0, .1),
@@ -109,12 +144,13 @@ form{
 }
 
 .submit button:click {
-    background-color: var(--rosaE);
+    background-color: var(--amarelo);
+    border: 1px solid var(--amarelo);
 }
 
 .btn-primary{
-    --bs-btn-active-bg: var(--rosaE)!important;
-    --bs-btn-active-border-color: var(--rosaE)!important;
+    --bs-btn-active-bg: var(--amarelo) !important;
+    --bs-btn-active-border-color: var(--amarelo) !important;
 }
 
 
