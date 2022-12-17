@@ -51,5 +51,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 /* ------- Back ------- */
+Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
 Route::get('/admin/patrocinios', [PageController::class, 'patrocinios'])->name('patrocinios');

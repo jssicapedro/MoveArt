@@ -3,9 +3,11 @@
 @section('title', 'MoveArt - Patrocínios')
 
 @section('links')
-<link href="{{ asset('css/modalidades_back.css') }}" rel="stylesheet">
+<link href="{{ asset('css/patrocinios_back.css') }}" rel="stylesheet">
 @endsection
 
 @section('main')
-<h1>OLA</h1>
+<div class="dashboard_main">
+    
+</div>
 @endsection
