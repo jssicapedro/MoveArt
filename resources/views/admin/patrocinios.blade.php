@@ -8,6 +8,13 @@
 
 @section('main')
 <div class="dashboard_main">
-    
+    <table>
+        <thead>
+            
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
 </div>
 @endsection
