@@ -110,6 +110,7 @@ class PageController extends Controller
     }
 
     public function patrocinios(){
-        return view('admin/patrocinios');
+        $patrocinios = Patrocinio::all();
+        return view('admin/patrocinios', compact('patrocinios'));
     }
 }

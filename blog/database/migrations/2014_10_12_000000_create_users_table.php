@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('patrocinios', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('nome',150);
-            $table->string('email',150);
-            $table->double('valor');
-            $table->string('telefone', 9)->nullable();
-            $table->text('mensagem');
-            $table->enum('estado', ['respondido', 'sem reposta'])->default('sem reposta');
-            $table->text('resposta')->nullable();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('patrocinio');
+        Schema::dropIfExists('users');
     }
 };

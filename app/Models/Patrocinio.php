@@ -17,5 +17,6 @@ class Patrocinio extends Model
         'valor',
         'telefone',
         'mensagem',
+        'estado',
     ];
 }
