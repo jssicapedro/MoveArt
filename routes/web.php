@@ -32,6 +32,10 @@ Route::get('/registo', [InscricaoController::class, 'inscricoes'])->name('regist
 
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
+Route::get('/professor', [PageController::class, 'professor'])->name('professor');
+
+Route::get('/patrocinio', [PageController::class, 'patrocinio'])->name('patrocinio');
+
 
 /* ------- landingPages ------- */
 // landing pages Jéssica>Adriana>Diogo>Beatriz>Tiago

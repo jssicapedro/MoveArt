@@ -22,10 +22,10 @@
                     <th style="text-align: center;">Mensagem</th>
                     <th style="text-align: center;">Valor</th>
                     <th style="text-align: center;">Estado</th>
-                    <th style="text-align: center;">
-                        <!-- <span class="material-symbols-outlined">
+                    <th class="more">
+                        <span class="material-symbols-outlined">
                             more_vert
-                        </span> -->
+                        </span>
                     </th>
                 </tr>
             </thead>
@@ -51,7 +51,7 @@
                     @endif
                     </td>
 
-                    <td style="text-align: center; width: auto;">
+                    <td class="option" style="">
                         <a href="">
                             <span class="material-symbols-outlined">
                                 visibility

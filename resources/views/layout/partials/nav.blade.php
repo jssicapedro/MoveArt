@@ -35,20 +35,17 @@
             <li class="nav-item">
               <a class="nav-link" target="_blank" href="http://moveloja.epizy.com">Loja</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ asset('inscricoes') }}">Inscrição</a>
-            </li>
-            <!-- <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                Inscreva-se
+                Inscreve-te
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{ asset('Aluno') }}">Aluno</a></li>
-                <li><a class="dropdown-item" href="{{ asset('Seja professor') }}">Seja professor</a></li>
-                <li><a class="dropdown-item" href="{{ asset('Patrocinio') }}">Patrocínio</a></li>
+                <li><a class="dropdown-item" href="{{ asset('inscricoes') }}">Aluno</a></li>
+                <li><a class="dropdown-item" href="{{ asset('professor') }}">Seja professor</a></li>
+                <li><a class="dropdown-item" href="{{ asset('patrocinio') }}">Patrocínio</a></li>
               </ul>
-            </li> -->
+            </li>
             <li class="nav-item dropdown">
               @auth
               <a class="nav-link dropdown-toggle" href="" role="button"

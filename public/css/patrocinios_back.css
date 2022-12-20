@@ -33,6 +33,15 @@ td{
     padding: 10px 0;
 }
 
+.more{
+    width: 60px; 
+    text-align: center;
+}
+
+.option{
+    color: var();
+}
+
 .mensagem{
     width: 35%;
 }
