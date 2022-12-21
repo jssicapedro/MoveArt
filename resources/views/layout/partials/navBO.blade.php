@@ -1,3 +1,7 @@
+@section('links')
+<link rel="stylesheet" href="{{asset('css/navBO.css')}}">
+@endsection
+
 <nav>
 <div class="dashboard_container">
     <div class="navigation">
