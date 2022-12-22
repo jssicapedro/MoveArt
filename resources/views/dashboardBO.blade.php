@@ -6,6 +6,10 @@
 <link href="{{ asset('css/dashboardBO.css') }}" rel="stylesheet">
 @endsection
 
+@section('script')
+<script src="{{ asset('js/dashboardBO/contactos.js') }}"></script>
+@endsection
+
 @section('main')
 
     <div class="dashboard_main">
