@@ -24,6 +24,7 @@ class ModalidadesSeeder extends Seeder
                 'foto_mensal' => '1.jpg',
                 'valor_anual' => '880',
                 'foto_anual' => '1.jpg',
+                'foto_horario' => '1_calendar.png',
             ],
             [
                 'modalidade' => 'Hip-Hop',
@@ -33,6 +34,7 @@ class ModalidadesSeeder extends Seeder
                 'foto_mensal' => '2.jpg',
                 'valor_anual' => '500',
                 'foto_anual' => '2.jpg',
+                'foto_horario' => '2_calendar.png',
             ],
             [
                 'modalidade' => 'Dança Espanhola',
@@ -42,6 +44,7 @@ class ModalidadesSeeder extends Seeder
                 'foto_mensal' => '3.jpg',
                 'valor_anual' => '400',
                 'foto_anual' => '3.jpg',
+                'foto_horario' => '3_calendar.png',
             ],
             [
                 'modalidade' => 'Danças Orientais',
@@ -51,6 +54,7 @@ class ModalidadesSeeder extends Seeder
                 'foto_mensal' => '4.jpg',
                 'valor_anual' => '400',
                 'foto_anual' => '4.jpg',
+                'foto_horario' => '4_calendar.png',
             ],
             [
                 'modalidade' => 'Folclore',
@@ -60,6 +64,7 @@ class ModalidadesSeeder extends Seeder
                 'foto_mensal' => '5.jpg',
                 'valor_anual' => '460',
                 'foto_anual' => '5.jpg',
+                'foto_horario' => '5_calendar.png',
             ],
         ]);
     }

@@ -86,8 +86,8 @@ class PageController extends Controller
         return view('landingPages/notifications');
     }
 
-    public function sejaprofessor(){
-        return view('landingPages/professor');
+    public function festival(){
+        return view('landingPages/festival');
     }
 
     public function landingA(){
@@ -120,8 +120,8 @@ class PageController extends Controller
         return view('admin/modalidades');
     }
 
-    public function patrocinios(){
+    /* public function patrocinios(){
         $patrocinios = Patrocinio::all();
         return view('admin/patrocinios', compact('patrocinios'));
-    }
+    } */
 }

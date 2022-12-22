@@ -44,7 +44,7 @@ Route::get('/patrocinio', [PageController::class, 'patrocinio'])->name('patrocin
 
 
 Route::get('/notificacoes', [PageController::class, 'notifications'])->name('notifications');
-Route::get('/sejaprofessor', [PageController::class, 'sejaprofessor'])->name('sejaprofessor');
+Route::get('/festival', [PageController::class, 'festival'])->name('festival');
 Route::get('/landingA', [PageController::class, 'landingA'])->name('landingA');
 Route::get('/landingD', [PageController::class, 'landingD'])->name('landingD');
 Route::get('/eventos', [PageController::class, 'eventos'])->name('eventos');
@@ -60,4 +60,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 /* ------- Back ------- */
 Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
-Route::get('/admin/patrocinios', [PageController::class, 'patrocinios'])->name('patrocinios');
+Route::get('/admin/patrocinios', [PatrocinioController::class, 'index'])->name('patrocinios');

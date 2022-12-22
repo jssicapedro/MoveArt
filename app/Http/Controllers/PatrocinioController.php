@@ -14,7 +14,8 @@ class PatrocinioController extends Controller
      */
     public function index()
     {
-        //
+        $patrocinios = Patrocinio::all();
+        return view('admin/patrocinios', compact('patrocinios'));
     }
 
     /**
@@ -57,7 +58,7 @@ class PatrocinioController extends Controller
      */
     public function edit(Patrocinio $patrocinio)
     {
-        return view('_admin.patrocinio.edit',compact('patrocinio'));
+        
     }
 
     /**

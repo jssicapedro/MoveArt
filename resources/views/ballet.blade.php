@@ -28,7 +28,7 @@
         @foreach($profs as $prof)
         <div>
             <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/ballet/ballet_prof_.png') }}" alt="">
-            <img class="prof" src="{{ url('storage/professores/'.$prof->foto) }}" alt="">
+            <img class="prof" src="{{ url('storage/professores/'.$prof->foto) }}" alt="{{$prof->primeiro}} {{$prof->apelido}} professor(a) de {!! $modalidade->modalidade !!}">
             <h3>{{$prof->primeiro}} {{$prof->apelido}}</h3>
         </div>
         @endforeach
@@ -45,7 +45,7 @@
                 <img width="100%" src="{{ asset('img/dancas/calendar.png') }}" class="d-block" alt="...">
             </div>
             <div class="carousel-item">
-                <img width="100%" src="{{ asset('img/dancas/ballet/calendar_ballet.png') }}" class="d-block" alt="...">
+                <img width="100%" src="{{ url('storage/modalidades/'.$modalidade->foto_horario) }}" class="d-block" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
@@ -72,7 +72,7 @@
                     </button>
                     <!--Modal body with image-->
                     <div class="modal-body">
-                        <img width="100%" src="{{ asset('img/dancas/ballet/calendar_ballet.png') }}" />
+                        <img width="100%" src="{{ url('storage/modalidades/'.$modalidade->foto_horario) }}" />
                     </div>
                 </div>
             </div>

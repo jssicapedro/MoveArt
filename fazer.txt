@@ -1,6 +1,8 @@
 fazer login (login.bade.php -> navbar/main/footer (layouts > app.blade.php)) ------> 2hrs✅ ------> adicionar animação
-alterar landing page
-separar pedido professor
-separar patrocinio
+alterar landing page ✅
+separar pedido professor ✅ 
+separar patrocinio ✅ 
 começar o Back
 adicionar campo de foto_horario nas modalidades
+
+pesquisar sobre police ---- impede que alunos entrem no back
