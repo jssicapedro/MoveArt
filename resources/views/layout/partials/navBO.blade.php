@@ -13,9 +13,6 @@
                     </span>
                 </a>
             </li>
-
-
-
             <li>
                 <a href="#">
                     <span class="icon">
@@ -31,6 +28,14 @@
                         <ion-icon name="people-outline"></ion-icon>
                     </span>
                     <span class="titulo">Users</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="apps-outline"></ion-icon>
+                    </span>
+                    <span class="titulo">Pedidos Professores</span>
                 </a>
             </li>
 
