@@ -33,7 +33,7 @@
             <li>
                 <a href="#">
                     <span class="icon">
-                        <ion-icon name="apps-outline"></ion-icon>
+                    <box-icon type='solid' name='user-check'></box-icon>
                     </span>
                     <span class="titulo">Pedidos Professores</span>
                 </a>
