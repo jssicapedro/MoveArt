@@ -51,7 +51,7 @@
                     @endif
                     </td>
 
-                    <td class="option" style="">
+                    <td class="option">
                         <a href="">
                             <span class="material-symbols-outlined">
                                 visibility

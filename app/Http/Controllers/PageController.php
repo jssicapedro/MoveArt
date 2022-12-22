@@ -86,6 +86,10 @@ class PageController extends Controller
         return view('landingPages/notifications');
     }
 
+    public function sejaprofessor(){
+        return view('landingPages/professor');
+    }
+
     public function landingA(){
         return view('landingPages/landingA');
     }

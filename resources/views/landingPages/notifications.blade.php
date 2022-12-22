@@ -29,7 +29,6 @@
         <a href="{{ asset('/') }}">
             <img src="{{asset('img/logo/logoBallet_p.png')}}" alt="logótipo moveArt" class="logotipo">
         </a>
-       <!--<img src="https://place-hold.it/50x50" alt="logótipo moveArt">--> 
    </header>
    <main>
        <div class="intro">

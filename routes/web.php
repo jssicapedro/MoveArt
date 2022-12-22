@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\InscricaoController;
+use App\Http\Controllers\PatrocinioController;
+
 
 /* ------- Front ------- */
 Route::get('/', [PageController::class, 'index'])->name('/');
@@ -42,6 +44,7 @@ Route::get('/patrocinio', [PageController::class, 'patrocinio'])->name('patrocin
 
 
 Route::get('/notificacoes', [PageController::class, 'notifications'])->name('notifications');
+Route::get('/sejaprofessor', [PageController::class, 'sejaprofessor'])->name('sejaprofessor');
 Route::get('/landingA', [PageController::class, 'landingA'])->name('landingA');
 Route::get('/landingD', [PageController::class, 'landingD'])->name('landingD');
 Route::get('/eventos', [PageController::class, 'eventos'])->name('eventos');
