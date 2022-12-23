@@ -75,6 +75,94 @@ td a{
 
 .comR{
     background-color: var(--rosa);
+}
+
+.voltar,
+.enviar{
+    width: 10%;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.voltar{
+    background-color: var(--roxo);
+    margin-bottom: 20px;
+}
+
+.nm_mail_tlf, 
+.msg_val{
+    display: flex;
+    gap: 20%;
+}
+
+.msg_val{
+    width: 80%;
+}
+
+.nm .conteudo, 
+.mail .conteudo, 
+.tlf .conteudo{
+    width: 200px;
+}
+
+.val .conteudo{
+    width: 100px;
+}
+
+p.sobre{
+    font-size: 20px;
+    height: 5vh;
+    line-height: 5vh;
+    margin: 5% 0 2%;
+}
+
+p.conteudo{
+    margin: 5px 0;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--cinza);
+    border: 2px solid var(--cinzaBorda);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.msg{
+    width: 50%;
+}
+
+.msg .conteudo{
+    padding: 20px 10px;
+    height: 15vh;
+    align-items: flex-start;
+}
+
+.resp{
+    width: 50%;
+}
+
+.resp .conteudo{
+    height: 100px;
+}
+
+.btn{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.enviar{
+    border: none;
+    background-color: var(--amarelo);
+    width: 15%;
+}
 
 .enviar:hover{
    cursor: pointer;
