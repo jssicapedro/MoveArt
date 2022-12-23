@@ -36,7 +36,7 @@ Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas'
 
 Route::get('/professor', [PageController::class, 'professor'])->name('professor');
 
-Route::get('/patrocinio', [PageController::class, 'patrocinio'])->name('patrocinio');
+Route::get('/patrocinio', [PatrocinioController::class, 'create'])->name('patrocinio');
 
 
 /* ------- landingPages ------- */
@@ -60,4 +60,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 /* ------- Back ------- */
 Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
-Route::get('/admin/patrocinios', [PatrocinioController::class, 'index'])->name('patrocinios');
+
+Route::get('/admin/patrocinio', [PatrocinioController::class, 'index'])->name('patrocinios');
+Route::get('/admin/patrocinio/{patrocinio}', [PatrocinioController::class, 'show'])->name('patrocinios.show');
+Route::get('/admin/patrocinio/{patrocinio}/edit', [PatrocinioController::class, 'edit'])->name('patrocinios.edit');

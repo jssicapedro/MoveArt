@@ -42,7 +42,7 @@
 
 
                 <li>
-                    <a href="{{ asset('admin/patrocinios') }}">
+                    <a href="{{ asset('admin/patrocinio') }}">
                         <span class="icon">
                             <ion-icon name="reader-outline"></ion-icon>
                         </span>

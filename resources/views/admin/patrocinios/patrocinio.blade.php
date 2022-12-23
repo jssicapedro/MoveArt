@@ -52,12 +52,12 @@
                     </td>
 
                     <td class="option">
-                        <a href="">
+                        <a href="{{ route('patrocinios.show', $patrocinio->id) }}">
                             <span class="material-symbols-outlined">
                                 visibility
                             </span>
                         </a>
-                        <a href="">
+                        <a href="{{ route('patrocinios.edit', $patrocinio->id) }}">
                             <span class="material-symbols-outlined">
                                 edit
                             </span>

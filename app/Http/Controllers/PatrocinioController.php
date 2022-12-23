@@ -15,7 +15,7 @@ class PatrocinioController extends Controller
     public function index()
     {
         $patrocinios = Patrocinio::all();
-        return view('admin/patrocinios', compact('patrocinios'));
+        return view('admin.patrocinios.patrocinio', compact('patrocinios'));
     }
 
     /**
@@ -25,7 +25,6 @@ class PatrocinioController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -47,7 +46,7 @@ class PatrocinioController extends Controller
      */
     public function show(Patrocinio $patrocinio)
     {
-        //
+        return view('admin.patrocinios.patrocinio_show', ['patrocinio' => $patrocinio]);
     }
 
     /**
@@ -58,7 +57,7 @@ class PatrocinioController extends Controller
      */
     public function edit(Patrocinio $patrocinio)
     {
-        
+        return view('admin.patrocinios.patrocinio_edit', ['patrocinio' => $patrocinio]); 
     }
 
     /**
@@ -68,6 +67,8 @@ class PatrocinioController extends Controller
      * @param  \App\Models\Patrocinio  $patrocinio
      * @return \Illuminate\Http\Response
      */
+
+
     public function update(Request $request, Patrocinio $patrocinio)
     {
         //
