@@ -67,10 +67,6 @@ class PageController extends Controller
         return view('professor');
     }
 
-    /* public function patrocinio(){
-        return view('patrocinio');
-    } */
-
     public function login(){
         return view('login');
     }
