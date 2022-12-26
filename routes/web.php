@@ -51,4 +51,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 /* ------- Back ------- */
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
+Route::get('/create', [PageController::class, 'create'])->name('create');
+
 
