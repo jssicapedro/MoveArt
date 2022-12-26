@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'MoveArt - Inscrições')
+@section('title', 'MoveArt - Patrocínio')
 
 @section('links')
 <link href="{{ asset('css/inscricoes.css') }}" rel="stylesheet">
@@ -21,22 +21,27 @@
         <h4>Coloque algumas informações da empresa.</h4>
     </div>
     <div class="form">
-        <form>
+        <form action="{{ route('register_patrocinio') }}" method="POST">
+            @csrf <!-- impede que vá buscar info de outro lugar -->
             <div class="row">
                 <div class="col-6">
-                    <input type="text" class="form-control" placeholder="Nome Empresa">
+                    <label for="">Nome da empresa</label> <br />
+                    <input type="text" name="nome" class="form-control" placeholder="Nome Empresa" required>
                 </div>
                 <div class="col-6">
-                    <input type="number" class="form-control" placeholder="Telefone..." max="9">
+                    <label for="">Telefone</label> <br />
+                    <input type="tel" name="telefone" class="form-control" placeholder="Telefone..." max="9">
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input type="email" class="form-control" placeholder="Email...">
+                    <label for="">Email</label> <br />
+                    <input type="email" name="email" class="form-control" placeholder="Email..." required>
                 </div>
                 <div class="col-4">
+                    <label for="">Valor</label> <br />
                     <div class="input-group">
-                        <input type="number" class="form-control" placeholder="Valor Patrocínio">
+                        <input type="number" name="valor" class="form-control" placeholder="Valor Patrocínio" required>
                         <div class="input-group-append">
                             <span class="input-group-text">€</span>
                         </div>
@@ -45,7 +50,8 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <textarea name="patrocinio" class="form-control" id="" cols="30" rows="10" placeholder="Breve mensagem sobre o patrocínio"></textarea>
+                    <label for="">Mensagem</label> <br />
+                    <textarea name="mensagem" class="form-control" id="" cols="30" rows="10" placeholder="Breve mensagem sobre o patrocínio"></textarea>
                 </div>
             </div>
             <div class="row">

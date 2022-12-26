@@ -14,10 +14,14 @@
     margin: 5%;
 }
 
-.patrocinio_main h1{
+h1{
     margin: 20px 0;
     font-size: 50px;
-    text-shadow: -5px 1px 10px #00000052;
+    text-align: center;
+}
+
+hr{
+    margin: 0 0 20px;
 }
 
 .dataTables_length{
@@ -52,6 +56,14 @@ td{
     text-align: center;
 }
 
+.option ul{
+    list-style: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .mensagem{
     width: 35%;
 }
@@ -79,7 +91,6 @@ td a{
 
 .voltar,
 .enviar{
-    width: 10%;
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
@@ -90,38 +101,24 @@ td a{
 }
 
 .voltar{
+    width: 150px;
     background-color: var(--roxo);
     margin-bottom: 20px;
 }
 
-.nm_mail_tlf, 
-.msg_val{
-    display: flex;
-    gap: 20%;
+.about{
+    background-color: var(--branco_footer);
+    padding: 20px;
 }
 
-.msg_val{
-    width: 80%;
-}
-
-.nm .conteudo, 
-.mail .conteudo, 
-.tlf .conteudo{
-    width: 200px;
-}
-
-.val .conteudo{
-    width: 100px;
-}
-
-p.sobre{
+.sobre{
     font-size: 20px;
     height: 5vh;
     line-height: 5vh;
     margin: 5% 0 2%;
 }
 
-p.conteudo{
+.conteudo{
     margin: 5px 0;
     height: 4vh;
     display: flex;
@@ -142,12 +139,17 @@ p.conteudo{
     align-items: flex-start;
 }
 
-.resp{
-    width: 50%;
+.resp, 
+.msg{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.resp .conteudo{
+.resp .conteudo, 
+.msg .conteudo{
     height: 100px;
+    width: 100%;
 }
 
 .btn{
@@ -161,9 +163,19 @@ p.conteudo{
 .enviar{
     border: none;
     background-color: var(--amarelo);
-    width: 15%;
 }
 
 .enviar:hover{
    cursor: pointer;
+}
+
+.row{
+    display: flex;
+    gap: 160px;
+    justify-content: flex-start;
+}
+@media (max-width:1400px){
+    .option ul{
+        flex-direction: column;
+    }
 }

@@ -52,21 +52,29 @@
                     </td>
 
                     <td class="option">
-                        <a href="{{ route('patrocinios.show', $patrocinio->id) }}">
-                            <span class="material-symbols-outlined">
-                                visibility
-                            </span>
-                        </a>
-                        <a href="{{ route('patrocinios.edit', $patrocinio->id) }}">
-                            <span class="material-symbols-outlined">
-                                edit
-                            </span>
-                        </a>
-                        <a href="">
-                            <span class="material-symbols-outlined">
-                                delete
-                            </span>
-                        </a>
+                        <ul>
+                            <li>
+                                <a href="{{ route('patrocinios.show', $patrocinio->id) }}">
+                                    <span class="material-symbols-outlined">
+                                        visibility
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('patrocinios.edit', $patrocinio->id) }}">
+                                    <span class="material-symbols-outlined">
+                                        edit
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 @endforeach

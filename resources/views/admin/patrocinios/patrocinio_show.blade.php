@@ -10,35 +10,45 @@
 <div class="dashboard_main">
     <div class="patrocinio_main">
         <a class="voltar" href="{{ asset('admin/patrocinio')}}">Voltar</a>
-        <div class="nm_mail_tlf">
-            <div class="nm">
-                <p class="sobre">Nome do patrocinio</p>
-                <p class="conteudo">{{$patrocinio->nome}}</p>
-            </div>
-            <div class="mail">
-                <p class="sobre">Email</p>
-                <p class="conteudo">{{$patrocinio->email}}</p>
-            </div>
-            <div class="tlf">
-                <p class="sobre">Telefone</p>
-                <p class="conteudo">{{$patrocinio->telefone}}</p>
-            </div>
+        <div class="about">
+            <h1>Sobre o patrocínio</h1>
+            <hr>
+            <form>
+                @csrf
+                <div class="row">
+                    <div class="col-3">
+                        <label class="sobre" for="">Nome da empresa</label> <br />
+                        <input type="text" name="nome" class="conteudo" value="{{$patrocinio->nome}}">
+                    </div>
+                    <div class="col-3">
+                        <label class="sobre" for="">Valor</label> <br />
+                        <div class="input-group">
+                            <input type="number" name="valor" class="conteudo" value="{{$patrocinio->valor}}">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <label class="sobre" for="">Email</label> <br />
+                        <input type="email" name="email" class="conteudo" value="{{$patrocinio->email}}">
+                    </div>
+                    <div class="col-3">
+                        <label class="sobre" for="">Telefone</label> <br />
+                        <input type="tel" name="telefone" class="conteudo" value="{{$patrocinio->telefone}}">
+                    </div>
+                </div>
+                <div class="row msg">
+                    <div class="col">
+                        <label class="sobre" for="">Mensagem enviada</label> <br />
+                        <textarea name="mensagem" class="conteudo">{{$patrocinio->mensagem}}</textarea>
+                    </div>
+                </div>
+                <div class="row resp">
+                    <div class="col">
+                        <label class="sobre" for="">Resposta</label> <br />
+                        <textarea name="resposta" class="conteudo">{{$patrocinio->resposta}}</textarea>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="msg_val">
-            <div class="msg">
-                <p class="sobre">Mensagem</p>
-                <p class="conteudo">{{$patrocinio->mensagem}}</p>
-            </div>
-            <div class="val">
-                <p class="sobre">Valor</p>
-                <p class="conteudo">{{$patrocinio->valor}}</p>
-            </div>
-        </div>
-        <div class="resp">
-            <p class="sobre">Resposta</p>
-            <p class="conteudo">{{$patrocinio->resposta}}</p>
-        </div>
-        <!-- <a class="enviar" href="#">Enviar resposta</a> -->
     </div>
 </div>
 @endsection

@@ -36,13 +36,13 @@ Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas'
 
 Route::get('/professor', [PageController::class, 'professor'])->name('professor');
 
+/* patrocinio */
 Route::get('/patrocinio', [PatrocinioController::class, 'create'])->name('patrocinio');
+Route::post('/patrocinio', [PatrocinioController::class, 'store'])->name('register_patrocinio');
 
 
 /* ------- landingPages ------- */
 // landing pages Jéssica>Adriana>Diogo>Beatriz>Tiago
-
-
 Route::get('/notificacoes', [PageController::class, 'notifications'])->name('notifications');
 Route::get('/festival', [PageController::class, 'festival'])->name('festival');
 Route::get('/landingA', [PageController::class, 'landingA'])->name('landingA');
@@ -61,6 +61,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
 
+
+
 Route::get('/admin/patrocinio', [PatrocinioController::class, 'index'])->name('patrocinios');
-Route::get('/admin/patrocinio/{patrocinio}', [PatrocinioController::class, 'show'])->name('patrocinios.show');
-Route::get('/admin/patrocinio/{patrocinio}/edit', [PatrocinioController::class, 'edit'])->name('patrocinios.edit');
+Route::get('/admin/patrocinio/show/{patrocinio}', [PatrocinioController::class, 'show'])->name('patrocinios.show');
+Route::get('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'edit'])->name('patrocinios.edit');
+Route::post('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'update'])->name('patrocinios.update');

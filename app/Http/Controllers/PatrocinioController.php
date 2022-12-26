@@ -36,7 +36,15 @@ class PatrocinioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Patrocinio::create([
+            'nome' => $request->nome,
+            'email' => $request->email,
+            'valor' => $request->valor,
+            'telefone' => $request->telefone,
+            'mensagem' => $request->mensagem,
+        ]);
+
+        return view('patrocinio');
     }
 
     /**
@@ -72,7 +80,17 @@ class PatrocinioController extends Controller
 
     public function update(Request $request, Patrocinio $patrocinio)
     {
-        //
+        $patrocinio->update([
+            'nome' => $request->nome,
+            'email' => $request->email,
+            'valor' => $request->valor,
+            'telefone' => $request->telefone,
+            'mensagem' => $request->mensagem,
+            'resposta' => $request->resposta,
+            'estado' => $request->estado,
+        ]);
+
+        return "patrocinio atualizado com sucesso";
     }
 
     /**
