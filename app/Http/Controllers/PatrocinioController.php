@@ -36,6 +36,12 @@ class PatrocinioController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nome' => 'required',
+            'email' => 'required|email',
+            'valor' => 'required',
+        ]);
+
         Patrocinio::create([
             'nome' => $request->nome,
             'email' => $request->email,

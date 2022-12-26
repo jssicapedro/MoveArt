@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('email',150);
             $table->double('valor');
             $table->string('telefone', 9)->nullable();
-            $table->text('mensagem');
+            $table->text('mensagem')->nullable();
             $table->enum('estado', ['respondido', 'sem reposta'])->default('sem reposta');
             $table->text('resposta')->nullable();
             $table->timestamps();
