@@ -51,6 +51,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 /* ------- Back ------- */
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
-Route::get('/create', [PageController::class, 'create'])->name('create');
 
-
+/*EventosBO*/
+Route::get('/eventos/novo', 'EventosController@create');
+Route::post('/eventos/novo', 'EventosController@store')->name('registar_evento');
+Route::get('/evento/ver/{id}', 'EventosController@show');
+Route::get('/evento/editar/{id}', 'EventosController@edit');
+Route::post('/evento/editar/{id}', 'EventosController@update')->name('alterar_evento');
+Route::get('/evento/excluir/{id}', 'EventosController@delete');
+Route::post('/evento/excluir/{id}', 'EventosController@destroy')->name('excluir_evento');

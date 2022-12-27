@@ -99,7 +99,5 @@ class PageController extends Controller
         
         return view('dashboardBO', compact('evento','modalidade','users','patrocinios'));
     }
-    public function create(){
-        return view('admin/create');
-    }
+
 }
