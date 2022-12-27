@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
             EventosSeeder::class,
             EventosModalidadesSeeder::class,
             PatrociniosSeeder::class,
-            InscricoesSeeder::class
+            InscricoesSeeder::class,
+            PedidoProfessorSeeder::class
         ]);
     }
 }

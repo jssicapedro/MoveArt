@@ -21,36 +21,41 @@
         <h4>Deixe aqui o seu CV.</h4>
     </div>
     <div class="form">
-        <form>
+        <form action="{{ route('register_professor') }}" method="POST">
+            @csrf
             <div class="row">
                 <div class="col-6">
-                    <input type="text" class="form-control" placeholder="Nome...">
+                    <label for="">Nome:</label>
+                    <input name="primeiro" type="text" class="form-control" placeholder="Nome..." required>
                 </div>
                 <div class="col-6">
-                    <input type="text" class="form-control" placeholder="Apelido...">
+                    <label for="">Apelido</label>
+                    <input name="apelido" type="text" class="form-control" placeholder="Apelido..." required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input type="email" class="form-control" name="prof_email" id="prof_email" placeholder="Email...">
+                    <label for="">Email</label>
+                    <input name="email" type="email" class="form-control" name="prof_email" id="prof_email" placeholder="Email..." required>
                 </div>
                 <div class="col-5">
-                    <input type="number" class="form-control" placeholder="Telefone" max="9">
+                    <label for="">Telefone</label>
+                    <input name="telefone" type="tel" class="form-control" placeholder="Telefone" max="9" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <label for="dta_nasc">Data de Nascimento</label>
-                    <input type="date" class="form-control" name="dta_nasc" id="dta_nasc" placeholder="Data de Nascimento">
+                    <label for="">Data de Nascimento</label>
+                    <input type="date" class="form-control" name="data_nac" id="dta_nasc" placeholder="Data de Nascimento">
                 </div>
                 <div class="col-6">
                     <label for="tp_modalidade">Tipo de Modalidade:</label>
-                    <select id="tp_modalidade" class="form-control ">
-                        <option value="hip-hop">Hip-Hop</option>
+                    <select name="modalidade" id="tp_modalidade" class="form-control" required>
                         <option value="Ballet">Ballet</option>
-                        <option value="Folclore">Folclore</option>
+                        <option value="hip-hop">Hip-Hop</option>
                         <option value="danca_espanhola">Dança Espanhola</option>
                         <option value="danca_oriental">Dança Oriental</option>
+                        <option value="Folclore">Folclore</option>
                     </select>
                 </div>
             </div>

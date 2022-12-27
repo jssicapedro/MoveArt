@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string("primeiro", 150);
             $table->string("apelido", 150);
             $table->string('telefone', 9);
-            $table->string("cv");
+            $table->string("cv")->nullable();
             $table->string("email");
-            $table->date('data_nac');
-            $table->string('modalidade');
+            $table->date('data_nac')->nullable();
+            $table->enum('modalidade', ['Ballet', 'Hip-Hop', 'Folclore', 'Dança Espanhola', 'Dança Oriental']);
             $table->enum("estado_do_pedido", ['aceite', 'recusado', 'pendente'])->default('pendente');
             $table->timestamps();
         });

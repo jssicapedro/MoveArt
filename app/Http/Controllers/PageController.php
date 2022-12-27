@@ -63,10 +63,6 @@ class PageController extends Controller
         return view('mapaaulas');
     }
 
-    public function professor(){
-        return view('professor');
-    }
-
     public function login(){
         return view('login');
     }
