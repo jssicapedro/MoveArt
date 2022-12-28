@@ -75,3 +75,6 @@ Route::get('/admin/pedprof', [PedidoprofessorController::class, 'index'])->name(
 Route::get('/admin/pedprof/show/{pedidos}', [PedidoprofessorController::class, 'show'])->name('pedprof.show');
 Route::get('/admin/pedprof/edit/{pedidos}', [PedidoprofessorController::class, 'edit'])->name('pedprof.edit');
 Route::post('/admin/pedprof/edit/{pedidos}', [PedidoprofessorController::class, 'update'])->name('pedprof.update');
+/* download cv */
+/* Route::get('/lista_cv', [PedidoprofessorController::class, 'lista_cv'])->name('cv_lista_cv');  */
+Route::get('/download/{file}', [PedidoprofessorController::class, 'download'])->name('cv_download'); 

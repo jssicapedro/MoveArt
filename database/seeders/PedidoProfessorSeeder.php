@@ -20,7 +20,7 @@ class PedidoProfessorSeeder extends Seeder
                 'primeiro'=> 'Afonso',
                 'apelido'=> 'José',
                 'telefone'=> '917666585',
-                'cv'=> '1.pdf',
+                'cv'=> 'AfonsoJosé.pdf',
                 'email'=> 'afonsoZe@gmail.com',
                 'data_nac'=> '1998-06-15',
                 'modalidade'=> 'Ballet',

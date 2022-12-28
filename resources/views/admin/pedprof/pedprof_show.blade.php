@@ -17,30 +17,30 @@
                 @csrf
                 <div class="row">
                     <div class="col-3">
-                        <label class="sobre" for="">Nome</label> <br />
-                        <input type="text" name="nome" class="conteudo" value="{{$pedidos->primeiro}} {{$pedidos->apelido}}">
+                        <p class="sobre" for="">Nome</p> <br />
+                        <p class="conteudo">{{$pedidos->primeiro}} {{$pedidos->apelido}}</p>
                     </div>
                     <div class="col-3">
-                    <label class="sobre" for="">Email</label> <br />
-                        <input type="email" name="email" class="conteudo" value="{{$pedidos->email}}">
+                    <p class="sobre" for="">Email</p> <br />
+                        <p class="conteudo">{{$pedidos->email}}</p>
                     </div>
                     <div class="col-3">
-                        <label class="sobre" for="">Telefone</label> <br />
-                        <input type="tel" name="telefone" class="conteudo" value="{{$pedidos->telefone}}">
+                        <p class="sobre" for="">Telefone</p> <br />
+                        <p class="conteudo">{{$pedidos->telefone}}</p>
                     </div>
                     <div class="col-3">
-                        <label class="sobre" for="">CV</label> <br />
-                        <input type="file" name="cv" class="conteudo" value="{{$pedidos->cv}}">
+                        <p class="sobre" for="">CV</p> <br />
+                        <p class="conteudo"><a href="{!! route('cv_download', $pedidos->cv) !!}" download>Fazer Download do CV</a></p>
                     </div>
                 </div>
-                <div class="row msg">
-                    <div class="col-3">
-                        <label class="sobre" for="">Data de nascimento</label> <br />
-                        <input type="text" name="dta_nac" class="conteudo" value="{{$pedidos->data_nac}}">
+                <div class="row">
+                    <div class="col-4">
+                        <p class="sobre" for="">Data de nascimento</p> <br />
+                        <p class="conteudo">{{$pedidos->data_nac}}</p>
                     </div>
-                    <div class="col-3">
-                        <label class="sobre" for="">Modalidade</label> <br />
-                        <input type="text" name="modalidade" class="conteudo" value="{{$pedidos->modalidade}}">
+                    <div class="col-4">
+                        <p class="sobre" for="">Modalidade</p> <br />
+                        <p class="conteudo">{{$pedidos->modalidade}}</p>
                     </div>
                 </div>
                 

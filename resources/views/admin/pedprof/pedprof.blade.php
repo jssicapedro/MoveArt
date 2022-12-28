@@ -40,7 +40,7 @@
                     <td>{{$pedidos->modalidade}}</td>
                     <td>{{$pedidos->email}}</td>
                     <td>{{$pedidos->telefone}}</td>
-                    <td>{{$pedidos->cv}}</td>
+                    <td><a href="{!! route('cv_download', $pedidos->cv) !!}" download><!-- Fazer Download --> {{ $pedidos->cv }}</a></td>
 
                     @if($pedidos->estado =='aceite')
                     <td>

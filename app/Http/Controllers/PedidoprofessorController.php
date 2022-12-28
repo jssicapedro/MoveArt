@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\PedidoProfessor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PedidoprofessorController extends Controller
 {
@@ -15,6 +16,11 @@ class PedidoprofessorController extends Controller
     public function index()
     {
         $pedidos = PedidoProfessor::all();
+        $pedidos->map(function ($pedido) {
+            $filename = end(explode('/',$pedido->cv));
+            $pedido->cd = $filename;
+            return $pedido;
+        });
         return view('admin.pedprof.pedprof', compact('pedidos'));
     }
 
@@ -36,12 +42,16 @@ class PedidoprofessorController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $namefile = $request->primeiro . $request->apelido . '.' . $request->cv->extension();
 
         $request->validate([
             'primeiro' => 'required',
             'apelido' => 'required',
             'email' => 'required|email',
+            'telefone' => 'required',
+            'data_nac' => 'required',
+            'modalidade' => 'required',
+            'cv' => 'required',
         ]);
 
         PedidoProfessor::create([
@@ -51,9 +61,21 @@ class PedidoprofessorController extends Controller
             'telefone' => $request->telefone,
             'data_nac' => $request->data_nac,
             'modalidade' => $request->modalidade,
+            'cv' => $request->cv->storeAs('pedidoProf', $namefile),
         ]);   
         
         return view('professor');
+    }
+
+    /* public function lista_cv(){
+        $file = Storage::files('pedidoProf');
+        echo'<pre>';
+        print_r($file);
+    } */
+
+
+    public function download($file){
+        return response()->download(storage_path('app/public/pedidoProf/'.$file));
     }
 
     /**

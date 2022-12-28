@@ -21,7 +21,7 @@
         <h4>Deixe aqui o seu CV.</h4>
     </div>
     <div class="form">
-        <form action="{{ route('register_professor') }}" method="POST">
+        <form action="{{ route('register_professor') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-6">
@@ -51,10 +51,11 @@
                 <div class="col-6">
                     <label for="tp_modalidade">Tipo de Modalidade:</label>
                     <select name="modalidade" id="tp_modalidade" class="form-control" required>
+                        <option value="Indiferente">Indiferente</option>
                         <option value="Ballet">Ballet</option>
-                        <option value="hip-hop">Hip-Hop</option>
-                        <option value="danca_espanhola">Dança Espanhola</option>
-                        <option value="danca_oriental">Dança Oriental</option>
+                        <option value="Hip-Hop">Hip-Hop</option>
+                        <option value="Dança Espanhola">Dança Espanhola</option>
+                        <option value="Dança Oriental">Dança Oriental</option>
                         <option value="Folclore">Folclore</option>
                     </select>
                 </div>
@@ -65,7 +66,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" accept="application/pdf">
+                        <input name="cv" type="file" class="form-control-file" accept="application/pdf" required>
                         <span class="cv">*Ficheiro apenas em formato PDF</span>
                     </div>
                 </div>

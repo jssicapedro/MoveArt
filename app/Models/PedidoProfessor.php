@@ -17,6 +17,7 @@ class PedidoProfessor extends Model
         'telefone',
         'email',
         'data_nac',
+        'cv',
         'modalidade',
     ];
 }
