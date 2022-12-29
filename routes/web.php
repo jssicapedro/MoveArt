@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\InscricaoController;
+use App\Http\Controllers\EventosController;
 
 /* ------- Front ------- */
 Route::get('/', [PageController::class, 'index'])->name('/');
@@ -53,10 +54,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
 
 /*EventosBO*/
-Route::get('/eventos/novo', 'EventosController@create');
-Route::post('/eventos/novo', 'EventosController@store')->name('registar_evento');
-Route::get('/evento/ver/{id}', 'EventosController@show');
-Route::get('/evento/editar/{id}', 'EventosController@edit');
-Route::post('/evento/editar/{id}', 'EventosController@update')->name('alterar_evento');
-Route::get('/evento/excluir/{id}', 'EventosController@delete');
-Route::post('/evento/excluir/{id}', 'EventosController@destroy')->name('excluir_evento');
+Route::get('/eventos/novo', [EventosController::class, 'create']);
+Route::post('/eventos/novo', [EventosController::class, 'store'])->name('registar_evento');
+Route::get('/evento/ver/{id}', [EventosController::class, 'show']);
+Route::get('/evento/editar/{id}', [EventosController::class, 'edit']);
+Route::post('/evento/editar/{id}', [EventosController::class, 'update'])->name('alterar_evento');
+Route::get('/evento/excluir/{id}', [EventosController::class, 'delete']);
+Route::post('/evento/excluir/{id}', [EventosController::class, 'destroy'])->name('excluir_evento');

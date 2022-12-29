@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Evento;
+use App\Models\Evento;
 
 class EventosController extends Controller
 {
@@ -47,7 +47,7 @@ class EventosController extends Controller
         'localizacao' => $request->localizacao,
         'foto' => $request->foto,
         'descricao' => $request->descricao,
-    ])
+    ]);
 
     return "Evento atualizado com sucesso!";
    }
