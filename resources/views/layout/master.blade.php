@@ -7,7 +7,7 @@
 
     <title>@yield('title')</title>
     <meta
-        content="A instituição MOVEART, oferece um ensino de qualidade na área das artes da dança e do movimento. Desenvolve diversos eventos em Portugal e temos como objetivo mostrar a nossa tradição ao mundo."
+        content="A escola de dança MOVEART, oferece um ensino de qualidade na área das artes da dança e do movimento. Desenvolve diversos eventos em Portugal e temos como objetivo mostrar a nossa tradição ao mundo."
         name="description">
     <meta content="dança, ballet, hiphop, danças-orientais, dança-espanhola, folclore" name="keywords">
 

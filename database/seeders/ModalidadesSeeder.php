@@ -18,7 +18,7 @@ class ModalidadesSeeder extends Seeder
         Modalidade::insert([
             [
                 'modalidade' => 'Ballet',
-                'descricao' => '</p>O Ballet é uma dança é o estilo de dança mais popular no mundo que exige muita técnica e precisão nos movimentos, com a ajuda dos nossos profissionais vais aprender e ser um dos melhores.<br>A nossa Instituição já foi premiada com ouro em 2020 e 2021.</p><br> <p>Queres ser o próximo? Vem connosco e entra nesta aventura.</p>',
+                'descricao' => '</p>O Ballet é uma dança é o estilo de dança mais popular no mundo que exige muita técnica e precisão nos movimentos, com a ajuda dos nossos profissionais vais aprender e ser um dos melhores.<br>A nossa escola de dança já foi premiada com ouro em 2020 e 2021.</p><br> <p>Queres ser o próximo? Vem connosco e entra nesta aventura.</p>',
                 'foto_desc' => '1_app.png',
                 'valor_mensal' => '75',
                 'foto_mensal' => '1.jpg',
@@ -38,7 +38,7 @@ class ModalidadesSeeder extends Seeder
             ],
             [
                 'modalidade' => 'Dança Espanhola',
-                'descricao' => '<p>A dança espanhola é conhecida pelos movimentos elegantes. A dança espanhola mais conhecida é o Flamingo, e é esta à qual a MoveArt dá mais atenção.</p><br><p>A nossa Instituição foi premiada em 2018 como a melhor escola de Leiria de Flamingo. Aprende esta modalidade com os nosso profissionais de topo.</p>',
+                'descricao' => '<p>A dança espanhola é conhecida pelos movimentos elegantes. A dança espanhola mais conhecida é o Flamingo, e é esta à qual a MoveArt dá mais atenção.</p><br><p>A nossa escola de dança foi premiada em 2018 como a melhor escola de Leiria de Flamingo. Aprende esta modalidade com os nosso profissionais de topo.</p>',
                 'foto_desc' => '3_app.png',
                 'valor_mensal' => '35',
                 'foto_mensal' => '3.jpg',
