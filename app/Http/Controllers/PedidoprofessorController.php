@@ -16,11 +16,6 @@ class PedidoprofessorController extends Controller
     public function index()
     {
         $pedidos = PedidoProfessor::all();
-        $pedidos->map(function ($pedido) {
-            $filename = end(explode('/',$pedido->cv));
-            $pedido->cd = $filename;
-            return $pedido;
-        });
         return view('admin.pedprof.pedprof', compact('pedidos'));
     }
 
@@ -54,6 +49,8 @@ class PedidoprofessorController extends Controller
             'cv' => 'required',
         ]);
 
+        $request->cv->storeAS('pedidoProf', $namefile);
+
         PedidoProfessor::create([
             'primeiro' => $request->primeiro,
             'apelido' => $request->apelido,
@@ -61,7 +58,7 @@ class PedidoprofessorController extends Controller
             'telefone' => $request->telefone,
             'data_nac' => $request->data_nac,
             'modalidade' => $request->modalidade,
-            'cv' => $request->cv->storeAs('pedidoProf', $namefile),
+            'cv'=> $namefile,
         ]);   
         
         return view('professor');
