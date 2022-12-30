@@ -22,6 +22,7 @@ return new class extends Migration
             $table->text('mensagem')->nullable();
             $table->enum('estado', ['respondido', 'sem reposta'])->default('sem reposta');
             $table->text('resposta')->nullable();
+            $table->softDeletes();/* coluna deleted_at -> softdelete */
             $table->timestamps();
         });
     }
