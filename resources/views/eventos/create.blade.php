@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Evento</title>
-</head>
-<body>
+@extends('layout.masterBO')
+
+@section('title', 'MoveArt - EventosBO')
+
+@section('links')
+<link href="{{ asset('css/eventosBO.css') }}" rel="stylesheet">
+@endsection
+
+@section('main')
+<div class="eventosBO_main">
+    <h1>Adicionar Evento</h1>
 <form action="{{ route('registar_evento') }}" method="POST">
        @csrf
         <label for="">Nome</label><br>
@@ -21,5 +23,5 @@
         <input type="text" name="descricao"><br>
         <button>Guardar</button>
     </form>
-</body>
-</html>
+</div>
+@endsection
