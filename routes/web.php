@@ -53,11 +53,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 /* ------- Back ------- */
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
 
-/*EventosBO*/
+/*EventosBO
 Route::get('/eventos/novo', [EventosController::class, 'create']);
 Route::post('/eventos/novo', [EventosController::class, 'store'])->name('registar_evento');
-Route::get('/evento/ver/{id}', [EventosController::class, 'show']);
-Route::get('/evento/editar/{id}', [EventosController::class, 'edit']);
-Route::post('/evento/editar/{id}', [EventosController::class, 'update'])->name('alterar_evento');
-Route::get('/evento/excluir/{id}', [EventosController::class, 'delete']);
-Route::post('/evento/excluir/{id}', [EventosController::class, 'destroy'])->name('excluir_evento');
+Route::get('/eventos/ver/{id}', [EventosController::class, 'show']);
+Route::get('/eventos/editar/{id}', [EventosController::class, 'edit']);
+Route::post('/eventos/editar/{id}', [EventosController::class, 'update'])->name('alterar_evento');
+Route::get('/eventos/excluir/{id}', [EventosController::class, 'delete']);
+Route::post('/eventos/excluir/{id}', [EventosController::class, 'destroy'])->name('excluir_evento');
+*/
+
+Route::resource("/evento", EventosController::class);
