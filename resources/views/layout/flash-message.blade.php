@@ -1,6 +1,4 @@
 @if(session('success'))
-<!-- <p class="success">{{ session('success') }}</p> -->
-
 <section>
     <div class=" container mt-5">
         <div class="row success">
@@ -21,7 +19,6 @@
 @endif
 
 @if(session('erro'))
-<!-- <p class="erro">{{ session('erro') }}</p> -->
 <section>
     <div class=" container mt-5">
         <div class="row erro">

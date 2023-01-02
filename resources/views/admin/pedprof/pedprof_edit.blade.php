@@ -51,6 +51,12 @@
                         <input type="text" name="cv" class="conteudo" value="{{$pedidos->cv}}" readonly>
                     </div>
                 </div>
+                <div class="row resp">
+                    <div class="col">
+                        <label class="sobre" for="">Resposta</label> <br />
+                        <textarea name="resposta" class="conteudo">{{$pedidos->resposta}}</textarea>
+                    </div>
+                </div>
                 <div class="btn">
                     <input type="submit" value="ATUALIZAR" class="enviar">
                 </div>
