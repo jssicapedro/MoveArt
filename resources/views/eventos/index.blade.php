@@ -22,10 +22,8 @@
 
         <!--dashboard_funcionarios/eventos-->
         <div class="baixo">
+        <h3><a href="{{ url('/evento/create') }}" class="btn btn-success btn-sm" title="Adicionar Evento"><img src="{{ asset('img/eventosBO/add.png') }}" style="width:30px; height:; " alt=""></a></h3><br>
             <div class="dashboard_funcionarios">
-               <h3> <a href="{{ url('/evento/create') }}" class="btn btn-success btn-sm" title="Add New evento">
-                            <i class="fa fa-plus" aria-hidden="true"></i> Adicionar Evento
-                        </a></h3><br>
 
                 <table>
                     <thead>
@@ -42,18 +40,18 @@
                     @if (isset($eventos))
                     @foreach($eventos as $item)
                                     <tr>
-                                        <td>{{ $item->foto }}</td>
+                                        <td><img src="{{ asset('img/eventosBO/arraial.png') }}" style="width:60px; height:; " alt=""></td>
                                         <td>{{ $item->nome }}</td>
                                         <td>{{ $item->data }}</td>
-                                        <td>{{ $item->localizacao }}</td>
+                                        <td>Jardim Luís Vaz de Camões</td>
                                         <td>{{ $item->descricao }}</td>
                                         <td>
-                                            <a href="{{ url('/evento/' . $item->id) }}" title="View evento"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Ver</button></a>
-                                            <a href="{{ url('/evento/' . $item->id . '/edit') }}" title="Edit evento"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button></a>
+                                            <a href="{{ url('/evento/' . $item->id) }}" title="View evento"><img src="{{ asset('img/eventosBO/view.png') }}" style="width:38px; background-color:white; " alt=""></a>
+                                            <a href="{{ url('/evento/' . $item->id . '/edit') }}" title="Edit evento"><img src="{{ asset('img/eventosBO/edit.png') }}" style="width:38px; background-color:white; " alt=""></a>
                                             <form method="POST" action="{{ url('/evento' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete evento" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</button>
+                                                <a type="submit" class="btn btn-danger btn-sm" title="Apagar Evento" onclick="return confirm(&quot;Tem a certeza que quer eliminar?&quot;)"><img src="{{ asset('img/eventosBO/delete.png') }}" style="width:38px; background-color:white; " alt=""></a></a>
                                             </form>
                                         </td>
                                     </tr>
@@ -63,9 +61,6 @@
                     @endif
                     </tbody>
                 </table>
-            </div>
-            <div>
-            </div>
         </div>
 </div>
 <!--
