@@ -78,6 +78,10 @@ class PageController extends Controller
         return view('landingPages/notifications');
     }
 
+    public function patrocinio(){
+        return view('landingPages/patrocinio');
+    }
+
     public function festival(){
         return view('landingPages/festival');
     }

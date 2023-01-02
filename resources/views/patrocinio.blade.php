@@ -12,6 +12,7 @@
         <h1>Patrocínio</h1>
     </div>
 </section>
+@include('layout.flash-message')
 @endsection
 
 @section('main')

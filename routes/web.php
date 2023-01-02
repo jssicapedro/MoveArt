@@ -47,7 +47,9 @@ Route::post('/patrocinio', [PatrocinioController::class, 'store'])->name('regist
 /* ------- landingPages ------- */
 // landing pages Jéssica>Adriana>Diogo>Beatriz>Tiago
 Route::get('/notificacoes', [PageController::class, 'notifications'])->name('notifications');
+Route::get('/patrocinioland', [PageController::class, 'patrocinio'])->name('patrocinio');
 Route::get('/festival', [PageController::class, 'festival'])->name('festival');
+
 Route::get('/landingA', [PageController::class, 'landingA'])->name('landingA');
 Route::get('/landingD', [PageController::class, 'landingD'])->name('landingD');
 Route::get('/eventos', [PageController::class, 'eventos'])->name('eventos');

@@ -61,7 +61,8 @@ class PedidoprofessorController extends Controller
             'cv'=> $namefile,
         ]);   
         
-        return view('professor');
+        return redirect('professor')->with('success');
+        return redirect('professor')->with('erro');
     }
 
     /* public function lista_cv(){

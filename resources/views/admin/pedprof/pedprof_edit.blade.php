@@ -18,37 +18,37 @@
                 <div class="row">
                     <div class="col-2">
                         <label class="sobre" for="">Nome</label> <br />
-                        <input type="text" name="nome" class="conteudo" value="{{$pedidos->primeiro}}">
+                        <input type="text" name="nome" class="conteudo" value="{{$pedidos->primeiro}}" readonly>
                     </div>
                     <div class="col-2">
                         <label class="sobre" for="">Apelido</label> <br />
-                        <input type="text" name="nome" class="conteudo" value=" {{$pedidos->apelido}}">
+                        <input type="text" name="nome" class="conteudo" value=" {{$pedidos->apelido}}" readonly>
                     </div>
                     <div class="col-2">
                         <label class="sobre" for="">Email</label> <br />
-                        <input type="email" name="email" class="conteudo" value="{{$pedidos->email}}">
+                        <input type="email" name="email" class="conteudo" value="{{$pedidos->email}}" readonly>
                     </div>
                     <div class="col-2">
                         <label class="sobre" for="">Telefone</label> <br />
-                        <input type="tel" name="telefone" class="conteudo" value="{{$pedidos->telefone}}">
+                        <input type="tel" name="telefone" class="conteudo" value="{{$pedidos->telefone}}" readonly>
                     </div>
                     <div class="col-2">
                         <label class="sobre" for="">CV</label> <br />
-                        <input type="file" name="cv" class="conteudo" value="{{$pedidos->cv}}">
+                        <input type="file" name="cv" class="conteudo" value="{{$pedidos->cv}}" readonly>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-4">
                         <label class="sobre" for="">Data de nascimento</label> <br />
-                        <input type="text" name="dta_nac" class="conteudo" value="{{$pedidos->data_nac}}">
+                        <input type="text" name="dta_nac" class="conteudo" value="{{$pedidos->data_nac}}" readonly>
                     </div>
                     <div class="col-4">
                         <label class="sobre" for="">Modalidade</label> <br />
-                        <input type="text" name="cv" class="conteudo" value="{{$pedidos->modalidade}}">
+                        <input type="text" name="cv" class="conteudo" value="{{$pedidos->modalidade}}" readonly>
                     </div>
                     <div class="col-4">
                         <label class="sobre" for="">Curriculo</label> <br />
-                        <input type="text" name="cv" class="conteudo" value="{{$pedidos->cv}}">
+                        <input type="text" name="cv" class="conteudo" value="{{$pedidos->cv}}" readonly>
                     </div>
                 </div>
                 <div class="btn">

@@ -35,7 +35,7 @@
            <div class="slogan_">
                <h1>Festival de Dança 2023</h1>
                <p>Musica ao vivo, apresentações de dança e muita diversão garantida.<br>Vem connosco e enche-te de movimento!</p>
-               <a href="{{ asset('professor') }}" data-aos="fade-up">
+               <a href="#inscricao" data-aos="fade-up">
                    <span>Junta-te a nós</span>
                </a>
            </div>
@@ -43,6 +43,7 @@
                alt="gif três pessoas a dançar hip-hop">
        </div>
        <div class="novidades" data-aos="fade-right">
+       <a name="inscricao"></a>
            <h3>Inscreve-te!</h3>
            <div class="form">
                <div class="squar">

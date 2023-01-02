@@ -42,7 +42,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{{ asset('inscricoes') }}">Aluno</a></li>
-                <li><a class="dropdown-item" href="{{ asset('professor') }}">Seja professor</a></li>
+                <li><a class="dropdown-item" href="{{ asset('professor') }}">Professor</a></li>
                 <li><a class="dropdown-item" href="{{ asset('patrocinio') }}">Patrocínio</a></li>
               </ul>
             </li>

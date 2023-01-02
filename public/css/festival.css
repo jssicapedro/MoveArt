@@ -55,7 +55,7 @@ main {
 
 h1 {
     font-family: var(--amaranth);
-    font-size: 100px;
+    font-size: 70pt;
 }
 
 h2 {
@@ -67,14 +67,14 @@ h3 {
     font-family: var(--amaranth);
     font-size: 50px;
     text-align: center;
-    margin: 80px 0;
+    margin-bottom: 80px;
 }
 
 
 .intro {
     display: flex;
     width: 100%;
-    /* height: 75vh; */
+    height: calc(75vh - 50px);
     align-items: center;
     justify-content: space-evenly;
 }
@@ -114,6 +114,7 @@ h3 {
 
 .intro .slogan_ p {
     margin: 35px 0;
+    font-size: 20pt;
 }
 
 .intro img {

@@ -34,7 +34,8 @@ class PatrocinioController extends Controller
             'mensagem' => $request->mensagem,
         ]);
 
-        return view('patrocinio');
+        return redirect('patrocinio')->with('success');
+        return redirect('patrocinio')->with('erro');
     }
 
     public function show(Patrocinio $patrocinio)
