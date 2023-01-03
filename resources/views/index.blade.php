@@ -106,7 +106,7 @@
                     </div>
 
                         <div class="pb-2 p_about">
-                            <p>Esta instituição de dança foi planeada e desenvolvida para guiar os utilizadores
+                            <p>Esta escola de dança foi planeada e desenvolvida para guiar os utilizadores
                                 potencialmente interessados pela dança, ao se inscrever no website será lhe oferecido
                                 não só
                                 aulas práticas, mas também a opção de compra do vestuário necessário oferta de pacotes

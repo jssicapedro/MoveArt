@@ -9,6 +9,30 @@ section#benner_inscricoes {
     align-items: flex-end;
 }
 
+section#banner_patrocinio {
+    min-height: 450px;
+    display: flex;
+    width: 100%;
+    background-image: url('../img/inscricoes/ballet.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-position: center;
+}
+
+section#banner_professor {
+    min-height: 450px;
+    display: flex;
+    width: 100%;
+    background-image: url('../img/inscricoes/ballet.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-position: center;
+}
+
 .info {
     text-align: center;
     padding: 10px;
@@ -140,14 +164,6 @@ section#imagem1 {
     margin-top: 15px;
     margin-bottom: 15px;
     background-position: center -56px;
-}
-
-section#imagem {
-    background-image: url('../img/inscricoes/fundo2.jpg');
-}
-
-section#imagem1 {
-    background-image: url('../img/inscricoes/fundo3.jpg');
 }
 
 span.cv {

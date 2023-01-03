@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('foto_mensal')->nullable();
             $table->text('valor_anual');
             $table->string('foto_anual')->nullable();
+            $table->string('foto_horario')->nullable();
             $table->timestamps();
         });
     }

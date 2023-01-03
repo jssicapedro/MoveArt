@@ -18,7 +18,7 @@ class UsersSeeder extends Seeder
         User::insert([
         /* ADMIN */
         [
-            'foto' => null,
+            'foto' => '1.png',
             'primeiro' => 'Jéssica',
             'apelido' => 'Pedro',
             'email' => 'jessica00pedro@gmail.com',
