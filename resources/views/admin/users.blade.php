@@ -5,6 +5,9 @@
 
 @section('links')
     <link rel="stylesheet" href="{{ asset('css/users_back.css') }}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 @endsection
 
 @section('script')
@@ -14,7 +17,7 @@
 @section('main')
 
     <div class="container " style="height: auto">
-        <div id="area" style="padding-top:80px;">
+        <div id="area" style="padding:100px 100px 50px 100px;">
         <div class="head_area">
             <h2>
                 Utilizadores
@@ -25,10 +28,10 @@
 
 
             <div>
-                <div class="table-responsive">
-                    <table class="table align-middle table-striped">
+                <div class="table-responsive" style="padding-bottom:50px; padding-top:50px;">
+                    <table class="table align-middle ">
                         <thead>
-                            <tr>
+                            <tr class="bottom_tr">
                                 <th scope="col">ID</th>
                                 <th scope="col">Foto</th>
                                 <th scope="col">Nome</th>
@@ -43,26 +46,40 @@
                             @if (count($users))
                                 @foreach ($users as $user)
                                     <tr>
-                                        <th scope="row">{{ $user->id }}</th>
-                                        <td id="user_photo">
+                                        <td class="align-middle">{{ $user->id }}</td>
+                                        <td class="align-middle" id="user_photo">
                                             @if ($user->foto == null)
-                                                <img src="{{ asset('img/inicio/user.jpg') }}" alt="">
+                                                <img src="{{ asset('img/inicio/user.jpg') }}" alt="user">
                                             @else
-                                                <img src="{{ url('storage/professores/' . $user->foto) }}" alt="">
+                                                <img src="{{ url('storage/professores/' . $user->foto) }}" alt="user">
                                             @endif
                                         </td>
-                                        <td>{{ $user->primeiro }} {{ $user->apelido }}</td>
-                                        <td>{{ $user->email }}</td>
-                                        <td>{{ $user->data_nasc }}</td>
-                                        <td>{{ $user->genero }}</td>
-                                        <td>{{ $user->perfil }}</td>
-                                        <td>view edit delete</td>
+                                        <td class="align-middle">{{ $user->primeiro }} {{ $user->apelido }}</td>
+                                        <td class="align-middle">{{ $user->email }}</td>
+                                        <td class="align-middle">{{ $user->data_nasc }}</td>
+                                        <td class="align-middle">{{ $user->genero }}</td>
+                                        <td class="align-middle">{{ $user->perfil }}</td>
+                                        <td class="align-middle"><button data-toggle="collapse" data-target="#demo{{ $user->id }}"
+                                            class="btn viewbtn accordion-toggle"><i class="fa-solid fa-eye"></i></button><button
+                                            class="btn editbtn" data-bs-toggle="modal" data-bs-target="#editmodal"><i
+                                                class="fa-solid fa-pencil"></i></button><button class="btn deletebtn"><i
+                                                class="fa-solid fa-trash"></i></button></td>
                                     </tr>
+                                    <tr>
+                                   
+                                        <td colspan="8" class="hiddenRow">
+                                            <div id="demo{{ $user->id }}" class="accordian-body collapse">{{ $user->primeiro }} {{ $user->apelido }}</div>
+                                        </td>
+                                     
+                                    </tr> 
                                 @endforeach
+                               
                             @else
                                 <h6>Não existem categorias registadas</h6>
                             @endif
+                          
                         </tbody>
+                       
                     </table>
                 </div>
 

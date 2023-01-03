@@ -17,3 +17,10 @@
 .page-item a:hover{
   color: #191919
 }
+.tbody td {
+  height: 40px;
+  line-height: 40px;
+}
+.hiddenRow {
+  padding: 0 !important;
+}
