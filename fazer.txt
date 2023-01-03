@@ -6,7 +6,7 @@ começar o Back ✅
 adicionar campo de foto_horario nas modalidades ✅ 
 
 
-valor mínimo do patrocínio 
+valor mínimo do patrocínio
 enviar email quando atualizar mensagem
 validações de formulários
 Acrescentar coluna de resposta á tabela pedidos_professores ou o admin liga logo para marcar reunião

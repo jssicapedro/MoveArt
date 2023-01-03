@@ -42,11 +42,12 @@
                 <div class="col-4">
                     <label for="">Valor</label> <br />
                     <div class="input-group">
-                        <input type="number" name="valor" class="form-control" placeholder="Valor Patrocínio" required>
+                        <input type="number" min="50" name="valor" class="form-control" placeholder="Valor Patrocínio" required>
                         <div class="input-group-append">
                             <span class="input-group-text">€</span>
                         </div>
                     </div>
+                    <span class="cv">*Valor minimo de 50€</span>
                 </div>
             </div>
             <div class="row">
