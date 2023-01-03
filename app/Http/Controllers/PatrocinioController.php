@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Patrocinio;
+
 use Illuminate\Http\Request;
 
 class PatrocinioController extends Controller
@@ -34,8 +35,8 @@ class PatrocinioController extends Controller
             'mensagem' => $request->mensagem,
         ]);
 
-        return redirect('patrocinio')->with('success');
-        return redirect('patrocinio')->with('erro');
+        return redirect('patrocinio')->with('success', true);
+       /*  return redirect('patrocinio')->with('erro'); */
     }
 
     public function show(Patrocinio $patrocinio)
@@ -60,7 +61,8 @@ class PatrocinioController extends Controller
             'estado' => $request->estado,
         ]);
 
-        return "patrocinio atualizado com sucesso";
+        /* return "patrocinio atualizado com sucesso"; */
+        return redirect('/admin/patrocinio');
     }
 
     public function destroy(Patrocinio $patrocinio)

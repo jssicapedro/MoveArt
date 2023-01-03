@@ -7,6 +7,7 @@ adicionar campo de foto_horario nas modalidades ✅
 
 
 valor mínimo do patrocínio 
+enviar email quando atualizar mensagem
 validações de formulários
 Acrescentar coluna de resposta á tabela pedidos_professores ou o admin liga logo para marcar reunião
 mensagem de erro/sucesso 
@@ -15,7 +16,7 @@ relatorio do projeto
 
 
 erros
-editar patrocinio n volta para a listagem
+editar patrocinio n volta para a listagem ✅
 
 
 mail estagio

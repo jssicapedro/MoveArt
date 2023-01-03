@@ -52,6 +52,7 @@ class PedidoprofessorController extends Controller
         $request->cv->storeAS('pedidoProf', $namefile);
 
         PedidoProfessor::create([
+            /* name do input => $request->coluna_tabela */
             'primeiro' => $request->primeiro,
             'apelido' => $request->apelido,
             'email' => $request->email,
@@ -61,8 +62,8 @@ class PedidoprofessorController extends Controller
             'cv'=> $namefile,
         ]);   
         
-        return redirect('professor')->with('success');
-        return redirect('professor')->with('erro');
+        return redirect('professor')->with('success', true);
+        /* return redirect('professor')->with('erro'); */
     }
 
     /* public function lista_cv(){

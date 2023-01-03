@@ -23,6 +23,7 @@ return new class extends Migration
             $table->date('data_nac')->nullable();
             $table->enum('modalidade', ['Ballet', 'Hip-Hop', 'Folclore', 'Dança Espanhola', 'Dança Oriental', 'Indiferente']);
             $table->enum("estado_do_pedido", ['aceite', 'recusado', 'pendente'])->default('pendente');
+            $table->text('resposta')->nullable();
             $table->timestamps();
         });
     }
