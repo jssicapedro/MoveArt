@@ -24,7 +24,7 @@ class EventosController extends Controller
     {
         $input = $request->all();
         evento::create($input);
-        return redirect('evento')->with('flash_message', 'evento Addedd!');  
+        return redirect('evento')->with('flash_message', 'evento Adicionado!');  
     }
  
     
@@ -47,13 +47,13 @@ class EventosController extends Controller
         $evento = evento::find($id);
         $input = $request->all();
         $evento->update($input);
-        return redirect('evento')->with('flash_message', 'evento Updated!');  
+        return redirect('evento')->with('flash_message', 'evento Atualizado!');  
     }
  
    
     public function destroy($id)
     {
         evento::destroy($id);
-        return redirect('evento')->with('flash_message', 'evento deleted!');  
+        return redirect('evento')->with('flash_message', 'evento eliminado!');  
     }
 }

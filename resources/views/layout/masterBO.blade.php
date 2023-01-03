@@ -36,8 +36,8 @@
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/comum.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href="{{asset('css/footer.css')}}">
   <link href="{{ asset('css/dashboardBO.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('css/navBO.css')}}">
 
   @yield('links')
 
