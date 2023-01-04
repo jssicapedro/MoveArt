@@ -40,18 +40,18 @@
                     @if (isset($eventos))
                     @foreach($eventos as $item)
                                     <tr>
-                                        <td><img src="{{ asset('img/eventosBO/arraial.png') }}" style="width:60px; height:; " alt=""></td>
+                                        <td><img src="/img/eventosBO/{{ $item->foto }}" style="width:60px; height:; " alt=""></td>
                                         <td>{{ $item->nome }}</td>
                                         <td>{{ $item->data }}</td>
-                                        <td>Jardim Luís Vaz de Camões</td>
+                                        <td>{{ $item->localizacao }}</td>
                                         <td>{{ $item->descricao }}</td>
                                         <td>
-                                            <a href="{{ url('/evento/' . $item->id) }}" title="View evento"><img src="{{ asset('img/eventosBO/view.png') }}" style="width:38px; background-color:white; " alt=""></a>
-                                            <a href="{{ url('/evento/' . $item->id . '/edit') }}" title="Edit evento"><img src="{{ asset('img/eventosBO/edit.png') }}" style="width:38px; background-color:white; " alt=""></a>
+                                        <a href="{{ url('/evento/' . $item->id) }}" title="View evento"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Ver</button></a>
+                                            <a href="{{ url('/evento/' . $item->id . '/edit') }}" title="Edit evento"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button></a>
                                             <form method="POST" action="{{ url('/evento' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <a type="submit" class="btn btn-danger btn-sm" title="Apagar Evento" onclick="return confirm(&quot;Tem a certeza que quer eliminar?&quot;)"><img src="{{ asset('img/eventosBO/delete.png') }}" style="width:38px; background-color:white; " alt=""></a></a>
+                                            <button type="submit" class="btn btn-danger btn-sm" title="Delete evento" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i>Eliminar</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -64,3 +64,6 @@
         </div>
 </div>
 @endsection
+
+
+

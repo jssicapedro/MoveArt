@@ -24,6 +24,7 @@
         <div class="baixo">
             <div class="dashboard_funcionarios">
 
+            
         <h1>Editar Evento</h1>
       <form action="{{ url('evento/' .$eventos->id) }}" method="post">
         {!! csrf_field() !!}
@@ -36,7 +37,7 @@
         <label>localizacao</label></br>
         <input type="text" name="localizacao" id="localizacao" value="{{$eventos->localizacao}}" class="form-control"></br>
         <label>foto</label></br>
-        <input type="text" name="foto" id="foto" value="{{$eventos->foto}}" class="form-control"></br>
+        <input type="file" name="foto" id="foto" value="{{$eventos->foto}}" class="form-control"></br>
         <label>descricao</label></br>
         <input type="text" name="descricao" id="descricao" value="{{$eventos->descricao}}" class="form-control"></br>
         <input type="submit" value="Atualizar" class="btn btn-success"></br>

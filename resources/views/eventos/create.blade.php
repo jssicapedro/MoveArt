@@ -32,9 +32,9 @@
         <label for="">Data</label><br>
         <input type="date" name="data"><br>
         <label for="">localizacao</label><br>
-        <input type="text" name="nome"><br>
+        <input type="text" name="localizacao"><br>
         <label for="">foto</label><br>
-        <input type="text" name="nome"><br>
+        <input type="file" name="foto"><br>
         <label for="">Descrição</label><br>
         <input type="text" name="descricao"><br>
         <input type="submit" value="Adicionar" class="btn btn-success"></br>
