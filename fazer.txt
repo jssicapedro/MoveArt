@@ -5,10 +5,7 @@ separar patrocinio ✅
 começar o Back ✅ 
 adicionar campo de foto_horario nas modalidades ✅ 
 valor mínimo do patrocínio ✅
-Acrescentar coluna de resposta á tabela pedidos_professores ou o admin liga logo para marcar reunião ✅ 
-
-
-finalizar view patrocinio e pedprof -> verificar os campos em q posso escrever ou n 
+Acrescentar coluna de resposta á tabela pedidos_professores ou o admin liga logo para marcar reunião ✅
 
 softdele -> pedido professor
 delete -> patrocinio - apaga-se o registo do pedido passados 6meses
@@ -18,6 +15,3 @@ validações de formulários > mensagem de erro/sucesso
 pesquisar sobre police ---- impede que alunos entrem no back
 relatorio do projeto
 
-
-erros
-editar patrocinio n volta para a listagem ✅

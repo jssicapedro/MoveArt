@@ -44,7 +44,13 @@
                 <div class="row resp">
                     <div class="col">
                         <label class="sobre" for="">Resposta</label> <br />
-                        <textarea name="resposta" class="conteudo">{{$patrocinio->resposta}}</textarea>
+                        
+                        @if(isset($patrocinio->resposta))
+                        <textarea name="resposta" class="conteudo" readonly>{{$patrocinio->resposta}}</textarea>
+                        @else
+                        <textarea name="resposta" class="conteudo" readonly>Sem resposta</textarea>
+                        @endif
+                        
                     </div>
                 </div>
             </form>
