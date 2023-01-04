@@ -72,7 +72,7 @@ Route::get('/admin/patrocinio', [PatrocinioController::class, 'index'])->name('p
 Route::get('/admin/patrocinio/show/{patrocinio}', [PatrocinioController::class, 'show'])->name('patrocinios.show');
 Route::get('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'edit'])->name('patrocinios.edit');
 Route::post('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'update'])->name('patrocinios.update');
-Route::post('/admin/patrocinio/delete/{patrocinio}', [PatrocinioController::class, 'destroy'])->name('patrocinios.destroy');
+Route::delete('/admin/patrocinio/delete/{patrocinio}', [PatrocinioController::class, 'destroy'])->name('patrocinios.destroy');
 
 Route::get('/admin/pedprof', [PedidoprofessorController::class, 'index'])->name('pedidosprof');
 Route::get('/admin/pedprof/show/{pedidos}', [PedidoprofessorController::class, 'show'])->name('pedprof.show');

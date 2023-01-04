@@ -62,7 +62,7 @@ class PatrocinioController extends Controller
         ]);
 
         /* return "patrocinio atualizado com sucesso"; */
-        return redirect('/admin/patrocinio');
+        return redirect('admin.patrocinio');
     }
 
     /* public function delete($id){
@@ -73,5 +73,7 @@ class PatrocinioController extends Controller
     public function destroy(Patrocinio $patrocinio)
     {
         $patrocinio->delete();
+
+        return redirect('admin/patrocinio')->with('success', true);
     }
 }

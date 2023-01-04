@@ -68,11 +68,17 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="">
-                                    <span class="material-symbols-outlined">
-                                        delete
-                                    </span>
-                                </a>
+                                <form action="{{ route('patrocinios.destroy', $patrocinio->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit">
+                                        <a href="">
+                                            <span class="material-symbols-outlined">
+                                                delete
+                                            </span>
+                                        </a>
+                                    </button>
+                                </form>
                             </li>
                         </ul>
                     </td>
