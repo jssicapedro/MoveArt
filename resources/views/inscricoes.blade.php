@@ -76,31 +76,31 @@
                 <label for="tp_danca">Tipo de Dança:</label>
                 <div class="card_tp_inscricao">
                     <select class=" tp_danca form-control">
-                    @foreach($modalidade as $mod)
-                    <option value="{{$mod->id}}">{{$mod->modalidade}}</option>
-                    @endforeach
-                </select>
+                        @foreach($modalidade as $mod)
+                        <option value="{{$mod->id}}">{{$mod->modalidade}}</option>
+                        @endforeach
+                    </select>
                     <section class="cards">
                         <article class="cart card--1">
-                            <div class="card_img"></div>
-                            <div class="card_img--hover"></div>
+                            <div class="card_img" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
+                            <div class="card_img--hover" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
                             <div class="card_info_1">
                                 <span class="card_epoca">Anual</span>
-                                <input type="radio" name="anual" id="anual">
+                                <input type="radio" name="tp_ins" value="anual" id="anual">
                                 <h3 class="card_preco_1">
-                                    <span class="valor_anual"></span>€
+                                    <span class="valor_anual">880</span>€
                                 </h3>
 
                             </div>
                         </article>
                         <article class="cart card--2">
-                            <div class="card_img"></div>
-                            <div class="card_img--hover"></div>
+                            <div class="card_img" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
+                            <div class="card_img--hover" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
                             <div class="card_info_2">
                                 <span class="card_epoca">Mensal</span>
-                                <input type="radio" name="mensal" id="mensal">
+                                <input type="radio" name="tp_ins" value="mensal" id="mensal">
                                 <h3 class="card_preco_2">
-                                    <span class="valor_mensal"></span>€
+                                    <span class="valor_mensal">75</span>€
                                 </h3>
                             </div>
                         </article>
@@ -114,19 +114,19 @@
             </div>
             <ul>
                 <li>
-                    <input type="radio" name="paypal" id="paypal">
+                    <input type="radio" name="pagamento" value="paypal" id="paypal">
                     <img src="{{asset('img/inscricoes/paypal.png')}}" alt="">
                 </li>
                 <li>
-                    <input type="radio" name="mbway" id="mbway">
+                    <input type="radio" name="pagamento" value="mbway" id="mbway">
                     <img src="{{asset('img/inscricoes/mb_way.png')}}" alt="">
                 </li>
                 <li>
-                    <input type="radio" name="multibanco" id="multibanco">
+                    <input type="radio" name="pagamento" value="multibanco" id="multibanco">
                     <img src="{{asset('img/inscricoes/multibanco.png')}}" alt="">
                 </li>
                 <li>
-                    <input type="radio" name="visa" id="visa">
+                    <input type="radio" name="pagamento" value="visa" id="visa">
                     <img src="{{asset('img/inscricoes/visa.png')}}" alt="">
                 </li>
             </ul>

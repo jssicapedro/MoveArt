@@ -6,10 +6,17 @@
 <link href="{{ asset('css/mapaaulas.css') }}" rel="stylesheet">
 @endsection
 
-@section('hero')
+<!--@section('hero')
 <section id="hero" class="inner-page d-flex align-items-center">
     <div class="img_banner mapadeaulas">
         <h1>Mapa de Aulas</h1>
+    </div>
+</section>
+@endsection-->
+@section('hero')
+<section id="hero" class="inner-page d-flex align-items-center">
+    <div class="img_banner ballet">
+        <h1>Ballet</h1>
     </div>
 </section>
 @endsection
@@ -24,11 +31,13 @@
         <div class="row">
             <div class="gallery-filter">
                 <span class="filter-item active" data-filter="geral">Geral</span>
-                <span class="filter-item" data-filter="dancaballet">Ballet</span>
-                <span class="filter-item" data-filter="dancaHiphop">Hip-hop</span>
-                <span class="filter-item" data-filter="dancaEsp">Dança Espanhola</span>
-                <span class="filter-item" data-filter="dancaOrien">Dança Oriental</span>
-                <span class="filter-item" data-filter="dancafolclore">Folclore</span>
+                @if (count($modalidade))
+        @foreach($modalidade as $modalidades)
+                <span class="filter-item" data-filter="dancaballet">{{$modalidades->modalidade}}</span>
+                @endforeach
+                    @else
+                    <h6>Não existem categorias registadas</h6>
+                    @endif
             </div>
         </div>
         <div class="row">
