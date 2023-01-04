@@ -19,10 +19,26 @@
     <div class="container " style="height: auto">
         <div id="area" style="padding:100px 100px 50px 100px;">
             <div class="head_area">
-                <h2>
-                    Utilizadores
-                </h2>
-                <button type="button" class="btn btn-light">Adicionar</button>
+                <div class="row">
+                    <div class="col-6">
+                        <h2>
+                            Utilizadores
+                        </h2>
+                    </div>
+                    <div class="col-6">
+                        <div class="buttons d-flex justify-content-end">
+                            <div id="add">
+                            <button type="button" class="btn add">+ Adicionar</button>     
+                            </div>
+                           <div id="load">
+                              <button onClick="window.location.reload();" type="button" class="btn load">Atualizar</button> 
+                           </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
             <div {{-- class="d-flex justify-content-center align-items-center" --}}>
 
@@ -60,7 +76,7 @@
                                             <td class="align-middle">{{ $user->data_nasc }}</td>
                                             <td class="align-middle">{{ $user->genero }}</td>
                                             <td class="align-middle">{{ $user->perfil }}</td>
-                                            <td class="align-middle"><button data-toggle="collapse"
+                                            <td class="align-middle icon_btns"><button data-toggle="collapse"
                                                     data-target="#demo{{ $user->id }}"
                                                     class="btn viewbtn accordion-toggle"><i
                                                         class="fa-solid fa-eye"></i></button><button class="btn editbtn"
@@ -74,7 +90,7 @@
                                                 <div id="demo{{ $user->id }}" class="accordian-body collapse">
                                                     <div class="container">
                                                         <div id="expand_user">
-                                                        <div class="row">  
+                                                            <div class="row">
                                                                 <div class="col-3 nas">
                                                                     <div id="view_user_photo">
                                                                         @if ($user->foto == null)
@@ -86,7 +102,7 @@
                                                                         @endif
                                                                     </div>
                                                                 </div>
-                                                            
+
                                                                 <div class="col-3 nas">
                                                                     <div class="user_name">
                                                                         <h2>{{ $user->primeiro }} {{ $user->apelido }}
@@ -94,10 +110,14 @@
                                                                     </div>
                                                                     <div class="user_list">
                                                                         <ul>
-                                                                            <li><span>Nascimento: </span>{{ $user->data_nasc }}</li>
-                                                                            <li><span>Género: </span>{{ $user->genero }}</li>
-                                                                            <li><span>Telefone: </span>{{ $user->telefone }}</li>
-                                                                            <li><span>Email: </span>{{ $user->email }}</li>
+                                                                            <li><span>Nascimento:
+                                                                                </span>{{ $user->data_nasc }}</li>
+                                                                            <li><span>Género: </span>{{ $user->genero }}
+                                                                            </li>
+                                                                            <li><span>Telefone:
+                                                                                </span>{{ $user->telefone }}</li>
+                                                                            <li><span>Email: </span>{{ $user->email }}
+                                                                            </li>
                                                                         </ul>
                                                                     </div>
                                                                 </div>
@@ -106,7 +126,8 @@
                                                                         <ul>
                                                                             <li><span>CC: </span>{{ $user->cc }}</li>
                                                                             <li><span>Nif: </span>{{ $user->nif }}</li>
-                                                                            <li><span>Localidade: </span>{{ $user->localidade }}</li>
+                                                                            <li><span>Localidade:
+                                                                                </span>{{ $user->localidade }}</li>
                                                                             <li><span>Rua: </span>{{ $user->rua }}</li>
                                                                         </ul>
                                                                     </div>
@@ -114,9 +135,12 @@
                                                                 <div class="col-3 nas">
                                                                     <div class="user_list" style="padding-top: 46px">
                                                                         <ul>
-                                                                            <li><span>Código-Postal: </span>{{ $user->cod_postal }}</li>
-                                                                            <li><span>Perfil: </span>{{ $user->perfil }}</li>
-                                                                            <li><span>Modalidade: </span>{{ $user->telefone }}</li>
+                                                                            <li><span>Código-Postal:
+                                                                                </span>{{ $user->cod_postal }}</li>
+                                                                            <li><span>Perfil: </span>{{ $user->perfil }}
+                                                                            </li>
+                                                                            <li><span>Modalidade:
+                                                                                </span>{{ $user->telefone }}</li>
                                                                         </ul>
                                                                     </div>
                                                                 </div>
