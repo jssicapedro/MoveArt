@@ -71,7 +71,7 @@
                                 <form action="{{ route('patrocinios.destroy', $patrocinio->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit">
+                                    <button type="submit" class="delete">
                                         <a href="">
                                             <span class="material-symbols-outlined">
                                                 delete

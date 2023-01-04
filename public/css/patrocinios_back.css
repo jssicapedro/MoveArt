@@ -61,7 +61,7 @@ td{
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .mensagem{
@@ -163,6 +163,10 @@ td a{
 .enviar{
     border: none;
     background-color: var(--amarelo);
+}
+
+.delete{
+    border: none!important;
 }
 
 .enviar:hover{
