@@ -88,3 +88,7 @@ padding: 10px 15px;
 .icon_btns i{
   color:#eeb2b5;
 }
+.icon_btns i:hover{
+  color:#d9a1a4;
+}
+
