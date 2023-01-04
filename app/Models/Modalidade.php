@@ -17,6 +17,7 @@ class Modalidade extends Model
         'foto_mensal',
         'valor_anual',
         'foto_anual',
+        'foto_horario',
     ];
 
 

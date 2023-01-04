@@ -185,7 +185,7 @@
         <i class="fa-solid fa-people-group"></i>
         <h2>Sobre nós</h2>
       </div>
-      <p class="card_body">Esta instituição de dança foi planeada e desenvolvida para guiar os utilizadores
+      <p class="card_body">Esta escola de dança foi planeada e desenvolvida para guiar os utilizadores
         potencialmente interessados pela dança, ao se inscrever no website será lhe oferecido não só aulas práticas, mas
         também a opção de compra do vestuário necessário oferta de pacotes de aulas e até bilhetes para espetáculos.</p>
       <p class="card_apply">

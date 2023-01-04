@@ -32,7 +32,7 @@
             
             <div class="sobre_nos_contactos_p">
                 <p>
-                    Nós somos uma instituição de dança em que englobamos vários tipos de dança para qualquer um conseguir participar.
+                    Nós somos uma escola de dança em que englobamos vários tipos de dança para qualquer um conseguir participar.
                 </p>
             </div>
         </div>  

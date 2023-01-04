@@ -65,7 +65,6 @@ class PageController extends Controller
         return view('mapaaulas', compact('modalidade'));
     }
 
-
     public function login(){
         return view('login');
     }
@@ -79,6 +78,14 @@ class PageController extends Controller
     /* ------- landingPages ------- */
     public function notifications(){
         return view('landingPages/notifications');
+    }
+
+    public function patrocinio(){
+        return view('landingPages/patrocinio');
+    }
+
+    public function festival(){
+        return view('landingPages/festival');
     }
 
     public function landingA(){
@@ -98,9 +105,6 @@ class PageController extends Controller
     }
 
     /* ------- back ------- */
-    public function modalidades(){
-        return view('admin/modalidades');
-    }
     public function dashboardBO(){
         $evento = Evento::all();
         $modalidade = Modalidade::all();
@@ -109,6 +113,7 @@ class PageController extends Controller
         
         return view('dashboardBO', compact('evento','modalidade','users','patrocinios'));
     }
+
     public function users(){
         Paginator::useBootstrap();
 
@@ -116,4 +121,11 @@ class PageController extends Controller
 
         return view('admin/users', compact('users'));
     }
+
+
+    public function modalidades(){
+        return view('admin/modalidades');
+    }
+
+
 }
