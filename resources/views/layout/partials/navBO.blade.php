@@ -19,7 +19,7 @@
             <li>
                 <a href="#">
                     <span class="icon">
-                        <ion-icon name="apps-outline"></ion-icon>
+                    <img src="{{ asset('img/eventosBO/dashboard.png') }}" style="width:30px; height:; " alt="">
                     </span>
                     <span class="titulo">Dashboard</span>
                 </a>
@@ -28,15 +28,15 @@
             <li>
                 <a href="#">
                     <span class="icon">
-                        <ion-icon name="people-outline"></ion-icon>
+                    <img src="{{ asset('img/eventosBO/group.png') }}" style="width:35px; height:; " alt="">
                     </span>
-                    <span class="titulo">Users</span>
+                    <span class="titulo">Utilizadores</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <span class="icon">
-                    <box-icon type='solid' name='user-check'></box-icon>
+                    <img src="{{ asset('img/eventosBO/interview.png') }}" style="width:30px; height:; " alt="">
                     </span>
                     <span class="titulo">Pedidos Professores</span>
                 </a>
@@ -45,7 +45,7 @@
             <li>
                 <a href="#">
                     <span class="icon">
-                        <ion-icon name="share-social-outline"></ion-icon>
+                    <img src="{{ asset('img/eventosBO/dancing.png') }}" style="width:40px; height:; " alt="">
                     </span>
                     <span class="titulo">Modalidades</span>
                 </a>
@@ -54,16 +54,16 @@
             <li>
                 <a href="#">
                     <span class="icon">
-                        <ion-icon name="reader-outline"></ion-icon>
+                    <img src="{{ asset('img/eventosBO/agreement.png') }}" style="width:35px; height:; " alt="">
                     </span>
                     <span class="titulo">Patrocínios</span>
                 </a>
             </li>
 
             <li>
-                <a href="#">
+                <a href="{{ asset('evento') }}" >
                     <span class="icon">
-                        <ion-icon name="ticket-outline"></ion-icon>
+                    <img src="{{ asset('img/eventosBO/calendar.png') }}" style="width:35px; height:; " alt="">
                     </span>
                     <span class="titulo">Eventos</span>
                 </a>

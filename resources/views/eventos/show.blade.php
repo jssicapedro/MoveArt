@@ -26,7 +26,7 @@
         <div class="container">
           <div class="card">
             <div class="shoeBackground">
-            <img src="{{ asset('img/eventosBO/arraial.png') }}" style="width:100%; border-radius:5px; " alt="">
+            <img src="/img/eventosBO/{{ $eventos->foto }}" style="width:100%; border-radius:5px; " alt="">
             </div>
             <div class="info">
               <div>

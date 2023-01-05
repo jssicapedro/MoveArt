@@ -25,21 +25,21 @@
             <div class="dashboard_funcionarios">
 
             
-        <h1>Editar Evento</h1>
+        <h3>Editar Evento</h3><br>
       <form action="{{ url('evento/' .$eventos->id) }}" method="post">
         {!! csrf_field() !!}
         @method("PATCH")
         <input type="hidden" name="id" id="id" value="{{$eventos->id}}" id="id" />
         <label>Nome</label></br>
-        <input type="text" name="nome" id="nome" value="{{$eventos->nome}}" class="form-control"></br>
+        <input type="text" name="nome" id="nome" placeholder="Nome" value="{{$eventos->nome}}" class="form-control"></br>
         <label>Data</label></br>
-        <input type="text" name="data" id="data" value="{{$eventos->data}}" class="form-control"></br>
-        <label>localizacao</label></br>
-        <input type="text" name="localizacao" id="localizacao" value="{{$eventos->localizacao}}" class="form-control"></br>
-        <label>foto</label></br>
-        <input type="file" name="foto" id="foto" value="{{$eventos->foto}}" class="form-control"></br>
-        <label>descricao</label></br>
-        <input type="text" name="descricao" id="descricao" value="{{$eventos->descricao}}" class="form-control"></br>
+        <input type="date" name="data" id="data" placeholder="Data" value="{{$eventos->data}}" class="form-control"></br>
+        <label>Localizacao</label></br>
+        <input type="text" name="localizacao" id="localizacao" placeholder="Localização" value="{{$eventos->localizacao}}" class="form-control"></br>
+        <label>Foto</label></br>
+        <input type="file" name="foto" id="foto" placeholder="Foto" value="{{$eventos->foto}}" class="form-control"></br>
+        <label>Descricao</label></br>
+        <input type="text" name="descricao" id="descricao" placeholder="Descrição" value="{{$eventos->descricao}}" class="form-control"></br>
         <input type="submit" value="Atualizar" class="btn btn-success"></br>
     </form>
 </div>

@@ -483,3 +483,27 @@ tbody{
     }
   }
   
+
+  input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit]{
+    font-size: 15px;
+    font-weight: 500;
+    text-transform:capitalize;
+    background-color: #c7adf7 ;
+  }
+  input[type=submit]:hover{
+    background-color: #eeb2b5;
+    transition: 0.5s;
+  }
+
+  
+  

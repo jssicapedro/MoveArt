@@ -24,20 +24,20 @@
         <div class="baixo">
             <div class="dashboard_funcionarios">
 
-            <h1>Adicionar Evento</h1>
+            <h3>Adicionar Evento</h3><br>
     <form action="{{ url('evento') }}" method="post">
         {!! csrf_field() !!}
         <label for="">Nome</label><br>
-        <input type="text" name="nome"><br>
+        <input type="text" name="nome" placeholder="Nome" ><br>
         <label for="">Data</label><br>
-        <input type="date" name="data"><br>
-        <label for="">localizacao</label><br>
-        <input type="text" name="localizacao"><br>
-        <label for="">foto</label><br>
-        <input type="file" name="foto"><br>
+        <input type="date" name="data" placeholder="Data" ><br>
+        <label for="">Localizacao</label><br>
+        <input type="text" name="localizacao" placeholder="Localização" ><br>
+        <label for="">Foto</label><br>
+        <input type="file" name="foto" placeholder="Foto"><br>
         <label for="">Descrição</label><br>
-        <input type="text" name="descricao"><br>
-        <input type="submit" value="Adicionar" class="btn btn-success"></br>
+        <input type="text" name="descricao" placeholder="Descrição" ><br>
+        <input type="submit" value="Adicionar"  class="btn btn-success"></br>
     </form>
 </div>
 </div>
