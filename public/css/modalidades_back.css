@@ -1,0 +1,33 @@
+main
+{
+    background-color: #ccc;
+}
+.modalidades_main {
+    width: 80%;
+    margin: auto;
+}
+.modalidades_main .row.head
+{
+    background-color: #f19fc5;
+    border-radius: 10px;
+    height: 50px;
+    font-weight: bold;
+    box-shadow: 5px 4px 10px #ccc;
+}
+.modalidades_main .row,
+.modalidades_main .row.head
+{
+    display: flex;
+    align-items: center;
+}
+.modalidades_main .col.option
+{
+    display: flex;
+    justify-content: center;
+}
+.modalidades_main  ul
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
