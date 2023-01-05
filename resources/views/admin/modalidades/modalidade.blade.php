@@ -16,25 +16,28 @@
 <div class="dashboard_main">
   <div class="modalidades_main">
     <h1>Modalidades</h1>
+    button create button search
     <div class="row head">
-      <div class="col" style="text-align: center;">id</div>
-      <div class="col" style="text-align: center;">Imagem</div>
-      <div class="col" style="text-align: center;">Nome</div>
-      <div class="col" style="text-align: center;">Valor Anual</div>
-      <div class="col" style="text-align: center;">Valor Mensal</div>
-      <div class="col" style="text-align: center;">Opções:</div>
+      <div class="col-1" style="text-align: center;">id</div>
+      <div class="col-2" style="text-align: center;">Imagem</div>
+      <div class="col-4" style="text-align: center;">Nome</div>
+      <div class="col-2" style="text-align: center;">Valor Anual</div>
+      <div class="col-2" style="text-align: center;">Valor Mensal</div>
+      <div class="col-1" style="text-align: center;"></div>
     </div>
     @foreach($modalidade as $mod)
-    <div class="row">
-      <div class="col" style="text-align: center;">{{$mod->id}}</div>
-      <div class="col" style="text-align: center;"><img style="width: 60px; height:60px;" src="{{ url('storage/modalidades/'.$mod->foto_desc) }}" alt=""></div>
-      <div class="col" style="text-align: center;">{{$mod->modalidade}}</div>
-      <div class="col" style="text-align: center;">{{$mod->valor_anual}}</div>
-      <div class="col" style="text-align: center;">{{$mod->valor_mensal}}</div>
-      <div class="col option">
-        <span class="material-symbols-outlined">
+    <div class="row info">
+      <div class="col-1" style="text-align: center;">{{$mod->id}}</div>
+      <div class="col-2" style="text-align: center;"><img style="width: 60px; height:60px;padding:5px;" src="{{ url('storage/modalidades/'.$mod->foto_desc) }}" alt=""></div>
+      <div class="col-4" style="text-align: center;">{{$mod->modalidade}}</div>
+      <div class="col-2" style="text-align: center;">{{$mod->valor_anual}}</div>
+      <div class="col-2" style="text-align: center;">{{$mod->valor_mensal}}</div>
+      <div class="col-1 option">
+        <div class="circle">
+          <span class="material-symbols-outlined">
           more_vert
         </span>
+        </div>
       </div>
     </div>
     @endforeach
