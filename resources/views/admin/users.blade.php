@@ -287,9 +287,9 @@
                     </table>
                 </div>
 
-                {{--     <div class="d-flex justify-content-center">
+                 <div class="d-flex justify-content-center">
                         {!! $users->withQueryString()->links() !!}
-                    </div>  --}}
+                    </div> 
             </div>
 
         </div>

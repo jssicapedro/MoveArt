@@ -115,15 +115,16 @@ class PageController extends Controller
     }
 
     public function users(){
-       /*  Paginator::useBootstrap();
+       Paginator::useBootstrap();
 
-         $users = User::paginate(10); */
+         /*  $users = User::paginate(10); */
 
         
          $users = User::leftjoin('users_modalidades', 'users_modalidades.user_id', '=', 'users.id')
          ->leftjoin('modalidades', 'modalidades.id', '=', 'users_modalidades.modalidade_id')
          ->orderBy('id', 'ASC')
-         ->get(['users.*', 'modalidades.modalidade']);
+         ->select(['users.*', 'modalidades.modalidade'])
+         ->paginate(10);
 
 
 
