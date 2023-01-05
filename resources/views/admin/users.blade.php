@@ -24,6 +24,7 @@
                         <h2>
                             Utilizadores
                         </h2>
+
                     </div>
                     <div class="col-6">
                         <div class="buttons d-flex justify-content-end">
@@ -44,7 +45,7 @@
             <div {{-- class="d-flex justify-content-center align-items-center" --}}>
 
 
-                <div>
+                <div id="accordion">
                     <div class="table-responsive" style="padding-bottom:50px; padding-top:50px;">
                         <table class="table align-middle ">
                             <thead>
@@ -77,13 +78,20 @@
                                             <td class="align-middle">{{ $user->data_nasc }}</td>
                                             <td class="align-middle">{{ $user->genero }}</td>
                                             <td class="align-middle">{{ $user->perfil }}</td>
-                                            <td class="align-middle icon_btns"><button data-toggle="collapse"
-                                                    data-target="#view{{ $user->id }}"
-                                                    class="btn viewbtn accordion-toggle"><i
+                                            <td class="align-middle icon_btns">
+
+                                                <button
+                                                    
+                                                    class="btn viewbtn collapsed" data-toggle="collapse" data-target="#view{{ $user->id }}"
+                aria-expanded="false" aria-controls="collapseThree"
+                                                    ><i
                                                         class="fa-solid fa-eye"></i></button>
 
-                                                <button class="btn editbtn" data-toggle="collapse"
-                                                    data-target="#edit{{ $user->id }}"><i
+                                                <button 
+                                                    
+                                                    class="btn editbtn collapsed" data-toggle="collapse" data-target="#edit{{ $user->id }}"
+                aria-expanded="false" aria-controls="collapseThree"
+                                                    ><i
                                                         class="fa-solid fa-pencil"></i></button>
 
                                                 <button class="btn deletebtn"><i class="fa-solid fa-trash"></i></button>
@@ -92,7 +100,8 @@
                                         <div class="tr_border">
                                             <tr>
                                                 <td colspan="8" class="hiddenRow">
-                                                    <div id="view{{ $user->id }}" class="accordian-body collapse">
+                                                    <div id="view{{ $user->id }}" class="collapse"
+                                                        aria-labelledby="headingThree" data-parent="#accordion">
                                                         <div class="container">
                                                             <div id="expand_user">
                                                                 <div class="row">
@@ -120,8 +129,16 @@
                                                                                 <li><span>Género:
                                                                                     </span>{{ $user->genero }}
                                                                                 </li>
+
                                                                                 <li><span>Telefone:
-                                                                                    </span>{{ $user->telefone }}</li>
+                                                                                    </span>
+                                                                                    @if ($user->telefone == null)
+                                                                                        ---
+                                                                                    @else
+                                                                                        {{ $user->telefone }}
+                                                                                    @endif
+                                                                                </li>
+
                                                                                 <li><span>Email: </span>{{ $user->email }}
                                                                                 </li>
                                                                             </ul>
@@ -130,13 +147,34 @@
                                                                     <div class="col-3 nas">
                                                                         <div class="user_list" style="padding-top: 46px">
                                                                             <ul>
-                                                                                <li><span>CC: </span>{{ $user->cc }}
+                                                                                <li><span>CC: </span>
+                                                                                    @if ($user->cc == null)
+                                                                                        ---
+                                                                                    @else
+                                                                                        {{ $user->cc }}
+                                                                                    @endif
                                                                                 </li>
-                                                                                <li><span>Nif: </span>{{ $user->nif }}
+                                                                                <li><span>Nif: </span>
+                                                                                    @if ($user->nif == null)
+                                                                                        ---
+                                                                                    @else
+                                                                                        {{ $user->nif }}
+                                                                                    @endif
                                                                                 </li>
                                                                                 <li><span>Localidade:
-                                                                                    </span>{{ $user->localidade }}</li>
-                                                                                <li><span>Rua: </span>{{ $user->rua }}
+                                                                                    </span>
+                                                                                    @if ($user->localidade == null)
+                                                                                        ---
+                                                                                    @else
+                                                                                        {{ $user->localidade }}
+                                                                                    @endif
+                                                                                </li>
+                                                                                <li><span>Rua: </span>
+                                                                                    @if ($user->rua == null)
+                                                                                        ---
+                                                                                    @else
+                                                                                        {{ $user->rua }}
+                                                                                    @endif
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
@@ -145,12 +183,18 @@
                                                                         <div class="user_list" style="padding-top: 46px">
                                                                             <ul>
                                                                                 <li><span>Código-Postal:
-                                                                                    </span>{{ $user->cod_postal }}</li>
+                                                                                    </span>
+                                                                                    @if ($user->cod_postal == null)
+                                                                                        ---
+                                                                                    @else
+                                                                                        {{ $user->cod_postal }}
+                                                                                    @endif
+                                                                                </li>
                                                                                 <li><span>Perfil:
                                                                                     </span>{{ $user->perfil }}
                                                                                 </li>
                                                                                 <li><span>Modalidade:
-                                                                                    </span>{{ $user->telefone }}</li>
+                                                                                    </span>{{ $user->modalidade }}</li>
                                                                             </ul>
                                                                         </div>
                                                                     </div>
@@ -163,11 +207,12 @@
                                             </tr>
                                         </div>
 
-                                        {{-- <div class="tr_border"></div>
+                                        <div class="tr_border"></div>
                                         <tr>
 
                                             <td colspan="8" class="hiddenRow">
-                                                <div id="edit{{ $user->id }}" class="accordian-body collapse">
+                                                <div id="edit{{ $user->id }}" class="collapse"
+                                                    aria-labelledby="headingThree" data-parent="#accordion">
                                                     <div class="container">
                                                         <div id="expand_user">
                                                             <div class="row">
@@ -231,7 +276,7 @@
                                             </td>
 
                                         </tr>
-                    </div> --}}
+                    </div>
                     @endforeach
                 @else
                     <h6>Não existem categorias registadas</h6>
@@ -242,12 +287,13 @@
                     </table>
                 </div>
 
-                <div class="d-flex justify-content-center">
-                    {!! $users->withQueryString()->links() !!}
-                </div>
+                {{--     <div class="d-flex justify-content-center">
+                        {!! $users->withQueryString()->links() !!}
+                    </div>  --}}
             </div>
+
         </div>
     </div>
-    </div>
+
 
 @endsection

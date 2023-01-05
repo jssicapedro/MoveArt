@@ -44,7 +44,7 @@ body
   height: 180px;
 }
 #expand_user{
-  padding: 20px;
+  padding: 30px 0;
 }
 .user_list ul, li{
 list-style-type: none;
@@ -92,3 +92,7 @@ padding: 10px 15px;
   color:#d9a1a4;
 }
 
+
+.user_list span{
+font-weight: 500;
+}

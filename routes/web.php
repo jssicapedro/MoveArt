@@ -69,8 +69,6 @@ Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('
 Route::get('/admin/users', [PageController::class, 'users'])->name('users');
 
 
-
-
 Route::get('/admin/patrocinio', [PatrocinioController::class, 'index'])->name('patrocinios');
 Route::get('/admin/patrocinio/show/{patrocinio}', [PatrocinioController::class, 'show'])->name('patrocinios.show');
 Route::get('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'edit'])->name('patrocinios.edit');
