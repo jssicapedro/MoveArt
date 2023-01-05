@@ -40,7 +40,15 @@
                     @if (isset($eventos))
                     @foreach($eventos as $item)
                                     <tr>
-                                        <td><img src="/img/eventosBO/{{ $item->foto }}" style="width:60px; height:; " alt=""></td>
+                                    <td>
+                                     @if ($item->foto)
+                                        <img src="{{asset('img/eventosBO/'.$item->foto)}}" style="width:60px; height:;" class="img-post" alt="">
+                                        @else
+                                        <img src="{{asset('img/eventosBO/noImage.png')}}" style="width:60px; height:;" class="img-post" alt="">
+                                        @endif</td>
+
+
+
                                         <td>{{ $item->nome }}</td>
                                         <td>{{ $item->data }}</td>
                                         <td>{{ $item->localizacao }}</td>
