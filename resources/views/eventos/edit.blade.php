@@ -36,9 +36,10 @@
         <input type="date" name="data" id="data" placeholder="Data" value="{{$eventos->data}}" class="form-control"></br>
         <label>Localizacao</label></br>
         <input type="text" name="localizacao" id="localizacao" placeholder="Localização" value="{{$eventos->localizacao}}" class="form-control"></br>
-        <label>Foto</label></br>
-        <input type="file" name="foto" id="foto" placeholder="Foto" value="{{$eventos->foto}}" class="form-control"></br>
-        <label>Descricao</label></br>
+        <label for="inputImage">Foto</label></br>
+        <small id="fileHelp" style="color:red; padding-top:7px;" class="form-text text-muted">A imagem não deve passar as 2MB </small><br>
+        <input type="file" class="form-control-file" name="image" id="inputImage" aria-describedby="fileHelp">
+        <label>Descrição</label></br>
         <input type="text" name="descricao" id="descricao" placeholder="Descrição" value="{{$eventos->descricao}}" class="form-control"></br>
         <input type="submit" value="Atualizar" class="btn btn-success"></br>
     </form>

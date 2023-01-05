@@ -24,7 +24,7 @@
         <div class="baixo">
             <div class="dashboard_funcionarios">
 
-            <h3>Adicionar Evento</h3><br>
+        <h3>Adicionar Evento</h3><br>
     <form action="{{ url('evento') }}" method="post">
         {!! csrf_field() !!}
         <label for="">Nome</label><br>
@@ -33,8 +33,9 @@
         <input type="date" name="data" placeholder="Data" ><br>
         <label for="">Localizacao</label><br>
         <input type="text" name="localizacao" placeholder="Localização" ><br>
-        <label for="">Foto</label><br>
-        <input type="file" name="foto" placeholder="Foto"><br>
+        <label for="inputImage">Foto</label></br>
+        <small id="fileHelp" style="color:red; padding-top:7px;" class="form-text text-muted">A imagem não deve passar as 2MB </small><br>
+        <input type="file" class="form-control-file" name="image" id="inputImage" aria-describedby="fileHelp">
         <label for="">Descrição</label><br>
         <input type="text" name="descricao" placeholder="Descrição" ><br>
         <input type="submit" value="Adicionar"  class="btn btn-success"></br>
