@@ -13,8 +13,7 @@
     <div class="pedidos_main">
         <h1>Pedidos Arquivados</h1>
         <a class="voltar" href="{{ asset('admin/pedprof')}}">Voltar</a>
-        <div class="about">
-            <table id="arquivados" class="tabela-arquivados table table-striped align-middle dataTable no-footer display">
+        <table id="arquivados" class="tabela-arquivados table table-striped align-middle dataTable no-footer display">
             <thead>
                 <tr class="title">
                     <th>Nome</th>
@@ -35,17 +34,16 @@
                     <td>{{$arquivados->telefone}}</td>
                     <td><a href="{!! route('cv_download', $arquivados->cv) !!}" download>{{ $arquivados->cv }}</a></td>
                     <td>
-                    <span class="material-symbols-outlined restaurar">
-restore_from_trash
-</span>
+                        <span class="material-symbols-outlined restaurar">
+                            restore_from_trash
+                        </span>
                     </td>
-                @endforeach
-                @else
-                <h6>Não existem categorias registadas</h6>
-                @endif
+                    @endforeach
+                    @else
+                    <h6>Não existem categorias registadas</h6>
+                    @endif
             </tbody>
         </table>
-        </div>
     </div>
 </div>
 @endsection
@@ -83,16 +81,16 @@ restore_from_trash
                 [0, 'desc']
             ],
             "language": {
-                "lengthMenu": "Entradas: _MENU_ por página",
-                "zeroRecords": "Nothing found - sorry",
+                "lengthMenu": "_MENU_ por página",
+                "zeroRecords": "Sem dados",
                 "info": " _PAGE_ de _PAGES_ ",
                 "infoEmpty": "No records available",
                 "infoFiltered": "(filtered from _MAX_ total records)",
                 "paginate": {
                     "first": "Primeiro",
                     "last": "Ultimo",
-                    "next": "Seguinte",
-                    "previous": "Anterior"
+                    "next": ">",
+                    "previous": "<"
                 }
             }
 

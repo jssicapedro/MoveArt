@@ -8,33 +8,17 @@ use Illuminate\Support\Facades\Storage;
 
 class PedidoprofessorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $pedidos = PedidoProfessor::all();
         return view('admin.pedprof.pedprof', compact('pedidos'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
        return view('professor');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $namefile = $request->primeiro . $request->apelido . '.' . $request->cv->extension();
@@ -101,7 +85,7 @@ class PedidoprofessorController extends Controller
         return view('admin.pedprof.pedprof_archive', compact('arquivados'));
     }
 
-    public function destroy(PedidoProfessor $pedidos)
+    public function delete(PedidoProfessor $pedidos)
     {
         $pedidos->delete();
         return redirect()->route('pedidosprof');

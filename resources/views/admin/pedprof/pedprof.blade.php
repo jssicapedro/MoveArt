@@ -15,7 +15,7 @@
     <div class="pedidos_main">
         <h1>Pedidos a Professor</h1>
         <a class="arquivados" href="{{ asset('/admin/pedprof/archive')}}">Arquivados</a>
-        <table id="patrocinio" class="table table-striped align-middle dataTable no-footer display">
+        <table id="pedprof" class="table table-striped align-middle dataTable no-footer display">
             <thead>
                 <tr class="title">
                     <th>id</th>
@@ -104,7 +104,7 @@
 <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('#patrocinio').DataTable({
+        $('#pedprof').DataTable({
 
             searching: false,
 
@@ -126,7 +126,7 @@
                     "bSortable": false
                 },
             ],
-            pageLength: 10,
+            pageLength: 5,
             lengthMenu: [
                 [5, 10, 20, -1],
                 [5, 10, 20, 'Todos']
@@ -135,16 +135,16 @@
                 [0, 'desc']
             ],
             "language": {
-                "lengthMenu": "Entradas: _MENU_ por página",
-                "zeroRecords": "Nothing found - sorry",
-                "info": " _PAGE_ de _PAGES_ ",
+                "lengthMenu": "_MENU_ por página",
+                "zeroRecords": "Sem dados",
+                "info": "",
                 "infoEmpty": "No records available",
                 "infoFiltered": "(filtered from _MAX_ total records)",
                 "paginate": {
                     "first": "Primeiro",
                     "last": "Ultimo",
-                    "next": "Seguinte",
-                    "previous": "Anterior"
+                    "next": ">",
+                    "previous": "<"
                 }
             }
 

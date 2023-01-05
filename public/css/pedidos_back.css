@@ -19,8 +19,13 @@ hr{
     margin: 0 0 30px;
 }
 
-#patrocinio{
+#pedprof,
+#arquivados{
     margin: 30px 0;
+}
+
+table{
+    border-collapse: collapse;
 }
 
 th{
@@ -126,6 +131,21 @@ td a{
     border: 2px solid var(--cinzaBorda);
     border-radius: 10px;
     padding: 10px;
+}
+
+
+.paginate_button,
+.previous,
+.next{
+    border: none !important;
+    border-radius: 50% !important;
+    background: var(--branco_footer) !important;
+    width: 40px !important;
+    height: 35px !important;
+}
+
+.current{
+    background: var(--amarelo) !important;
 }
 
 .msg{

@@ -65,12 +65,7 @@ class PatrocinioController extends Controller
         return redirect('admin.patrocinio');
     }
 
-    /* public function delete($id){
-        $patrocinio = Patrocinio::findOrFail($id);
-        return view('sucesso');
-    } */
-
-    public function destroy(Patrocinio $patrocinio)
+    public function delete(Patrocinio $patrocinio)
     {
         $patrocinio->delete();
 

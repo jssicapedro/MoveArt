@@ -80,5 +80,5 @@ Route::get('/admin/pedprof/edit/{pedidos}', [PedidoprofessorController::class, '
 Route::post('/admin/pedprof/edit/{pedidos}', [PedidoprofessorController::class, 'update'])->name('pedprof.update');
 /* download cv */
 Route::get('/download/{file}', [PedidoprofessorController::class, 'download'])->name('cv_download'); 
-Route::delete('/admin/pedprof/delete/{pedidos}', [PedidoprofessorController::class, 'destroy'])->name('pedprof.destroy');
+Route::delete('/admin/pedprof/delete/{pedidos}', [PedidoprofessorController::class, 'delete'])->name('pedprof.destroy');
 Route::get('/admin/pedprof/archive', [PedidoprofessorController::class, 'archive'])->name('arquivos');

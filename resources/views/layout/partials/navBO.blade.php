@@ -30,6 +30,15 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="{{ asset('admin/pedprof') }}">
+                        <span class="icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                        </span>
+                        <span class="titulo">Pedidos Professores</span>
+                    </a>
+                </li>
+
 
                 <li>
                     <a href="{{ asset('admin/modalidades') }}">
