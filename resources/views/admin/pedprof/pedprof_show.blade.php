@@ -8,7 +8,7 @@
 
 @section('main')
 <div class="dashboard_main">
-    <div class="patrocinio_main">
+    <div class="pedidos_main">
         <a class="voltar" href="{{ asset('admin/pedprof')}}">Voltar</a>
         <div class="about">
             <h1>Sobre o pedido</h1>

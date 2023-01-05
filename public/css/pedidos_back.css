@@ -1,4 +1,5 @@
-.patrocinio_main{
+.patrocinio_main,
+.pedidos_main{
     display: flex;
     flex-direction: column;
     margin: 5%;
@@ -82,7 +83,8 @@ td a{
 }
 
 .voltar,
-.enviar{
+.enviar,
+.arquivados{
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
@@ -92,10 +94,15 @@ td a{
     border-radius: 10px;
 }
 
-.voltar{
+.voltar,
+.arquivados{
     width: 150px;
     background-color: var(--roxo);
     margin-bottom: 20px;
+}
+
+.arquivados{
+    padding: 10px;
 }
 
 .about{
@@ -166,6 +173,21 @@ td a{
     gap: 160px;
     justify-content: flex-start;
 }
+
+.delete{
+    border: none!important;
+    color: red;
+}
+
+.restaurar{
+    border: none;
+    color: green;
+}
+
+.tabela-arquivados{
+    width: 100%;
+}
+
 @media (max-width:1400px){
     .option ul{
         flex-direction: column;

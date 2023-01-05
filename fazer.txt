@@ -9,11 +9,12 @@ Acrescentar coluna de resposta á tabela pedidos_professores ou o admin liga log
 delete -> patrocinio ✅ https://www.youtube.com/watch?v=suXG1bs0dHo&ab_channel=Celke
 
 
-
 softdele -> pedido professor - apaga-se o registo do pedido passados 6meses
+inserir corriculo com nome random
+
 
 enviar email quando atualizar mensagem 
 validações de formulários > mensagem de erro/sucesso 
 pesquisar sobre police ---- impede que alunos entrem no back
+gerar nova página de modlaidade automaticamente
 relatorio do projeto
-

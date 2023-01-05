@@ -167,6 +167,7 @@ td a{
 
 .delete{
     border: none!important;
+    color: red;
 }
 
 .enviar:hover{

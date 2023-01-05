@@ -66,46 +66,20 @@ class PedidoprofessorController extends Controller
         /* return redirect('professor')->with('erro'); */
     }
 
-    /* public function lista_cv(){
-        $file = Storage::files('pedidoProf');
-        echo'<pre>';
-        print_r($file);
-    } */
-
-
     public function download($file){
         return response()->download(storage_path('app/public/pedidoProf/'.$file));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\PedidoProfessor  $pedidos
-     * @return \Illuminate\Http\Response
-     */
     public function show(PedidoProfessor $pedidos)
     {
         return view('admin.pedprof.pedprof_show', ['pedidos' => $pedidos]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\PedidoProfessor  $pedidos
-     * @return \Illuminate\Http\Response
-     */
     public function edit(PedidoProfessor $pedidos)
     {
         return view('admin.pedprof.pedprof_edit', ['pedidos' => $pedidos]); 
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\PedidoProfessor  $pedidos
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, PedidoProfessor $pedidos)
     {
         $pedidos->update([
@@ -120,14 +94,16 @@ class PedidoprofessorController extends Controller
         return "pedidoProfessor atualizado com sucesso";
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\PedidoProfessor  $pedidos
-     * @return \Illuminate\Http\Response
-     */
+    public function archive(){
+        $arquivados = PedidoProfessor::onlyTrashed()
+            ->orderBy('id', 'desc')->get();
+
+        return view('admin.pedprof.pedprof_archive', compact('arquivados'));
+    }
+
     public function destroy(PedidoProfessor $pedidos)
     {
-        //
+        $pedidos->delete();
+        return redirect()->route('pedidosprof');
     }
 }

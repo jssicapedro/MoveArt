@@ -12,8 +12,9 @@
 
 @section('main')
 <div class="dashboard_main">
-    <div class="patrocinio_main">
+    <div class="pedidos_main">
         <h1>Pedidos a Professor</h1>
+        <a class="arquivados" href="{{ asset('/admin/pedprof/archive')}}">Arquivados</a>
         <table id="patrocinio" class="table table-striped align-middle dataTable no-footer display">
             <thead>
                 <tr class="title">
@@ -74,11 +75,17 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="">
-                                    <span class="material-symbols-outlined">
-                                        delete
-                                    </span>
-                                </a>
+                            <form action="{{ route('pedprof.destroy', $pedidos->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="delete">
+                                        <a href="">
+                                            <span class="material-symbols-outlined delete">
+                                                delete
+                                            </span>
+                                        </a>
+                                    </button>
+                                </form>
                             </li>
                         </ul>
                     </td>
