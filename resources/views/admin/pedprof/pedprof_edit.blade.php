@@ -18,11 +18,11 @@
                 <div class="row">
                     <div class="col-2">
                         <label class="sobre" for="">Nome</label> <br />
-                        <input type="text" name="nome" class="conteudo" value="{{$pedidos->primeiro}}" readonly>
+                        <input type="text" name="primeiro" class="conteudo" value="{{$pedidos->primeiro}}" readonly>
                     </div>
                     <div class="col-2">
                         <label class="sobre" for="">Apelido</label> <br />
-                        <input type="text" name="nome" class="conteudo" value=" {{$pedidos->apelido}}" readonly>
+                        <input type="text" name="apelido" class="conteudo" value=" {{$pedidos->apelido}}" readonly>
                     </div>
                     <div class="col-2">
                         <label class="sobre" for="">Email</label> <br />
@@ -40,11 +40,11 @@
                 <div class="row">
                     <div class="col-4">
                         <label class="sobre" for="">Data de nascimento</label> <br />
-                        <input type="text" name="dta_nac" class="conteudo" value="{{$pedidos->data_nac}}" readonly>
+                        <input type="text" name="data_nac" class="conteudo" value="{{$pedidos->data_nac}}" readonly>
                     </div>
                     <div class="col-4">
                         <label class="sobre" for="">Modalidade</label> <br />
-                        <input type="text" name="cv" class="conteudo" value="{{$pedidos->modalidade}}" readonly>
+                        <input type="text" name="modalidade" class="conteudo" value="{{$pedidos->modalidade}}" readonly>
                     </div>
                     <div class="col-4">
                         <label class="sobre" for="">Curriculo</label> <br />
@@ -53,7 +53,7 @@
                 </div>
                 <div class="row resp">
                     <div class="col">
-                        <label class="sobre" for="">Resposta</label> <br />
+                        <label class="sobre" for="">Responder</label> <br />
                         <textarea name="resposta" class="conteudo">{{$pedidos->resposta}}</textarea>
                     </div>
                 </div>

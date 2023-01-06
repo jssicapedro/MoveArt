@@ -67,15 +67,18 @@ class PedidoprofessorController extends Controller
     public function update(Request $request, PedidoProfessor $pedidos)
     {
         $pedidos->update([
-            'nome' => $request->primeiro,
+            'primeiro' => $request->primeiro,
             'apelido' => $request->apelido,
             'email' => $request->email,
             'telefone' => $request->telefone,
-            'dta_nasc' => $request->data_nac,
+            'cv' => $request->cv,
+            'data_nac' => $request->data_nac,
             'modalidade' => $request->modalidade,
+            'resposta' => $request->resposta,
         ]);
 
-        return "pedidoProfessor atualizado com sucesso";
+        /* return "pedidoProfessor atualizado com sucesso"; */
+        return redirect('admin/pedprof');
     }
 
     public function archive(){

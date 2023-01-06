@@ -20,5 +20,6 @@ class PedidoProfessor extends Model
         'data_nac',
         'cv',
         'modalidade',
+        'resposta',
     ];
 }

@@ -43,7 +43,12 @@
                         <p class="conteudo">{{$pedidos->modalidade}}</p>
                     </div>
                 </div>
-                
+                <div class="row resp">
+                    <div class="col">
+                        <label class="sobre" for="">Resposta</label> <br />
+                        <textarea name="resposta" class="conteudo" readonly>{{$pedidos->resposta}}</textarea>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
