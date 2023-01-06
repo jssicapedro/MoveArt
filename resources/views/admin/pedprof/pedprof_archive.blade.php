@@ -34,9 +34,11 @@
                     <td>{{$arquivados->telefone}}</td>
                     <td><a href="{!! route('cv_download', $arquivados->cv) !!}" download>{{ $arquivados->cv }}</a></td>
                     <td>
-                        <span class="material-symbols-outlined restaurar">
-                            restore_from_trash
-                        </span>
+                        <form action="">
+                            <span class="material-symbols-outlined restaurar">
+                                restore_from_trash
+                            </span>
+                        </form>
                     </td>
                     @endforeach
                     @else
