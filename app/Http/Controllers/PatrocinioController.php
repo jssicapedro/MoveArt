@@ -11,7 +11,7 @@ class PatrocinioController extends Controller
     public function index()
     {
         $patrocinios = Patrocinio::all();
-        return view('admin.patrocinios.patrocinio', compact('patrocinios'));
+        return view('admin/patrocinios/patrocinio', compact('patrocinios'));
     }
 
     public function create()
@@ -41,12 +41,12 @@ class PatrocinioController extends Controller
 
     public function show(Patrocinio $patrocinio)
     {
-        return view('admin.patrocinios.patrocinio_show', ['patrocinio' => $patrocinio]);
+        return view('admin/patrocinios/patrocinio_show', ['patrocinio' => $patrocinio]);
     }
 
     public function edit(Patrocinio $patrocinio)
     {
-        return view('admin.patrocinios.patrocinio_edit', ['patrocinio' => $patrocinio]); 
+        return view('admin/patrocinios/patrocinio_edit', ['patrocinio' => $patrocinio]); 
     }
 
     public function update(Request $request, Patrocinio $patrocinio)
@@ -62,7 +62,7 @@ class PatrocinioController extends Controller
         ]);
 
         /* return "patrocinio atualizado com sucesso"; */
-        return redirect('admin.patrocinio');
+        return redirect('admin/patrocinio');
     }
 
     public function delete(Patrocinio $patrocinio)

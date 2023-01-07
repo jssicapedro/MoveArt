@@ -5,22 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\PedidoProfessor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Redirect;
 
 class PedidoprofessorController extends Controller
 {
-    public function index()
-    {
+    public function index(){
         $pedidos = PedidoProfessor::all();
         return view('admin.pedprof.pedprof', compact('pedidos'));
     }
 
-    public function create()
-    {
+    public function create(){
        return view('professor');
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         $namefile = $request->primeiro . $request->apelido . '.' . $request->cv->extension();
 
         $request->validate([
@@ -36,7 +34,6 @@ class PedidoprofessorController extends Controller
         $request->cv->storeAS('pedidoProf', $namefile);
 
         PedidoProfessor::create([
-            /* name do input => $request->coluna_tabela */
             'primeiro' => $request->primeiro,
             'apelido' => $request->apelido,
             'email' => $request->email,
@@ -46,26 +43,22 @@ class PedidoprofessorController extends Controller
             'cv'=> $namefile,
         ]);   
         
-        return redirect('professor')->with('success', true);
-        /* return redirect('professor')->with('erro'); */
+        return redirect('professor')->with('success_pedprof', true);
     }
 
     public function download($file){
         return response()->download(storage_path('app/public/pedidoProf/'.$file));
     }
 
-    public function show(PedidoProfessor $pedidos)
-    {
+    public function show(PedidoProfessor $pedidos){
         return view('admin.pedprof.pedprof_show', ['pedidos' => $pedidos]);
     }
 
-    public function edit(PedidoProfessor $pedidos)
-    {
+    public function edit(PedidoProfessor $pedidos){
         return view('admin.pedprof.pedprof_edit', ['pedidos' => $pedidos]); 
     }
 
-    public function update(Request $request, PedidoProfessor $pedidos)
-    {
+    public function update(Request $request, PedidoProfessor $pedidos){
         $pedidos->update([
             'primeiro' => $request->primeiro,
             'apelido' => $request->apelido,
@@ -76,8 +69,6 @@ class PedidoprofessorController extends Controller
             'modalidade' => $request->modalidade,
             'resposta' => $request->resposta,
         ]);
-
-        /* return "pedidoProfessor atualizado com sucesso"; */
         return redirect('admin/pedprof');
     }
 
@@ -88,9 +79,14 @@ class PedidoprofessorController extends Controller
         return view('admin.pedprof.pedprof_archive', compact('arquivados'));
     }
 
-    public function delete(PedidoProfessor $pedidos)
-    {
+    public function delete(PedidoProfessor $pedidos){
         $pedidos->delete();
         return redirect()->route('pedidosprof');
+    }
+
+    public function restore($id){
+        /* PedidoProfessor::whereId($id)->restore(); */
+        PedidoProfessor::withTrashed()->find($id)->restore();
+        return back();
     }
 }

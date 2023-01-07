@@ -10,11 +10,14 @@ delete -> patrocinio ✅ https://www.youtube.com/watch?v=suXG1bs0dHo&ab_channel=
 
 
 softdele -> pedido professor - apaga o registo do pedido passados 6meses
-         -> restaurar - https://www.youtube.com/watch?v=twcDknTcOEw&ab_channel=CodeImprove
+         -> restaurar - https://www.youtube.com/watch?v=twcDknTcOEw&ab_channel=CodeImprove ✅
 
 
+tabela responsiva
 enviar email quando atualizar mensagem 
 validações de formulários > mensagem de erro/sucesso 
 pesquisar sobre police ---- impede que alunos entrem no back
 gerar nova página de modlaidade automaticamente
+design
+
 relatorio do projeto

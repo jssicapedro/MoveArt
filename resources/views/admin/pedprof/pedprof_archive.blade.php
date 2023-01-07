@@ -34,10 +34,16 @@
                     <td>{{$arquivados->telefone}}</td>
                     <td><a href="{!! route('cv_download', $arquivados->cv) !!}" download>{{ $arquivados->cv }}</a></td>
                     <td>
-                        <form action="">
-                            <span class="material-symbols-outlined restaurar">
-                                restore_from_trash
-                            </span>
+                        <form action="{{ route('restore.pedprof', $arquivados->id) }}" method="GET">
+                            @csrf
+                            @method('get')
+                            <button type="submit" class="delete">
+                                <a href="">
+                                    <span class="material-symbols-outlined restaurar">
+                                        restore_from_trash
+                                    </span>
+                                </a>
+                            </button>
                         </form>
                     </td>
                     @endforeach
