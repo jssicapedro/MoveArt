@@ -10,13 +10,17 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endsection
 
 @section('main')
 <div class="dashboard_main">
   <div class="modalidades_main">
-    <h1>Modalidades</h1>
-    button create button search
+    <h1>
+      <img src="https://img.icons8.com/glyph-neue/64/null/dancing.png" /> Modalidades
+    </h1>
+    <button class="create"> <a href="{{ asset('/admin/modalidades/create') }}">Nova Modalidade <i class="fa-solid fa-plus"></i></a> </button> button search
     <div class="row head">
       <div class="col-1" style="text-align: center;">id</div>
       <div class="col-2" style="text-align: center;">Imagem</div>
@@ -30,17 +34,32 @@
       <div class="col-1" style="text-align: center;">{{$mod->id}}</div>
       <div class="col-2" style="text-align: center;"><img style="width: 60px; height:60px;padding:5px;" src="{{ url('storage/modalidades/'.$mod->foto_desc) }}" alt=""></div>
       <div class="col-4" style="text-align: center;">{{$mod->modalidade}}</div>
-      <div class="col-2" style="text-align: center;">{{$mod->valor_anual}}</div>
-      <div class="col-2" style="text-align: center;">{{$mod->valor_mensal}}</div>
-      <div class="col-1 option">
-        <div class="circle">
-          <span class="material-symbols-outlined">
-          more_vert
-        </span>
+      <div class="col-2" style="text-align: center;">{{$mod->valor_anual}}€</div>
+      <div class="col-2" style="text-align: center;">{{$mod->valor_mensal}}€</div>
+      <div class="col-1">
+        <div class="drop">
+          <ul class="ops">
+            <li><a href="{{ route('modalidades.show', $mod->id) }}"><i class="fa-solid fa-eye"></i></a></li>
+            <li><a href="{{ route('modalidades.edit', $mod->id) }}"><i class="fa-solid fa-pen-ruler"></i></a></li>
+            <li><a href=""><i class="fa-solid fa-trash"></i></a></li>
+          </ul>
         </div>
       </div>
+        
     </div>
     @endforeach
   </div>
 </div>
 @endsection
+<!-- @section('script')
+<script>
+  function show_hide() {
+    var click = document.getElementById("drop");
+    if (click.style.display === "block") {
+      click.style.display = "none"
+    } else {
+      click.style.display = "block";
+    }
+  }
+</script>
+@endsection -->
