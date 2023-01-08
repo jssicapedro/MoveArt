@@ -1,6 +1,6 @@
 @extends('layout.masterBO')
 
-@section('title', 'MoveArt - Patrocínios')
+@section('title', 'MoveArt - Responder pedido')
 
 @section('links')
 <link rel="stylesheet" href="{{ asset('css/pedidos_back.css') }}">
@@ -15,63 +15,49 @@
             <hr>
             <form action="{{ route('pedprof.update', ['pedidos' => $pedidos->id]) }}" method="POST">
                 @csrf
-                <!-- <div class="row">
-                    <div class="col-2">
-                        <label class="sobre" for="">Nome</label> <br />
-                        <input type="text" name="primeiro" class="conteudo" value="{{$pedidos->primeiro}}" readonly>
-                    </div>
-                    <div class="col-2">
-                        <label class="sobre" for="">Apelido</label> <br />
-                        <input type="text" name="apelido" class="conteudo" value=" {{$pedidos->apelido}}" readonly>
-                    </div>
-                    <div class="col-2">
-                        <label class="sobre" for="">Email</label> <br />
-                        <input type="email" name="email" class="conteudo" value="{{$pedidos->email}}" readonly>
-                    </div>
-                    <div class="col-2">
-                        <label class="sobre" for="">Telefone</label> <br />
-                        <input type="tel" name="telefone" class="conteudo" value="{{$pedidos->telefone}}" readonly>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <label class="sobre" for="">Data de nascimento</label> <br />
-                        <input type="text" name="data_nac" class="conteudo" value="{{$pedidos->data_nac}}" readonly>
-                    </div>
-                    <div class="col-4">
-                        <label class="sobre" for="">Modalidade</label> <br />
-                        <input type="text" name="modalidade" class="conteudo" value="{{$pedidos->modalidade}}" readonly>
-                    </div>
-                    <div class="col-4">
-                        <label class="sobre" for="">Curriculo</label> <br />
-                        <input type="text" name="cv" class="conteudo" value="{{$pedidos->cv}}" readonly>
-                    </div>
-                </div>
-                <div class="row resp">
-                    <div class="col">
-                        <label class="sobre" for="">Responder</label> <br />
-                        <textarea name="resposta" class="conteudo">{{$pedidos->resposta}}</textarea>
-                    </div>
-                </div>
-                <div class="btn">
-                    <input type="submit" value="ATUALIZAR" class="enviar">
-                </div> -->
                 <div class="pedidos_sobre">
                     <div class="acerca">
-                        Nome
-                        <input type="text" name="primeiro" class="conteudo" value="{{$pedidos->primeiro}}" readonly>
-                        Apelido
-                        <input type="text" name="apelido" class="conteudo" value="{{$pedidos->apelido}}" readonly>
-                        Nascimento
-                        <input type="text" name="data_nac" class="conteudo" value="{{$pedidos->data_nac}}" readonly>
-                        Telefone
-                        <input type="text" name="telefone" class="conteudo" value="{{$pedidos->telefone}}" readonly>
-                        Email
-                        <input type="text" name="email" class="conteudo" value="{{$pedidos->email}}" readonly>
+                        <h2>Sobre</h2>
+                        <div class="acerca_sob">
+                            <p class="sob_titulo">Nome</p>
+                            <input type="text" name="primeiro" class="conteudo" value="{{$pedidos->primeiro}}" readonly>
+                        </div>
+                        <div class="acerca_sob">
+                            <p class="sob_titulo">Apelido</p>
+                            <input type="text" name="apelido" class="conteudo" value="{{$pedidos->apelido}}" readonly>
+                        </div>
+                        <div class="acerca_sob">
+                            <p class="sob_titulo">Nascimento</p>
+                            <input type="text" name="data_nac" class="conteudo" value="{{$pedidos->data_nac}}" readonly>
+                        </div>
+                        <div class="acerca_sob">
+                            <p class="sob_titulo">Telefone</p>
+                            <input type="text" name="telefone" class="conteudo" value="{{$pedidos->telefone}}" readonly>
+                        </div>
+                        <div class="acerca_sob">
+                            <p class="sob_titulo">Email</p>
+                            <input type="text" name="email" class="conteudo" value="{{$pedidos->email}}" readonly>
+                        </div>
                     </div>
-                    <div class="responderPedido"> </div>
+                    <div class="exp">
+                        <h2>Experiência</h2>
+                        <div class="acerca_sob">
+                            <p class="sob_titulo">CV</p>
+                            <input type="hidden" name="cv" class="conteudo" value="{{$pedidos->cv}}">
+                            <a href="{!! route('cv_download', $pedidos->cv) !!}" download>Fazer Download do CV</a>
+                        </div>
+                        <div class="acerca_sob">
+                            <p class="sob_titulo">Modalidade sugerida</p>
+                            <input type="text" name="modalidade" class="conteudo" value="{{$pedidos->modalidade}}" readonly>
+                        </div>
+                    </div>
+                    <div class="responderPedido">
+                            <h2>Modalidade sugerida</h2>
+                            <textarea name="resposta" class="conteudo">{{$pedidos->resposta}}</textarea>
+                    <input type="submit" value="Enviar email" class="enviar">
                 </div>
-
+                </div>
+                
             </form>
         </div>
     </div>

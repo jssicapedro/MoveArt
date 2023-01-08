@@ -1,6 +1,6 @@
 @extends('layout.masterBO')
 
-@section('title', 'MoveArt - Patrocínios')
+@section('title', 'MoveArt - Pedidos Professor')
 
 @section('links')
 <link rel="stylesheet" href="{{ asset('css/pedidos_back.css') }}">
@@ -13,7 +13,7 @@
 @section('main')
 <div class="dashboard_main">
     <div class="pedidos_main">
-        <h1>Pedidos a Professor</h1>
+        <h1>Pedidos para Professor</h1>
         <a class="arquivados" href="{{ asset('/admin/pedprof/archive')}}">Arquivados</a>
         <div class="table-wrapper">
             <div class="table-scroll">

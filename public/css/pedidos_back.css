@@ -140,8 +140,9 @@ td a {
 
 .pedido {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 90px;
+    justify-content:center;
 }
 
 .info_exp {
@@ -172,6 +173,10 @@ td a {
     padding-bottom: 10px;
 }
 
+.informacao p{
+    font-size: 16pt;
+}
+
 .sob {
     font-weight: bold;
 }
@@ -186,6 +191,7 @@ td a {
     color: var(--castanho);
     text-decoration: none;
     font-weight: 500;
+    font-size: 16pt;
 }
 
 .responder {
@@ -195,62 +201,70 @@ td a {
 
 .responder p {
     text-align: center;
+    font-size: 16pt;
 }
 
 
 /* ##### edit ##### */
-/* .about {
-    background-color: var(--branco_footer);
-    padding: 20px;
-}
-
-.sobre {
-    font-size: 20px;
-    height: 5vh;
-    line-height: 5vh;
-    margin: 5% 0 2%;
-}
-
-.conteudo {
-    margin: 5px 0;
-    height: 4vh;
+.pedidos_sobre{
     display: flex;
-    align-items: center;
-    background-color: var(--cinza);
-    border: 2px solid var(--cinzaBorda);
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+h2{
+    text-align: center;
+}
+
+.acerca,
+.exp,
+.responderPedido{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 25vh;
+    background: var(--branco_footer);
+    justify-content: space-evenly;
+    border: 3px solid var(--cinzaBorda);
     border-radius: 10px;
     padding: 10px;
 }
 
-.msg {
-    width: 50%;
-}
-
-.msg .conteudo {
-    padding: 20px 10px;
-    height: 15vh;
-    align-items: flex-start;
-}
-
-.resp,
-.msg {
-    width: 100%;
+.acerca_sob{
     display: flex;
-    flex-direction: column;
 }
 
-.resp .conteudo,
-.msg .conteudo {
-    height: 100px;
-    width: 100%;
+.acerca .sob_titulo,
+.exp .sob_titulo{
+    font-weight: bold;
+    font-size: 16pt;
 }
 
-.btn {
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    align-content: center;
+.acerca input,
+.exp input{
+    border: transparent;
+    background: transparent;
+    margin: 0 10px 0;
+    font-size: 16pt;
+    cursor: not-allowed;
+}
+
+.acerca_sob a{
+    color: var(--castanho);
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 10px 0;
+    font-size: 16pt;
+}
+
+.responderPedido textarea{
+    text-align: center;
+    height: 40%;
+    padding: 10px;
+    border: 1px solid var(--cinzaBorda);
+    border-radius: 5px;
+    background: var(--gray);
 }
 
 .enviar {
@@ -260,26 +274,6 @@ td a {
 
 .enviar:hover {
     cursor: pointer;
-}
-
-.row {
-    display: flex;
-    gap: 160px;
-    justify-content: flex-start;
-} */
-.pedidos_sobre{
-
-}
-
-.acerca{
-
-}
-
-.acerca input{
-    border: transparent;
-    background: transparent;
-    border-bottom: 2px solid var(--cinzaBorda);
-    margin: 0 5px 0;
 }
 
 

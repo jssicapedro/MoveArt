@@ -1,6 +1,6 @@
 @extends('layout.masterBO')
 
-@section('title', 'MoveArt - Patrocínios')
+@section('title', 'MoveArt - Pedidos arquivados')
 
 @section('links')
 <link rel="stylesheet" href="{{ asset('css/pedidos_back.css') }}">
