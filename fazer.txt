@@ -9,7 +9,8 @@ Acrescentar coluna de resposta á tabela pedidos_professores ou o admin liga log
 delete -> patrocinio ✅ https://www.youtube.com/watch?v=suXG1bs0dHo&ab_channel=Celke
 
 
-softdele -> pedido professor - apaga o registo do pedido passados 6meses
+softdele -> pedido professor ✅
+            - apaga o registo do pedido passados 6meses
          -> restaurar - https://www.youtube.com/watch?v=twcDknTcOEw&ab_channel=CodeImprove ✅
 
 
@@ -20,6 +21,8 @@ validações de formulários > mensagem de erro/sucesso ✅
                           > erro -> não guarda os valores anteriormente inseridos
 
 enviar email quando atualizar mensagem 
+            - https://mailtrap.io/blog/send-email-in-laravel/ 
+            - https://www.itsolutionstuff.com/post/laravel-send-mail-using-mailtrap-exampleexample.html
 
 pesquisar sobre police ---- impede que alunos entrem no back
 gerar nova página de modlaidade automaticamente
