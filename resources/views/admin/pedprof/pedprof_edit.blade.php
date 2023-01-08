@@ -11,11 +11,11 @@
     <div class="pedidos_main">
         <a class="voltar" href="{{ asset('admin/pedprof')}}">Voltar</a>
         <div class="about">
-            <h1>Atualizar pedido</h1>
+            <h1>Responder a {{$pedidos->primeiro}}</h1>
             <hr>
             <form action="{{ route('pedprof.update', ['pedidos' => $pedidos->id]) }}" method="POST">
                 @csrf
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-2">
                         <label class="sobre" for="">Nome</label> <br />
                         <input type="text" name="primeiro" class="conteudo" value="{{$pedidos->primeiro}}" readonly>
@@ -55,7 +55,23 @@
                 </div>
                 <div class="btn">
                     <input type="submit" value="ATUALIZAR" class="enviar">
+                </div> -->
+                <div class="pedidos_sobre">
+                    <div class="acerca">
+                        Nome
+                        <input type="text" name="primeiro" class="conteudo" value="{{$pedidos->primeiro}}" readonly>
+                        Apelido
+                        <input type="text" name="apelido" class="conteudo" value="{{$pedidos->apelido}}" readonly>
+                        Nascimento
+                        <input type="text" name="data_nac" class="conteudo" value="{{$pedidos->data_nac}}" readonly>
+                        Telefone
+                        <input type="text" name="telefone" class="conteudo" value="{{$pedidos->telefone}}" readonly>
+                        Email
+                        <input type="text" name="email" class="conteudo" value="{{$pedidos->email}}" readonly>
+                    </div>
+                    <div class="responderPedido"> </div>
                 </div>
+
             </form>
         </div>
     </div>

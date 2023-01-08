@@ -7,12 +7,31 @@
 
 h1 {
     margin: 20px 0;
-    font-size: 50px;
+    font-size: 35pt;
     text-align: center;
 }
 
 hr {
     margin: 0 0 20px;
+}
+
+.voltar,
+.enviar,
+.arquivados {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20pt;
+    text-align: center;
+    color: var(--branco);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.voltar,
+.arquivados {
+    width: 10vw;
+    background-color: var(--roxo);
+    margin-bottom: 20px;
 }
 
 .dataTables_length {
@@ -87,51 +106,27 @@ td a {
     background-color: var(--roxo);
 }
 
-.voltar,
-.enviar,
-.arquivados {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    color: var(--branco);
-    padding: 20px;
-    border-radius: 10px;
+.delete {
+    border: none !important;
+    color: red;
 }
 
-.voltar,
-.arquivados {
-    width: 150px;
-    background-color: var(--roxo);
-    margin-bottom: 20px;
+/* ##### paginação listagem ##### */
+
+.paginate_button,
+.previous,
+.next {
+    border: none !important;
+    border-radius: 50% !important;
+    background: var(--branco_footer) !important;
+    width: 40px !important;
+    height: 35px !important;
 }
 
-.arquivados {
-    padding: 10px;
+.current {
+    background: var(--amarelo) !important;
 }
 
-.about{
-    background-color: var(--branco_footer);
-    padding: 20px;
-}
-
-.sobre{
-    font-size: 20px;
-    height: 5vh;
-    line-height: 5vh;
-    margin: 5% 0 2%;
-}
-
-.conteudo{
-    margin: 5px 0;
-    height: 4vh;
-    display: flex;
-    align-items: center;
-    background-color: var(--cinza);
-    border: 2px solid var(--cinzaBorda);
-    border-radius: 10px;
-    padding: 10px;
-}
 
 /* ##### show ##### */
 .pedido_titulo {
@@ -143,16 +138,16 @@ td a {
     font-size: 20pt;
 }
 
-.pedido{
+.pedido {
     display: flex;
     flex-direction: column;
     gap: 90px;
 }
 
-.info_exp,
-.responder {
+.info_exp {
     display: flex;
     justify-content: space-evenly;
+    gap: 200px;
 }
 
 .informacao,
@@ -170,7 +165,7 @@ td a {
 }
 
 .info_exp h2,
-.responder h2{
+.responder h2 {
     border-bottom: 3px solid var(--black2);
     border-radius: 10px;
     text-align: center;
@@ -179,49 +174,52 @@ td a {
 
 .sob {
     font-weight: bold;
-
 }
 
-.info_exp .informacao a{
+.info_exp .informacao a {
     color: var(--rosaE);
     text-decoration: none;
     font-weight: 500;
 }
 
-.info_exp .experiencia a{
+.info_exp .experiencia a {
     color: var(--castanho);
     text-decoration: none;
     font-weight: 500;
 }
 
-.responder{
+.responder {
     margin: auto;
+    display: flex;
 }
 
-.responder p{
+.responder p {
     text-align: center;
 }
 
 
-
-
-
-
-
-
-
-.paginate_button,
-.previous,
-.next {
-    border: none !important;
-    border-radius: 50% !important;
-    background: var(--branco_footer) !important;
-    width: 40px !important;
-    height: 35px !important;
+/* ##### edit ##### */
+/* .about {
+    background-color: var(--branco_footer);
+    padding: 20px;
 }
 
-.current {
-    background: var(--amarelo) !important;
+.sobre {
+    font-size: 20px;
+    height: 5vh;
+    line-height: 5vh;
+    margin: 5% 0 2%;
+}
+
+.conteudo {
+    margin: 5px 0;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--cinza);
+    border: 2px solid var(--cinzaBorda);
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .msg {
@@ -268,13 +266,24 @@ td a {
     display: flex;
     gap: 160px;
     justify-content: flex-start;
+} */
+.pedidos_sobre{
+
 }
 
-.delete {
-    border: none !important;
-    color: red;
+.acerca{
+
 }
 
+.acerca input{
+    border: transparent;
+    background: transparent;
+    border-bottom: 2px solid var(--cinzaBorda);
+    margin: 0 5px 0;
+}
+
+
+/* ##### restaurar ##### */
 .restaurar {
     border: none;
     color: green;
@@ -288,6 +297,29 @@ td a {
     .option ul {
         flex-direction: column;
     }
+}
+
+@media (max-width:1090px) {
+    .pedido {
+        gap: 20px;
+    }
+
+    .info_exp {
+        gap: 20px;
+    }
+}
+
+@media (max-width:900px) {
+
+    .informacao,
+    .experiencia,
+    .responder {
+        width: 50vw;
+    }
+
+    /* .info_exp {
+        flex-direction: column;
+    } */
 }
 
 @media (max-width:600px) {
@@ -324,5 +356,20 @@ td a {
 
     td {
         border-bottom: 1px solid var(--cinzaBorda);
+    }
+
+    .pedido {
+        flex-direction: column;
+    }
+
+    .responder {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .responder p {
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
