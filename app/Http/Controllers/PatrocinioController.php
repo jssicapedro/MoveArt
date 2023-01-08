@@ -21,11 +21,20 @@ class PatrocinioController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'nome' => 'required',
-            'email' => 'required|email',
-            'valor' => 'required',
-        ]);
+        $request->validate(
+            [
+                'nome' => 'required',
+                'email' => 'required|email',
+                'valor' => 'required',
+                'mensagem' => 'required',
+            ],
+            [
+                'nome.required' => 'Preencha o campo do NOME',
+                'email.required' => 'Preencha o campo do EMAIL',
+                'valor.required' => 'Preencha o campo do VALOR',
+                'mensagem.required' => 'Preencha o campo do MENSAGEM',
+            ]
+        );
 
         Patrocinio::create([
             'nome' => $request->nome,
@@ -36,7 +45,7 @@ class PatrocinioController extends Controller
         ]);
 
         return redirect('patrocinio')->with('success', true);
-       /*  return redirect('patrocinio')->with('erro'); */
+        /*  return redirect('patrocinio')->with('erro'); */
     }
 
     public function show(Patrocinio $patrocinio)
@@ -46,7 +55,7 @@ class PatrocinioController extends Controller
 
     public function edit(Patrocinio $patrocinio)
     {
-        return view('admin/patrocinios/patrocinio_edit', ['patrocinio' => $patrocinio]); 
+        return view('admin/patrocinios/patrocinio_edit', ['patrocinio' => $patrocinio]);
     }
 
     public function update(Request $request, Patrocinio $patrocinio)

@@ -18,7 +18,7 @@
 @section('main')
 <section id="form_patr">
     <div class="title">
-        <h2>Ajude a nossa associação!</h2>
+        <h2>Ajuda a nossa associação!</h2>
         <h4>Coloque algumas informações da empresa.</h4>
     </div>
     <div class="form">
@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-6">
                     <label for="">Nome da empresa</label> <br />
-                    <input type="text" name="nome" class="form-control" placeholder="Nome Empresa" required>
+                    <input type="text" name="nome" class="form-control" placeholder="Nome Empresa">
                 </div>
                 <div class="col-6">
                     <label for="">Telefone</label> <br />
@@ -37,17 +37,17 @@
             <div class="row">
                 <div class="col-6">
                     <label for="">Email</label> <br />
-                    <input type="email" name="email" class="form-control" placeholder="Email..." required>
+                    <input type="email" name="email" class="form-control" placeholder="Email...">
                 </div>
                 <div class="col-4">
                     <label for="">Valor</label> <br />
                     <div class="input-group">
-                        <input type="number" min="50" name="valor" class="form-control" placeholder="Valor Patrocínio" required>
+                        <input type="number" min="50" name="valor" class="form-control" placeholder="Valor Patrocínio">
                         <div class="input-group-append">
                             <span class="input-group-text">€</span>
                         </div>
                     </div>
-                    <span class="cv">*Valor minimo de 50€</span>
+                    <span class="cv">*Valor mínimo de 50€</span>
                 </div>
             </div>
             <div class="row">
@@ -67,6 +67,15 @@
                 </div>
             </div>
         </form>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     </div>
 </section>
 @endsection

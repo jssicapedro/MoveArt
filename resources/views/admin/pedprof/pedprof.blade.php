@@ -15,87 +15,91 @@
     <div class="pedidos_main">
         <h1>Pedidos a Professor</h1>
         <a class="arquivados" href="{{ asset('/admin/pedprof/archive')}}">Arquivados</a>
-        <table id="pedprof" class="table table-striped align-middle dataTable no-footer display">
-            <thead>
-                <tr class="title">
-                    <th>id</th>
-                    <th>Nome</th>
-                    <th>Modalidade</th>
-                    <th>Email</th>
-                    <th>Telefone</th>
-                    <th>CV</th>
-                    <th>Estado</th>
-                    <th class="more">
-                        <span class="material-symbols-outlined">
-                            more_vert
-                        </span>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (count($pedidos))
-                @foreach($pedidos as $pedidos)
-                <tr>
-                    <td>{{$pedidos->id}}</td>
-                    <td>{{$pedidos->primeiro}} {{$pedidos->apelido}}</td>
-                    <td>{{$pedidos->modalidade}}</td>
-                    <td>{{$pedidos->email}}</td>
-                    <td>{{$pedidos->telefone}}</td>
-                    <td><a href="{!! route('cv_download', $pedidos->cv) !!}" download><!-- Fazer Download --> {{ $pedidos->cv }}</a></td>
-
-                    @if($pedidos->estado =='aceite')
-                    <td>
-                        <p class="aceite">Aceite</p>
-                    </td>
-                    @elseif($pedidos->estado =='recusado')
-                    <td>
-                        <p class="recusado">Recusado</p>
-                    </td>
-                    @else
-                    <td>
-                        <p class="pendente">Pendente</p>
-                    </td>
-                    @endif
-                    </td>
-
-                    <td class="option">
-                        <ul>
-                            <li>
-                                <a href="{{ route('pedprof.show', $pedidos->id) }}">
-                                    <span class="material-symbols-outlined">
-                                        visibility
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('pedprof.edit', $pedidos->id) }}">
-                                    <span class="material-symbols-outlined">
-                                        edit
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                            <form action="{{ route('pedprof.destroy', $pedidos->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="delete">
-                                        <a href="">
-                                            <span class="material-symbols-outlined delete">
-                                                delete
+        <div class="table-wrapper">
+            <div class="table-scroll">
+                <table id="pedprof" class="table table-striped align-middle dataTable no-footer display">
+                    <thead>
+                        <tr class="title">
+                            <th>id</th>
+                            <th>Nome</th>
+                            <th>Modalidade</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>CV</th>
+                            <th>Estado</th>
+                            <th class="more">
+                                <span class="material-symbols-outlined">
+                                    more_vert
+                                </span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (count($pedidos))
+                        @foreach($pedidos as $pedidos)
+                        <tr>
+                            <td>{{$pedidos->id}}</td>
+                            <td>{{$pedidos->primeiro}} {{$pedidos->apelido}}</td>
+                            <td>{{$pedidos->modalidade}}</td>
+                            <td>{{$pedidos->email}}</td>
+                            <td>{{$pedidos->telefone}}</td>
+                            <td><a href="{!! route('cv_download', $pedidos->cv) !!}" download>Fazer Download </a></td>
+                            @if($pedidos->estado =='aceite')
+                            <td>
+                                <p class="aceite">Aceite</p>
+                            </td>
+                            @elseif($pedidos->estado =='recusado')
+                            <td>
+                                <p class="recusado">Recusado</p>
+                            </td>
+                            @else
+                            <td>
+                                <p class="pendente">Pendente</p>
+                            </td>
+                            @endif
+                            </td>
+                            <td class="option">
+                                <ul>
+                                    <li>
+                                        <a href="{{ route('pedprof.show', $pedidos->id) }}">
+                                            <span class="material-symbols-outlined">
+                                                visibility
                                             </span>
                                         </a>
-                                    </button>
-                                </form>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-                @endforeach
-                @else
-                <h6>Não existem categorias registadas</h6>
-                @endif
-            </tbody>
-        </table>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('pedprof.edit', $pedidos->id) }}">
+                                            <span class="material-symbols-outlined">
+                                                edit
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <form action="{{ route('pedprof.destroy', $pedidos->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="delete">
+                                                <a href="">
+                                                    <span class="material-symbols-outlined delete">
+                                                        delete
+                                                    </span>
+                                                </a>
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        @endforeach
+                        @else
+                        <h6>Não existem categorias registadas</h6>
+                        @endif
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        
     </div>
 </div>
 @endsection

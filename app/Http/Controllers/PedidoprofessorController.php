@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\PedidoProfessor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -19,8 +20,6 @@ class PedidoprofessorController extends Controller
     }
 
     public function store(Request $request){
-        $namefile = $request->primeiro . $request->apelido . '.' . $request->cv->extension();
-
         $request->validate([
             'primeiro' => 'required',
             'apelido' => 'required',
@@ -29,7 +28,19 @@ class PedidoprofessorController extends Controller
             'data_nac' => 'required',
             'modalidade' => 'required',
             'cv' => 'required',
-        ]);
+        ],
+        [
+            'primeiro.required' => 'Preencha o campo do NOME',
+            'apelido.required' => 'Preencha o campo do APELIDO',
+            'email.required' => 'Preencha o campo do EMAIL',
+            'telefone.required' => 'Preencha o campo do TELEFONE',
+            'data_nac.required' => 'Preencha o campo do DATA DE NASCIMENTO',
+            'modalidade.required' => 'Preencha o campo do MODALIDADE',
+            'cv.required' => 'Manda-nos o teu CV'
+        ]
+        );
+
+        $namefile = $request->primeiro . $request->apelido . '.' . $request->cv->extension();
 
         $request->cv->storeAS('pedidoProf', $namefile);
 

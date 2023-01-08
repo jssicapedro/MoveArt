@@ -32,10 +32,6 @@
                         <label class="sobre" for="">Telefone</label> <br />
                         <input type="tel" name="telefone" class="conteudo" value="{{$pedidos->telefone}}" readonly>
                     </div>
-                    <div class="col-2">
-                        <label class="sobre" for="">CV</label> <br />
-                        <input type="file" name="cv" class="conteudo" value="{{$pedidos->cv}}" readonly>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-4">

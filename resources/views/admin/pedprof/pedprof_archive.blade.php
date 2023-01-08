@@ -13,45 +13,49 @@
     <div class="pedidos_main">
         <h1>Pedidos Arquivados</h1>
         <a class="voltar" href="{{ asset('admin/pedprof')}}">Voltar</a>
-        <table id="arquivados" class="tabela-arquivados table table-striped align-middle dataTable no-footer display">
-            <thead>
-                <tr class="title">
-                    <th>Nome</th>
-                    <th>Modalidade</th>
-                    <th>Email</th>
-                    <th>Telefone</th>
-                    <th>CV</th>
-                    <th>Restaurar</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (count($arquivados))
-                @foreach($arquivados as $arquivados)
-                <tr>
-                    <td>{{$arquivados->primeiro}} {{$arquivados->apelido}}</td>
-                    <td>{{$arquivados->modalidade}}</td>
-                    <td>{{$arquivados->email}}</td>
-                    <td>{{$arquivados->telefone}}</td>
-                    <td><a href="{!! route('cv_download', $arquivados->cv) !!}" download>{{ $arquivados->cv }}</a></td>
-                    <td>
-                        <form action="{{ route('restore.pedprof', $arquivados->id) }}" method="GET">
-                            @csrf
-                            @method('get')
-                            <button type="submit" class="delete">
-                                <a href="">
-                                    <span class="material-symbols-outlined restaurar">
-                                        restore_from_trash
-                                    </span>
-                                </a>
-                            </button>
-                        </form>
-                    </td>
-                    @endforeach
-                    @else
-                    <h6>Não existem categorias registadas</h6>
-                    @endif
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <div class="table-scroll">
+                <table id="arquivados" class="tabela-arquivados table table-striped align-middle dataTable no-footer display">
+                    <thead>
+                        <tr class="title">
+                            <th>Nome</th>
+                            <th>Modalidade</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>CV</th>
+                            <th>Restaurar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (count($arquivados))
+                        @foreach($arquivados as $arquivados)
+                        <tr>
+                            <td>{{$arquivados->primeiro}} {{$arquivados->apelido}}</td>
+                            <td>{{$arquivados->modalidade}}</td>
+                            <td>{{$arquivados->email}}</td>
+                            <td>{{$arquivados->telefone}}</td>
+                            <td><a href="{!! route('cv_download', $arquivados->cv) !!}" download>{{ $arquivados->cv }}</a></td>
+                            <td>
+                                <form action="{{ route('restore.pedprof', $arquivados->id) }}" method="GET">
+                                    @csrf
+                                    @method('get')
+                                    <button type="submit" class="delete">
+                                        <a href="">
+                                            <span class="material-symbols-outlined restaurar">
+                                                restore_from_trash
+                                            </span>
+                                        </a>
+                                    </button>
+                                </form>
+                            </td>
+                            @endforeach
+                            @else
+                            <h6>Não existem categorias registadas</h6>
+                            @endif
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
