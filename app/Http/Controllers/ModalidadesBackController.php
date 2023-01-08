@@ -17,9 +17,9 @@ class ModalidadesBackController extends Controller
     public function show(Modalidade $mod){
         return view('admin.modalidades.modalidade_show', ['modalidade' => $mod]);
     }
-    public function edit(Modalidade $mod)
+    public function edit(Modalidade $modalidade)
     {
-        return view('admin.modalidades.modalidade_edit', ['modalidade' => $mod]); 
+        return view('admin.modalidades.modalidade_edit', ['modalidade' => $modalidade]);
     }
     public function store(Request $request){
         $mod = Modalidade::create([
@@ -40,6 +40,6 @@ class ModalidadesBackController extends Controller
             'valor_anual' => $request->valor_anual,
         ]);
 
-        return redirect()->route('admin.modalidades.modalidade_edit', ['modalidade' => $mod]);
+        return redirect()->route('admin.modalidades.modalidade_edit');
     }
 }

@@ -18,18 +18,19 @@
 <div class="dashboard_main">
     <div class="mod_create_main">
         <h1>
-        <i class="fa-solid fa-pen-ruler"></i>Editar Modalidade
+            <i class="fa-solid fa-pen-ruler"></i> Editar Modalidade
         </h1>
-        <form action="">
+        <form action="{{ route('modalidades.update', $modalidade->id) }}" method="POST">
+            @csrf
             <div class="first">
                 <div class="primeira_info">
                     <legend><i class="fa-solid fa-circle-info"></i> Primeira Informação</legend>
                     <div class="row">
                         <div class="col">
                             <div class="title_nome">Nome da Modalidade</div>
-                            <input type="text" class="form-control nome_mod" name="nome" id="">
+                            <input type="text" class="form-control nome_mod" name="nome" id="" value="{{$modalidade->modalidade}}">
                             <div class="title_desc">Breve descrição da Modalidade</div>
-                            <textarea name="" class="form-control desc_mod" id=""></textarea>
+                            <textarea name="" class="form-control desc_mod" id="">{{$modalidade->descricao}}</textarea>
                         </div>
                     </div>
                 </div>
@@ -38,21 +39,55 @@
                     <div class="row">
                         <div class="col">
                             <div class="title_vm">Valor Mensal</div>
-                            <input type="number" class="form-control vm" name="" id="">
+                            <input type="number" class="form-control vm" name="" id="" value="{{$modalidade->valor_mensal}}">
                             <div class="title_va">Valor Anual</div>
-                            <input type="number" class="form-control va" name="" id="">
+                            <input type="number" class="form-control va" name="" id="" value="{{$modalidade->valor_anual}}">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="imagens">
-                <legend><i class="fa-solid fa-photo-film"></i> Imagens</legend>
-                <div class="imgs">
+                <legend><i class="fa-solid fa-photo-film"></i> Imagens Atuais</legend>
+                <div class="img_atual">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="title_fm">Foto Descrição</div>
+                            <img class="img_upl" src="{{ url('storage/modalidades/'.$modalidade->foto_desc) }}" alt="">
+
+                        </div>
+                        <div class="col-6">
+                            <div class="title_fh">Foto do horário</div>
+                            <img class="img_upl" src="{{ url('storage/modalidades/'.$modalidade->foto_horario) }}" alt="">
+
+                        </div>
+                        <div class="col-6"> <input type="text" class="form-control n_fm" name="" id="" disabled value="{{$modalidade->foto_desc}}"></div>
+                        <div class="col-6"><input type="text" class="form-control n_fh" name="" id="" disabled value="{{$modalidade->foto_horario}}"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="title_fmm">Foto modalidade Mensal</div>
+                            <img class="img_upl" src="{{ url('storage/modalidades/'.$modalidade->foto_mensal) }}" alt="">
+
+                        </div>
+                        <div class="col-6">
+                            <div class="title_fma">Foto modalidade Anual</div>
+                            <img class="img_upl" src="{{ url('storage/modalidades/'.$modalidade->foto_anual) }}" alt="">
+
+                        </div>
+                        <div class="col-6"><input type="text" class="form-control n_fmm" name="" id="" disabled value="{{$modalidade->foto_mensal}}"></div>
+                        <div class="col-6"><input type="text" class="form-control n_fma" name="" id="" disabled value="{{$modalidade->foto_anual}}"></div>
+                    </div>
+                </div>
+            </div>
+                <div class="imagens">
+                <legend><i class="fa-solid fa-file-image"></i> Alterar Imagens</legend>
+                <div class="imgs_edit">
                     <div class="first_imgs">
-                        <div class="title_fm">Foto modalidade</div>
+                        <div class="title_fm">Foto Descrição</div>
                         <label for="fm"><i class="fa fa-plus"></i></label>
                         <input type="file" class="upload_img" name="" id="fm" accept=".jpg, .jpeg, .png">
                         <div class="title_fh">Foto do horário</div>
+
                         <label for="fh"><i class="fa fa-plus"></i></label>
                         <input type="file" class="upload_img" name="" id="fh" accept=".jpg, .jpeg, .png">
                     </div>
@@ -60,6 +95,7 @@
                         <div class="title_fmm">Foto modalidade Mensal</div>
                         <label for="fmm"><i class="fa fa-plus"></i></label>
                         <input type="file" class="upload_img" name="" id="fmm" accept=".jpg, .jpeg, .png">
+
                         <div class="title_fma">Foto modalidade Anual</div>
                         <label for="fma"><i class="fa fa-plus"></i></label>
                         <input type="file" class="upload_img" name="" id="fma" accept=".jpg, .jpeg, .png">
@@ -68,7 +104,7 @@
 
 
             </div>
-
+            <a id="button" class="button" href="#" type="submit">Atualizar<i id="arrow-hover" class="fa-solid fa-circle-check"></i></a>
         </form>
     </div>
 </div>

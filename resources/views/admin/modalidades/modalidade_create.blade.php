@@ -20,7 +20,7 @@
         <h1>
             <img src="https://img.icons8.com/ios-filled/50/null/new.png" /> Nova Modalidade
         </h1>
-        <form action="{{route('modalidade.store')}}">
+        <form action="{{route('modalidades.store')}}" method="POST">
             <div class="first">
                 <div class="primeira_info">
                     <legend><i class="fa-solid fa-circle-info"></i> Primeira Informação</legend>
@@ -65,10 +65,8 @@
                         <input type="file" class="upload_img" name="foto_anual" id="fma" accept=".jpg, .jpeg, .png">
                     </div>
                 </div>
-
-
             </div>
-
+            <a id="button" class="button" href="#" type="submit">Criar<i id="arrow-hover" class="fa-solid fa-circle-check"></i></a>
         </form>
     </div>
 </div>

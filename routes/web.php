@@ -85,8 +85,11 @@ Route::get('/download/{file}', [PedidoprofessorController::class, 'download'])->
 
 /*Back Das Modalidades */
 Route::get('admin/modalidades',[ModalidadesBackController::class,'index'])->name('Modalidades');
+
 Route::get('/admin/modalidades/create',[ModalidadesBackController::class, 'create'])->name('NovaModalidade');
-Route::post('/admin/modalidades/create',[ModalidadesBackController::class, 'store'])->name('modalidade.store');
+Route::post('/admin/modalidades/create',[ModalidadesBackController::class, 'store'])->name('modalidades.store');
+
 Route::get('/admin/modalidades/show/{modalidade}',[ModalidadesBackController::class, 'show'])->name('modalidades.show');
+
 Route::get('/admin/modalidades/edit/{modalidade}',[ModalidadesBackController::class, 'edit'])->name('modalidades.edit');
-Route::post('/admin/modalidades/edit/{modalidade}',[ModalidadesBackController::class, 'update'])->name('modalidades.update');
+Route::post('/admin/modalidades/update/{modalidade}',[ModalidadesBackController::class, 'update'])->name('modalidades.update');
