@@ -40,10 +40,6 @@ html {
   color: var(--preto);
 }
 
-main {
-  padding: 20px 0;
-}
-
 header nav #mode {
   width: 45px;
   height: 45px;

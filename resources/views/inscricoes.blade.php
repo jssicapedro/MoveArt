@@ -16,43 +16,43 @@
 
 @section('main')
 <section id="form_student">
+    @include('layout.flash-message')
     <div class="title">
         <h2>Torna-te um profissional na dança!</h2>
         <h4>Escolhe a tua dança e torna-te um(a) aluno(a).</h4>
     </div>
-    <fieldset>
-        <legend>Perfil</legend>
-        <div class="form_perfil">
-            <form>
+    <form action="{{route('inscricao_aluno_register')}}" method="POST">
+        @csrf
+        <fieldset>
+            <legend>Perfil</legend>
+            <div class="form_perfil">
                 <div class="row">
                     <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Nome...">
+                        <input type="text" class="form-control" name="primeiro" placeholder="Nome...">
                     </div>
                     <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Apelido...">
+                        <input type="text" class="form-control" name="apelido" placeholder="Apelido...">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <label for="genero">Género:</label>
-                        <select id="genero" class="form-control">
-                            <option value="F">Feminino</option>
-
-                            <option value="M">Masculino</option>
-                            <option value="O">Outro</option>
-                            <option value="PND">Prefiro não divulgar</option>
+                        <select id="genero" name="genero" class="form-control">
+                            <option value="feminino">Feminino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="outro">Outro</option>
+                            <option value="nao_divulgar">Prefiro não divulgar</option>
                         </select>
                     </div>
                     <div class="col-6">
                         <label for="idade">Data de Nascimento:</label>
-                        <input type="date" class="form-control" name="idade" id="idade">
+                        <input type="date" class="form-control" name="data_nasc" id="idade">
                     </div>
                 </div>
-    </fieldset>
-    <fieldset>
-        <legend>Registro</legend>
-        <div class="form_registro">
-            <form>
+        </fieldset>
+        <fieldset>
+            <legend>Registro</legend>
+            <div class="form_registro">
                 <div class="row">
                     <div class="col-6">
                         <input type="email" class="form-control" name="email" id="email" placeholder="Email">
@@ -60,88 +60,87 @@
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <input type="password" class="form-control" name="pass" placeholder="Palavra-Passe">
+                        <input type="password" class="form-control" name="password" placeholder="Palavra-Passe" required>
                     </div>
                     <div class="col-6">
-                        <input type="password" class="form-control" name="conf_pass" placeholder="Confirmar Palavra-Passe">
+                        <input type="password" class="form-control" name="password_confirmation" required placeholder="Confirmar Palavra-Passe">
                     </div>
                 </div>
-            </form>
-        </div>
-    </fieldset>
-    <fieldset>
-        <legend>Dança</legend>
-        <div class="row danca">
-            <div class="col-6">
-                <label for="tp_danca">Tipo de Dança:</label>
-                <div class="card_tp_inscricao">
-                    <select class=" tp_danca form-control">
-                        @foreach($modalidade as $mod)
-                        <option value="{{$mod->id}}">{{$mod->modalidade}}</option>
-                        @endforeach
-                    </select>
-                    <section class="cards">
-                        <article class="cart card--1">
-                            <div class="card_img" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
-                            <div class="card_img--hover" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
-                            <div class="card_info_1">
-                                <span class="card_epoca">Anual</span>
-                                <input type="radio" name="tp_ins" value="anual" id="anual">
-                                <h3 class="card_preco_1">
-                                    <span class="valor_anual">880</span>€
-                                </h3>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Dança</legend>
+            <div class="row danca">
+                <div class="col-6">
+                    <label for="tp_danca">Tipo de Dança:</label>
+                    <div class="card_tp_inscricao">
+                        <select class=" tp_danca form-control" name="modalidade_id">
+                            @foreach($modalidade as $mod)
+                            <option value="{{$mod->id}}">{{$mod->modalidade}}</option>
+                            @endforeach
+                        </select>
+                        <section class="cards">
+                            <article class="cart card--1">
+                                <div class="card_img" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
+                                <div class="card_img--hover" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
+                                <div class="card_info_1">
+                                    <span class="card_epoca">Anual</span>
+                                    <input type="radio" name="tp_ins" value="anual" id="anual">
+                                    <h3 class="card_preco_1">
+                                        <span class="valor_anual">880</span>€
+                                    </h3>
 
-                            </div>
-                        </article>
-                        <article class="cart card--2">
-                            <div class="card_img" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
-                            <div class="card_img--hover" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
-                            <div class="card_info_2">
-                                <span class="card_epoca">Mensal</span>
-                                <input type="radio" name="tp_ins" value="mensal" id="mensal">
-                                <h3 class="card_preco_2">
-                                    <span class="valor_mensal">75</span>€
-                                </h3>
-                            </div>
-                        </article>
-                    </section>
+                                </div>
+                            </article>
+                            <article class="cart card--2">
+                                <div class="card_img" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
+                                <div class="card_img--hover" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
+                                <div class="card_info_2">
+                                    <span class="card_epoca">Mensal</span>
+                                    <input type="radio" name="tp_ins" value="mensal" id="mensal">
+                                    <h3 class="card_preco_2">
+                                        <span class="valor_mensal">75</span>€
+                                    </h3>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="tp_pagamento">
-            <div class="titulo">
-                <h2>Modo de pagamento:</h2>
+            <!-- <div class="tp_pagamento">
+                <div class="titulo">
+                    <h2>Modo de pagamento:</h2>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" name="pagamento" value="paypal" id="paypal">
+                        <img src="{{asset('img/inscricoes/paypal.png')}}" alt="">
+                    </li>
+                    <li>
+                        <input type="radio" name="pagamento" value="mbway" id="mbway">
+                        <img src="{{asset('img/inscricoes/mb_way.png')}}" alt="">
+                    </li>
+                    <li>
+                        <input type="radio" name="pagamento" value="multibanco" id="multibanco">
+                        <img src="{{asset('img/inscricoes/multibanco.png')}}" alt="">
+                    </li>
+                    <li>
+                        <input type="radio" name="pagamento" value="visa" id="visa">
+                        <img src="{{asset('img/inscricoes/visa.png')}}" alt="">
+                    </li>
+                </ul>
+            </div> -->
+        </fieldset>
+        <div class="row">
+            <div class="col">
+                <button type="submit" class="btn btn-primary" id="enviar">Submeter
+                    <i class="fa-solid fa-square-check"></i>
+                </button>
+                <button type="reset" class="btn btn-secondary" id="tirar">Limpar
+                    <i class="fa-solid fa-brush"></i>
+                </button>
             </div>
-            <ul>
-                <li>
-                    <input type="radio" name="pagamento" value="paypal" id="paypal">
-                    <img src="{{asset('img/inscricoes/paypal.png')}}" alt="">
-                </li>
-                <li>
-                    <input type="radio" name="pagamento" value="mbway" id="mbway">
-                    <img src="{{asset('img/inscricoes/mb_way.png')}}" alt="">
-                </li>
-                <li>
-                    <input type="radio" name="pagamento" value="multibanco" id="multibanco">
-                    <img src="{{asset('img/inscricoes/multibanco.png')}}" alt="">
-                </li>
-                <li>
-                    <input type="radio" name="pagamento" value="visa" id="visa">
-                    <img src="{{asset('img/inscricoes/visa.png')}}" alt="">
-                </li>
-            </ul>
         </div>
-    </fieldset>
-    <div class="row">
-        <div class="col">
-            <button type="submit" class="btn btn-primary" id="enviar">Submeter
-                <i class="fa-solid fa-square-check"></i>
-            </button>
-            <button type="reset" class="btn btn-secondary" id="tirar">Limpar
-                <i class="fa-solid fa-brush"></i>
-            </button>
-        </div>
-    </div>
     </form>
     </div>
 </section>
