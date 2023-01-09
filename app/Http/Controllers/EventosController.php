@@ -22,9 +22,24 @@ class EventosController extends Controller
    
     public function store(Request $request)
     {
-        $input = $request->all();
+        $input = $request->validate([
+            'nome' => 'required',
+            'data' => 'required|date',
+            'localizacao' => 'required',
+            'foto' => 'sometimes',
+            'descricao' => 'required',
+        ],
+        [
+            'nome.required' => 'Preencha o campo do Nome',
+            'data.required' => 'Adicione uma data',
+            'localizacao.required' => 'Adicione uma localizacao',
+            'descricao.required' => 'Adicione uma descrição'
+        ]);
+        
+        /*cria todos a informacao escrita*/
         evento::create($input);
-        return redirect('evento')->with('flash_message', 'evento Adicionado!');  
+       /*redireciona para o index após adicionar com a flash message*/ 
+       return redirect('evento')->with('flash_message', 'Evento Adicionado!');  
     }
  
     
