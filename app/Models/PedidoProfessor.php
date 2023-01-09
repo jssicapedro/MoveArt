@@ -21,5 +21,6 @@ class PedidoProfessor extends Model
         'cv',
         'modalidade',
         'resposta',
+        'estado_do_pedido',
     ];
 }

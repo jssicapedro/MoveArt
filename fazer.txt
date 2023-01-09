@@ -20,7 +20,7 @@ tabela responsiva - patrocinio ✅
 validações de formulários > mensagem de erro/sucesso ✅
                           > erro -> não guarda os valores anteriormente inseridos
 
-enviar email quando atualizar mensagem 
+enviar email quando atualizar mensagem -> quando enviar resposta proibir mandar outra.
             - https://mailtrap.io/blog/send-email-in-laravel/ 
             - https://www.itsolutionstuff.com/post/laravel-send-mail-using-mailtrap-exampleexample.html
 

@@ -7,6 +7,8 @@ use App\Models\PedidoProfessor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Redirect;
+use App\Mail\RespostaPedido;
+use Illuminate\Support\Facades\Mail;
 
 class PedidoprofessorController extends Controller
 {
@@ -79,7 +81,15 @@ class PedidoprofessorController extends Controller
             'data_nac' => $request->data_nac,
             'modalidade' => $request->modalidade,
             'resposta' => $request->resposta,
+            'estado_do_pedido' => $request->estado,
         ]);
+
+        $estado=$request->estado;
+
+        dd($estado);
+
+        /* Mail::to($request->email)->send(new RespostaPedido($pedidos)); */
+
         return redirect('admin/pedprof');
     }
 

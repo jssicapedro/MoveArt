@@ -54,11 +54,14 @@
                     <div class="responderPedido">
                             <h2>Modalidade sugerida</h2>
                             <textarea name="resposta" class="conteudo">{{$pedidos->resposta}}</textarea>
-                    <input type="submit" value="Enviar email" class="enviar">
+                    <div class="btn">
+                        <input type="radio" name="estado" value="aceite">Aceitar
+                        <input type="radio" name="estado" value="recusado">Recusar
+                    </div>
                 </div>
-                </div>
-                
-            </form>
+            </div>
+            <input class="enviar" type="submit">
+        </form>
         </div>
     </div>
 </div>

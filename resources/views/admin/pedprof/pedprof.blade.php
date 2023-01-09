@@ -44,11 +44,11 @@
                             <td>{{$pedidos->email}}</td>
                             <td>{{$pedidos->telefone}}</td>
                             <td><a href="{!! route('cv_download', $pedidos->cv) !!}" download>Fazer Download </a></td>
-                            @if($pedidos->estado =='aceite')
+                            @if($pedidos->estado_do_pedido =='aceite')
                             <td>
                                 <p class="aceite">Aceite</p>
                             </td>
-                            @elseif($pedidos->estado =='recusado')
+                            @elseif($pedidos->estado_do_pedido =='recusado')
                             <td>
                                 <p class="recusado">Recusado</p>
                             </td>

@@ -9,18 +9,22 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
+use App\Models\PedidoProfessor;
+
 class RespostaPedido extends Mailable
 {
     use Queueable, SerializesModels;
+
+    public $details;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(PedidoProfessor $details)
     {
-        //
+        $this->details = $details;
     }
 
     /**
@@ -43,7 +47,7 @@ class RespostaPedido extends Mailable
     public function content()
     {
         return new Content(
-            view: 'view.name',
+            view: 'mail.pedidoprofessor',
         );
     }
 
