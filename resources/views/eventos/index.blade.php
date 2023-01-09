@@ -14,10 +14,10 @@
             </div>
 
             <h1>Eventos</h1>
+            @auth
             <div class="utilizador_dashboard">
-                <span>Olá, admin</span>
-            </div>
-
+                <span>Olá, {{ Auth::user()->primeiro }}</span>
+            </div>@endauth
         </div>
 
         <!--dashboard_funcionarios/eventos-->

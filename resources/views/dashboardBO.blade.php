@@ -19,11 +19,13 @@
             </div>
 
             <h3>Dashboard</h3>
+            @auth
             <div class="utilizador_dashboard">
-                <span>Olá, admin</span>
-            </div>
-
+                <span>Olá, {{ Auth::user()->primeiro }}</span>
+            </div>@endauth
         </div>
+
+
 
         <div class="details">
             <div class="estatistica">

@@ -17,7 +17,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ asset('dashboardBO') }}">
                     <span class="icon">
                     <img src="{{ asset('img/eventosBO/dashboard.png') }}" style="width:30px; height:; " alt="">
                     </span>
