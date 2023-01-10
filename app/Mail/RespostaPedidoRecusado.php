@@ -11,51 +11,31 @@ use Illuminate\Queue\SerializesModels;
 
 use App\Models\PedidoProfessor;
 
-class RespostaPedido extends Mailable
+class RespostaPedidoRecusado extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $details;
 
-    /**
-     * Create a new message instance.
-     *
-     * @return void
-     */
     public function __construct(PedidoProfessor $details)
     {
         $this->details = $details;
     }
 
-    /**
-     * Get the message envelope.
-     *
-     * @return \Illuminate\Mail\Mailables\Envelope
-     */
     public function envelope()
     {
         return new Envelope(
-            subject: 'Resposta Pedido',
+            subject: 'Resposta Pedido Aceite',
         );
     }
 
-    /**
-     * Get the message content definition.
-     *
-     * @return \Illuminate\Mail\Mailables\Content
-     */
     public function content()
     {
         return new Content(
-            view: 'mail.pedidoprofessor',
+            view: 'mail.pedidoprofessorRecusado',
         );
     }
 
-    /**
-     * Get the attachments for the message.
-     *
-     * @return array
-     */
     public function attachments()
     {
         return [];

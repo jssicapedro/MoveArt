@@ -9,6 +9,13 @@ Acrescentar coluna de resposta á tabela pedidos_professores ou o admin liga log
 delete -> patrocinio ✅ https://www.youtube.com/watch?v=suXG1bs0dHo&ab_channel=Celke
 
 
+
+
+
+
+
+
+
 softdele -> pedido professor ✅
             - apaga o registo do pedido passados 6meses
          -> restaurar - https://www.youtube.com/watch?v=twcDknTcOEw&ab_channel=CodeImprove ✅
@@ -20,12 +27,15 @@ tabela responsiva - patrocinio ✅
 validações de formulários > mensagem de erro/sucesso ✅
                           > erro -> não guarda os valores anteriormente inseridos
 
-enviar email quando atualizar mensagem -> quando enviar resposta proibir mandar outra.
-            - https://mailtrap.io/blog/send-email-in-laravel/ 
-            - https://www.itsolutionstuff.com/post/laravel-send-mail-using-mailtrap-exampleexample.html
+enviar email quando atualizar mensagem -> quando enviar resposta proibir mandar outra. ✅ -> validações
+   - https://mailtrap.io/blog/send-email-in-laravel/ 
+   - https://www.itsolutionstuff.com/post/laravel-send-mail-using-mailtrap-exampleexample.html
+      > pedido professor
+         >>enviar ✅
+         >>alterar design ✅
+      > patrocinio
+         >>enviar 
+         >>alterar design
 
 pesquisar sobre police ---- impede que alunos entrem no back
 gerar nova página de modlaidade automaticamente
-design
-
-relatorio do projeto

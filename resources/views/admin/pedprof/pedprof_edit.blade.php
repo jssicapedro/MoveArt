@@ -52,16 +52,24 @@
                         </div>
                     </div>
                     <div class="responderPedido">
-                            <h2>Modalidade sugerida</h2>
-                            <textarea name="resposta" class="conteudo">{{$pedidos->resposta}}</textarea>
-                    <div class="btn">
-                        <input type="radio" name="estado" value="aceite">Aceitar
-                        <input type="radio" name="estado" value="recusado">Recusar
+                        <h2>Modalidade sugerida</h2>
+                        <textarea name="resposta" class="conteudo">{{$pedidos->resposta}}</textarea>
+                        <div class="btn">
+                            <ul>
+                                <li>
+                                    <input type="radio" id="f-option" name="estado" value="aceite">
+                                    <label for="f-option">Aceitar</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="f-option" name="estado" value="recusado">
+                                    <label for="f-option">Recusar</label>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <input class="enviar" type="submit">
-        </form>
+                <input class="enviar" type="submit" value="Enviar resposta">
+            </form>
         </div>
     </div>
 </div>

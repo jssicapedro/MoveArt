@@ -7,7 +7,8 @@ use App\Models\PedidoProfessor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Redirect;
-use App\Mail\RespostaPedido;
+use App\Mail\RespostaPedidoRecusado;
+use App\Mail\RespostaPedidoAceite;
 use Illuminate\Support\Facades\Mail;
 
 class PedidoprofessorController extends Controller
@@ -84,11 +85,14 @@ class PedidoprofessorController extends Controller
             'estado_do_pedido' => $request->estado,
         ]);
 
-        $estado=$request->estado;
+        if($request->estado === 'aceite'){
+            Mail::to($request->email)->send(new RespostaPedidoAceite($pedidos));
+        } else if($request->estado === 'recusado'){
+            Mail::to($request->email)->send(new RespostaPedidoRecusado($pedidos));
+        }
 
-        dd($estado);
 
-        /* Mail::to($request->email)->send(new RespostaPedido($pedidos)); */
+       
 
         return redirect('admin/pedprof');
     }

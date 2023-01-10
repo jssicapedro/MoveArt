@@ -67,6 +67,7 @@
                                             </span>
                                         </a>
                                     </li>
+                                    @if($pedidos->estado_do_pedido=='pendente')
                                     <li>
                                         <a href="{{ route('pedprof.edit', $pedidos->id) }}">
                                             <span class="material-symbols-outlined">
@@ -74,6 +75,7 @@
                                             </span>
                                         </a>
                                     </li>
+                                    
                                     <li>
                                         <form action="{{ route('pedprof.destroy', $pedidos->id) }}" method="POST">
                                             @csrf
@@ -87,6 +89,9 @@
                                             </button>
                                         </form>
                                     </li>
+                                    @else
+                                    <li></li>
+                                    @endif
                                 </ul>
                             </td>
                         </tr>
