@@ -37,12 +37,10 @@
 
 <body>
     <img src="/public/img/logo/logoBallet_p.png" alt="logo MoveArt">
-    <img src="/public/img/email/banner.png" alt="Pedido aceite">
+    <img src="/public/img/email/banner_aceite.png" alt="Pedido aceite">
     <p>Olá {{ $details->primeiro }} {{ $details->apelido }}, </p>
     <p>o teu pedido para seres professor da nossa escola foi {{ $details->estado_do_pedido }}!</p>
-    <p>Agradecemos por escolheres fazer parte da nossa equipa. Entraremos em
-        contacto nos próximos 2 dias úteis para marcar reunião e vires conhecer
-        a nossa escola.</p>
+    <p>{{ $details->resposta }}</p>
     <hr>
     <img src="/public/img/logo/logoBallet_p.png" alt="logo_footer MoveArt">
     <div class="redes">

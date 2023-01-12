@@ -45,19 +45,18 @@
                             <td>{{$pedidos->telefone}}</td>
                             <td><a href="{!! route('cv_download', $pedidos->cv) !!}" download>Fazer Download </a></td>
                             @if($pedidos->estado_do_pedido =='aceite')
-                            <td>
-                                <p class="aceite">Aceite</p>
-                            </td>
-                            @elseif($pedidos->estado_do_pedido =='recusado')
-                            <td>
-                                <p class="recusado">Recusado</p>
-                            </td>
-                            @else
-                            <td>
-                                <p class="pendente">Pendente</p>
-                            </td>
+                                <td>
+                                    <p class="aceite">Aceite</p>
+                                </td>
+                                @elseif($pedidos->estado_do_pedido =='recusado')
+                                    <td>
+                                        <p class="recusado">Recusado</p>
+                                    </td>
+                                @else
+                                <td>
+                                    <p class="pendente">Pendente</p>
+                                </td>
                             @endif
-                            </td>
                             <td class="option">
                                 <ul>
                                     <li>
@@ -68,30 +67,29 @@
                                         </a>
                                     </li>
                                     @if($pedidos->estado_do_pedido=='pendente')
-                                    <li>
-                                        <a href="{{ route('pedprof.edit', $pedidos->id) }}">
-                                            <span class="material-symbols-outlined">
-                                                edit
-                                            </span>
-                                        </a>
-                                    </li>
-                                    
-                                    <li>
-                                        <form action="{{ route('pedprof.destroy', $pedidos->id) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="delete">
-                                                <a href="">
-                                                    <span class="material-symbols-outlined delete">
-                                                        delete
-                                                    </span>
-                                                </a>
-                                            </button>
-                                        </form>
-                                    </li>
-                                    @else
-                                    <li></li>
+                                        <li>
+                                            <a href="{{ route('pedprof.edit', $pedidos->id) }}">
+                                                <span class="material-symbols-outlined">
+                                                    edit
+                                                </span>
+                                            </a>
+                                        </li>
+                                        @else
+                                            <li></li>
                                     @endif
+                                        <li>
+                                            <form action="{{ route('pedprof.destroy', $pedidos->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="delete">
+                                                    <a href="">
+                                                        <span class="material-symbols-outlined delete">
+                                                            delete
+                                                        </span>
+                                                    </a>
+                                                </button>
+                                            </form>
+                                        </li>
                                 </ul>
                             </td>
                         </tr>

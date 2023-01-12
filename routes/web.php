@@ -10,30 +10,24 @@ use App\Http\Controllers\PedidoprofessorController;
 
 /* ------- Front ------- */
 Route::get('/', [PageController::class, 'index'])->name('/');
+/* danca */
 Route::get('/ballet', [PageController::class, 'ballet'])->name('ballet');
 Route::get('/hiphop', [PageController::class, 'hiphop'])->name('hiphop');
 Route::get('/oriental', [PageController::class, 'oriental'])->name('oriental');
 Route::get('/espanhola', [PageController::class, 'espanhola'])->name('espanhola');
 Route::get('/folclore', [PageController::class, 'folclore'])->name('folclore');
 Route::get('/contactos', [PageController::class, 'contactos'])->name('contactos');
-
+/* inscricoes */
 Route::get('/inscricoes', [InscricaoController::class, 'inscricoes'])->name('inscricoes');
-
 Route::get('/precomensal',[InscricaoController::class, 'precomensal']);
-
 Route::get('/precoanual', [InscricaoController::class, 'precoanual']);
-
+/* mapa aulas */
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
-
+/* perfil */
 Route::get('/perfil', [PageController::class, 'perfil'])->name('perfil');
-
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::get('/registo', [InscricaoController::class, 'inscricoes'])->name('register');
-
-Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
 /* Pedido Professor */
 Route::get('/professor', [PedidoprofessorController::class, 'create'])->name('professor');

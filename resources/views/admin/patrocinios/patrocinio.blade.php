@@ -57,6 +57,10 @@
                                             </span>
                                         </a>
                                     </li>
+
+                                    @if($patrocinio->estado =='respondido')
+                                    <li></li>
+                                    @else
                                     <li>
                                         <a href="{{ route('patrocinios.edit', $patrocinio->id) }}">
                                             <span class="material-symbols-outlined">
@@ -64,6 +68,10 @@
                                             </span>
                                         </a>
                                     </li>
+                                    @endif
+
+
+
                                     <li>
                                         <form action="{{ route('patrocinios.destroy', $patrocinio->id) }}" method="POST">
                                             @csrf

@@ -1,11 +1,6 @@
-/* html{
-    overflow: hidden;
-} */
-
 * {
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
 }
 
 .patrocinio_main {
@@ -87,6 +82,11 @@ td a {
 
 .comR {
     background-color: var(--rosa);
+}
+
+.delete a span {
+    border: none !important;
+    color: red;
 }
 
 .voltar,
@@ -176,11 +176,19 @@ td a {
 
 .row {
     display: flex;
-    gap: 160px;
-    justify-content: flex-start;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-
+.alerta {
+    padding: 10px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    color: #842029;
+    border-radius: 10px;
+    margin: 10px 0;
+}
 
 @media (max-width:1400px) {
     .option ul {
@@ -189,10 +197,11 @@ td a {
 }
 
 @media (max-width:600px) {
+
     .dataTables_length,
     .dataTables_paginate,
     .paging_simple_numbers,
-    .dataTables_info{
+    .dataTables_info {
         display: none;
     }
 
@@ -221,5 +230,9 @@ td a {
 
     td {
         border-bottom: 1px solid var(--cinzaBorda);
+    }
+
+    .row {
+        justify-content: flex-start;
     }
 }

@@ -9,15 +9,15 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-use App\Models\PedidoProfessor;
+use App\Models\Patrocinio;
 
-class RespostaPedidoAceite extends Mailable
+class RespostaPatrocinio extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $details;
-
-    public function __construct(PedidoProfessor $details)
+    
+    public function __construct(Patrocinio $details)
     {
         $this->details = $details;
     }
@@ -25,14 +25,14 @@ class RespostaPedidoAceite extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Pedido Aceite',
+            subject: 'Resposta ao seu Patrocínio',
         );
     }
 
     public function content()
     {
         return new Content(
-            view: 'mail.pedidoprofessorAceite',
+            view: 'mail.patrocinio',
         );
     }
 

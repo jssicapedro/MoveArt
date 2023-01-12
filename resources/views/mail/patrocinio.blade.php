@@ -42,11 +42,11 @@
 
 <body>
     <img src="/public/img/logo/logoBallet_p.png" alt="logo MoveArt">
-    <img src="/public/img/email/banner_recusado.png" alt="Pedido aceite">
-    <p>Olá {{ $details->primeiro }} {{ $details->apelido }}, </p>
-    <p>o teu pedido para seres professor da nossa escola foi {{ $details->estado_do_pedido }}!</p>
-    <p>{{ $details->resposta }}</p>
-    <p>De momento achamos que não te enquadras para as nossa escola para mais esclarecimentos contacta o 917524872.</p>
+    <img src="/public/img/email/banner.png" alt="Obrigado por ajudares!">
+    <p>Olá {{ $details->nome }}, </p>
+    <p>A MoveArt agradece o teu patrocínio..</p>
+    <p><p>{{ $details->resposta }}</p></p>
+    <p>Obrigado pela sua escolha!</p>
     <hr>
     <img src="/public/img/logo/logoBallet_p.png" alt="logo_footer MoveArt">
     <div class="redes">

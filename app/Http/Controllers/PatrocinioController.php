@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\Patrocinio;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Redirect;
+use App\Mail\RespostaPatrocinio;
+use Illuminate\Support\Facades\Mail;
 
 class PatrocinioController extends Controller
 {
@@ -19,7 +23,7 @@ class PatrocinioController extends Controller
         return view('patrocinio');
     }
 
-    public function store(Request $request)
+    public function store(Request $request, Patrocinio $patrocinio)
     {
         $request->validate(
             [
@@ -45,7 +49,6 @@ class PatrocinioController extends Controller
         ]);
 
         return redirect('patrocinio')->with('success', true);
-        /*  return redirect('patrocinio')->with('erro'); */
     }
 
     public function show(Patrocinio $patrocinio)
@@ -70,7 +73,8 @@ class PatrocinioController extends Controller
             'estado' => $request->estado,
         ]);
 
-        /* return "patrocinio atualizado com sucesso"; */
+        Mail::to($request->email)->send(new RespostaPatrocinio($patrocinio));
+        
         return redirect('admin/patrocinio');
     }
 

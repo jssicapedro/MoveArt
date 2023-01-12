@@ -10,12 +10,6 @@ delete -> patrocinio ✅ https://www.youtube.com/watch?v=suXG1bs0dHo&ab_channel=
 
 
 
-
-
-
-
-
-
 softdele -> pedido professor ✅
             - apaga o registo do pedido passados 6meses
          -> restaurar - https://www.youtube.com/watch?v=twcDknTcOEw&ab_channel=CodeImprove ✅
@@ -33,9 +27,14 @@ enviar email quando atualizar mensagem -> quando enviar resposta proibir mandar 
       > pedido professor
          >>enviar ✅
          >>alterar design ✅
+
       > patrocinio
-         >>enviar 
-         >>alterar design
+         >>enviar ✅
+         >>alterar design ✅
+
+Design responsivo view e edit
+      > pedprof
+      >patrocinio
 
 pesquisar sobre police ---- impede que alunos entrem no back
-gerar nova página de modlaidade automaticamente
+gerar nova página de modalidade automaticamente

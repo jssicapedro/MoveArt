@@ -73,6 +73,10 @@ class PedidoprofessorController extends Controller
     }
 
     public function update(Request $request, PedidoProfessor $pedidos){
+        $request->validate([
+            'resposta' => 'required',
+        ]);
+
         $pedidos->update([
             'primeiro' => $request->primeiro,
             'apelido' => $request->apelido,
@@ -90,9 +94,6 @@ class PedidoprofessorController extends Controller
         } else if($request->estado === 'recusado'){
             Mail::to($request->email)->send(new RespostaPedidoRecusado($pedidos));
         }
-
-
-       
 
         return redirect('admin/pedprof');
     }

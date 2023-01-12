@@ -95,17 +95,17 @@ td a {
 }
 
 .aceite {
-    background-color: #1FB597;
+    background-color: var(--rosa);
     color: var(--branco);
 }
 
 .recusado {
-    background-color: #FE4603;
+    background-color: var(--castanho);
     color: var(--branco);
 }
 
 .pendente {
-    background-color: #FEBA03;
+    background-color: var(--amarelo);
     color: var(--branco);
 }
 
@@ -216,6 +216,10 @@ td a {
     gap: 50px;
 }
 
+.pedidos_sobre .cont{
+    display: flex;
+}
+
 h2 {
     text-align: center;
 }
@@ -225,7 +229,7 @@ h2 {
 .responderPedido {
     display: flex;
     flex-direction: column;
-    width: 25vw;
+    /* width: 25vw; */
     height: 25vh;
     background: var(--branco_footer);
     justify-content: space-evenly;
@@ -322,7 +326,7 @@ input[value='aceite']:checked:after {
     top: -2px;
     left: -1px;
     position: relative;
-    background-color: #16b44b;
+    background-color: #90bc04;
     content: '';
     display: inline-block;
     visibility: visible;
@@ -336,13 +340,21 @@ input[value='recusado']:checked:after {
     top: -2px;
     left: -1px;
     position: relative;
-    background-color: #b41616;
+    background-color: #ff8029;
     content: '';
     display: inline-block;
     visibility: visible;
     border: 2px solid white;
 }
 
+.alerta {
+    padding: 10px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    color: #842029;
+    border-radius: 10px;
+    margin: 10px 0;
+}
 
 /* ##### restaurar ##### */
 .restaurar {
