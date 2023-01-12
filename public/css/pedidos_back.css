@@ -29,9 +29,14 @@ hr {
 
 .voltar,
 .arquivados {
-    width: 10vw;
+    width: 170px;
     background-color: var(--roxo);
     margin-bottom: 20px;
+}
+
+.enviar{
+    margin: 25px 0;
+    float: right;
 }
 
 .dataTables_length {
@@ -142,16 +147,14 @@ td a {
 }
 
 .pedido {
-    display: flex;
-    flex-wrap: wrap;
     gap: 90px;
-    justify-content: center;
+    margin: 0 auto;
 }
 
 .info_exp {
     display: flex;
     justify-content: space-evenly;
-    gap: 200px;
+    gap: 90px;
 }
 
 .informacao,
@@ -198,7 +201,7 @@ td a {
 }
 
 .responder {
-    margin: auto;
+    margin: 90px auto 0;
     display: flex;
 }
 
@@ -216,8 +219,13 @@ td a {
     gap: 50px;
 }
 
-.pedidos_sobre .cont{
+.pedidos_sobre .cont {
     display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
 }
 
 h2 {
@@ -229,13 +237,14 @@ h2 {
 .responderPedido {
     display: flex;
     flex-direction: column;
-    /* width: 25vw; */
+    width: 30em;
     height: 25vh;
     background: var(--branco_footer);
     justify-content: space-evenly;
     border: 3px solid var(--cinzaBorda);
     border-radius: 10px;
     padding: 10px;
+   
 }
 
 .acerca_sob {
@@ -252,7 +261,7 @@ h2 {
 .exp input {
     border: transparent;
     background: transparent;
-    margin: 0 10px 0;
+    margin: 0 0 0 10px;
     font-size: 16pt;
     cursor: not-allowed;
 }
@@ -283,7 +292,7 @@ h2 {
     cursor: pointer;
 }
 
-.btn{
+.btn {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -298,8 +307,8 @@ h2 {
     flex-wrap: wrap;
 }
 
-.btn ul li{
-    width: 10vw;
+.btn ul li {
+    width: 200px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -347,6 +356,10 @@ input[value='recusado']:checked:after {
     border: 2px solid white;
 }
 
+.btn label{
+    line-height: 15px;
+}
+
 .alerta {
     padding: 10px;
     background-color: #f8d7da;
@@ -354,6 +367,19 @@ input[value='recusado']:checked:after {
     color: #842029;
     border-radius: 10px;
     margin: 10px 0;
+}
+
+.alert {
+    padding: 10px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    color: #842029;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.alert ul{
+    list-style: none;
 }
 
 /* ##### restaurar ##### */
@@ -372,6 +398,12 @@ input[value='recusado']:checked:after {
     }
 }
 
+@media (max-width:1200px) {
+    .informacao, .experiencia, .responder {
+        width: auto;
+    }
+}
+
 @media (max-width:1090px) {
     .pedido {
         gap: 20px;
@@ -379,6 +411,15 @@ input[value='recusado']:checked:after {
 
     .info_exp {
         gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .informacao, .experiencia, .responder {
+        width: auto;
+    }
+
+    .responder{
+        margin: 20px auto 0;
     }
 }
 
@@ -388,6 +429,24 @@ input[value='recusado']:checked:after {
     .experiencia,
     .responder {
         width: 50vw;
+    }
+
+    .btn ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input[type='radio'],
+    input[type='radio']:after,
+    input[value='recusado']:checked:after,
+    input[value='aceite']:checked:after {
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+    }
+
+    .btn label{
+        line-height: 25px;
     }
 }
 
@@ -440,5 +499,12 @@ input[value='recusado']:checked:after {
     .responder p {
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    .acerca,
+    .exp,
+    .responderPedido {
+        width: 80%;
+        margin: 10px auto;
     }
 }

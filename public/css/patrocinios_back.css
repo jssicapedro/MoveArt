@@ -190,6 +190,10 @@ td a {
     margin: 10px 0;
 }
 
+.alerta ul{
+    list-style: none;
+}
+
 @media (max-width:1400px) {
     .option ul {
         flex-direction: column;

@@ -55,7 +55,7 @@
                     </div>
                     <div class="responderPedido">
                         <h2>Modalidade sugerida</h2>
-                        <textarea name="resposta" class="conteudo" required>{{$pedidos->resposta}}</textarea>
+                        <textarea name="resposta" class="conteudo">{{$pedidos->resposta}}</textarea>
                         @if($pedidos->estado_do_pedido == 'aceite'||$pedidos->estado_do_pedido == 'recusado')
                         <div class="alerta">
                             <p class="error">Este pedido já foi respondido</p>
@@ -76,12 +76,24 @@
                         @endif
                     </div>
                 </div>
+
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+
+
+
                 @if($pedidos->estado_do_pedido == 'aceite'||$pedidos->estado_do_pedido == 'recusado')
-                
+
                 @else
                 <input class="enviar" type="submit" value="Enviar resposta">
                 @endif
-                
             </form>
         </div>
     </div>

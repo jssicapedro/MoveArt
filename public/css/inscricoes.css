@@ -18,7 +18,7 @@ section#banner_patrocinio {
     background-repeat: no-repeat;
     justify-content: flex-end;
     align-items: flex-end;
-    background-position: center -235px;;
+    background-position: center;
 }
 
 section#banner_professor {
@@ -30,7 +30,7 @@ section#banner_professor {
     background-repeat: no-repeat;
     justify-content: flex-end;
     align-items: flex-end;
-    background-position: center -235px;;
+    background-position: center;
 }
 
 .info {

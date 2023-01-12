@@ -63,6 +63,15 @@ class PatrocinioController extends Controller
 
     public function update(Request $request, Patrocinio $patrocinio)
     {
+        $request->validate(
+            [
+                'resposta' => 'required',
+            ],
+            [
+                'resposta.required' => 'Para atualizar este patrocínio tem de dar uma RESPOSTA ao mesmo',
+            ]
+        );
+
         $patrocinio->update([
             'nome' => $request->nome,
             'email' => $request->email,

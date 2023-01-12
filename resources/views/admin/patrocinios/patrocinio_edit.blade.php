@@ -45,6 +45,15 @@
                     <div class="col">
                         <label class="sobre" for="">Responder</label> <br />
                         <textarea name="resposta" class="conteudo">{{$patrocinio->resposta}}</textarea>
+                        @if ($errors->any())
+                        <div class="alerta alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
                     </div>
                 </div>
                 <input type="hidden" name="estado" class="conteudo" value="respondido">

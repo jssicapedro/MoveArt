@@ -1,7 +1,7 @@
 fazer login (login.bade.php -> navbar/main/footer (layouts > app.blade.php)) ------> 2hrs✅ ------> adicionar animação
 alterar landing page ✅
 separar pedido professor ✅ 
-separar patrocinio ✅ 
+separar patrocínio ✅ 
 começar o Back ✅ 
 adicionar campo de foto_horario nas modalidades ✅ 
 valor mínimo do patrocínio ✅
@@ -15,26 +15,36 @@ softdele -> pedido professor ✅
          -> restaurar - https://www.youtube.com/watch?v=twcDknTcOEw&ab_channel=CodeImprove ✅
 
 
-tabela responsiva - patrocinio ✅
+design da tabela responsivo - patrocínio ✅
                   - Pedido professor ✅
 
 validações de formulários > mensagem de erro/sucesso ✅
                           > erro -> não guarda os valores anteriormente inseridos
 
-enviar email quando atualizar mensagem -> quando enviar resposta proibir mandar outra. ✅ -> validações
+enviar email quando atualizar mensagem -> quando enviar resposta proibir mandar outra. -> validações ✅
    - https://mailtrap.io/blog/send-email-in-laravel/ 
    - https://www.itsolutionstuff.com/post/laravel-send-mail-using-mailtrap-exampleexample.html
-      > pedido professor
+      > pedido professor ✅
          >>enviar ✅
          >>alterar design ✅
 
-      > patrocinio
+      > patrocinio ✅
          >>enviar ✅
          >>alterar design ✅
 
 Design responsivo view e edit
-      > pedprof
-      >patrocinio
+      > pedprof ✅
+      > patrocínio ✅
+
+Alertas de confirmação
+      > confirmar se o admin  
+         >> quer arquivar o pedido de professor
+         >>  quer restaurar o pedido de professor
+         >> quer apagar o registo do patrocínio
+
+
+
+
 
 pesquisar sobre police ---- impede que alunos entrem no back
 gerar nova página de modalidade automaticamente
