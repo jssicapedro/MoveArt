@@ -8,6 +8,7 @@ use App\Http\Controllers\InscricaoController;
 use App\Http\Controllers\PatrocinioController;
 use App\Http\Controllers\PedidoprofessorController;
 use App\Http\Controllers\ModalidadesBackController;
+use App\Http\Controllers\UsersBackController;
 use App\Models\Modalidade;
 
 /* ------- Front ------- */
@@ -70,7 +71,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
 
-Route::get('/admin/users', [PageController::class, 'users'])->name('users');
+Route::get('admin/users', [UsersBackController::class, 'index']);
+Route::get('add-user', [UsersBackController::class, 'create']);
+Route::post('add-user', [UsersBackController::class, 'store']);
+Route::get('edit-user/{id}', [UsersBackController::class, 'edit']);
+Route::put('update-user/{id}', [UsersBackController::class, 'update']);
+Route::post('delete-user', [UsersBackController::class, 'destroy']);
+
 
 Route::get('/admin/patrocinio', [PatrocinioController::class, 'index'])->name('patrocinios');
 Route::get('/admin/patrocinio/show/{patrocinio}', [PatrocinioController::class, 'show'])->name('patrocinios.show');

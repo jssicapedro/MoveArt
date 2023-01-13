@@ -142,19 +142,6 @@ font-weight: 600;
 tr.bottom_tr{
   border-width: 0 0 3px 0;
 }
-button.btn_edit{
-  background-color: #eeb2b5;
-border-radius: 25px;
-transition: 0.3s;
-border: 0;
-font-weight: 500;
-color: #fff;
-padding: 10px 20px;
-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-button.btn_edit:hover{
-  background-color: #d9a1a4;
-  }
   .btn_edit_div{
     padding-top: 20px;
   }
@@ -163,19 +150,86 @@ button.btn_edit:hover{
     font-weight: 600;
   }
 
-  button.delete_fechar{
-    background-color: #f7f7f7;
-    border-radius: 25px;
-    transition: 0.3s;
-    border: 0;
-    font-weight: 500;
-    color: #303030;
-    padding: 10px 15px;
-  }
   #user_main_content{
     position: absolute;
     width: calc(100% - 300px);
     left: 250px;
-    min-height: 100vh;
     transition: 0.5s;
+  }
+
+  .profile-pic-div{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: -50%;
+    transform: translate(-50%,-20%);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: rgb(251, 251, 251);
+}
+
+#photo{
+    height: 100%;
+    width: 100%;
+}
+
+#file{
+    display: none;
+}
+
+#uploadBtn{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    line-height: 30px;
+    font-family: sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    display: block;
+}
+#uploadBtn:hover{
+  background: rgba(110, 110, 110, 0.7);
+}
+.foto{
+  position: relative;
+  min-height: 150px;
+}
+
+.icon_camara{
+padding-top: 5px;
+}
+.icon_camara i{
+font-size: 25px;
+  }
+  .form_add label{
+    font-size: 15px;
+    color: #8a8a8a;
+  }
+  .form_add label span{
+    font-size: 15px;
+    color: #eeb2b5;
+  }
+
+p#spancampo{
+  font-size: 13px;
+  color: #8a8a8a;
+}
+
+  #adduser{
+
+    margin-top: 10px;
+  }
+  .required_field{
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }

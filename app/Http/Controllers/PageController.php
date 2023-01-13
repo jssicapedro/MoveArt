@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Pagination\Paginator;
+
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Modalidade;
@@ -114,19 +114,7 @@ class PageController extends Controller
         return view('dashboardBO', compact('evento','modalidade','users','patrocinios'));
     }
 
-    public function users(){
-       Paginator::useBootstrap();
-        
-         $users = User::leftjoin('users_modalidades', 'users_modalidades.user_id', '=', 'users.id')
-         ->leftjoin('modalidades', 'modalidades.id', '=', 'users_modalidades.modalidade_id')
-         ->orderBy('id', 'ASC')
-         ->select(['users.*', 'modalidades.modalidade'])
-         ->paginate(10);
-
-        return view('admin/users', compact('users'));
-    }
-
-
+    
     public function modalidades(){
         return view('admin/modalidades');
     }
