@@ -12,11 +12,17 @@ use Illuminate\Support\Facades\Hash;
 class UsersBackController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
         Paginator::useBootstrap();
-
-        $users = User::leftjoin('users_modalidades', 'users_modalidades.user_id', '=', 'users.id')
+        $search = $request->search;
+        $users = User::where(function ($query) use ($search) {
+            if ($search) {
+                $query->where('email', $search);
+                $query->orWhere('primeiro', 'LIKE', "%$search%");
+                $query->orWhere('apelido', 'LIKE', "%$search%");
+            }
+        })->leftjoin('users_modalidades', 'users_modalidades.user_id', '=', 'users.id')
             ->leftjoin('modalidades', 'modalidades.id', '=', 'users_modalidades.modalidade_id')
             ->orderBy('id', 'ASC')
             ->select(['users.*', 'modalidades.modalidade'])
@@ -24,14 +30,15 @@ class UsersBackController extends Controller
 
         return view('admin.users', compact('users'));
     }
-    public function create(){
+    public function create()
+    {
         $modalidade = Modalidade::all();
         $users = User::all();
         return view('admin.users_create', compact('modalidade'), compact('users'));
     }
     public function store(Request $request)
     {
-  
+
         $user = new User();
         $user->primeiro = $request->input('primeiro');
         $user->apelido = $request->input('apelido');
@@ -46,17 +53,16 @@ class UsersBackController extends Controller
         $user->localidade = $request->input('localidade');
         $user->rua = $request->input('rua');
         $user->cod_postal = $request->input('cod_postal');
-        if($request->hasfile('foto'))
-        {
+        if ($request->hasfile('foto')) {
             $file = $request->file('foto');
             $extention = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extention;
+            $filename = time() . '.' . $extention;
             $file->move('storage/professores/', $filename);
             $user->foto = $filename;
         }
         $user->save();
 
-        return redirect()->back()->with('status','Utilizador adicionado com sucesso.');
+        return redirect()->back()->with('status', 'Utilizador adicionado com sucesso.');
     }
     public function edit($id)
     {
@@ -80,38 +86,33 @@ class UsersBackController extends Controller
         $user->localidade = $request->input('localidade');
         $user->rua = $request->input('rua');
         $user->cod_postal = $request->input('cod_postal');
-        if($request->hasfile('foto'))
-        {
-            $destination = 'storage/professores/'.$user->foto;
-            if(File::exists($destination))
-            {
+        if ($request->hasfile('foto')) {
+            $destination = 'storage/professores/' . $user->foto;
+            if (File::exists($destination)) {
                 File::delete($destination);
             }
             $file = $request->file('foto');
             $extention = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extention;
+            $filename = time() . '.' . $extention;
             $file->move('storage/professores/', $filename);
             $user->foto = $filename;
         }
 
         $user->update();
-        return redirect()->back()->with('status','User editado com sucesso.');
+        return redirect()->back()->with('status', 'User editado com sucesso.');
     }
     public function destroy(Request $request)
     {
         $user = User::find($request->id_user);
-        if($user){
-         $destination = 'storage/professores/'.$user->foto;
-        if(File::exists($destination))
-        {
-            File::delete($destination);
+        if ($user) {
+            $destination = 'storage/professores/' . $user->foto;
+            if (File::exists($destination)) {
+                File::delete($destination);
+            }
+            $user->delete();
+            return redirect('admin/users')->with('status', 'Utilizador apagado com sucesso.');
+        } else {
+            return redirect('admin/users')->with('status', 'Utilizador não apagado.');
         }
-        $user->delete();
-        return redirect('admin/users')->with('status','Utilizador apagado com sucesso.');
-        }else{
-            return redirect('admin/users')->with('status','Utilizador não apagado.');  
-        }
-        
     }
-
 }

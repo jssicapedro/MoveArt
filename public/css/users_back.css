@@ -233,3 +233,52 @@ p#spancampo{
     bottom: 0;
     left: 0;
   }
+
+ .search{
+    background-color: #eeb2b5;
+    border-radius: 25px;
+    transition: 0.3s;
+    border: 0;
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    
+    .search:hover{
+      background-color: #d9a1a4;
+       color: #fff;
+      }
+      .admin_id_perfil{
+        background-color: #d296d66f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 4px;
+        border: 1px solid #d296d6;
+        border-radius: 25px;
+        color: #d296d6;
+
+      }
+      .prof_id_perfil{
+        background-color: #f7d5a171;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 10px;
+        border: 1px solid #e5c491;
+        border-radius: 25px;
+        color: #e5c491;
+
+      }
+      .aluno_id_perfil{
+        background-color: #eeb2b574;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 10px;
+        border: 1px solid #e0a5a8;
+        border-radius: 25px;
+        color: #e0a5a8;
+
+      }

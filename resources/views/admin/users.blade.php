@@ -93,29 +93,51 @@
                         </div>
                     </div>
 
+
+                </div>
+                <div class="container" style="padding:35px 0; ">
+                    <div class="row">
+                        <div class="col-5">
+                            <form action="{{ url('admin/users') }}" method="get">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <div style="padding-right:10px;">
+                                        <input class="form-control" type="text" name="search" placeholder="Pesquisar"
+                                            style="height: 44px; border-radius:25px;">
+
+                                    </div>
+                                    <div>
+                                        <button class="btn search">Pesquisar</button>
+                                    </div>
+
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div>
 
 
                     <div id="accordion">
-                        <div style="padding:50px 0; ">
-                            <div class="table-responsive rr">
+                        <div style="padding-bottom:50px; ">
+                            @if (count($users))
+                                <div class="table-responsive rr">
 
-                                <table class="table align-middle" style="margin: 0;">
-                                    <thead style="padding:100px 0; ">
-                                        <tr class="bottom_tr id-pad">
-                                            <th class="pad" scope="col">ID</th>
-                                            <th scope="col">Foto</th>
-                                            <th scope="col">Nome</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Nascimento</th>
-                                            <th scope="col">Género</th>
-                                            <th scope="col">Função</th>
-                                            <th scope="col"></th>
-                                        </tr>
-                                    </thead>
+                                    <table class="table align-middle" style="margin: 0;">
+                                        <thead style="padding:100px 0; ">
+                                            <tr class="bottom_tr id-pad">
+                                                <th class="pad" scope="col">ID</th>
+                                                <th scope="col">Foto</th>
+                                                <th scope="col">Nome</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Nascimento</th>
+                                                <th scope="col">Género</th>
+                                                <th scope="col">Função</th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
 
-                                    @if (count($users))
+
                                         @foreach ($users as $user)
                                             <tbody id="yy">
                                                 <tr class="id-pad">
@@ -138,7 +160,7 @@
                                                     <td class="align-middle">
                                                         {{ date('d-m-Y', strtotime($user->data_nasc)) }}</td>
                                                     <td class="align-middle">{{ $user->genero }}</td>
-                                                    <td class="align-middle">{{ $user->perfil }}</td>
+                                                    <td class="align-middle"><div id="perfil_css" >{{ $user->perfil }}</div></td>
                                                     <td class="align-middle icon_btns">
 
                                                         <button class="btn viewbtn collapsed" data-toggle="collapse"
@@ -276,16 +298,16 @@
                                                 </tr>
                                             </tbody>
                                         @endforeach
-                                    @else
-                                        <h6>Não existem categorias registadas</h6>
-                                    @endif
 
 
 
-                                </table>
-                            </div>
+
+                                    </table>
+                                </div>
                         </div>
-
+                    @else
+                        <h6 class="alert alert-danger">Não existem categorias registadas</h6>
+                        @endif
                         <div class="d-flex justify-content-center">
                             {!! $users->withQueryString()->links() !!}
                         </div>
@@ -301,10 +323,10 @@
 @section('script')
     <script>
         $(document).ready(function() {
-   
-                $(document).on('click', '.deletebtn',function(e){
 
-         
+            $(document).on('click', '.deletebtn', function(e) {
+
+
                 e.preventDefault();
 
                 var user_id = $(this).val();
@@ -313,5 +335,12 @@
             });
         });
 
+
+        var backcolor = document.getElementById("perfil_css");
+ 
+
     </script>
+    
+
+
 @endsection
