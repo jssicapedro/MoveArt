@@ -11,6 +11,10 @@ h1 {
     text-align: center;
 }
 
+.quantidade{
+    font-size: 18pt;
+}
+
 hr {
     margin: 0 0 20px;
 }
@@ -32,6 +36,11 @@ hr {
     width: 170px;
     background-color: var(--roxo);
     margin-bottom: 20px;
+}
+
+.voltar_quantidade{
+    display: flex;
+    justify-content: space-between;
 }
 
 .enviar{

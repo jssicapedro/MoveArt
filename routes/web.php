@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\InscricaoAlunoController;
 use App\Http\Controllers\InscricaoController;
 use App\Http\Controllers\PatrocinioController;
@@ -67,26 +68,26 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 /* ------- Back ------- */
+/* Gate::check(abilities: 'back_premission'); */
+
+
 Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
 
-
+/* back patrocinio */
 Route::get('/admin/patrocinio', [PatrocinioController::class, 'index'])->name('patrocinios');
 Route::get('/admin/patrocinio/show/{patrocinio}', [PatrocinioController::class, 'show'])->name('patrocinios.show');
 Route::get('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'edit'])->name('patrocinios.edit');
 Route::post('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'update'])->name('patrocinios.update');
 Route::delete('/admin/patrocinio/delete/{patrocinio}', [PatrocinioController::class, 'delete'])->name('patrocinios.destroy');
-
+/* back pedido professor */
 Route::get('/admin/pedprof', [PedidoprofessorController::class, 'index'])->name('pedidosprof');
 Route::get('/admin/pedprof/show/{pedidos}', [PedidoprofessorController::class, 'show'])->name('pedprof.show');
 Route::get('/admin/pedprof/edit/{pedidos}', [PedidoprofessorController::class, 'edit'])->name('pedprof.edit');
 Route::post('/admin/pedprof/edit/{pedidos}', [PedidoprofessorController::class, 'update'])->name('pedprof.update');
-/* download cv */
 Route::get('/download/{file}', [PedidoprofessorController::class, 'download'])->name('cv_download'); 
 Route::delete('/admin/pedprof/delete/{pedidos}', [PedidoprofessorController::class, 'delete'])->name('pedprof.destroy');
-/* arquivados */
 Route::get('/admin/pedprof/archive', [PedidoprofessorController::class, 'archive'])->name('arquivos');
-/* restaurar */
 Route::get('/admin/pedprof/restore/{arquivados}', [PedidoprofessorController::class, 'restore'])->name('restore.pedprof');
 
 /*Back Das Modalidades */

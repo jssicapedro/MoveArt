@@ -60,6 +60,17 @@
                       {{ __('Logout') }}
                     </a>
                     <a class="dropdown-item" href="{{ asset('perfil') }}"> Perfil</a>
+                    
+                    
+                    
+                    
+                    @if(Auth::user()->perfil == 'admin')
+                    <a class="dropdown-item" href="{{ asset('dashboardBO') }}"> dashboard</a>
+                    @endif
+
+
+
+
                   </li>
                 </ul>
 

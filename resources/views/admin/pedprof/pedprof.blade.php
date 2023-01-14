@@ -13,8 +13,10 @@
 @section('main')
 <div class="dashboard_main">
     <div class="pedidos_main">
-        <h1>Pedidos para Professor</h1>
-        <a class="arquivados" href="{{ asset('/admin/pedprof/archive')}}">Arquivados</a>
+        <h1>Pedidos para Professor <span class="quantidade">({{$quantidade}} pendentes)</span></h1>
+        <div class="voltar_quantidade">
+            <a class="arquivados" href="{{ asset('/admin/pedprof/archive')}}">Arquivados</a>
+        </div>
         <div class="table-wrapper">
             <div class="table-scroll">
                 <table id="pedprof" class="table table-striped align-middle dataTable no-footer display">
@@ -45,17 +47,17 @@
                             <td>{{$pedidos->telefone}}</td>
                             <td><a href="{!! route('cv_download', $pedidos->cv) !!}" download>Fazer Download </a></td>
                             @if($pedidos->estado_do_pedido =='aceite')
-                                <td>
-                                    <p class="aceite">Aceite</p>
-                                </td>
-                                @elseif($pedidos->estado_do_pedido =='recusado')
-                                    <td>
-                                        <p class="recusado">Recusado</p>
-                                    </td>
-                                @else
-                                <td>
-                                    <p class="pendente">Pendente</p>
-                                </td>
+                            <td>
+                                <p class="aceite">Aceite</p>
+                            </td>
+                            @elseif($pedidos->estado_do_pedido =='recusado')
+                            <td>
+                                <p class="recusado">Recusado</p>
+                            </td>
+                            @else
+                            <td>
+                                <p class="pendente">Pendente</p>
+                            </td>
                             @endif
                             <td class="option">
                                 <ul>
@@ -67,29 +69,29 @@
                                         </a>
                                     </li>
                                     @if($pedidos->estado_do_pedido=='pendente')
-                                        <li>
-                                            <a href="{{ route('pedprof.edit', $pedidos->id) }}">
-                                                <span class="material-symbols-outlined">
-                                                    edit
-                                                </span>
-                                            </a>
-                                        </li>
-                                        @else
-                                            <li></li>
+                                    <li>
+                                        <a href="{{ route('pedprof.edit', $pedidos->id) }}">
+                                            <span class="material-symbols-outlined">
+                                                edit
+                                            </span>
+                                        </a>
+                                    </li>
+                                    @else
+                                    <li></li>
                                     @endif
-                                        <li>
-                                            <form action="{{ route('pedprof.destroy', $pedidos->id) }}" method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="delete">
-                                                    <a href="">
-                                                        <span class="material-symbols-outlined delete">
-                                                            delete
-                                                        </span>
-                                                    </a>
-                                                </button>
-                                            </form>
-                                        </li>
+                                    <li>
+                                        <form action="{{ route('pedprof.destroy', $pedidos->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="delete">
+                                                <a href="">
+                                                    <span class="material-symbols-outlined delete">
+                                                        delete
+                                                    </span>
+                                                </a>
+                                            </button>
+                                        </form>
+                                    </li>
                                 </ul>
                             </td>
                         </tr>
@@ -102,7 +104,7 @@
             </div>
         </div>
 
-        
+
     </div>
 </div>
 @endsection

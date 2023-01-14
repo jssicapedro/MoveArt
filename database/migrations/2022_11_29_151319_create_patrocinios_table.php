@@ -20,7 +20,7 @@ return new class extends Migration
             $table->double('valor');
             $table->string('telefone', 9)->nullable();
             $table->text('mensagem')->nullable();
-            $table->enum('estado', ['respondido', 'sem reposta'])->default('sem reposta');
+            $table->enum('estado', ['respondido', 'sem resposta'])->default('sem resposta');
             $table->text('resposta')->nullable();
             $table->softDeletes();/* coluna deleted_at -> softdelete */
             $table->timestamps();

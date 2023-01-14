@@ -13,7 +13,7 @@
 @section('main')
 <div class="dashboard_main">
     <div class="patrocinio_main">
-        <h1>Patrocínios</h1>
+        <h1>Patrocínios <span class="quantidade">({{$quantidade}} pendentes)</span></h1>
         <div class="table-wrapper">
             <div class="table-scroll">
                 <table id="patrocinio" class="table table-striped align-middle dataTable no-footer display">
@@ -101,6 +101,7 @@
 @endsection
 
 @section('script')
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function() {

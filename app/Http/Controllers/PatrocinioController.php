@@ -15,7 +15,9 @@ class PatrocinioController extends Controller
     public function index()
     {
         $patrocinios = Patrocinio::all();
-        return view('admin/patrocinios/patrocinio', compact('patrocinios'));
+        $quantidade = $patrocinios->where('estado', 'sem resposta')->count();
+        /* dd($quantidade); */
+        return view('admin/patrocinios/patrocinio', compact('patrocinios'), compact('quantidade'));
     }
 
     public function create()

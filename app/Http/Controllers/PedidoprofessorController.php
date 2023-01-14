@@ -16,7 +16,9 @@ class PedidoprofessorController extends Controller
     public function index()
     {
         $pedidos = PedidoProfessor::all();
-        return view('admin.pedprof.pedprof', compact('pedidos'));
+        $quantidade = $pedidos->where('estado_do_pedido', 'pendente')->count();
+        /* dd($quantidade); */
+        return view('admin.pedprof.pedprof', compact('pedidos'), compact('quantidade'));
     }
 
     public function create()

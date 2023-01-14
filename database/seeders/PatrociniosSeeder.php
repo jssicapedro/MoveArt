@@ -21,16 +21,16 @@ class PatrociniosSeeder extends Seeder
                 'email'=> 'patrocinio@movete.com',
                 'valor'=> '100',
                 'telefone'=> '',
-                'mensagem'=>'',
                 'mensagem'=> 'Como patrocínio damos 100€ esperamos contribuir para que continuem com as ótimas aulas! Bom trabalho',
+                'estado'=> 'sem resposta'
             ],
             [
                 'nome'=> 'Leiria a dançar',
                 'email'=> 'dancaLeiria@gmail.com',
                 'valor'=> '50',
                 'telefone'=> '',
-                'mensagem'=>'',
                 'mensagem'=> 'De forma a agradecer pelo trabalho que prestam e pelo ajuda na organização do nosso evento',
+                'estado'=> 'sem resposta'
             ],
         ]);
     }
