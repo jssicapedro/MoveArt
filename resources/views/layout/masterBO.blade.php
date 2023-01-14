@@ -45,9 +45,9 @@
 <body>
 
   <!-- ======= Header ======= -->
-  @include('layout.partials.headerBO ')
-
+  
   <main id="main">
+  @include('layout.partials.navBO')
     @yield('main')
   </main><!-- End #main -->
 

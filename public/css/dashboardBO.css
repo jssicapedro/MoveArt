@@ -31,24 +31,37 @@ body {
 
 /*navbar*/
 .navigation {
+  width: 250px;
+  display: block;
+  
+  bottom: 0;
+  float: none;
+  left: 0;
   position: fixed;
-  width: 15vw;
-  height: 100%;
+  top: 0;
+  height: 100vh;
+  overflow-y: hidden;
+  
   background: white;
   border-left: 10px solid white;
   transition: 0.5s;
-  overflow: hidden;
   border-radius: 0px 30px 20px 0px;
+  padding-top: 20px;
 }
+
+.navigation ul {
+  padding: 0;
+}
+
 .navigation.active {
   width: 80px;
 }
 
+#main nav {
+  display: inline-block;
+}
+
 .navigation ul {
-  position: absolute;
-  top: 3%;
-  left: 5%;
-  width: 100%;
 }
 
 .navigation ul li {
@@ -139,11 +152,12 @@ body {
 
 /*Main*/
 .dashboard_main {
-  position: absolute;
   width: calc(100% - 300px);
-  left: 250px;
   min-height: 100vh;
   transition: 0.5s;
+
+  height: 100%;
+  margin-left: 250px;
 }
 .dashboard_main.active {
   width: calc(100% - 80px);

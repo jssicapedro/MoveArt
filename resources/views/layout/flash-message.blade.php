@@ -58,3 +58,7 @@
     </div>
 </section>
 @endif
+
+@if(session('erropass'))
+<p>Password diferente</p>
+@endif
