@@ -27,14 +27,14 @@
                     @csrf
                     <div class="modal-header">
                         <h5 class="modal-title" id="staticBackdropLabel">Eliminar
-                            Conta
+                            Utilizador
                         </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body d-flex justify-content-center align-items-center">
-                        <div>
+                        <div class="main_delete">
                             <div class="d-flex justify-content-center align-items-center">
-                                <div id="icon_delete ">
+                                <div class="icon_delete">
                                     <i class="fa-solid fa-triangle-exclamation"></i>
                                 </div>
                             </div>
@@ -42,15 +42,15 @@
                             <div id="delete_conta_text">
                                 <input type="hidden" name="id_user" id="user_id">
                                 <h6>
-                                    Tem a certeza que pretende eliminar a conta?
+                                    Tem a certeza que pretende eliminar o utilizador?
                                 </h6>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary delete_fechar"
+                        <button type="button" class="btn btn-secondary delete_fechar canc"
                             data-bs-dismiss="modal">Fechar</button>
-                        <button type="submit" class="btn btn-primary delete_conta">Eliminar</button>
+                        <button type="submit" class="btn btn-primary delete_conta delt">Eliminar</button>
                     </div>
                 </form>
             </div>
@@ -160,7 +160,15 @@
                                                     <td class="align-middle">
                                                         {{ date('d-m-Y', strtotime($user->data_nasc)) }}</td>
                                                     <td class="align-middle">{{ $user->genero }}</td>
-                                                    <td class="align-middle"><div id="perfil_css" >{{ $user->perfil }}</div></td>
+                                                    <td class="align-middle">
+                                                        @if($user->perfil == 'admin')
+                                                        <div class="admin_id_perfil" >{{ $user->perfil }}</div>
+                                                    @elseif($user->perfil == 'professor')
+                                                    <div class="prof_id_perfil" >{{ $user->perfil }}</div>
+                                                    @elseif($user->perfil == 'aluno')
+                                                    <div class="aluno_id_perfil" >{{ $user->perfil }}</div>
+                                                    @endif
+                                                </td>
                                                     <td class="align-middle icon_btns">
 
                                                         <button class="btn viewbtn collapsed" data-toggle="collapse"

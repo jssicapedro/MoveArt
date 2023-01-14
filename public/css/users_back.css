@@ -254,7 +254,7 @@ p#spancampo{
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 2px 4px;
+        padding: 2px 0px;
         border: 1px solid #d296d6;
         border-radius: 25px;
         color: #d296d6;
@@ -282,3 +282,43 @@ p#spancampo{
         color: #e0a5a8;
 
       }
+      .delt{
+        background-color: #eeb2b5;
+        border-radius: 25px;
+        transition: 0.3s;
+        border: 0;
+        font-weight: 500;
+        color: #fff;
+        padding: 10px 15px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+        
+        .delt:hover{
+          background-color: #d9a1a4;
+           color: #fff;
+          }
+
+          .canc{
+            background-color: #fff;
+            border-radius: 25px;
+            transition: 0.3s;
+            border: 0;
+            font-weight: 500;
+            color: #303030;
+            padding: 10px 15px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            }
+            .canc:hover{
+              background-color: rgb(239, 239, 239);
+              color: #303030;
+              }
+          .main_delete{
+            padding: 20px 0;
+          }
+          .icon_delete i{
+            font-size: 70px !important;
+            color:#d9a1a486;
+          }
+          .icon_delete{
+            padding: 0 0 25px 0;
+          }
