@@ -6,14 +6,14 @@
     <li>Faça uma cópia do ficheiro .env.example</li>
     <li>Atualize o nome e a palavra-passe da base de dados desse mesmo ficheiro. Guarde-o com o nome ".env" e sem extenção;</li>
     <li>Abra um terminal na pasta onde se encontra o projeto</li>
-    <li>Execute "composer update"</li>
+    <li>Execute "composer install"</li>
     <li>Depois da atualização execute "php artisan key:generate"</li>
 </ol>
 
 <h1>Login</h1>
 <ol>
     <li>Deve instalar o ui do Laravel, para isso execute, no terminal</li>
-    <pre>composer update</pre><br><p> ou  <pre>require laravel/ui</pre> 
+    <pre>composer install</pre><br><p> ou  <pre>require laravel/ui</pre> 
     <li>De seguida deve </li>
     <pre>npm install</pre>
     <li>Depois </li>

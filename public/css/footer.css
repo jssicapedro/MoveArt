@@ -1,17 +1,26 @@
 footer {
     display: flex;
     margin: auto;
-    background-color: #dadada;
+    background-color: var(--branco_footer);
     flex-direction: column;
 }
 
-section#first, section#second, section#second_mobile, section#third{
+section#first, section#second, section#second_mobile{
     display: flex;
     height: auto;
     width: 80vw;
     align-content: center;
     justify-content: space-around;
     padding: 20px 0;
+    margin: 0 auto;
+}
+section#third{
+    display: flex;
+    height: auto;
+    width: 80vw;
+    align-content: center;
+    justify-content: space-around;
+    padding-top: 20px;
     margin: 0 auto;
 }
 hr.footer_divissor

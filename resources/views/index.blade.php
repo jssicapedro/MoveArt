@@ -4,10 +4,15 @@
 
 @section('links')
 <link href="{{ asset('css/inicio.css') }}" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 @endsection
 
 @section('script')
 <script src="{{ asset('js/inicio/inicio.js') }}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 @endsection
 
 @section('hero')
@@ -16,7 +21,8 @@
         <div class="container ">
             <div class="row ">
                 <div class="col col-xl-6 col-sm-12">
-                    <div id="hero_text">
+                    <div data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom" id="hero_text">
                         <h1>Venha-Nos Visitar!</h1>
                         <p>A dança para nós não é só uma atividade é um estilo de vida!</p>
                         <div class="hero_btn">
@@ -39,7 +45,8 @@
 
         <div class="container d-flex align-items-center justify-content-center">
 
-            <div class="row sli_all  d-flex align-items-center justify-content-center">
+            <div data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom" class="row sli_all  d-flex align-items-center justify-content-center">
 
                 <div class="col-xl-6 col-md-6 columslider d-flex justify-content-end">
 
@@ -101,12 +108,12 @@
 
                     <div>
                         <div class="text32  hr_class1">
-                            <h2>Eventos</h2>
+                            <h2>Sobre Nós</h2>
                             <hr style="width:85px; height:2px; text-align:center; margin:0 0 25px 0;">
                     </div>
 
                         <div class="pb-2 p_about">
-                            <p>Esta instituição de dança foi planeada e desenvolvida para guiar os utilizadores
+                            <p>Esta escola de dança foi planeada e desenvolvida para guiar os utilizadores
                                 potencialmente interessados pela dança, ao se inscrever no website será lhe oferecido
                                 não só
                                 aulas práticas, mas também a opção de compra do vestuário necessário oferta de pacotes
@@ -138,7 +145,7 @@
     <section id="our_team">
         <div class="container-fluid group_equipa">
 
-            <div class="row p-0">
+            <div class="row p-0" data-aos="fade-up">
                 <div class="col-xl-2 col-md-2 col-6 img_box p-0">
                     <img src="{{ asset('img/inicio/pessoa6.png') }}" class="img-fluid" alt="funcionário">
                 </div>
@@ -412,7 +419,7 @@
                             <h3>{{$eventos->nome}}</h3>
                         </div>
                         <div class="img_event position-relative" style="border-radius: 4px;">
-                            <img src="{{ url('img/eventos/'.$eventos->foto) }}"
+                            <img src="{{ url('storage/eventos/'.$eventos->foto) }}"
                                 alt="{{$eventos->nome}}">
                         </div>
                     </div>

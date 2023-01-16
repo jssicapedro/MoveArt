@@ -1,7 +1,7 @@
 <footer>
     <section id="first">
         <div class="logo">
-            <img src="{{asset('img/footer/Logo Ballet Preto.png')}}" alt="">
+            <a href="{{ asset('/') }}"><img src="{{asset('img/footer/Logo Ballet Preto.png')}}" alt=""></a>
         </div>
         <div class="menu">
             <ul>

@@ -1,1 +1,22 @@
-colocar imagens na storage>app>public como fiz no dia 13/12
+fazer login (login.bade.php -> navbar/main/footer (layouts > app.blade.php)) ------> 2hrs✅ ------> adicionar animação
+alterar landing page ✅
+separar pedido professor ✅ 
+separar patrocinio ✅ 
+começar o Back ✅ 
+adicionar campo de foto_horario nas modalidades ✅ 
+
+
+valor mínimo do patrocínio
+enviar email quando atualizar mensagem
+validações de formulários
+Acrescentar coluna de resposta á tabela pedidos_professores ou o admin liga logo para marcar reunião
+mensagem de erro/sucesso 
+pesquisar sobre police ---- impede que alunos entrem no back
+relatorio do projeto
+
+
+erros
+editar patrocinio n volta para a listagem ✅
+
+
+mail estagio

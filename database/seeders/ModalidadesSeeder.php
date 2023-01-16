@@ -18,12 +18,14 @@ class ModalidadesSeeder extends Seeder
         Modalidade::insert([
             [
                 'modalidade' => 'Ballet',
-                'descricao' => '</p>O Ballet é uma dança é o estilo de dança mais popular no mundo que exige muita técnica e precisão nos movimentos, com a ajuda dos nossos profissionais vais aprender e ser um dos melhores.<br>A nossa Instituição já foi premiada com ouro em 2020 e 2021.</p><br> <p>Queres ser o próximo? Vem connosco e entra nesta aventura.</p>',
+                'descricao' => '</p>O Ballet é uma dança é o estilo de dança mais popular no mundo que exige muita técnica e precisão nos movimentos, com a ajuda dos nossos profissionais vais aprender e ser um dos melhores.<br>A nossa escola de dança já foi premiada com ouro em 2020 e 2021.</p><br> <p>Queres ser o próximo? Vem connosco e entra nesta aventura.</p>',
                 'foto_desc' => '1_app.png',
                 'valor_mensal' => '75',
                 'foto_mensal' => '1.jpg',
                 'valor_anual' => '880',
                 'foto_anual' => '1.jpg',
+                'foto_horario' => '1_calendar.png',
+                'foto_banner' => '1_banner.png',
             ],
             [
                 'modalidade' => 'Hip-Hop',
@@ -33,15 +35,19 @@ class ModalidadesSeeder extends Seeder
                 'foto_mensal' => '2.jpg',
                 'valor_anual' => '500',
                 'foto_anual' => '2.jpg',
+                'foto_horario' => '2_calendar.png',
+                'foto_banner' => '2_banner.png',
             ],
             [
                 'modalidade' => 'Dança Espanhola',
-                'descricao' => '<p>A dança espanhola é conhecida pelos movimentos elegantes. A dança espanhola mais conhecida é o Flamingo, e é esta à qual a MoveArt dá mais atenção.</p><br><p>A nossa Instituição foi premiada em 2018 como a melhor escola de Leiria de Flamingo. Aprende esta modalidade com os nosso profissionais de topo.</p>',
+                'descricao' => '<p>A dança espanhola é conhecida pelos movimentos elegantes. A dança espanhola mais conhecida é o Flamingo, e é esta à qual a MoveArt dá mais atenção.</p><br><p>A nossa escola de dança foi premiada em 2018 como a melhor escola de Leiria de Flamingo. Aprende esta modalidade com os nosso profissionais de topo.</p>',
                 'foto_desc' => '3_app.png',
                 'valor_mensal' => '35',
                 'foto_mensal' => '3.jpg',
                 'valor_anual' => '400',
                 'foto_anual' => '3.jpg',
+                'foto_horario' => '3_calendar.png',
+                'foto_banner' => '3_banner.png',
             ],
             [
                 'modalidade' => 'Danças Orientais',
@@ -51,6 +57,8 @@ class ModalidadesSeeder extends Seeder
                 'foto_mensal' => '4.jpg',
                 'valor_anual' => '400',
                 'foto_anual' => '4.jpg',
+                'foto_horario' => '4_calendar.png',
+                'foto_banner' => '4_banner.png',
             ],
             [
                 'modalidade' => 'Folclore',
@@ -60,6 +68,8 @@ class ModalidadesSeeder extends Seeder
                 'foto_mensal' => '5.jpg',
                 'valor_anual' => '460',
                 'foto_anual' => '5.jpg',
+                'foto_horario' => '5_calendar.png',
+                'foto_banner' => '5_banner.png',
             ],
         ]);
     }

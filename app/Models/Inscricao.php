@@ -17,5 +17,9 @@ class Inscricao extends Model
         'type_insc',
         'modalidade_id',
         'user_id',
+        'nome',
+        'apelido',
+        'data_nasc',
+        'genero',
     ];
 }

@@ -24,6 +24,7 @@ class User extends Authenticatable
         'email',
         'data_nasc',
         'cc',
+        'nif',
         'genero',
         'perfil',
         'password',       
