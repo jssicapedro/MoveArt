@@ -5,9 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Evento extends Model
+class Produto extends Model
 {
-   protected $fillable = ['nome', 'data', 'localizacao', 'foto', 'descricao'];
+    protected $fillable = ['nome', 'custo', 'preco', 'quantidade'];
 }
-
-

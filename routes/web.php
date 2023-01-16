@@ -6,11 +6,15 @@ use Illuminate\Support\Facades\Gate;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\InscricaoAlunoController;
 use App\Http\Controllers\InscricaoController;
+
 use App\Http\Controllers\PatrocinioController;
 use App\Http\Controllers\PedidoprofessorController;
 use App\Http\Controllers\ModalidadesBackController;
 use App\Http\Controllers\UsersBackController;
 use App\Models\Modalidade;
+
+use App\Http\Controllers\EventosController;
+
 
 /* ------- Front ------- */
 Route::get('/', [PageController::class, 'index'])->name('/');
@@ -116,3 +120,11 @@ Route::get('/admin/modalidades/show/{modalidade}',[ModalidadesBackController::cl
 Route::get('/admin/modalidades/edit/{modalidade}',[ModalidadesBackController::class, 'edit'])->name('modalidades.edit');
 Route::post('/admin/modalidades/update/{modalidade}',[ModalidadesBackController::class, 'update'])->name('modalidades.update');
 
+/*EventosBO*/
+Route::get('/eventos/novo', [EventosController::class, 'create']);
+Route::post('/eventos/novo', [EventosController::class, 'store'])->name('registar_evento');
+Route::get('/evento/ver/{id}', [EventosController::class, 'show']);
+Route::get('/evento/editar/{id}', [EventosController::class, 'edit']);
+Route::post('/evento/editar/{id}', [EventosController::class, 'update'])->name('alterar_evento');
+Route::get('/evento/excluir/{id}', [EventosController::class, 'delete']);
+Route::post('/evento/excluir/{id}', [EventosController::class, 'destroy'])->name('excluir_evento');
