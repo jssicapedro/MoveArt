@@ -32,7 +32,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if (count($patrocinios))
+                        @if (isset($patrocinios))
                         @foreach($patrocinios as $patrocinio)
                         <tr>
                             <td style="text-align: center;">{{$patrocinio->id}}</td>
@@ -40,7 +40,7 @@
                             <td style="text-align: center;" class="mensagem">{{$patrocinio->mensagem}}</td>
                             <td style="text-align: center;">{{$patrocinio->valor}}€</td>
                             <td style="text-align: center;">
-                                @if($patrocinio->estado =='sem reposta')
+                                @if($patrocinio->estado =='sem resposta')
                                 <p class="semR">Sem Resposta</p>
                                 @elseif($patrocinio->estado =='respondido')
                                 <p class="comR">Respondido</p>

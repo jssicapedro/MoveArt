@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .patrocinio_main {
     display: flex;
     flex-direction: column;
@@ -27,74 +22,79 @@ hr {
     margin: 0 0 30px;
 }
 
-#patrocinio {
+.patrocinio_main #patrocinio {
     margin: 30px 0;
+    border-collapse: collapse;
 }
 
-th {
+.patrocinio_main #patrocinio .title {
     background-color: var(--rosaE);
     height: 50px;
+    text-align: center !important;
 }
 
-td {
+.patrocinio_main #patrocinio td {
     padding: 10px 0;
+    text-align: center !important;
 }
 
-.more {
+.patrocinio_main #patrocinio .more {
     width: 60px;
     text-align: center;
 }
 
-.more span {
+.patrocinio_main #patrocinio .more span {
     display: flex;
     justify-content: center;
 }
 
-.option {
+.patrocinio_main .option {
     width: 10%;
     text-align: center;
 }
 
-.option ul {
+.patrocinio_main .option ul {
     list-style: none;
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 0;
 }
 
-.mensagem {
+.patrocinio_main .mensagem {
     width: 35%;
 }
 
-td p {
+.patrocinio_main td p {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     padding: 16px 5px;
+    margin-bottom: 0;
 }
 
-td a {
+.patrocinio_main td a {
     text-decoration: none;
     color: var(--preto);
 }
 
-.semR {
+.patrocinio_main .semR {
     background-color: var(--castanho);
 }
 
-.comR {
+.patrocinio_main .comR {
     background-color: var(--rosa);
 }
 
-.delete a span {
+.patrocinio_main .delete a span {
     border: none !important;
     color: red;
 }
 
-.voltar,
-.enviar {
+.patrocinio_main .voltar,
+.patrocinio_main .enviar {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
@@ -104,25 +104,25 @@ td a {
     border-radius: 10px;
 }
 
-.voltar {
+.patrocinio_main .voltar {
     width: 150px;
     background-color: var(--roxo);
     margin-bottom: 20px;
 }
 
-.about {
+.patrocinio_main .about {
     background-color: var(--branco_footer);
     padding: 20px;
 }
 
-.sobre {
+.patrocinio_main .sobre {
     font-size: 20px;
     height: 5vh;
     line-height: 5vh;
     margin: 5% 0 2%;
 }
 
-.conteudo {
+.patrocinio_main .conteudo {
     margin: 5px 0;
     height: 4vh;
     display: flex;
@@ -133,30 +133,30 @@ td a {
     padding: 10px;
 }
 
-.msg {
+.patrocinio_main .msg {
     width: 50%;
 }
 
-.msg .conteudo {
+.patrocinio_main .msg .conteudo {
     padding: 20px 10px;
     height: 15vh;
     align-items: flex-start;
 }
 
-.resp,
-.msg {
+.patrocinio_main .resp,
+.patrocinio_main .msg {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.resp .conteudo,
-.msg .conteudo {
+.patrocinio_main .resp .conteudo,
+.patrocinio_main .msg .conteudo {
     height: 100px;
     width: 100%;
 }
 
-.btn {
+.patrocinio_main .btn {
     height: 10vh;
     display: flex;
     align-items: center;
@@ -164,28 +164,28 @@ td a {
     align-content: center;
 }
 
-.enviar {
+.patrocinio_main .enviar {
     border: none;
     background-color: var(--amarelo);
 }
 
-.delete {
+.patrocinio_main .delete {
     border: none !important;
     color: red;
 }
 
-.enviar:hover {
+.patrocinio_main .enviar:hover {
     cursor: pointer;
 }
 
-.row {
+.patrocinio_main .row {
     display: flex;
     gap: 20px;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.alerta {
+.patrocinio_main .alerta {
     padding: 10px;
     background-color: #f8d7da;
     border: 1px solid #f5c2c7;
@@ -194,53 +194,53 @@ td a {
     margin: 10px 0;
 }
 
-.alerta ul{
+.patrocinio_main .alerta ul{
     list-style: none;
 }
 
 @media (max-width:1400px) {
-    .option ul {
+    .patrocinio_main .option ul {
         flex-direction: column;
     }
 }
 
 @media (max-width:600px) {
 
-    .dataTables_length,
-    .dataTables_paginate,
-    .paging_simple_numbers,
-    .dataTables_info {
+    .patrocinio_main .dataTables_length,
+    .patrocinio_main .dataTables_paginate,
+    .patrocinio_main .paging_simple_numbers,
+    .patrocinio_main .dataTables_info {
         display: none;
     }
 
-    .table-wrapper {
+    .patrocinio_main .table-wrapper {
         position: relative;
     }
 
-    .table-scroll {
+    .patrocinio_main .table-scroll {
         margin-top: 20px;
         overflow-x: scroll;
         margin-top: 20px;
     }
 
-    table {
+    .patrocinio_main table {
         width: 100%;
         border-collapse: collapse;
     }
 
-    table tr:nth-child(2) {
+    .patrocinio_main table tr:nth-child(2) {
         background-color: var(--branco_footer);
     }
 
-    th {
+    .patrocinio_main th {
         padding: 10px;
     }
 
-    td {
+    .patrocinio_main td {
         border-bottom: 1px solid var(--cinzaBorda);
     }
 
-    .row {
+    .patrocinio_main .row {
         justify-content: flex-start;
     }
 }

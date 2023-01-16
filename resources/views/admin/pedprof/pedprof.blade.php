@@ -22,14 +22,14 @@
                 <table id="pedprof" class="table table-striped align-middle dataTable no-footer display">
                     <thead>
                         <tr class="title">
-                            <th>id</th>
-                            <th>Nome</th>
-                            <th>Modalidade</th>
-                            <th>Email</th>
-                            <th>Telefone</th>
-                            <th>CV</th>
-                            <th>Estado</th>
-                            <th class="more">
+                            <th style="text-align: center;">id</th>
+                            <th style="text-align: center;">Nome</th>
+                            <th style="text-align: center;">Modalidade</th>
+                            <th style="text-align: center;">Email</th>
+                            <th style="text-align: center;">Telefone</th>
+                            <th style="text-align: center;">CV</th>
+                            <th style="text-align: center;">Estado</th>
+                            <th style="text-align: center;" class="more">
                                 <span class="material-symbols-outlined">
                                     more_vert
                                 </span>
@@ -128,8 +128,12 @@
                 {
                     "bSortable": false
                 },
-                null,
-                null,
+                {
+                    "bSortable": false
+                },
+                {
+                    "bSortable": false
+                },
                 null,
                 {
                     "bSortable": false

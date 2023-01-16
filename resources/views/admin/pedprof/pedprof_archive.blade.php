@@ -18,12 +18,12 @@
                 <table id="arquivados" class="tabela-arquivados table table-striped align-middle dataTable no-footer display">
                     <thead>
                         <tr class="title">
-                            <th>Nome</th>
-                            <th>Modalidade</th>
-                            <th>Email</th>
-                            <th>Telefone</th>
-                            <th>CV</th>
-                            <th>Restaurar</th>
+                            <th style="text-align: center;">Nome</th>
+                            <th style="text-align: center;">Modalidade</th>
+                            <th style="text-align: center;">Email</th>
+                            <th style="text-align: center;">Telefone</th>
+                            <th style="text-align: center;">CV</th>
+                            <th style="text-align: center;">Restaurar</th>
                         </tr>
                     </thead>
                     <tbody>

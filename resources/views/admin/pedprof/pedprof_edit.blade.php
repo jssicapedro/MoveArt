@@ -49,7 +49,8 @@
                             </div>
                             <div class="acerca_sob">
                                 <p class="sob_titulo">Modalidade sugerida</p>
-                                <input type="text" name="modalidade" class="conteudo" value="{{$pedidos->modalidade}}" readonly>
+                                <input type="hidden" name="modalidade" class="conteudo" value="{{$pedidos->modalidade}}">
+                                <p class="conteudo">{{$pedidos->modalidade}}</p>
                             </div>
                         </div>
                     </div>
