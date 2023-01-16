@@ -172,7 +172,8 @@ input.form-control.va {
 }
 
 .first_imgs,
-.second_imgs {
+.second_imgs,
+.banner_img {
     margin: 10px;
     padding: 5px
 }
@@ -180,7 +181,8 @@ input.form-control.va {
 .mod_create_main .title_fm,
 .mod_create_main .title_fmm,
 .mod_create_main .title_fma,
-.mod_create_main .title_fh {
+.mod_create_main .title_fh,
+.mod_create_main .title_b{
     padding: 5px;
     color: #adadad;
     font-size: 10pt;
@@ -231,7 +233,8 @@ input.form-control.va {
 input.form-control.n_fma,
 input.form-control.n_fmm,
 input.form-control.n_fh,
-input.form-control.n_fm {
+input.form-control.n_fm,
+input.form-control.n_b {
     margin: 5px;
     border-top: none;
     border-left: none;
@@ -358,7 +361,8 @@ h1.title {
 .mod_show_main .title_fh,
 .mod_show_main .title_fm,
 .mod_show_main .title_fmm,
-.mod_show_main .title_fma
+.mod_show_main .title_fma,
+.mod_show_main .title_b
 {
     padding-bottom: 10px;
     font-family: 'Poppins',sans-serif;
@@ -366,7 +370,8 @@ h1.title {
 .mod_show_main img.img_fm,
 .mod_show_main img.img_fh,
 .mod_show_main img.img_fmm,
-.mod_show_main img.img_fma 
+.mod_show_main img.img_fma,
+.mod_show_main img.img_b
 {
     width: 100%;
 }

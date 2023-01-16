@@ -20,7 +20,7 @@
         <h1>
             <i class="fa-solid fa-pen-ruler"></i> Editar Modalidade
         </h1>
-        <form action="{{ route('modalidades.update', $modalidade->id) }}" method="POST">
+        <form action="{{ route('modalidades.update', $modalidade->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="first">
                 <div class="primeira_info">
@@ -53,12 +53,10 @@
                         <div class="col-6">
                             <div class="title_fm">Foto Descrição</div>
                             <img class="img_upl" src="{{ url('storage/modalidades/'.$modalidade->foto_desc) }}" alt="">
-
                         </div>
                         <div class="col-6">
                             <div class="title_fh">Foto do horário</div>
                             <img class="img_upl" src="{{ url('storage/modalidades/'.$modalidade->foto_horario) }}" alt="">
-
                         </div>
                         <div class="col-6"> <input type="text" class="form-control n_fm" name="" id="" disabled value="{{$modalidade->foto_desc}}"></div>
                         <div class="col-6"><input type="text" class="form-control n_fh" name="" id="" disabled value="{{$modalidade->foto_horario}}"></div>
@@ -67,19 +65,24 @@
                         <div class="col-6">
                             <div class="title_fmm">Foto modalidade Mensal</div>
                             <img class="img_upl" src="{{ url('storage/modalidades/'.$modalidade->foto_mensal) }}" alt="">
-
                         </div>
                         <div class="col-6">
                             <div class="title_fma">Foto modalidade Anual</div>
                             <img class="img_upl" src="{{ url('storage/modalidades/'.$modalidade->foto_anual) }}" alt="">
-
                         </div>
                         <div class="col-6"><input type="text" class="form-control n_fmm" name="" id="" disabled value="{{$modalidade->foto_mensal}}"></div>
                         <div class="col-6"><input type="text" class="form-control n_fma" name="" id="" disabled value="{{$modalidade->foto_anual}}"></div>
                     </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="title_b">Foto banner</div>
+                            <img class="img_upl" src="{{ url('storage/modalidades/'.$modalidade->foto_banner) }}" alt="">
+                            <input type="text" class="form-control n_b" name="" id="" disabled value="{{$modalidade->foto_banner}}">
+                        </div>
+                    </div>
                 </div>
             </div>
-                <div class="imagens">
+            <div class="imagens">
                 <legend><i class="fa-solid fa-file-image"></i> Alterar Imagens</legend>
                 <div class="imgs_edit">
                     <div class="first_imgs">
@@ -100,9 +103,12 @@
                         <label for="fma"><i class="fa fa-plus"></i></label>
                         <input type="file" class="upload_img" name="" id="fma" accept=".jpg, .jpeg, .png">
                     </div>
+                    <div class="banner_img">
+                        <div class="title_b">Foto Banner</div>
+                        <label for="b"><i class="fa fa-plus"></i></label>
+                        <input type="file" class="upload_img" name="foto_mensal" id="b" accept=".jpg, .jpeg, .png">
+                    </div>
                 </div>
-
-
             </div>
             <a id="button" class="button" href="#" type="submit">Atualizar<i id="arrow-hover" class="fa-solid fa-circle-check"></i></a>
         </form>

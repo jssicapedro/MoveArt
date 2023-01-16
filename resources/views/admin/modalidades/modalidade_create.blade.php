@@ -20,7 +20,7 @@
         <h1>
             <img src="https://img.icons8.com/ios-filled/50/null/new.png" /> Nova Modalidade
         </h1>
-        <form action="{{route('modalidades.store')}}" method="POST">
+        <form action="{{route('modalidades.store')}}" method="POST" enctype="multipart/form-data">
             <div class="first">
                 <div class="primeira_info">
                     <legend><i class="fa-solid fa-circle-info"></i> Primeira Informação</legend>
@@ -63,6 +63,11 @@
                         <div class="title_fma">Foto modalidade Anual</div>
                         <label for="fma"><i class="fa fa-plus"></i></label>
                         <input type="file" class="upload_img" name="foto_anual" id="fma" accept=".jpg, .jpeg, .png">
+                    </div>
+                    <div class="banner_img">
+                    <div class="title_b">Foto Banner</div>
+                        <label for="b"><i class="fa fa-plus"></i></label>
+                        <input type="file" class="upload_img" name="foto_mensal" id="b" accept=".jpg, .jpeg, .png">
                     </div>
                 </div>
             </div>

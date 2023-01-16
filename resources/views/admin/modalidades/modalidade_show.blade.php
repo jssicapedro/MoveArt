@@ -59,6 +59,10 @@
                     <div class="title_fma">Foto modalidade Anual</div>
                     <img class="img_fma" src="{{ url('storage/modalidades/'.$modalidade->foto_anual) }}" alt="">
                 </div>
+                <div class="col">
+                    <div class="title_b">Foto banner</div>
+                    <img class="img_b" src="{{ url('storage/modalidades/'.$modalidade->foto_banner) }}" alt="">
+                </div>
             </div>
         </form>
     </div>
