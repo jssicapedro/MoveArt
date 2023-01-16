@@ -75,7 +75,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
 
+
 /* back patrocinio */
+
 Route::get('admin/users', [UsersBackController::class, 'index']);
 Route::get('add-user', [UsersBackController::class, 'create']);
 Route::post('add-user', [UsersBackController::class, 'store']);
@@ -98,6 +100,8 @@ Route::get('/download/{file}', [PedidoprofessorController::class, 'download'])->
 Route::delete('/admin/pedprof/delete/{pedidos}', [PedidoprofessorController::class, 'delete'])->name('pedprof.destroy');
 Route::get('/admin/pedprof/archive', [PedidoprofessorController::class, 'archive'])->name('arquivos');
 Route::get('/admin/pedprof/restore/{arquivados}', [PedidoprofessorController::class, 'restore'])->name('restore.pedprof');
+
+
 
 
 
