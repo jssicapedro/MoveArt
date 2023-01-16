@@ -101,7 +101,7 @@
                                                 <div class="form-group mb-3">
                                                     <label for="password">Password<span>*</span></label>
                                                     <input type="password" name="password" id="password"
-                                                        class="form-control form-control-sm" value="{{ $user->password}}">
+                                                        class="form-control form-control-sm" value="">
                                                 </div>
                                                 <div class="form-group mb-3">
                                                     <label for="nif">Nif</label>
@@ -112,7 +112,7 @@
                                                 <div class="form-group mb-3">
                                                     <label for="cod_postal">Código Postal<span>*</span></label>
                                                     <input type="text" name="cod_postal" id="cod_postal"
-                                                        class="form-control form-control-sm" value="{{ $user->primeiro }}">
+                                                        class="form-control form-control-sm" value="{{ $user->cod_postal }}">
                                                 </div>
                                             </div>
 
