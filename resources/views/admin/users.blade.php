@@ -237,7 +237,7 @@
                                                                         </div>
                                                                         <div class="col-3 nas">
                                                                             <div class="user_list"
-                                                                                style="padding-top: 46px">
+                                                                                style="padding-top: 60px">
                                                                                 <ul>
                                                                                     <li><span>CC: </span>
                                                                                         @if ($user->cc == null)
@@ -273,7 +273,7 @@
                                                                         </div>
                                                                         <div class="col-3 nas">
                                                                             <div class="user_list"
-                                                                                style="padding-top: 46px">
+                                                                                style="padding-top: 60px">
                                                                                 <ul>
                                                                                     <li><span>Código-Postal:
                                                                                         </span>
