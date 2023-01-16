@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PerfilRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Modalidade;
@@ -70,10 +71,20 @@ class PageController extends Controller
     }
 
     public function perfil(){
-        return view('perfil');
+        $user = User::all();
+        return view('perfil', compact('user'));
     }
-
-    protected $table='modalidade';
+    
+    public function edit_perfil(User $user){
+        return view('perfil/update_perfil', compact('user'));
+    }
+     public function update_perfil(PerfilRequest $request, User $user) {
+        $fields=$request->validated();
+        $user->fill($fields);
+        $user->save();
+        dd($request);
+        return redirect()->route('perfil')->with('success','Perfil atualizado com sucesso');
+     }
 
     /* ------- landingPages ------- */
     public function notifications(){

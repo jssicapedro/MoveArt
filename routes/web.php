@@ -24,6 +24,10 @@ Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas'
 
 Route::get('/perfil', [PageController::class, 'perfil'])->name('perfil');
 
+Route::get('/perfil/editar',[PageController::class, 'edit_perfil'])->name('edit_perfil');
+
+Route::put('/perfil/editar',[PageController::class, 'update_perfil'])->name('update_perfil');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -59,3 +63,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 /* ------- Back ------- */
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
+
+
+
+
+
+
+
