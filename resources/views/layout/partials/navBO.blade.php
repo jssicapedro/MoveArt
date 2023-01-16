@@ -33,7 +33,8 @@
                 <li>
                     <a href="{{ asset('admin/pedprof') }}">
                         <span class="icon">
-                            <ion-icon name="person-add-outline"></ion-icon>
+                            <ion-icon name="apps-outline"></ion-icon>
+                            <box-icon type='solid' name='user-check'></box-icon>
                         </span>
                         <span class="titulo">Pedidos Professores</span>
                     </a>
@@ -61,7 +62,7 @@
 
 
                 <li>
-                    <a href="{{ asset('/') }}">
+                    <a href="{{ asset('eventos/') }}">
                         <span class="icon">
                             <ion-icon name="ticket-outline"></ion-icon>
                         </span>
