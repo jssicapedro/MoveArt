@@ -21,14 +21,16 @@
                 </li>
 
 
-                <li>
-                    <a href="{{ asset('') }}">
-                        <span class="icon">
-                            <ion-icon name="people-outline"></ion-icon>
-                        </span>
-                        <span class="titulo">Users</span>
-                    </a>
-                </li>
+
+            <li>
+                <a href="{{ asset('admin/users') }}">
+                    <span class="icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </span>
+                    <span class="titulo">Users</span>
+                </a>
+            </li>
+
 
                 <li>
                     <a href="{{ asset('admin/pedprof') }}">

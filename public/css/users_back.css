@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+/* ---- reset ---- */ 
+body
+{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: 'Poppins', sans-serif;
+} 
+
+.section-padding {
+    padding: 0px;
+  }
+#user_photo img{
+  max-height:100%; 
+  max-width:100%;
+  object-fit: contain;
+}
+#user_photo{
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+.active>.page-link, .page-link.active{
+  background-color: #747474;
+  border-color:#747474;
+}
+.page-link{
+  color: #747474;
+}
+.page-item a:hover{
+  color: #191919
+}
+.tbody td {
+  height: 40px;
+  line-height: 40px;
+}
+.hiddenRow {
+  padding: 0 !important;
+}
+#view_user_photo{
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+#view_user_photo img{
+  max-height:100%; 
+  max-width:100%;
+  object-fit: contain;
+}
+#expand_user{
+  padding: 30px 30px;
+}
+.user_list ul, li{
+list-style-type: none;
+padding-left: 0;
+}
+.user_list li{
+  margin: 0 0 16px 0;
+}
+.nas{
+  width: fit-content;
+  padding-right: 50px;
+}
+
+.buttons .add{
+background-color: #eeb2b5;
+border-radius: 25px;
+transition: 0.3s;
+border: 0;
+font-weight: 500;
+color: #fff;
+padding: 10px 15px;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.buttons .add:hover{
+  background-color: #d9a1a4;
+  }
+.buttons .load{
+  background-color: #fff;
+  border-radius: 25px;
+  transition: 0.3s;
+  border: 0;
+  font-weight: 500;
+  color: #303030;
+  padding: 10px 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  .buttons .load:hover{
+    background-color: rgb(239, 239, 239);
+    }
+
+#add{
+  margin-right: 15px;
+}
+.icon_btns i{
+  color:#eeb2b5;
+}
+.icon_btns i:hover{
+  color:#d9a1a4;
+}
+
+.user_list{
+font-size: 14px;  
+
+}
+.user_list span{
+font-weight: 600;
+
+}
+.user_name h2 {
+  color: #eeb2b5;
+  font-weight: 700;
+}
+.user_name{
+  padding-bottom: 13px;
+}
+.head_title h2{
+  font-weight: 700;
+  font-size: 40px;
+}
+.rr{
+  background-color: #fff;
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.bottom_tr th{
+  padding-top: 20px ;
+  padding-bottom: 20px ;
+}
+.id-pad td.pad, th.pad{
+  padding-left: 35px;
+}
+tr.bottom_tr{
+  border-width: 0 0 3px 0;
+}
+  .btn_edit_div{
+    padding-top: 20px;
+  }
+
+  .form_label label{
+    font-weight: 600;
+  }
+
+  #user_main_content{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 250px;
+    transition: 0.5s;
+  }
+
+  .profile-pic-div{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: -50%;
+    transform: translate(-50%,-20%);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: rgb(251, 251, 251);
+}
+
+#photo{
+    height: 100%;
+    width: 100%;
+}
+
+#file{
+    display: none;
+}
+
+#uploadBtn{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    line-height: 30px;
+    font-family: sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    display: block;
+}
+#uploadBtn:hover{
+  background: rgba(110, 110, 110, 0.7);
+}
+.foto{
+  position: relative;
+  min-height: 150px;
+}
+
+.icon_camara{
+padding-top: 5px;
+}
+.icon_camara i{
+font-size: 25px;
+  }
+  .form_add label{
+    font-size: 15px;
+    color: #8a8a8a;
+  }
+  .form_add label span{
+    font-size: 15px;
+    color: #eeb2b5;
+  }
+
+p#spancampo{
+  font-size: 13px;
+  color: #8a8a8a;
+}
+
+  #adduser{
+
+    margin-top: 10px;
+  }
+  .required_field{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+ .search{
+    background-color: #eeb2b5;
+    border-radius: 25px;
+    transition: 0.3s;
+    border: 0;
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    
+    .search:hover{
+      background-color: #d9a1a4;
+       color: #fff;
+      }
+      .admin_id_perfil{
+        background-color: #d296d66f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 0px;
+        border: 1px solid #d296d6;
+        border-radius: 25px;
+        color: #d296d6;
+
+      }
+      .prof_id_perfil{
+        background-color: #f7d5a171;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 10px;
+        border: 1px solid #e5c491;
+        border-radius: 25px;
+        color: #e5c491;
+
+      }
+      .aluno_id_perfil{
+        background-color: #eeb2b574;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 10px;
+        border: 1px solid #e0a5a8;
+        border-radius: 25px;
+        color: #e0a5a8;
+
+      }
+      .delt{
+        background-color: #eeb2b5;
+        border-radius: 25px;
+        transition: 0.3s;
+        border: 0;
+        font-weight: 500;
+        color: #fff;
+        padding: 10px 15px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+        
+        .delt:hover{
+          background-color: #d9a1a4;
+           color: #fff;
+          }
+
+          .canc{
+            background-color: #fff;
+            border-radius: 25px;
+            transition: 0.3s;
+            border: 0;
+            font-weight: 500;
+            color: #303030;
+            padding: 10px 15px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            }
+            .canc:hover{
+              background-color: rgb(239, 239, 239);
+              color: #303030;
+              }
+          .main_delete{
+            padding: 20px 0;
+          }
+          .icon_delete i{
+            font-size: 70px !important;
+            color:#d9a1a486;
+          }
+          .icon_delete{
+            padding: 0 0 25px 0;
+          }

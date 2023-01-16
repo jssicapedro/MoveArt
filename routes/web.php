@@ -9,6 +9,7 @@ use App\Http\Controllers\InscricaoController;
 use App\Http\Controllers\PatrocinioController;
 use App\Http\Controllers\PedidoprofessorController;
 use App\Http\Controllers\ModalidadesBackController;
+use App\Http\Controllers\UsersBackController;
 use App\Models\Modalidade;
 
 /* ------- Front ------- */
@@ -75,6 +76,14 @@ Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashbo
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
 
 /* back patrocinio */
+Route::get('admin/users', [UsersBackController::class, 'index']);
+Route::get('add-user', [UsersBackController::class, 'create']);
+Route::post('add-user', [UsersBackController::class, 'store']);
+Route::get('edit-user/{id}', [UsersBackController::class, 'edit']);
+Route::put('update-user/{id}', [UsersBackController::class, 'update']);
+Route::post('delete-user', [UsersBackController::class, 'destroy']);
+
+
 Route::get('/admin/patrocinio', [PatrocinioController::class, 'index'])->name('patrocinios');
 Route::get('/admin/patrocinio/show/{patrocinio}', [PatrocinioController::class, 'show'])->name('patrocinios.show');
 Route::get('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'edit'])->name('patrocinios.edit');
@@ -90,6 +99,8 @@ Route::delete('/admin/pedprof/delete/{pedidos}', [PedidoprofessorController::cla
 Route::get('/admin/pedprof/archive', [PedidoprofessorController::class, 'archive'])->name('arquivos');
 Route::get('/admin/pedprof/restore/{arquivados}', [PedidoprofessorController::class, 'restore'])->name('restore.pedprof');
 
+
+
 /*Back Das Modalidades */
 Route::get('admin/modalidades',[ModalidadesBackController::class,'index'])->name('Modalidades');
 
@@ -100,3 +111,4 @@ Route::get('/admin/modalidades/show/{modalidade}',[ModalidadesBackController::cl
 
 Route::get('/admin/modalidades/edit/{modalidade}',[ModalidadesBackController::class, 'edit'])->name('modalidades.edit');
 Route::post('/admin/modalidades/update/{modalidade}',[ModalidadesBackController::class, 'update'])->name('modalidades.update');
+

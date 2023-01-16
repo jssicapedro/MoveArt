@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->bigInteger('modalidade_id')->unsigned();
             $table->foreign('modalidade_id')->references('id')->on('modalidades');
+            $table->timestamps();
         });
     }
 

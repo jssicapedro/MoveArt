@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Modalidade;
@@ -113,12 +114,10 @@ class PageController extends Controller
         return view('dashboardBO', compact('evento','modalidade','users','patrocinios'));
     }
 
+    
     public function modalidades(){
         return view('admin/modalidades');
     }
 
-    /* public function patrocinios(){
-        $patrocinios = Patrocinio::all();
-        return view('admin/patrocinios', compact('patrocinios'));
-    } */
+
 }
