@@ -20,7 +20,7 @@
     <h1>
       <img src="https://img.icons8.com/glyph-neue/64/null/dancing.png" /> Modalidades
     </h1>
-    <button class="create"> <a href="{{ asset('/admin/modalidades/create') }}">Nova Modalidade <i class="fa-solid fa-plus"></i></a> </button> button search
+    <button class="create"> <a href="{{ asset('/admin/modalidades/create') }}">Nova Modalidade <i class="fa-solid fa-plus"></i></a> </button>
     <div class="row head">
       <div class="col-1" style="text-align: center;">id</div>
       <div class="col-2" style="text-align: center;">Imagem</div>

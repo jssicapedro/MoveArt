@@ -2,16 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\Patrocinio;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Redirect;
+use App\Mail\RespostaPatrocinio;
+use Illuminate\Support\Facades\Mail;
 
 class PatrocinioController extends Controller
 {
     public function index()
     {
         $patrocinios = Patrocinio::all();
-        return view('admin.patrocinios.patrocinio', compact('patrocinios'));
+        $quantidade = $patrocinios->where('estado', 'sem resposta')->count();
+        /* dd($quantidade); */
+        return view('admin/patrocinios/patrocinio', compact('patrocinios'), compact('quantidade'));
     }
 
     public function create()
@@ -19,13 +25,22 @@ class PatrocinioController extends Controller
         return view('patrocinio');
     }
 
-    public function store(Request $request)
+    public function store(Request $request, Patrocinio $patrocinio)
     {
-        $request->validate([
-            'nome' => 'required',
-            'email' => 'required|email',
-            'valor' => 'required',
-        ]);
+        $request->validate(
+            [
+                'nome' => 'required',
+                'email' => 'required|email',
+                'valor' => 'required',
+                'mensagem' => 'required',
+            ],
+            [
+                'nome.required' => 'Preencha o campo do NOME',
+                'email.required' => 'Preencha o campo do EMAIL',
+                'valor.required' => 'Preencha o campo do VALOR',
+                'mensagem.required' => 'Preencha o campo do MENSAGEM',
+            ]
+        );
 
         Patrocinio::create([
             'nome' => $request->nome,
@@ -36,21 +51,29 @@ class PatrocinioController extends Controller
         ]);
 
         return redirect('patrocinio')->with('success', true);
-       /*  return redirect('patrocinio')->with('erro'); */
     }
 
     public function show(Patrocinio $patrocinio)
     {
-        return view('admin.patrocinios.patrocinio_show', ['patrocinio' => $patrocinio]);
+        return view('admin/patrocinios/patrocinio_show', ['patrocinio' => $patrocinio]);
     }
 
     public function edit(Patrocinio $patrocinio)
     {
-        return view('admin.patrocinios.patrocinio_edit', ['patrocinio' => $patrocinio]); 
+        return view('admin/patrocinios/patrocinio_edit', ['patrocinio' => $patrocinio]);
     }
 
     public function update(Request $request, Patrocinio $patrocinio)
     {
+        $request->validate(
+            [
+                'resposta' => 'required',
+            ],
+            [
+                'resposta.required' => 'Para atualizar este patrocínio tem de dar uma RESPOSTA ao mesmo',
+            ]
+        );
+
         $patrocinio->update([
             'nome' => $request->nome,
             'email' => $request->email,
@@ -61,12 +84,15 @@ class PatrocinioController extends Controller
             'estado' => $request->estado,
         ]);
 
-        /* return "patrocinio atualizado com sucesso"; */
-        return redirect('/admin/patrocinio');
+        Mail::to($request->email)->send(new RespostaPatrocinio($patrocinio));
+        
+        return redirect('admin/patrocinio');
     }
 
-    public function destroy(Patrocinio $patrocinio)
+    public function delete(Patrocinio $patrocinio)
     {
-        //
+        $patrocinio->delete();
+
+        return redirect('admin/patrocinio')->with('success', true);
     }
 }

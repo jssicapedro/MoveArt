@@ -18,6 +18,27 @@
 </section>
 @endif
 
+@if(session('success_pedprof'))
+<section>
+    <div class=" container mt-5">
+        <div class="row success">
+            <div class="col-sm-12">
+                <div class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
+                    O seu formulário foi enviado com Sucesso!<br>Entraremos em contacto assim que possível
+                    <button type="button" class="close font__size-18" data-dismiss="alert">
+                        <span aria-hidden="true"><a>
+                                <i class="fa fa-times greencross"></i>
+                            </a></span>
+                        <span class="sr-only">X</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endif
+
+
 @if(session('erro'))
 <section>
     <div class=" container mt-5">

@@ -1,2 +1,152 @@
+.navfront {
+  z-index: 3000;
+  position: relative;
+}
 
+.navigation {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: white;
+    border-left: 10px solid white;
+    transition: 0.5s;
+    overflow: hidden;
+    border-radius: 0px 30px 20px 0px;
+  }
+  .navigation.active {
+    width: 80px;
+  }
+  
+  .navigation ul {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    width: 100%;
+  }
+  
+  .navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  
+  .navigation ul li:hover,
+  .navigation ul li.hovered {
+    background-color: #f7f4f4;
+  }
+  
+  .navigation ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none;
+  }
+  
+  .navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #343438;
+  }
+  .navigation ul li:hover a,
+  .navigation ul li.hovered a {
+    color: #aa4215;
+  }
+  
+  .navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+  }
+  .navigation ul li a .icon ion-icon {
+    font-size: 1.75rem;
+  }
+  
+  .navigation ul li a .titulo {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+  }
+  
+  /* Seleçao Menu */
+  .navigation ul li:hover a::before,
+  .navigation ul li.hovered a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+  }
+  .navigation ul li:hover a::after,
+  .navigation ul li.hovered a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+  }
+  
+  
+  
+  
+  
+  
+  /*Main*/
+  .dashboard_main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 250px;
+    min-height: 100vh;
+    transition: 0.5s;
+  }
+  .dashboard_main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+  }
+  
+  .parteSuperior {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+  
+  .utilizador_dashboar {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
   

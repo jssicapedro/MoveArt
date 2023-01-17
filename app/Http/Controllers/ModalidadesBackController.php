@@ -14,8 +14,8 @@ class ModalidadesBackController extends Controller
     public function create(){
         return view('admin.modalidades.modalidade_create');
     }
-    public function show(Modalidade $mod){
-        return view('admin.modalidades.modalidade_show', ['modalidade' => $mod]);
+    public function show(Modalidade $modalidade){
+        return view('admin.modalidades.modalidade_show', ['modalidade' => $modalidade]);
     }
     public function edit(Modalidade $modalidade)
     {
@@ -23,7 +23,7 @@ class ModalidadesBackController extends Controller
     }
     public function store(Request $request){
         $mod = Modalidade::create([
-            //nome do input=> função request -> nome do campo na bd
+            //nome do campo bd=> função request -> nome do input
             'modalidade' => $request->modalidade,
             'descricao' => $request->descricao,
             'valor_mensal' => $request->valor_mensal,

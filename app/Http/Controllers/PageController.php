@@ -125,10 +125,4 @@ class PageController extends Controller
         return view('dashboardBO', compact('evento','modalidade','users','patrocinios'));
     }
 
-    
-    public function modalidades(){
-        return view('admin/modalidades');
-    }
-
-
 }

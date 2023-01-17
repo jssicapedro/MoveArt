@@ -1,6 +1,6 @@
 @extends('layout.masterBO')
 
-@section('title', 'MoveArt - Patrocínios')
+@section('title', 'MoveArt - Responder pedido')
 
 @section('links')
 <link rel="stylesheet" href="{{ asset('css/pedidos_back.css') }}">
@@ -8,58 +8,93 @@
 
 @section('main')
 <div class="dashboard_main">
-    <div class="patrocinio_main">
+    <div class="pedidos_main">
         <a class="voltar" href="{{ asset('admin/pedprof')}}">Voltar</a>
         <div class="about">
-            <h1>Atualizar pedido</h1>
+            <h1>Responder a {{$pedidos->primeiro}}</h1>
             <hr>
             <form action="{{ route('pedprof.update', ['pedidos' => $pedidos->id]) }}" method="POST">
                 @csrf
-                <div class="row">
-                    <div class="col-2">
-                        <label class="sobre" for="">Nome</label> <br />
-                        <input type="text" name="nome" class="conteudo" value="{{$pedidos->primeiro}}" readonly>
+                <div class="pedidos_sobre">
+                    <div class="cont">
+                        <div class="acerca">
+                            <h2>Sobre</h2>
+                            <div class="acerca_sob">
+                                <p class="sob_titulo">Nome</p>
+                                <input type="text" name="primeiro" class="conteudo" value="{{$pedidos->primeiro}}" readonly>
+                            </div>
+                            <div class="acerca_sob">
+                                <p class="sob_titulo">Apelido</p>
+                                <input type="text" name="apelido" class="conteudo" value="{{$pedidos->apelido}}" readonly>
+                            </div>
+                            <div class="acerca_sob">
+                                <p class="sob_titulo">Nascimento</p>
+                                <input type="text" name="data_nac" class="conteudo" value="{{$pedidos->data_nac}}" readonly>
+                            </div>
+                            <div class="acerca_sob">
+                                <p class="sob_titulo">Telefone</p>
+                                <input type="text" name="telefone" class="conteudo" value="{{$pedidos->telefone}}" readonly>
+                            </div>
+                            <div class="acerca_sob">
+                                <p class="sob_titulo">Email</p>
+                                <input type="text" name="email" class="conteudo" value="{{$pedidos->email}}" readonly>
+                            </div>
+                        </div>
+                        <div class="exp">
+                            <h2>Experiência</h2>
+                            <div class="acerca_sob">
+                                <p class="sob_titulo">CV</p>
+                                <input type="hidden" name="cv" class="conteudo" value="{{$pedidos->cv}}">
+                                <a href="{!! route('cv_download', $pedidos->cv) !!}" download>Fazer Download do CV</a>
+                            </div>
+                            <div class="acerca_sob">
+                                <p class="sob_titulo">Modalidade sugerida</p>
+                                <input type="hidden" name="modalidade" class="conteudo" value="{{$pedidos->modalidade}}">
+                                <p class="conteudo">{{$pedidos->modalidade}}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <label class="sobre" for="">Apelido</label> <br />
-                        <input type="text" name="nome" class="conteudo" value=" {{$pedidos->apelido}}" readonly>
-                    </div>
-                    <div class="col-2">
-                        <label class="sobre" for="">Email</label> <br />
-                        <input type="email" name="email" class="conteudo" value="{{$pedidos->email}}" readonly>
-                    </div>
-                    <div class="col-2">
-                        <label class="sobre" for="">Telefone</label> <br />
-                        <input type="tel" name="telefone" class="conteudo" value="{{$pedidos->telefone}}" readonly>
-                    </div>
-                    <div class="col-2">
-                        <label class="sobre" for="">CV</label> <br />
-                        <input type="file" name="cv" class="conteudo" value="{{$pedidos->cv}}" readonly>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <label class="sobre" for="">Data de nascimento</label> <br />
-                        <input type="text" name="dta_nac" class="conteudo" value="{{$pedidos->data_nac}}" readonly>
-                    </div>
-                    <div class="col-4">
-                        <label class="sobre" for="">Modalidade</label> <br />
-                        <input type="text" name="cv" class="conteudo" value="{{$pedidos->modalidade}}" readonly>
-                    </div>
-                    <div class="col-4">
-                        <label class="sobre" for="">Curriculo</label> <br />
-                        <input type="text" name="cv" class="conteudo" value="{{$pedidos->cv}}" readonly>
-                    </div>
-                </div>
-                <div class="row resp">
-                    <div class="col">
-                        <label class="sobre" for="">Resposta</label> <br />
+                    <div class="responderPedido">
+                        <h2>Modalidade sugerida</h2>
                         <textarea name="resposta" class="conteudo">{{$pedidos->resposta}}</textarea>
+                        @if($pedidos->estado_do_pedido == 'aceite'||$pedidos->estado_do_pedido == 'recusado')
+                        <div class="alerta">
+                            <p class="error">Este pedido já foi respondido</p>
+                        </div>
+                        @else
+                        <div class="btn">
+                            <ul>
+                                <li>
+                                    <input type="radio" id="f-option" name="estado" value="aceite">
+                                    <label for="f-option">Aceitar</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="f-option" name="estado" value="recusado">
+                                    <label for="f-option">Recusar</label>
+                                </li>
+                            </ul>
+                        </div>
+                        @endif
                     </div>
                 </div>
-                <div class="btn">
-                    <input type="submit" value="ATUALIZAR" class="enviar">
+
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
+                @endif
+
+
+
+                @if($pedidos->estado_do_pedido == 'aceite'||$pedidos->estado_do_pedido == 'recusado')
+
+                @else
+                <input class="enviar" type="submit" value="Enviar resposta">
+                @endif
             </form>
         </div>
     </div>

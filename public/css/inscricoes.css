@@ -13,7 +13,7 @@ section#banner_patrocinio {
     min-height: 450px;
     display: flex;
     width: 100%;
-    background-image: url('../img/inscricoes/ballet.jpg');
+    background-image: url('../img/inscricoes/patrocinio.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: flex-end;
@@ -25,7 +25,7 @@ section#banner_professor {
     min-height: 450px;
     display: flex;
     width: 100%;
-    background-image: url('../img/inscricoes/ballet.jpg');
+    background-image: url('../img/inscricoes/professor.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: flex-end;

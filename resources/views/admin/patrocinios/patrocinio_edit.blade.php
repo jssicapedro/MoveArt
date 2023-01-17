@@ -1,6 +1,6 @@
 @extends('layout.masterBO')
 
-@section('title', 'MoveArt - Patrocínios')
+@section('title', 'MoveArt - Responder patrocínio')
 
 @section('links')
 <link rel="stylesheet" href="{{ asset('css/patrocinios_back.css') }}">
@@ -38,19 +38,34 @@
                 <div class="row msg">
                     <div class="col">
                         <label class="sobre" for="">Mensagem enviada</label> <br />
-                        <textarea name="mensagem" class="conteudo" readonly >{{$patrocinio->mensagem}}</textarea>
+                        <textarea name="mensagem" class="conteudo" readonly>{{$patrocinio->mensagem}}</textarea>
                     </div>
                 </div>
                 <div class="row resp">
                     <div class="col">
                         <label class="sobre" for="">Responder</label> <br />
                         <textarea name="resposta" class="conteudo">{{$patrocinio->resposta}}</textarea>
+                        @if ($errors->any())
+                        <div class="alerta alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
                     </div>
                 </div>
                 <input type="hidden" name="estado" class="conteudo" value="respondido">
+                @if($patrocinio->estado =='respondido')
+                <div class="alerta">
+                    <p class="error">Este patrocínio já foi respondido</p>
+                </div>
+                @else
                 <div class="btn">
                     <input type="submit" value="ATUALIZAR" class="enviar">
                 </div>
+                @endif
             </form>
         </div>
     </div>
