@@ -80,11 +80,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
-Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
 
-
-
-
+/* users */
 Route::get('admin/users', [UsersBackController::class, 'index']);
 Route::get('add-user', [UsersBackController::class, 'create']);
 Route::post('add-user', [UsersBackController::class, 'store']);
@@ -97,10 +94,7 @@ Route::get('/admin/patrocinio', [PatrocinioController::class, 'index'])->name('p
 Route::get('/admin/patrocinio/show/{patrocinio}', [PatrocinioController::class, 'show'])->name('patrocinios.show');
 Route::get('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'edit'])->name('patrocinios.edit');
 Route::post('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'update'])->name('patrocinios.update');
-
-
 Route::delete('/admin/patrocinio/delete/{patrocinio}', [PatrocinioController::class, 'delete'])->name('patrocinios.destroy');
-
 
 /* back pedido professor */
 Route::get('/admin/pedprof', [PedidoprofessorController::class, 'index'])->name('pedidosprof');
@@ -112,19 +106,14 @@ Route::delete('/admin/pedprof/delete/{pedidos}', [PedidoprofessorController::cla
 Route::get('/admin/pedprof/archive', [PedidoprofessorController::class, 'archive'])->name('arquivos');
 Route::get('/admin/pedprof/restore/{arquivados}', [PedidoprofessorController::class, 'restore'])->name('restore.pedprof');
 
-
-
-
-
 /*Back Das Modalidades */
 Route::get('admin/modalidades',[ModalidadesBackController::class,'index'])->name('Modalidades');
-
 Route::get('/admin/modalidades/create',[ModalidadesBackController::class, 'create'])->name('NovaModalidade');
-Route::post('/admin/modalidades/create',[ModalidadesBackController::class, 'store'])->name('modalidades.store');
-
+Route::post('/admin/modalidades/store',[ModalidadesBackController::class, 'store'])->name('modalidades.store');
 Route::get('/admin/modalidades/show/{modalidade}',[ModalidadesBackController::class, 'show'])->name('modalidades.show');
-
 Route::get('/admin/modalidades/edit/{modalidade}',[ModalidadesBackController::class, 'edit'])->name('modalidades.edit');
+Route::post('/admin/modalidades/edit/{mod}',[ModalidadesBackController::class, 'update'])->name('modalidades.update');
+Route::delete('/admin/modalidades/delete/{modalidade}',[ModalidadesBackController::class, 'delete'])->name('modalidades.delete');
 Route::post('/admin/modalidades/update/{modalidade}',[ModalidadesBackController::class, 'update'])->name('modalidades.update');
 
 /*EventosBO*/

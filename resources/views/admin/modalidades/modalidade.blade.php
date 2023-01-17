@@ -9,8 +9,6 @@
 <!-- datatable -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endsection
 
@@ -41,11 +39,19 @@
           <ul class="ops">
             <li><a href="{{ route('modalidades.show', $mod->id) }}"><i class="fa-solid fa-eye"></i></a></li>
             <li><a href="{{ route('modalidades.edit', $mod->id) }}"><i class="fa-solid fa-pen-ruler"></i></a></li>
-            <li><a href=""><i class="fa-solid fa-trash"></i></a></li>
+            <li>
+              <form action="{{ route('modalidades.delete', $mod->id) }}" method="POST">
+                @csrf
+                @method('delete')
+                <button type="submit" class="delete">
+                  <a href=""><i class="fa-solid fa-trash"></i></a>
+                </button>
+              </form>
+            </li>
           </ul>
         </div>
       </div>
-        
+
     </div>
     @endforeach
   </div>
