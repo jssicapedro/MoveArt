@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Modalidade;
 use App\Models\Evento;
 use App\Models\Patrocinio;
+use Auth;
 
 
 class PageController extends Controller
@@ -74,14 +75,14 @@ class PageController extends Controller
         return view('perfil', compact('user'));
     }
     
-    public function edit_perfil(User $user){
-        return view('perfil/update_perfil', compact('user'));
+    public function edit_perfil(){
+        return view('perfil/update_perfil');
     }
-     public function update_perfil(PerfilRequest $request, User $user) {
+     public function update_perfil(PerfilRequest $request) {
+        $user = Auth::user();
         $fields=$request->validated();
         $user->fill($fields);
         $user->save();
-        dd($request);
         return redirect()->route('perfil')->with('success','Perfil atualizado com sucesso');
      }
 
