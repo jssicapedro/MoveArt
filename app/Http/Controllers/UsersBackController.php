@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\File;
 use App\Models\Modalidade;
+use App\Models\UserModalidade;
 use Illuminate\Support\Facades\Hash;
 
 class UsersBackController extends Controller
@@ -39,7 +40,7 @@ class UsersBackController extends Controller
     public function store(Request $request)
     {
 
-        $user = new User();
+       $user = new User();
         $user->primeiro = $request->input('primeiro');
         $user->apelido = $request->input('apelido');
         $user->email = $request->input('email');
@@ -62,6 +63,11 @@ class UsersBackController extends Controller
         }
         $user->save();
 
+        $mod = new UserModalidade();
+        $mod->modalidade_id = $request->input('modalidade_id');
+        $mod->user_id = $user->id;
+        $mod->save();
+
         return redirect()->back()->with('status', 'Utilizador adicionado com sucesso.');
     }
     public function edit($id)
@@ -71,7 +77,7 @@ class UsersBackController extends Controller
         return view('admin.user_edit', compact('user'), compact('modalidade'));
     }
     public function update(Request $request, $id)
-    {
+    {  
         $user = User::find($id);
         $user->primeiro = $request->input('primeiro');
         $user->apelido = $request->input('apelido');
@@ -99,6 +105,8 @@ class UsersBackController extends Controller
         }
 
         $user->update();
+       
+
         return redirect()->back()->with('status', 'User editado com sucesso.');
     }
     public function destroy(Request $request)
@@ -109,7 +117,9 @@ class UsersBackController extends Controller
             if (File::exists($destination)) {
                 File::delete($destination);
             }
+            $user->deletemodalidade()->delete();
             $user->delete();
+
             return redirect('admin/users')->with('status', 'Utilizador apagado com sucesso.');
         } else {
             return redirect('admin/users')->with('status', 'Utilizador não apagado.');
