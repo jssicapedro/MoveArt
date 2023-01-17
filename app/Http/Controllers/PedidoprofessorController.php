@@ -2,52 +2,54 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\PedidoProfessor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Redirect;
+use App\Mail\RespostaPedidoRecusado;
+use App\Mail\RespostaPedidoAceite;
+use Illuminate\Support\Facades\Mail;
 
 class PedidoprofessorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $pedidos = PedidoProfessor::all();
-        return view('admin.pedprof.pedprof', compact('pedidos'));
+        $quantidade = $pedidos->where('estado_do_pedido', 'pendente')->count();
+        /* dd($quantidade); */
+        return view('admin.pedprof.pedprof', compact('pedidos'), compact('quantidade'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-       return view('professor');
+        return view('professor');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        $namefile = $request->primeiro . $request->apelido . '.' . $request->cv->extension();
+        $request->validate(
+            [
+                'primeiro' => 'required',
+                'apelido' => 'required',
+                'email' => 'required|email',
+                'telefone' => 'required',
+                'data_nac' => 'required',
+                'modalidade' => 'required',
+                'cv' => 'required',
+            ],
+            [
+                'primeiro.required' => 'Preencha o campo do NOME',
+                'apelido.required' => 'Preencha o campo do APELIDO',
+                'email.required' => 'Preencha o campo do EMAIL',
+                'telefone.required' => 'Preencha o campo do TELEFONE',
+                'data_nac.required' => 'Preencha o campo do DATA DE NASCIMENTO',
+                'modalidade.required' => 'Preencha o campo do MODALIDADE',
+                'cv.required' => 'Manda-nos o teu CV'
+            ]
+        );
 
-        $request->validate([
-            'primeiro' => 'required',
-            'apelido' => 'required',
-            'email' => 'required|email',
-            'telefone' => 'required',
-            'data_nac' => 'required',
-            'modalidade' => 'required',
-            'cv' => 'required',
-        ]);
+        $namefile = $request->primeiro . $request->apelido . '.' . $request->cv->extension();
 
         $request->cv->storeAS('pedidoProf', $namefile);
 
@@ -58,75 +60,79 @@ class PedidoprofessorController extends Controller
             'telefone' => $request->telefone,
             'data_nac' => $request->data_nac,
             'modalidade' => $request->modalidade,
-            'cv'=> $namefile,
-        ]);   
-        
-        return redirect('professor')->with('success');
-        return redirect('professor')->with('erro');
+            'cv' => $namefile,
+        ]);
+
+        return redirect('professor')->with('success_pedprof', true);
     }
 
-    /* public function lista_cv(){
-        $file = Storage::files('pedidoProf');
-        echo'<pre>';
-        print_r($file);
-    } */
-
-
-    public function download($file){
-        return response()->download(storage_path('app/public/pedidoProf/'.$file));
+    public function download($file)
+    {
+        return response()->download(storage_path('app/public/pedidoProf/' . $file));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\PedidoProfessor  $pedidos
-     * @return \Illuminate\Http\Response
-     */
     public function show(PedidoProfessor $pedidos)
     {
         return view('admin.pedprof.pedprof_show', ['pedidos' => $pedidos]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\PedidoProfessor  $pedidos
-     * @return \Illuminate\Http\Response
-     */
     public function edit(PedidoProfessor $pedidos)
     {
-        return view('admin.pedprof.pedprof_edit', ['pedidos' => $pedidos]); 
+        return view('admin.pedprof.pedprof_edit', ['pedidos' => $pedidos]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\PedidoProfessor  $pedidos
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, PedidoProfessor $pedidos)
     {
+        $request->validate(
+            [
+                'resposta' => 'required',
+                'estado' => 'required',
+            ],
+            [
+                'resposta.required' => 'Para atualizar este pedido tem de dar uma RESPOSTA ao mesmo',
+                'estado.required' => 'Não se esqueça de aceitar ou rejeitar o pedido'
+            ]
+        );
+
         $pedidos->update([
-            'nome' => $request->primeiro,
+            'primeiro' => $request->primeiro,
             'apelido' => $request->apelido,
             'email' => $request->email,
             'telefone' => $request->telefone,
-            'dta_nasc' => $request->data_nac,
+            'cv' => $request->cv,
+            'data_nac' => $request->data_nac,
             'modalidade' => $request->modalidade,
+            'resposta' => $request->resposta,
+            'estado_do_pedido' => $request->estado,
         ]);
 
-        return "pedidoProfessor atualizado com sucesso";
+        if ($request->estado === 'aceite') {
+            Mail::to($request->email)->send(new RespostaPedidoAceite($pedidos));
+        } else if ($request->estado === 'recusado') {
+            Mail::to($request->email)->send(new RespostaPedidoRecusado($pedidos));
+        }
+
+        return redirect('admin/pedprof');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\PedidoProfessor  $pedidos
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(PedidoProfessor $pedidos)
+    public function archive()
     {
-        //
+        $arquivados = PedidoProfessor::onlyTrashed()
+            ->orderBy('id', 'desc')->get();
+
+        return view('admin.pedprof.pedprof_archive', compact('arquivados'));
+    }
+
+    public function delete(PedidoProfessor $pedidos)
+    {
+        $pedidos->delete();
+        return redirect()->route('pedidosprof');
+    }
+
+    public function restore($id)
+    {
+        /* PedidoProfessor::whereId($id)->restore(); */
+        PedidoProfessor::withTrashed()->find($id)->restore();
+        return back();
     }
 }

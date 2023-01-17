@@ -23,7 +23,12 @@ class User extends Authenticatable
         'apelido',
         'email',
         'data_nasc',
+        'telefone',
+        'localidade',
+        'rua',
+        'cod_postal',
         'cc',
+        'nif',
         'genero',
         'perfil',
         'password',       
@@ -53,4 +58,8 @@ class User extends Authenticatable
     public function modalidade(){
         return $this->belongsToMany(Modalidade::class, "users_modalidades");
     }   
+
+    public function deletemodalidade(){
+        return $this->hasMany(UserModalidade::class, 'user_id', 'id');
+    }  
 }

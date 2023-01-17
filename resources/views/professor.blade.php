@@ -18,7 +18,7 @@
 @section('main')
 <section id="form_prof">
     <div class="title">
-        <h2>Venha trabalhar connosco!</h2>
+        <h2>Vem trabalhar connosco!</h2>
         <h4>Deixe aqui o seu CV.</h4>
     </div>
     <div class="form">
@@ -27,21 +27,21 @@
             <div class="row">
                 <div class="col-6">
                     <label for="">Nome:</label>
-                    <input name="primeiro" type="text" class="form-control" placeholder="Nome..." required>
+                    <input name="primeiro" type="text" class="form-control" placeholder="Nome..." >
                 </div>
                 <div class="col-6">
                     <label for="">Apelido</label>
-                    <input name="apelido" type="text" class="form-control" placeholder="Apelido..." required>
+                    <input name="apelido" type="text" class="form-control" placeholder="Apelido..." >
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
                     <label for="">Email</label>
-                    <input name="email" type="email" class="form-control" name="prof_email" id="prof_email" placeholder="Email..." required>
+                    <input name="email" type="email" class="form-control" name="prof_email" id="prof_email" placeholder="Email..." >
                 </div>
                 <div class="col-5">
                     <label for="">Telefone</label>
-                    <input name="telefone" type="tel" class="form-control" placeholder="Telefone" max="9" required>
+                    <input name="telefone" type="tel" class="form-control" placeholder="Telefone" max="9" >
                 </div>
             </div>
             <div class="row">
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-6">
                     <label for="tp_modalidade">Tipo de Modalidade:</label>
-                    <select name="modalidade" id="tp_modalidade" class="form-control" required>
+                    <select name="modalidade" id="tp_modalidade" class="form-control" >
                         <option value="Indiferente">Indiferente</option>
                         <option value="Ballet">Ballet</option>
                         <option value="Hip-Hop">Hip-Hop</option>
@@ -67,7 +67,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <input name="cv" type="file" class="form-control-file" accept="application/pdf" required>
+                        <input name="cv" type="file" class="form-control-file" accept="application/pdf" >
                         <span class="cv">*Ficheiro apenas em formato PDF</span>
                     </div>
                 </div>
@@ -83,6 +83,15 @@
                 </div>
             </div>
         </form>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     </div>
 </section>
 @endsection

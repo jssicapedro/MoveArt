@@ -1,21 +1,51 @@
 fazer login (login.bade.php -> navbar/main/footer (layouts > app.blade.php)) ------> 2hrs✅ ------> adicionar animação
 alterar landing page ✅
 separar pedido professor ✅ 
-separar patrocinio ✅ 
+separar patrocínio ✅ 
 começar o Back ✅ 
 adicionar campo de foto_horario nas modalidades ✅ 
+valor mínimo do patrocínio ✅
+Acrescentar coluna de resposta á tabela pedidos_professores ou o admin liga logo para marcar reunião ✅
+delete -> patrocinio ✅ https://www.youtube.com/watch?v=suXG1bs0dHo&ab_channel=Celke
 
 
-valor mínimo do patrocínio 
-validações de formulários
-Acrescentar coluna de resposta á tabela pedidos_professores ou o admin liga logo para marcar reunião
-mensagem de erro/sucesso 
-pesquisar sobre police ---- impede que alunos entrem no back
-relatorio do projeto
+
+softdele -> pedido professor ✅
+            - apaga o registo do pedido passados 6meses
+         -> restaurar - https://www.youtube.com/watch?v=twcDknTcOEw&ab_channel=CodeImprove ✅
 
 
-erros
-editar patrocinio n volta para a listagem
+design da tabela responsivo - patrocínio ✅
+                  - Pedido professor ✅
+
+validações de formulários > mensagem de erro/sucesso ✅
+                          > erro -> não guarda os valores anteriormente inseridos
+
+enviar email quando atualizar mensagem -> quando enviar resposta proibir mandar outra. -> validações ✅
+   - https://mailtrap.io/blog/send-email-in-laravel/ 
+   - https://www.itsolutionstuff.com/post/laravel-send-mail-using-mailtrap-exampleexample.html
+      > pedido professor ✅
+         >>enviar ✅
+         >>alterar design ✅
+
+      > patrocinio ✅
+         >>enviar ✅
+         >>alterar design ✅
+
+Design responsivo view e edit
+      > pedprof ✅
+      > patrocínio ✅
+
+Alertas de confirmação
+      > confirmar se o admin  
+         >> quer arquivar o pedido de professor
+         >>  quer restaurar o pedido de professor
+         >> quer apagar o registo do patrocínio
 
 
-mail estagio
+implementar nav do front no back -> add á mão o css do bootstrap
+dropdown na nav do back
+
+
+pesquisar sobre police/gate ---- impede que alunos entrem no back
+gerar nova página de modalidade automaticamente

@@ -1,4 +1,9 @@
-<nav>
+<!-- @section('links')
+<link rel="stylesheet" href="{{asset('css/navBO.css')}}">
+<link rel="stylesheet" href="{{asset('css/nav.css')}}">
+@endsection -->
+
+<nav class="navback">
     <div class="dashboard_container">
         <div class="navigation">
             <ul>
@@ -9,8 +14,6 @@
                         </span>
                     </li>
                 </a>
-
-
                 <li>
                     <a href="{{ asset('dashboardBO') }}">
                         <span class="icon">
@@ -20,13 +23,20 @@
                     </a>
                 </li>
 
-
                 <li>
-                    <a href="{{ asset('') }}">
+                    <a href="{{ asset('admin/users') }}">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
                         <span class="titulo">Users</span>
+                    </a>
+                </li>
+                <li>
+                <a href="{{ asset('admin/pedprof') }}">
+                        <span class="icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                        </span>
+                        <span class="titulo">Pedidos Professores</span>
                     </a>
                 </li>
 
@@ -52,7 +62,7 @@
 
 
                 <li>
-                    <a href="{{ asset('/') }}">
+                    <a href="{{ asset('') }}">
                         <span class="icon">
                             <ion-icon name="ticket-outline"></ion-icon>
                         </span>

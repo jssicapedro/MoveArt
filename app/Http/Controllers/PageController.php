@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PerfilRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Modalidade;
 use App\Models\Evento;
 use App\Models\Patrocinio;
+use Auth;
 
 
 class PageController extends Controller
@@ -69,10 +71,20 @@ class PageController extends Controller
     }
 
     public function perfil(){
-        return view('perfil');
+        $user = User::all();
+        return view('perfil', compact('user'));
     }
-
-    protected $table='modalidade';
+    
+    public function edit_perfil(){
+        return view('perfil/update_perfil');
+    }
+     public function update_perfil(PerfilRequest $request) {
+        $user = Auth::user();
+        $fields=$request->validated();
+        $user->fill($fields);
+        $user->save();
+        return redirect()->route('perfil')->with('success','Perfil atualizado com sucesso');
+     }
 
     /* ------- landingPages ------- */
     public function notifications(){
@@ -113,12 +125,4 @@ class PageController extends Controller
         return view('dashboardBO', compact('evento','modalidade','users','patrocinios'));
     }
 
-    public function modalidades(){
-        return view('admin/modalidades');
-    }
-
-    /* public function patrocinios(){
-        $patrocinios = Patrocinio::all();
-        return view('admin/patrocinios', compact('patrocinios'));
-    } */
 }
