@@ -69,6 +69,11 @@ button.create {
     background-color: rgb(231, 231, 231);
     box-shadow: rgb(166, 181, 195) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.666) -3px -3px 6px 1px inset;
 }
+button.delete
+{
+    border: none;
+    background-color: transparent;
+}
 
 .modalidades_main a {
     text-decoration: none;
@@ -244,7 +249,7 @@ input.form-control.n_b {
     width: 40%;
 }
 
-a#button.button {
+button#button.button {
     display: inline-flex;
     height: 40px;
     width: 150px;
@@ -262,7 +267,7 @@ a#button.button {
     transition: all .25s
 }
 
-a {
+button#button {
     text-decoration: none;
     letter-spacing: 1px;
 }
@@ -280,14 +285,14 @@ i#arrow-hover {
     color: white;
 }
 
-a#button:hover {
+button#button:hover {
     color: white;
     border: 1px solid #56ab2f;
     background-color: #56ab2f;
     box-shadow: rgb(13, 77, 13) 3px 3px 6px 0px inset, rgb(207, 240, 207) -3px -3px 6px 1px inset;
 }
 
-a#button:hover i {
+button#button:hover i {
     width: 15px;
     opacity: 1;
     transform: translateX(50px);

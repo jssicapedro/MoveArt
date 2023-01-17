@@ -21,6 +21,7 @@
             <img src="https://img.icons8.com/ios-filled/50/null/new.png" /> Nova Modalidade
         </h1>
         <form action="{{route('modalidades.store')}}" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="first">
                 <div class="primeira_info">
                     <legend><i class="fa-solid fa-circle-info"></i> Primeira Informação</legend>
@@ -65,13 +66,15 @@
                         <input type="file" class="upload_img" name="foto_anual" id="fma" accept=".jpg, .jpeg, .png">
                     </div>
                     <div class="banner_img">
-                    <div class="title_b">Foto Banner</div>
+                        <div class="title_b">Foto Banner</div>
                         <label for="b"><i class="fa fa-plus"></i></label>
-                        <input type="file" class="upload_img" name="foto_mensal" id="b" accept=".jpg, .jpeg, .png">
+                        <input type="file" class="upload_img" name="foto_banner" id="b" accept=".jpg, .jpeg, .png">
                     </div>
                 </div>
             </div>
-            <a id="button" class="button" href="#" type="submit">Criar<i id="arrow-hover" class="fa-solid fa-circle-check"></i></a>
+            <button type="submit" id="button" class="button">
+                Criar<i id="arrow-hover" class="fa-solid fa-circle-check"></i>
+            </button>
         </form>
     </div>
 </div>

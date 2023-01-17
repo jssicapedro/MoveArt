@@ -28,9 +28,9 @@
                     <div class="row">
                         <div class="col">
                             <div class="title_nome">Nome da Modalidade</div>
-                            <input type="text" class="form-control nome_mod" name="nome" id="" value="{{$modalidade->modalidade}}">
+                            <input type="text" class="form-control nome_mod" name="modalidade" id="" value="{{$modalidade->modalidade}}">
                             <div class="title_desc">Breve descrição da Modalidade</div>
-                            <textarea name="" class="form-control desc_mod" id="">{{$modalidade->descricao}}</textarea>
+                            <textarea name="descricao" class="form-control desc_mod" id="">{{$modalidade->descricao}}</textarea>
                         </div>
                     </div>
                 </div>
@@ -39,9 +39,9 @@
                     <div class="row">
                         <div class="col">
                             <div class="title_vm">Valor Mensal</div>
-                            <input type="number" class="form-control vm" name="" id="" value="{{$modalidade->valor_mensal}}">
+                            <input type="number" class="form-control vm" name="valor_mensal" id="" value="{{$modalidade->valor_mensal}}">
                             <div class="title_va">Valor Anual</div>
-                            <input type="number" class="form-control va" name="" id="" value="{{$modalidade->valor_anual}}">
+                            <input type="number" class="form-control va" name="valor_anual" id="" value="{{$modalidade->valor_anual}}">
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,9 @@
                     </div>
                 </div>
             </div>
-            <a id="button" class="button" href="#" type="submit">Atualizar<i id="arrow-hover" class="fa-solid fa-circle-check"></i></a>
+            <button type="submit" id="button" class="button">
+            Atualizar<i id="arrow-hover" class="fa-solid fa-circle-check"></i>
+            </button>
         </form>
     </div>
 </div>
