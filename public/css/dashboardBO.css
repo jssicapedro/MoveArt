@@ -28,7 +28,6 @@ body {
   width: 100%;
 }
 
-
 /*navbar*/
 .navigation {
   width: 250px;
@@ -146,10 +145,6 @@ body {
 }
 
 
-
-
-
-
 /*Main*/
 .dashboard_main {
   width: calc(100% - 300px);
@@ -215,7 +210,7 @@ body {
   position: relative;
   font-weight: 500;
   font-size: 2.5rem;
-  color: #975235;
+  color: #b48ff7;
 }
 
 .estatistica .caixa .nome {
@@ -247,7 +242,7 @@ body {
 }
 .dashboard_subtitulo h2 {
   font-weight: 600;
-  color: #975235;
+  color: #b48ff7;
 }
 .dashboard_subtitulo .btn {
   position: relative;
@@ -307,13 +302,13 @@ body {
 
 /*Responsivo*/
 @media (max-width: 991px) {
-  .navigation {
+ /* .navigation {
     left: -300px;
   }
   .navigation.active {
     width: 300px;
     left: 0;
-  }
+  }*/
   .dashboard_main {
     width: 100%;
     left: 0;
@@ -352,7 +347,7 @@ body {
   .utilizador_dashboar {
     min-width: 40px;
   }
-  .navigation {
+/*  .navigation {
     width: 100%;
     left: -100%;
     z-index: 1000;
@@ -360,7 +355,7 @@ body {
   .navigation.active {
     width: 100%;
     left: 0;
-  }
+  }*/
   .toggle {
     z-index: 10001;
   }
@@ -375,10 +370,10 @@ body {
 #logo{
   margin-top: 15%;
 }
-
+/*
 .navigation.active #logo{
   left: 0;
-}
+}*/
 
 
 

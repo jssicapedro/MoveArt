@@ -19,11 +19,13 @@
             </div>
 
             <h3>Dashboard</h3>
+            @auth
             <div class="utilizador_dashboard">
-                <span>Olá, admin</span>
-            </div>
-
+                <span>Olá, {{ Auth::user()->primeiro }}</span>
+            </div>@endauth
         </div>
+
+
 
         <div class="details">
             <div class="estatistica">
@@ -94,7 +96,7 @@
                     </tr>
                     @endforeach
                     @else
-                    <h6>Não existem categorias registadas</h6>
+                    <td>Não existem dados registados</td>
                     @endif
                     </tbody>
                 </table>
@@ -134,7 +136,7 @@
                     </tr>
                     @endforeach
                     @else
-                    <h6>Não existem categorias registadas</h6>
+                    <h6>Não existem dados registados</h6>
                     @endif
                     </tbody>
                 </table>
@@ -143,7 +145,7 @@
 
             <div class="dashboard_eventos">
                 <div class="dashboard_subtitulo">
-                    <h2>Eventos</h2>
+                    <h2>Próximos Eventos</h2>
                 </div>
                
                 <table>
@@ -160,13 +162,13 @@
                     @if (count($evento))
                     @foreach($evento as $eventos)
                     <tr>
-                        <td><img src="{{ asset('img/inicio/Ballet.jpg') }}" width="50px"></td>
+                        <td><img src="{{asset('img/eventosBO/'.$eventos->foto)}}" style="width:60px; height:;" class="img-post" alt=""></td>
                         <td>{{$eventos->nome}}</td>
-                        <td></td>
+                        <td>{{$eventos->data}}</td>
                     </tr>
                     @endforeach
                     @else
-                    <h6>Não existem categorias registadas</h6>
+                    <td>Não existem categorias registadas</td>
                     @endif
                     </tbody>
                 </table>

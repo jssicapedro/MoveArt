@@ -1,25 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar um Evento</title>
-</head>
-<body>
-<form action="{{ route('alterar_evento', ['id' => $evento->id]) }}" method="POST">
-       @csrf
-        <label for="">Nome</label><br>
-        <input type="text" name="nome" value="{{ $evento->nome }}"><br>
-        <label for="">Data</label><br>
-        <input type="date" name="data" value="{{ $evento->data }}"><br>
-        <label for="">localizacao</label><br>
-        <input type="text" name="nome" value="{{ $evento->localizacao }}"><br>
-        <label for="">foto</label><br>
-        <input type="text" name="nome" value="{{ $evento->foto }}"><br>
-        <label for="">Descrição</label><br>
-        <input type="text" name="descricao" value="{{ $evento->descricao }}"><br>
-        <button>Guardar</button>
+@extends('layout.masterBO')
+
+@section('title', 'MoveArt - EventosBO')
+
+@section('links')
+<link href="{{ asset('css/eventosBO.css') }}" rel="stylesheet">
+@endsection
+
+@section('main')
+<div class="dashboard_main">
+        <div class="parteSuperior">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+
+            <h1>Eventos</h1>
+            @auth
+            <div class="utilizador_dashboard">
+                <span>Olá, {{ Auth::user()->primeiro }}</span>
+            </div>@endauth
+        </div>
+
+        <!--dashboard_funcionarios/eventos-->
+        <div class="baixo">
+            <div class="dashboard_funcionarios">
+
+            
+        <h3>Editar Evento</h3><br>
+      <form action="{{ url('evento/' .$eventos->id) }}" method="post">
+        {!! csrf_field() !!}
+        @method("PATCH")
+        <input type="hidden" name="id" id="id" value="{{$eventos->id}}" id="id" />
+        <label>Nome</label></br>
+        <input type="text" name="nome" id="nome" placeholder="Nome" value="{{$eventos->nome}}" class="form-control"></br>
+        <label>Data</label></br>
+        <input type="date" name="data" id="data" placeholder="Data" value="{{$eventos->data}}" class="form-control"></br>
+        <label>Localizacao</label></br>
+        <input type="text" name="localizacao" id="localizacao" placeholder="Localização" value="{{$eventos->localizacao}}" class="form-control"></br>
+        <label for="inputImage">Foto</label></br>
+        <small id="fileHelp" style="color:red; padding-top:7px;" class="form-text text-muted">A imagem não deve passar as 2MB </small><br>
+        <input type="file" class="form-control-file" name="image" id="inputImage" aria-describedby="fileHelp">
+        <label>Descrição</label></br>
+        <input type="text" name="descricao" id="descricao" placeholder="Descrição" value="{{$eventos->descricao}}" class="form-control"></br>
+        <input type="submit" value="Atualizar" class="btn btn-success"></br>
     </form>
-</body>
-</html>
+</div>
+</div>
+@stop

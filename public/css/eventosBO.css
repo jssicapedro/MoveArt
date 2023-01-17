@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Globals ============== */
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --blue: #2a2185;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #f7f4f4;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dashboard_container {
+  position: relative;
+  width: 100%;
+}
+
+
+
+/*Main*/
+.dashboard_main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 250px;
+  min-height: 100vh;
+  transition: 0.5s;
+}
+.dashboard_main.active {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.parteSuperior {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+
+/*Responsivo*/
+@media (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .dashboard_main {
+    width: 100%;
+    left: 0;
+  }
+  .dashboard_main.active {
+    left: 300px;
+  }
+  .estatistica {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .details {
+    grid-template-columns: 1fr;
+  }
+  .baixo {
+    grid-template-columns: 1fr;
+  }
+  .dashboard_funcionarios {
+    overflow-x: auto;
+  }
+  .status.inProgress {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .estatistica {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+  .dashboard_subtitulo h2 {
+    font-size: 20px;
+  }
+  .utilizador_dashboar {
+    min-width: 40px;
+  }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .toggle {
+    z-index: 10001;
+  }
+  .dashboard_main.active .toggle {
+    color: #fff;
+    position: fixed;
+    left: initial;
+  }
+}
+
+.baixo {
+  position: relative;
+  width: 150%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+  /* margin-top: 10px; */
+}
+
+.baixo .dashboard_funcionarios {
+  position: relative;
+  min-height: 500px;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+
+.baixo .dashboard_subtitulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.baixo table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.baixo table thead td {
+  font-weight: 600;
+}
+.baixo .dashboard_funcionarios table tr {
+  color: var(--black1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/*Ultima linha desaparece*/
+.baixo .dashboard_funcionarios table tr:last-child {
+  border-bottom: none;
+}
+
+.baixo .dashboard_funcionarios table tr td {
+  padding: 10px;
+}
+.baixo .dashboard_funcionarios table tr td:last-child {
+  text-align: end;
+}
+.baixo .dashboard_funcionarios table tr td:nth-child(2) {
+  text-align: center;
+}
+.baixo .dashboard_funcionarios table tr td:nth-child(3) {
+  text-align: center;
+}
+
+
+tbody{
+  font-weight: 400;
+}
+
+
+
+
+/*Box EVENTO*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    overflow: hidden;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 860px;
+  }
+  
+  .shoeBackground {
+    position: relative;
+    width: 50%;
+    height: 475px;
+    transition: 0.5s;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 5%);
+    border-radius: 5px;
+  }
+  
+  @keyframes width {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  
+  
+  .info {
+    width: 50%;
+    background-color: #fff;
+    z-index: 1;
+    padding: 35px 40px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 5%);
+    word-wrap: break-word;
+    border-radius: 5px;
+  }
+  
+  
+  .description {
+    padding: 10px 0;
+  }
+  
+  .title {
+    color: #3a3a3a;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  
+  .text {
+    color: #555;
+    font-size: 17px;
+  }
+  
+  .color-container {
+    padding: 10px 0;
+  }
+  
+  .colors {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0 10px;
+    border: 5px solid;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  
+  .size-container {
+    padding: 10px 0;
+    margin-bottom: 10px;
+  }
+  
+  .sizes {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .size {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #eee;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .size.active {
+    background-color: var(--primary);
+    color: #fff;
+    transition: 0.5s;
+  }
+  
+  .buy-price {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .price {
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .price h1 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+  
+  .price i {
+    font-size: 1.4rem;
+    margin-right: 1px;
+  }
+  
+  .price i {
+    font-size: 1.4rem;
+    margin-left: -15px;
+    position: absolute;
+  }
+  
+  
+  
+  @media (max-width: 1070px) {
+    .shoe {
+      width: 135%;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .card {
+      flex-direction: column;
+      width: 100%;
+      box-shadow: 0 0 35px 1px rgba(0, 0, 0, 0.2);
+    }
+  
+    .card > div {
+      width: 100%;
+      box-shadow: none;
+    }
+  
+    .shoe {
+      width: 100%;
+      transform: rotate(-5deg) translateY(-50%);
+      top: 55%;
+      right: 2%;
+    }
+  
+    .nike {
+      top: 20%;
+      left: 5%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .share {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .share i {
+      font-size: 1rem;
+      line-height: 40px;
+    }
+  
+    .logo {
+      width: 70px;
+    }
+  }
+  
+  @media (max-width: 490px) {
+    .nike {
+      font-size: 7rem;
+    }
+  
+    .shoeName div .big {
+      font-size: 1.3rem;
+    }
+  
+    .small {
+      font-size: 1rem;
+    }
+  
+    .new {
+      padding: 2px 6px;
+      font-size: 0.9rem;
+    }
+  
+    .title {
+      font-size: 0.9rem;
+    }
+  
+    .text {
+      font-size: 0.8rem;
+    }
+  
+    .buy {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.8rem;
+    }
+  
+    .price h1 {
+      font-size: 1.5rem;
+    }
+  
+    .price i {
+      font-size: 0.9rem;
+    }
+  
+    .size {
+      width: 30px;
+      height: 30px;
+      margin: 0 8px;
+      font-size: 0.9rem;
+      line-height: 30px;
+    }
+  
+    .color {
+      margin: 0 6px;
+      width: 0 20px;
+      width: 20px;
+      height: 20px;
+      border-width: 4px;
+    }
+  
+    .share {
+      width: 35px;
+      height: 35px;
+      top: 10px;
+      right: 10px;
+    }
+  
+    .share i {
+      font-size: 0.8rem;
+      line-height: 35px;
+    }
+  
+    .logo {
+      width: 60px;
+      top: 10px;
+      left: 10px;
+    }
+  
+    .info {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 414px) {
+    .buy i {
+      display: none;
+    }
+  
+    .priceBtn {
+      display: none;
+    }
+  
+    .container {
+      padding: 20px;
+    }
+  }
+  
+
+  input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit]{
+    font-size: 15px;
+    font-weight: 500;
+    text-transform:capitalize;
+    background-color: #c7adf7 ;
+  }
+  input[type=submit]:hover{
+    background-color: #eeb2b5;
+    transition: 0.5s;
+  }
+
+  .alert alert-danger{
+    margin-left: 4%;
+    font-weight: 500;
+    font-style: italic;
+    border-style: solid;
+    border-color: red;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
