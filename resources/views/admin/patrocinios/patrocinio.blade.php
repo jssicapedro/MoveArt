@@ -59,7 +59,7 @@
                                     </li>
 
                                     @if($patrocinio->estado =='respondido')
-                                    <li></li>
+                                    
                                     @else
                                     <li>
                                         <a href="{{ route('patrocinios.edit', $patrocinio->id) }}">

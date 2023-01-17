@@ -80,7 +80,7 @@ Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashbo
 Route::get('/admin/modalidades', [PageController::class, 'modalidades'])->name('modalidades');
 
 
-/* back patrocinio */
+
 
 Route::get('admin/users', [UsersBackController::class, 'index']);
 Route::get('add-user', [UsersBackController::class, 'create']);
@@ -89,12 +89,16 @@ Route::get('edit-user/{id}', [UsersBackController::class, 'edit']);
 Route::put('update-user/{id}', [UsersBackController::class, 'update']);
 Route::post('delete-user', [UsersBackController::class, 'destroy']);
 
-
+/* back patrocinio */
 Route::get('/admin/patrocinio', [PatrocinioController::class, 'index'])->name('patrocinios');
 Route::get('/admin/patrocinio/show/{patrocinio}', [PatrocinioController::class, 'show'])->name('patrocinios.show');
 Route::get('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'edit'])->name('patrocinios.edit');
 Route::post('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'update'])->name('patrocinios.update');
+
+
 Route::delete('/admin/patrocinio/delete/{patrocinio}', [PatrocinioController::class, 'delete'])->name('patrocinios.destroy');
+
+
 /* back pedido professor */
 Route::get('/admin/pedprof', [PedidoprofessorController::class, 'index'])->name('pedidosprof');
 Route::get('/admin/pedprof/show/{pedidos}', [PedidoprofessorController::class, 'show'])->name('pedprof.show');

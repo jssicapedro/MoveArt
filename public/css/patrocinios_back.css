@@ -4,17 +4,17 @@
     margin: 5%;
 }
 
-h1 {
+.patrocinio_main h1 {
     margin: 20px 0;
     font-size: 50px;
     text-align: center;
 }
 
-.quantidade{
+.patrocinio_main .quantidade{
     font-size: 18pt;
 }
 
-hr {
+.patrocinio_main hr {
     margin: 0 0 20px;
 }
 
@@ -22,51 +22,51 @@ hr {
     margin: 0 0 30px;
 }
 
-.patrocinio_main #patrocinio {
+#patrocinio {
     margin: 30px 0;
     border-collapse: collapse;
 }
 
-.patrocinio_main #patrocinio .title {
+#patrocinio .title {
     background-color: var(--rosaE);
     height: 50px;
     text-align: center !important;
 }
 
-.patrocinio_main #patrocinio td {
+#patrocinio td {
     padding: 10px 0;
     text-align: center !important;
 }
 
-.patrocinio_main #patrocinio .more {
+#patrocinio .more {
     width: 60px;
     text-align: center;
 }
 
-.patrocinio_main #patrocinio .more span {
+#patrocinio .more span {
     display: flex;
     justify-content: center;
 }
 
-.patrocinio_main .option {
+#patrocinio .option {
     width: 10%;
     text-align: center;
 }
 
-.patrocinio_main .option ul {
+#patrocinio .option ul {
     list-style: none;
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 0;
 }
 
-.patrocinio_main .mensagem {
+#patrocinio .mensagem {
     width: 35%;
 }
 
-.patrocinio_main td p {
+#patrocinio td p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,26 +75,26 @@ hr {
     margin-bottom: 0;
 }
 
-.patrocinio_main td a {
+#patrocinio td a {
     text-decoration: none;
     color: var(--preto);
 }
 
-.patrocinio_main .semR {
+#patrocinio .semR {
     background-color: var(--castanho);
 }
 
-.patrocinio_main .comR {
+#patrocinio .comR {
     background-color: var(--rosa);
 }
 
-.patrocinio_main .delete a span {
+.delete a span {
     border: none !important;
     color: red;
 }
 
-.patrocinio_main .voltar,
-.patrocinio_main .enviar {
+.voltar,
+.enviar {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
@@ -104,13 +104,13 @@ hr {
     border-radius: 10px;
 }
 
-.patrocinio_main .voltar {
+.voltar {
     width: 150px;
     background-color: var(--roxo);
     margin-bottom: 20px;
 }
 
-.patrocinio_main .about {
+.about {
     background-color: var(--branco_footer);
     padding: 20px;
 }
@@ -199,12 +199,12 @@ hr {
 }
 
 @media (max-width:1400px) {
-    .patrocinio_main .option ul {
+    #patrocinio .option ul {
         flex-direction: column;
     }
 }
 
-@media (max-width:600px) {
+@media (max-width: 1000px) {
 
     .patrocinio_main .dataTables_length,
     .patrocinio_main .dataTables_paginate,

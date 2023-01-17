@@ -43,8 +43,9 @@ Alertas de confirmação
          >> quer apagar o registo do patrocínio
 
 
+implementar nav do front no back -> add á mão o css do bootstrap
+dropdown na nav do back
 
 
-
-pesquisar sobre police ---- impede que alunos entrem no back
+pesquisar sobre police/gate ---- impede que alunos entrem no back
 gerar nova página de modalidade automaticamente

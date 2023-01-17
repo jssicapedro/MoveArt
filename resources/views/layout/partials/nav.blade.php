@@ -65,7 +65,7 @@
                     
                     
                     @if(Auth::user()->perfil == 'admin')
-                    <a class="dropdown-item" href="{{ asset('dashboardBO') }}"> dashboard</a>
+                    <a class="dropdown-item" href="{{ asset('dashboardBO') }}"> Dashboard</a>
                     @endif
 
 
