@@ -9,7 +9,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  
+
 
   <!-- Favicons -->
   <link rel="icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
@@ -22,11 +22,11 @@
   <script src="{{asset('js/splide/dist/js/splide.min.js')}}"></script>
 
   <!-- bootstrap-->
+  <!--  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>-->
 
-<!-- 
+  <!-- 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
 
   <!-- bootstrap icons -->
@@ -49,11 +49,11 @@
 <body>
 
   <!-- ======= Header ======= -->
-  
-  <main id="main">
-  @include('layout.partials.header')
 
-  @include('layout.partials.headerBO')
+  <main id="main">
+    
+
+    @include('layout.partials.headerBO')
     @yield('main')
   </main><!-- End #main -->
 
@@ -80,14 +80,14 @@
       }
     });
 
-   /*  mode.onclick = () => {
-      document.body.classList.toggle("light-mode");
-      if (document.body.classList.contains("light-mode")) {
-        mode.src = "{{asset('img/darkMode/sun.png')}}";
-      } else {
-        mode.src = "{{asset('img/darkMode/moon.png')}}";
-      } 
-    }*/
+    /*  mode.onclick = () => {
+       document.body.classList.toggle("light-mode");
+       if (document.body.classList.contains("light-mode")) {
+         mode.src = "{{asset('img/darkMode/sun.png')}}";
+       } else {
+         mode.src = "{{asset('img/darkMode/moon.png')}}";
+       } 
+     }*/
   </script>
 
   @yield('script')

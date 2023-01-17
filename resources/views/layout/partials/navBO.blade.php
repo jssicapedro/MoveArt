@@ -1,7 +1,4 @@
-<!-- @section('links')
-<link rel="stylesheet" href="{{asset('css/navBO.css')}}">
-<link rel="stylesheet" href="{{asset('css/nav.css')}}">
-@endsection -->
+
 
 <!--NavbBO-->
 <nav>
@@ -42,7 +39,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="{{ asset('admin/modalidades') }}">
                     <span class="icon">
                     <img src="{{ asset('img/eventosBO/dancing.png') }}" style="width:40px; height:; " alt="">
                     </span>
@@ -51,7 +48,7 @@
             </li>
 
             <li>
-            <a href="{{ asset('admin/modalidades') }}">
+            <a href="{{ asset('admin/patrocinio') }}">
                     <span class="icon">
                     <img src="{{ asset('img/eventosBO/agreement.png') }}" style="width:35px; height:; " alt="">
                     </span>
