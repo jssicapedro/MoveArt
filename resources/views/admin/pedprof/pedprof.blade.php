@@ -68,14 +68,12 @@
                                             </span>
                                         </a>
                                     </li>
-                                    @if($pedidos->estado_do_pedido=='respondido')
-                                    <li>
-                                        <a href="{{ route('pedprof.edit', $pedidos->id) }}">
+                                    @if($pedidos->estado_do_pedido=='pendente')
+                                    <li><a href="{{ route('pedprof.edit', $pedidos->id) }}">
                                             <span class="material-symbols-outlined">
                                                 edit
                                             </span>
-                                        </a>
-                                    </li>
+                                        </a></li>
                                     @else
                                     <li></li>
                                     @endif
