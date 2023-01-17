@@ -92,6 +92,6 @@ Route::post('/admin/modalidades/store',[ModalidadesBackController::class, 'store
 Route::get('/admin/modalidades/show/{modalidade}',[ModalidadesBackController::class, 'show'])->name('modalidades.show');
 
 Route::get('/admin/modalidades/edit/{modalidade}',[ModalidadesBackController::class, 'edit'])->name('modalidades.edit');
-Route::post('/admin/modalidades/edit/{modalidade}',[ModalidadesBackController::class, 'update'])->name('modalidades.update');
+Route::post('/admin/modalidades/edit/{mod}',[ModalidadesBackController::class, 'update'])->name('modalidades.update');
 
 Route::delete('/admin/modalidades/delete/{modalidade}',[ModalidadesBackController::class, 'delete'])->name('modalidades.delete');

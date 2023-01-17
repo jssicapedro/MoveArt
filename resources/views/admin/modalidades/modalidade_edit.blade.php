@@ -20,7 +20,7 @@
         <h1>
             <i class="fa-solid fa-pen-ruler"></i> Editar Modalidade
         </h1>
-        <form action="{{ route('modalidades.update', $modalidade->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('modalidades.update', ['mod'=> $modalidade->id]) }}" method="POST" >
             @csrf
             <div class="first">
                 <div class="primeira_info">

@@ -59,7 +59,8 @@ class ModalidadesBackController extends Controller
             'valor_mensal' => $request->valor_mensal,
             'valor_anual' => $request->valor_anual,
         ]);
-        return back();
+        /* dd($request); */
+        return redirect('admin/modalidades');
     }
     public function delete($modalidade)
     {
