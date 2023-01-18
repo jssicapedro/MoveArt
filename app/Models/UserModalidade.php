@@ -17,5 +17,6 @@ class UserModalidade extends Model
 
     public function modalidade(){
         return $this->belongsTo(User::class, 'user_id', 'id');
+        
     } 
 }

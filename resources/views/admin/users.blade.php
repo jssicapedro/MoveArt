@@ -85,10 +85,6 @@
                                 <div id="add">
                                     <a href="{{ url('add-user') }}" class="btn add">+ Adicionar</a>
                                 </div>
-                                <div id="load">
-                                    <button onClick="window.location.reload();" type="button"
-                                        class="btn load">Atualizar</button>
-                                </div>
                             </div>
                         </div>
                     </div>
