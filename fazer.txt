@@ -39,7 +39,7 @@ Design responsivo view e edit
 Alertas de confirmação
       > confirmar se o admin  
          >> quer arquivar o pedido de professor
-         >>  quer restaurar o pedido de professor
+         >> quer restaurar o pedido de professor
          >> quer apagar o registo do patrocínio
 
 
@@ -49,3 +49,14 @@ dropdown na nav do back
 
 pesquisar sobre police/gate ---- impede que alunos entrem no back
 gerar nova página de modalidade automaticamente
+
+
+
+
+APRESENTAÇÂO
+menu em vez de dashboard meter administração
+erros devem estar onde o erro se encontra
+remover mensagem á listagem dos patrocinios
+redirecionar rotas depois de edição
+quando restaurar um pedido mandar para a listagem
+model de confirmação de erro
