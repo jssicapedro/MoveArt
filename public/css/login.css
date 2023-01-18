@@ -13,17 +13,17 @@
 .login_page{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.login_page .img{
+/* .login_page .img{
     width: 50vw;
-}
+} */
 
 .main_login img{
-    width: 70%;
+    width: 40%;
     animation: go-back 1.2s;
     filter: drop-shadow(5px 5px 5px rgb(71, 71, 71));
 }
@@ -140,7 +140,7 @@ input#password:hover {
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
         7px 7px 20px 0px rgba(0, 0, 0, .1),
         4px 4px 5px 0px rgba(0, 0, 0, .1);
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 }
 
 .submit button:click {
@@ -156,6 +156,41 @@ input#password:hover {
 
 .justify-content-center {
     height: calc( 100vh - 55vh);
+}
+
+.login_page .img{
+    width: 40vw;
+}
+
+.gradient {
+	position: relative;
+    height: calc(100vh - 300px);
+    background: linear-gradient(225deg, var(--rosa), var(--roxo), var(--castanho));
+    background-size: 180% 180%;
+    animation: gradient-animation 6s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* left: -30%; */
+    border-radius: 29% 47% 33% 48% / 12% 68% 31% 37%;
+}
+
+.gradient img{
+    width: 60%;
+    animation: go-back 1.2s;
+    filter: drop-shadow(5px 5px 5px rgb(71, 71, 71));
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @keyframes go-back {

@@ -3,14 +3,17 @@
 @section('content')
 <div class="login_page">
     <div class="img">
-        <img src="{{ asset('img/login/Choreographer-rafiki_amarelo.png') }}" alt="imagem de login" class="image">
+        <div class="gradient">
+            <img src="{{ asset('img/login/Choreographer-rafiki_amarelo.png') }}" alt="imagem de login" class="image">
+        </div>
+
     </div>
     <div class="form_login">
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="email">
                 <label for="email" class="label_email">Email:</label>
-                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email"  placeholder="Indique o seu email">
+                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Indique o seu email">
                 @error('email')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -19,7 +22,7 @@
             </div>
             <div class="pass">
                 <label for="email" class="label_email">Password:</label>
-                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"  placeholder="Indica a tua password">
+                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Indica a tua password">
 
                 @error('password')
                 <span class="invalid-feedback" role="alert">
