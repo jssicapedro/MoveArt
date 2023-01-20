@@ -19,7 +19,7 @@
 <section id="form_prof">
     <div class="title">
         <h2>Vem trabalhar connosco!</h2>
-        <h4>Deixe aqui o seu CV.</h4>
+        <h4>Deixa o teu CV.</h4>
     </div>
     <div class="form">
         <form action="{{ route('register_professor') }}" method="POST" enctype="multipart/form-data">

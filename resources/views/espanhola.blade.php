@@ -61,7 +61,7 @@
 <div class="calendar_mobile">
     <h2>Horário</h2>
     <div class="image">
-        <img src="{{asset('img/dancas/espanhola/calendar_espanhola.png') }}" data-toggle="modal" data-target="#exampleModal" />
+        <img src="{{ url('storage/modalidades/'.$modalidade->foto_horario) }}" data-toggle="modal" data-target="#exampleModal" />
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">

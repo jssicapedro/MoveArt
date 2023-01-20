@@ -23,11 +23,11 @@
                 <div class="col col-xl-6 col-sm-12">
                     <div data-aos="fade-up"
                     data-aos-anchor-placement="bottom-bottom" id="hero_text">
-                        <h1>Venha-Nos Visitar!</h1>
+                        <h1>Vêm Visitar-nos!</h1>
                         <p>A dança para nós não é só uma atividade é um estilo de vida!</p>
                         <div class="hero_btn">
                             <a href="#">
-                                <div class="button">Saiba Mais</div>
+                                <div class="button">Sabe Mais</div>
                             </a>
                         </div>
                     </div>

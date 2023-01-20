@@ -19,7 +19,7 @@
 <section id="form_patr">
     <div class="title">
         <h2>Ajuda a nossa associação!</h2>
-        <h4>Coloque algumas informações da empresa.</h4>
+        <h4>Coloca as informações da tua empresa.</h4>
     </div>
     <div class="form">
         <form action="{{ route('register_patrocinio') }}" method="POST">

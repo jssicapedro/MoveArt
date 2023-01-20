@@ -21,7 +21,6 @@
                         <tr class="title">
                             <th style="text-align: center;">id</th>
                             <th style="text-align: center;">Patrocinador</th>
-                            <th style="text-align: center;">Mensagem</th>
                             <th style="text-align: center;">Valor</th>
                             <th style="text-align: center;">Estado</th>
                             <th class="more">
@@ -37,7 +36,6 @@
                         <tr>
                             <td style="text-align: center;">{{$patrocinio->id}}</td>
                             <td style="text-align: center;">{{$patrocinio->nome}}</td>
-                            <td style="text-align: center;" class="mensagem">{{$patrocinio->mensagem}}</td>
                             <td style="text-align: center;">{{$patrocinio->valor}}€</td>
                             <td style="text-align: center;">
                                 @if($patrocinio->estado =='sem resposta')
@@ -111,9 +109,6 @@
 
             "columns": [
                 null,
-                {
-                    "bSortable": false
-                },
                 {
                     "bSortable": false
                 },
