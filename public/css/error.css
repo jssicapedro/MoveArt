@@ -1,33 +1,31 @@
-.erro {
-    display: flex;
-    flex-direction: row;
-    width: 80vw;
-    justify-content: space-around;
-    align-items: center;
-    /* gap: 70px; */
-    margin: 42px auto 0;
+
+#main {
+  height: calc(100vh - 200px);
+  display: flex;
+  width: 80vw;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto -85px;
 }
 
-.erro .img {
+.erro404, .erro403 {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.erro404 img, .erro403 img {
   width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #c8b19349;
-  z-index: -3;
 }
 
  h1 {
   font-weight: bolder;
 }
 
-.main {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 80vw;
-    margin: auto;
-}
 @media (max-width: 900px) {
   .erro{
     flex-direction: column-reverse;

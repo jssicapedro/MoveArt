@@ -19,11 +19,10 @@ class IsAdmin
     {
         if(Auth::check() && Auth::user()->perfil == 'admin'){
             return $next($request);
-        }else {
-            if(!Auth::check()){
-                return redirect('/login');
-            }
-            dd('sem acesso');
+        }else if(!Auth::check()){
+            return redirect('/login');
+        }else{
+            abort(403);
         }
     }
 }
