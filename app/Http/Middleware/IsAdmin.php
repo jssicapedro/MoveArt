@@ -22,7 +22,7 @@ class IsAdmin
         }else if(!Auth::check()){
             return redirect('/login');
         }else{
-            abort(403);
+            abort(401);
         }
     }
 }
