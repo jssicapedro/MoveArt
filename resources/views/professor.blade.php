@@ -26,32 +26,47 @@
             @csrf
             <div class="row">
                 <div class="col-6">
-                    <label for="">Nome:</label>
-                    <input name="primeiro" type="text" class="form-control" placeholder="Nome..." >
+                    <label for="">Nome: *</label>
+                    <input name="primeiro" type="text" class="form-control" placeholder="Nome...">
+                    @if ($errors->has('primeiro'))
+                    <span class="text-danger">{{ $errors->first('primeiro') }}</span>
+                    @endif
                 </div>
                 <div class="col-6">
-                    <label for="">Apelido</label>
-                    <input name="apelido" type="text" class="form-control" placeholder="Apelido..." >
+                    <label for="">Apelido: *</label>
+                    <input name="apelido" type="text" class="form-control" placeholder="Apelido...">
+                    @if ($errors->has('apelido'))
+                    <span class="text-danger">{{ $errors->first('apelido') }}</span>
+                    @endif
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <label for="">Email</label>
-                    <input name="email" type="email" class="form-control" name="prof_email" id="prof_email" placeholder="Email..." >
+                    <label for="">Email: *</label>
+                    <input name="email" type="email" class="form-control" name="prof_email" id="prof_email" placeholder="Email...">
+                    @if ($errors->has('email'))
+                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                    @endif
                 </div>
                 <div class="col-5">
-                    <label for="">Telefone</label>
-                    <input name="telefone" type="tel" class="form-control" placeholder="Telefone" max="9" >
+                    <label for="">Telefone: *</label>
+                    <input name="telefone" type="tel" class="form-control" placeholder="Telefone" max="9">
+                    @if ($errors->has('telefone'))
+                    <span class="text-danger">{{ $errors->first('telefone') }}</span>
+                    @endif
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <label for="">Data de Nascimento</label>
+                    <label for="">Data de Nascimento: *</label>
                     <input type="date" class="form-control" name="data_nac" id="dta_nasc" placeholder="Data de Nascimento">
+                    @if ($errors->has('data_nac'))
+                    <span class="text-danger">{{ $errors->first('data_nac') }}</span>
+                    @endif
                 </div>
                 <div class="col-6">
                     <label for="tp_modalidade">Tipo de Modalidade:</label>
-                    <select name="modalidade" id="tp_modalidade" class="form-control" >
+                    <select name="modalidade" id="tp_modalidade" class="form-control">
                         <option value="Indiferente">Indiferente</option>
                         <option value="Ballet">Ballet</option>
                         <option value="Hip-Hop">Hip-Hop</option>
@@ -62,15 +77,18 @@
                 </div>
             </div>
             <div class="titulo">
-                <h2>Importação do CV:</h2>
+                <h2>Importação do CV: *</h2>
             </div>
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <input name="cv" type="file" class="form-control-file" accept="application/pdf" >
+                        <input name="cv" type="file" class="form-control-file" accept="application/pdf">
                         <span class="cv">*Ficheiro apenas em formato PDF</span>
                     </div>
                 </div>
+                @if ($errors->has('cv'))
+                    <span class="text-danger">{{ $errors->first('cv') }}</span>
+                    @endif
             </div>
             <div class="row">
                 <div class="col">
@@ -83,15 +101,6 @@
                 </div>
             </div>
         </form>
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
     </div>
 </section>
 @endsection
