@@ -45,15 +45,15 @@ class ModalidadesBackController extends Controller
             'foto_banner' => $request->foto_banner, */
             
         ]);
-        return back();
+        return redirect('admin/modalidades');
     }
     public function edit(Modalidade $modalidade)
     {
         return view('admin.modalidades.modalidade_edit', ['modalidade' => $modalidade]);
     }
-    public function update(Request $request, Modalidade $mod)
+    public function update(Request $request, Modalidade $modalidade)
     {
-        $mod->update([
+        $modalidade->update([
             'modalidade' => $request->modalidade,
             'descricao' => $request->descricao,
             'valor_mensal' => $request->valor_mensal,
@@ -65,7 +65,7 @@ class ModalidadesBackController extends Controller
     public function delete($modalidade)
     {
         Modalidade::destroy($modalidade);
-        return 'sucesso';
+        return redirect('admin/modalidades');
         /* dd($modalidade->id);
         $modalidade->delete();
         return redirect('admin/modalidades'); */
