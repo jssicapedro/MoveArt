@@ -64,6 +64,11 @@ class PageController extends Controller
         return view('mapaaulas', compact('modalidade'));
     }
 
+    public function eventosFO(){
+        $evento = Evento::all();
+        return view('eventosFO', compact('evento'));
+    }
+
     protected $table='modalidade';
 
     /* ------- landingPages ------- */

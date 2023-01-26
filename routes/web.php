@@ -22,6 +22,8 @@ Route::get('/precoanual', [InscricaoController::class, 'precoanual']);
 
 Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas');
 
+Route::get('/eventosFO', [PageController::class, 'eventosFO'])->name('eventosFO');
+
 
 Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
 
