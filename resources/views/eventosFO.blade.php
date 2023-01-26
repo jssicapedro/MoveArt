@@ -5,7 +5,7 @@
 @section('links')
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <!-- custom css file link  -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/eventosFO.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 @endsection
 
@@ -18,12 +18,12 @@
 
     <div class="swiper-container home-slider">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="{{ asset('img/eventosFO/pexels-allan-mas-5368984.jpg')}}" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('img/eventosFO/pexels-allan-mas-5368984.jpg')}}" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('img/eventosFO/pexels-allan-mas-5368984.jpg')}}" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('img/eventosFO/pexels-allan-mas-5368984.jpg')}}" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('img/eventosFO/pexels-allan-mas-5368984.jpg')}}" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('img/eventosFO/pexels-allan-mas-5368984.jpg')}}" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('img/eventosFO/1 (1).jpg')}}" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('img/eventosFO/1 (2).jpg')}}" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('img/eventosFO/1 (3).jpg')}}" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('img/eventosFO/1 (4).jpg')}}" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('img/eventosFO/1 (5).jpg')}}" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('img/eventosFO/1 (6).jpg')}}" alt=""></div>
         </div>
     </div>
 
@@ -38,19 +38,19 @@
 
     <div class="box-container">
         <div class="box">
-            <i class="fas fa-utensils"></i>
+        <i class="bi bi-geo-alt-fill"></i>
             <h3>Comida e Bebida</h3>
             <p>Em todos os nossos eventos temos comida e bebida para si.</p>
         </div>
 
         <div class="box">
-            <i class="fas fa-photo-video"></i>
+        <i class="bi bi-geo-alt-fill"></i>
             <h3>Fotos</h3>
             <p>Em todos os nosso eventos, poderá levar uma foto como recordação.</p>
         </div>
 
         <div class="box">
-            <i class="fas fa-birthday-cake"></i>
+        <i class="bi bi-geo-alt-fill"></i>
             <h3>Acessórios</h3>
             <p>Em todos os nossos eventos, receberá um acessório para se juntar a nós.</p>
         </div>
@@ -66,20 +66,28 @@
     <h1 class="heading">Próximos<span> Eventos</span> </h1>
 <div class="container">
     <div class="row">
+    @if (count($evento))
+        @foreach($evento as $eventos)
         <div class="column">
           <div class="card">
             <div class="img">
-                <span>Evelynn</span>
+                <img src="{{asset('img/eventosBO/'.$eventos->foto)}}">
             </div>
             <div class="content">
-                <span class="title">O abraço da agonia</span>
-                <p class="desc">. Ela atrai presas com sua voluptuosa aparência de fêmea humana</p>
+            <h3>{{$eventos->nome}}</h3><hr>
+            <h6><i class="bi bi-calendar4-event"></i> {{ date('d-m-Y', strtotime($eventos->data))}}</h6><hr>
+            <h6><i class="bi bi-geo-alt-fill"></i> {{$eventos->localizacao}}</h6><hr>
+            <p>{{$eventos->descricao}}</p>
             </div>
             <div class="arrow">
                 <span>&#8673;</span>
             </div>
           </div>
         </div>
+        @endforeach
+        @else
+        <h6>Por agora, não há nenhum evento agendado</h6>
+        @endif
     </div>
 </div>
 </section>

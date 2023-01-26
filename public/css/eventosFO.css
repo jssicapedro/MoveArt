@@ -513,7 +513,6 @@ img{
     justify-content: center;
     align-items: center;
     height: 200px;
-    background-image: url(./assets/Evelynn.jpg);
     background-size: cover;
     background-position: center;
     transition: all .5s;
@@ -557,6 +556,7 @@ img{
     box-sizing: border-box;
     overflow: hidden;
     transform: translateY(30px);
+    font-size: 13px;
 }
 
 .card:hover .content {
@@ -564,14 +564,21 @@ img{
     padding: 20px;
     opacity: 1;
     transform: translateY(0);
+    font-size: 30px;
 }
 
 .card .content p {
     margin: 0;
+    font-size: 30px;
+}
+
+.card .content h6 {
+    margin: 0;
+    font-size: 20px;
 }
 
 .card .content .title {
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 600;
 }
 
@@ -580,6 +587,7 @@ img{
     font-weight: 100;
     opacity: .8;
     margin-top: 8px;
+    font-size: 30px;
 }
 
 .card .arrow {
