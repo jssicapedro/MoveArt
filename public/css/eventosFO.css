@@ -101,11 +101,19 @@ section{
 
 .service .box-container .box{
     border-radius: 6px;
-    background:#d6a996;
+    background: #ffccb7;
     text-align: center;
-    padding:2.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 3px 2px 0 rgb(140 117 117 / 40%);
 }
 
+.service .box-container .box:hover{
+    border-radius: 10px;
+    background: #fcb99d;
+    text-align: center;
+    padding: 2.5rem;
+    box-shadow: 0 3px 2px 0 rgb(140 117 117 / 40%);
+}
 .service .box-container .box i{
     height: 6rem;
     width: 6rem;
@@ -124,7 +132,7 @@ section{
 
 .service .box-container .box p{
     font-size: 1.4rem;
-    color:#eee;
+    color:rgb(0, 0, 0);
     line-height: 1.8;
 }
 
