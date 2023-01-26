@@ -236,8 +236,7 @@ button {
   background-size: cover;
   position: relative;
   margin-bottom: -20px;
-  min-height: 250px
-;
+  min-height: 250px;
   width: 100%;
 }
 

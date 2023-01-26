@@ -81,10 +81,6 @@
 </section>
 
 
-
-
-
-
 <section id="mapaaulas_imagem">
     <div>
         <div id="textoimagem">

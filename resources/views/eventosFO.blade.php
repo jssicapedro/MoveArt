@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 @endsection
 
+
+
 @section('main')
 <section class="home" id="home">
 
@@ -34,7 +36,7 @@
 
 <section class="service" id="service">
 
-    <h1 class="heading"> Serviços nos <span>nossos Eventos</span> </h1>
+    <h2 class="section__title">Serviços nos nossos Eventos</span></h2>
 
     <div class="box-container">
         <div class="box">
@@ -63,7 +65,7 @@
 <br>
 
 <section>
-    <h1 class="heading">Próximos<span> Eventos</span> </h1>
+<h2 class="section__title">Próximos<span> Eventos</span></h2>
 <div class="container">
     <div class="row">
     @if (count($evento))
@@ -77,7 +79,6 @@
             <h3>{{$eventos->nome}}</h3><hr>
             <h6><i class="bi bi-calendar4-event"></i> {{ date('d-m-Y', strtotime($eventos->data))}}</h6><hr>
             <h6><i class="bi bi-geo-alt-fill"></i> {{$eventos->localizacao}}</h6><hr>
-            <p>{{$eventos->descricao}}</p>
             </div>
             <div class="arrow">
                 <span>&#8673;</span>
@@ -86,10 +87,21 @@
         </div>
         @endforeach
         @else
-        <h6>Por agora, não há nenhum evento agendado</h6>
+        <h6>Não há nenhum evento agendado</h6>
         @endif
     </div>
 </div>
+</section>
+
+<section id="mapaaulas_imagem">
+    <div>
+        <div id="textoimagem">
+            <h2 class="section__title">
+                Vem Dançar
+            </h2>
+            <button>Comprar Bilhetes</button>
+        </div>
+    </div>
 </section>
 @endsection
 
