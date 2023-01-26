@@ -32,7 +32,7 @@
             <div class="gallery-filter">
                 <span class="filter-item active" data-filter="geral">Geral</span>
                 @if (count($modalidade))
-        @foreach($modalidade as $modalidades)
+                @foreach($modalidade as $modalidades)
                 <span class="filter-item" data-filter="dancaballet">{{$modalidades->modalidade}}</span>
                 @endforeach
                     @else
@@ -78,6 +78,11 @@
         </div>
     </div>
 </section>
+
+
+
+
+
 
 <section id="mapaaulas_imagem">
     <div>
