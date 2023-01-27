@@ -22,7 +22,7 @@
 
         <!--dashboard_funcionarios/eventos-->
         <div class="baixo">
-        <h3><a href="{{ url('/evento/create') }}" class="btn btn-success btn-sm" title="Adicionar Evento"><img src="{{ asset('img/eventosBO/add.png') }}" style="width:30px; height:; " alt=""></a></h3><br>
+        <h3><a href="{{ url('/evento/create') }}" class="" title="Adicionar Evento"><img src="{{ asset('img/eventosBO/add.png') }}" style="width:30px; height:; " alt=""></a></h3><br>
             <div class="dashboard_funcionarios">
 
                 <table>

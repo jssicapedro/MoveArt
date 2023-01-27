@@ -74,9 +74,12 @@ section{
     text-transform: uppercase;
     font-family: var(--amaranth);
 }
+.swiper-3d, .swiper-3d.swiper-css-mode .swiper-wrapper {
+    perspective: 800px;
+}
 
 .home .content h3 span{
-    color:#d6a996;
+    color:#d08768;
     text-transform: uppercase;
     font-family: var(--amaranth);
 }

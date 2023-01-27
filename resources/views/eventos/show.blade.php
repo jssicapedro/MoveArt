@@ -23,8 +23,8 @@
         <!--dashboard_funcionarios/eventos-->
 
 <section>
-        <div class="container">
-          <div class="card">
+        <div class="shows">
+          <div class="carta">
             <div class="shoeBackground">
             <img src="/img/eventosBO/{{ $eventos->foto }}" style="width:100%; border-radius:5px; " alt="">
             </div>
@@ -33,7 +33,6 @@
                 <div>
                   <h1>{{ $eventos->nome }}</h1>
                 </div>
-                <h3>Modalidade</h3>
               </div><br>
               <div class="description">
                 <h3 class="title">Descrição</h3>

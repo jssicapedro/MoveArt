@@ -198,7 +198,7 @@ tbody{
 
 /*Box EVENTO*/
 
-.container {
+.shows {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,7 +206,7 @@ tbody{
     overflow: hidden;
   }
   
-  .card {
+  .carta {
     display: flex;
     justify-content: center;
     align-items: center;
