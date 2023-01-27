@@ -40,19 +40,19 @@
 
     <div class="box-container">
         <div class="box">
-        <i class="bi bi-geo-alt-fill"></i>
+        <img src="{{asset('img/eventosFO/restaurant.png')}}" style="width:60px; height:;" class="img-post" alt="">
             <h3>Comida e Bebida</h3>
             <p>Em todos os nossos eventos temos comida e bebida para si.</p>
         </div>
 
         <div class="box">
-        <i class="bi bi-geo-alt-fill"></i>
+        <img src="{{asset('img/eventosFO/camera.png')}}" style="width:60px; height:;" class="img-post" alt="">
             <h3>Fotos</h3>
-            <p>Em todos os nosso eventos, poderá levar uma foto como recordação.</p>
+            <p>Em todos os nossos eventos, poderá levar uma foto como recordação.</p>
         </div>
 
         <div class="box">
-        <i class="bi bi-geo-alt-fill"></i>
+        <img src="{{asset('img/eventosFO/acessorio.png')}}" style="width:60px; height:;" class="img-post" alt="">
             <h3>Acessórios</h3>
             <p>Em todos os nossos eventos, receberá um acessório para se juntar a nós.</p>
         </div>
