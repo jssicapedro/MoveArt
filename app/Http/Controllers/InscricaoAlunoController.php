@@ -28,7 +28,7 @@ class InscricaoAlunoController extends Controller
             'genero' => 'required',
             'data_nasc' => 'required',
             'email' => 'required|email',
-            'password' => 'required'
+            'password' => 'required|confirmed'
         ],
         [
             'primeiro.required' => 'Preencha o Nome',

@@ -23,8 +23,8 @@ class ModalidadesBackController extends Controller
     }
     public function store(Request $request)
     {
-
-        $request->validate(
+       
+         $request->validate(
             [
                 'modalidade' => 'required',
                 'descricao' => 'required',
@@ -37,26 +37,26 @@ class ModalidadesBackController extends Controller
                 'valor_mensal.required' => 'Preencha o Género',
                 'valor_anual.required' => 'Preencha a Data de Nascimento',
             ]
-        );
-        if($request->file('foto_desc')->isValid()){
+        ); 
+        if ($request->file('foto_desc')->isValid()) {
             $nameFileDesc = $request->modalidade . '_desc.' . $request->foto_desc->extension();
-            $request->foto_desc->storeAS('modalidades',$nameFileDesc);
+            $request->foto_desc->storeAS('modalidades', $nameFileDesc);
         }
-        if($request->file('foto_horario')->isValid()){
+        if ($request->file('foto_horario')->isValid()) {
             $nameFileHor = $request->modalidade . '_horario.' . $request->foto_horario->extension();
-            $request->foto_horario->storeAS('modalidades',$nameFileHor);
+            $request->foto_horario->storeAS('modalidades', $nameFileHor);
         }
-        if($request->file('foto_mensal')->isValid()){
+        if ($request->file('foto_mensal')->isValid()) {
             $nameFileMensal = $request->modalidade . '_mensal.' . $request->foto_mensal->extension();
-            $request->foto_mensal->storeAS('modalidades',$nameFileMensal);
+            $request->foto_mensal->storeAS('modalidades', $nameFileMensal);
         }
-        if($request->file('foto_anual')->isValid()){
+        if ($request->file('foto_anual')->isValid()) {
             $nameFileAnual = $request->modalidade . '_anual.' . $request->foto_anual->extension();
-            $request->foto_anual->storeAS('modalidades',$nameFileAnual);
+            $request->foto_anual->storeAS('modalidades', $nameFileAnual);
         }
-        if($request->file('foto_banner')->isValid()){
+        if ($request->file('foto_banner')->isValid()) {
             $nameFileBanner = $request->modalidade . '_banner.' . $request->foto_banner->extension();
-            $request->foto_banner->storeAS('modalidades',$nameFileBanner);
+            $request->foto_banner->storeAS('modalidades', $nameFileBanner);
         }
         Modalidade::create([
             //nome do campo bd=> função request -> nome do input
@@ -68,7 +68,7 @@ class ModalidadesBackController extends Controller
             'foto_mensal' => $nameFileMensal,
             'foto_anual' => $nameFileAnual,
             'foto_horario' => $nameFileHor,
-            'foto_banner' => $nameFileBanner, 
+            'foto_banner' => $nameFileBanner,
         ]);
 
         return redirect('admin/modalidades');
@@ -94,25 +94,25 @@ class ModalidadesBackController extends Controller
             ]
         );
 
-        if($request->file('foto_desc')){
+        if ($request->file('foto_desc')) {
             $nameFileDesc = $request->modalidade . '_desc.' . $request->foto_desc->extension();
-            $request->foto_desc->storeAS('modalidades',$nameFileDesc);
+            $request->foto_desc->storeAS('modalidades', $nameFileDesc);
         }
-        if($request->file('foto_horario')){
+        if ($request->file('foto_horario')) {
             $nameFileHor = $request->modalidade . '_horario.' . $request->foto_horario->extension();
-            $request->foto_horario->storeAS('modalidades',$nameFileHor);
+            $request->foto_horario->storeAS('modalidades', $nameFileHor);
         }
-        if($request->file('foto_mensal')){
+        if ($request->file('foto_mensal')) {
             $nameFileMensal = $request->modalidade . '_mensal.' . $request->foto_mensal->extension();
-            $request->foto_mensal->storeAS('modalidades',$nameFileMensal);
+            $request->foto_mensal->storeAS('modalidades', $nameFileMensal);
         }
-        if($request->file('foto_anual')){
+        if ($request->file('foto_anual')) {
             $nameFileAnual = $request->modalidade . '_anual.' . $request->foto_anual->extension();
-            $request->foto_anual->storeAS('modalidades',$nameFileAnual);
+            $request->foto_anual->storeAS('modalidades', $nameFileAnual);
         }
-        if($request->file('foto_banner')){
+        if ($request->file('foto_banner')) {
             $nameFileBanner = $request->modalidade . '_banner.' . $request->foto_banner->extension();
-            $request->foto_banner->storeAS('modalidades',$nameFileBanner);
+            $request->foto_banner->storeAS('modalidades', $nameFileBanner);
         }
 
         $modalidade->update([
