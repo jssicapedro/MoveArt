@@ -28,7 +28,7 @@ class UsersSeeder extends Seeder
             'password'=> bcrypt('moveart22'),
         ],
         [
-            'foto' => null,
+            'foto' => '2.png',
             'primeiro' => 'Adriana',
             'apelido' => 'Valente',
             'email' => 'adriana00valent@gmail.com',
