@@ -24,7 +24,7 @@ class UsersSeeder extends Seeder
             'email' => 'jessica00pedro@gmail.com',
             'data_nasc' => '2003-05-15',
             'genero' => 'Feminino',
-            'perfil'=> 'Admin',
+            'perfil'=> 'Administrador',
             'password'=> bcrypt('moveart22'),
         ],
         [
@@ -34,7 +34,7 @@ class UsersSeeder extends Seeder
             'email' => 'adriana00valent@gmail.com',
             'data_nasc' => '2003-03-25',
             'genero' => 'Feminino',
-            'perfil'=> 'Admin',
+            'perfil'=> 'Administrador',
             'password'=> bcrypt('moveart22'),
         ],
         [
@@ -44,7 +44,7 @@ class UsersSeeder extends Seeder
             'email' => 'diogo00santos@gmail.com',
             'data_nasc' => '2003-09-27',
             'genero' => 'Masculino',
-            'perfil'=> 'Admin',
+            'perfil'=> 'Administrador',
             'password'=> bcrypt('moveart22'),
         ],
         [
@@ -54,7 +54,7 @@ class UsersSeeder extends Seeder
             'email' => 'beatriz00gameiro@gmail.com',
             'data_nasc' => '2003-09-07',
             'genero' => 'Feminino',
-            'perfil'=> 'Admin',
+            'perfil'=> 'Administrador',
             'password'=> bcrypt('moveart22'),
         ],
         [
@@ -64,7 +64,7 @@ class UsersSeeder extends Seeder
             'email' => 'tiago00migueis@gmail.com',
             'data_nasc' => '2003-10-07',
             'genero' => 'Masculino',
-            'perfil'=> 'Admin',
+            'perfil'=> 'Administrador',
             'password'=> bcrypt('moveart22'),
         ],
         

@@ -13,7 +13,7 @@
                 </a>
                 <li class="about_admin">
                     <div class="imagem">
-                        <img src="{{ url('storage/professores/'.Auth::user()->foto) }}" alt="user">
+                        <img src="{{ url('storage/users/'.Auth::user()->foto) }}" alt="user">
                     </div>
                     <p>Olá, {{ Auth::user()->primeiro }}</p>
                 </li>
