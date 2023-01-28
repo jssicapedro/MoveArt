@@ -22,6 +22,22 @@ class InscricaoAlunoController extends Controller
     }
     public function store(Request $request)
     {
+        $request->validate([
+            'primeiro' => 'required',
+            'apelido'=> 'required',
+            'genero' => 'required',
+            'data_nasc' => 'required',
+            'email' => 'required|email',
+            'password' => 'required'
+        ],
+        [
+            'primeiro.required' => 'Preencha o Nome',
+            'apelido.required' => 'Preencha o Apelido',
+            'genero.required' => 'Preencha o Género',
+            'data_nasc.required' => 'Preencha a Data de Nascimento',
+            'email.required' => 'Preencha o email',
+            'password.required' => 'Preencha a password'
+        ]);
         $user = User::create([
             //nome do input=> função request -> nome do campo na bd
             'primeiro' => $request->primeiro,
