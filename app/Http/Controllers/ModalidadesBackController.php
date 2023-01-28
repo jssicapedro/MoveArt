@@ -64,11 +64,11 @@ class ModalidadesBackController extends Controller
             'descricao' => $request->descricao,
             'valor_mensal' => $request->valor_mensal,
             'valor_anual' => $request->valor_anual,
-            'foto_desc' => $request->foto_desc,
-            'foto_mensal' => $request->foto_mensal,
-            'foto_anual' => $request->foto_anual,
-            'foto_horario' => $request->foto_horario,
-            'foto_banner' => $request->foto_banner, 
+            'foto_desc' => $nameFileDesc,
+            'foto_mensal' => $nameFileMensal,
+            'foto_anual' => $nameFileAnual,
+            'foto_horario' => $nameFileHor,
+            'foto_banner' => $nameFileBanner, 
         ]);
 
         return redirect('admin/modalidades');
@@ -120,11 +120,11 @@ class ModalidadesBackController extends Controller
             'descricao' => $request->descricao,
             'valor_mensal' => $request->valor_mensal,
             'valor_anual' => $request->valor_anual,
-            'foto_desc' => $request->foto_desc,
-            'foto_mensal' => $request->foto_mensal,
-            'foto_anual' => $request->foto_anual,
-            'foto_horario' => $request->foto_horario,
-            'foto_banner' => $request->foto_banner,
+            'foto_desc' => $nameFileDesc,
+            'foto_mensal' => $nameFileMensal,
+            'foto_anual' => $nameFileAnual,
+            'foto_horario' => $nameFileHor,
+            'foto_banner' => $nameFileBanner,
         ]);
         return redirect('admin/modalidades');
     }
