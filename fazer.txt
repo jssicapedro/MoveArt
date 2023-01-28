@@ -1,49 +1,10 @@
-fazer login (login.bade.php -> navbar/main/footer (layouts > app.blade.php)) ------> 2hrs✅ ------> adicionar animação
-alterar landing page ✅
-separar pedido professor ✅ 
-separar patrocínio ✅ 
-começar o Back ✅ 
-adicionar campo de foto_horario nas modalidades ✅ 
-valor mínimo do patrocínio ✅
-Acrescentar coluna de resposta á tabela pedidos_professores ou o admin liga logo para marcar reunião ✅
-delete -> patrocinio ✅ https://www.youtube.com/watch?v=suXG1bs0dHo&ab_channel=Celke
-
-
-
-softdele -> pedido professor ✅
+softdele -> pedido professor 
             - apaga o registo do pedido passados 6meses
-         -> restaurar - https://www.youtube.com/watch?v=twcDknTcOEw&ab_channel=CodeImprove ✅
 
-
-design da tabela responsivo - patrocínio ✅
-                  - Pedido professor ✅
-
-validações de formulários > mensagem de erro/sucesso ✅
+validações de formulários > mensagem de erro/sucesso ✅ -  deixou de funcionar
                           > erro -> não guarda os valores anteriormente inseridos
 
-enviar email quando atualizar mensagem -> quando enviar resposta proibir mandar outra. -> validações ✅
-   - https://mailtrap.io/blog/send-email-in-laravel/ 
-   - https://www.itsolutionstuff.com/post/laravel-send-mail-using-mailtrap-exampleexample.html
-      > pedido professor ✅
-         >>enviar ✅
-         >>alterar design ✅
-
-      > patrocinio ✅
-         >>enviar ✅
-         >>alterar design ✅
-
-Design responsivo view e edit
-      > pedprof ✅
-      > patrocínio ✅
-
-
-
-
-
-
-
-
-As flash messagem não estão a funcionar nem no pedido nem no patrocinio
+As flash messagem não estão a funcionar nem no pedido nem no patrocínio
 Alerta mostra o id do pedido mas n funciona com o formulário
 
 
@@ -53,16 +14,6 @@ Alertas de confirmação
          >> quer restaurar o pedido de professor
          >> quer apagar o registo do patrocínio
 
-
-pesquisar sobre police/gate ---- impede que alunos entrem no back
 gerar nova página de modalidade automaticamente
 
-
-
-APRESENTAÇÂO
-menu em vez de dashboard meter administração ✅
-erros devem estar onde o erro se encontra ✅
-remover mensagem á listagem dos patrocinios ✅
-redirecionar rotas depois de edição ✅
 quando restaurar um pedido mandar para a listagem
-model de confirmação de erro
