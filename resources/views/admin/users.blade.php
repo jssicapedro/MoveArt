@@ -85,10 +85,6 @@
                                 <div id="add">
                                     <a href="{{ url('add-user') }}" class="btn add">+ Adicionar</a>
                                 </div>
-                                <div id="load">
-                                    <button onClick="window.location.reload();" type="button"
-                                        class="btn load">Atualizar</button>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -161,13 +157,13 @@
                                                         {{ date('d-m-Y', strtotime($user->data_nasc)) }}</td>
                                                     <td class="align-middle">{{ $user->genero }}</td>
                                                     <td class="align-middle">
-                                                        @if($user->perfil == 'admin')
-                                                        <div class="admin_id_perfil" >{{ $user->perfil }}</div>
-                                                    @elseif($user->perfil == 'professor')
-                                                    <div class="prof_id_perfil" >{{ $user->perfil }}</div>
-                                                    @elseif($user->perfil == 'aluno')
-                                                    <div class="aluno_id_perfil" >{{ $user->perfil }}</div>
-                                                    @endif
+                                                       
+                                                        <div class="{{ $user->perfil }}" >{{ $user->perfil }}</div>
+                                                  
+                                                   
+                                                  
+                                                
+                                                  
                                                 </td>
                                                     <td class="align-middle icon_btns">
 

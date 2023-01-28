@@ -42,10 +42,6 @@
                                 <div id="add">
                                     <a href="{{ url('admin/users') }}" class="btn add">Voltar</a>
                                 </div>
-                                <div id="load">
-                                    <button onClick="window.location.reload();" type="button"
-                                        class="btn load">Atualizar</button>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -59,148 +55,214 @@
                             <div>
                                 <form action="{{ url('add-user') }}" method="post" enctype="multipart/form-data">
                                     @csrf
-                               
+
                                     <div class="container form_add" style="padding:18px 0px 40px 0px;">
                                         <div class="row">
                                             <div class="col-12 foto">
                                                 <div class=" d-flex justify-content-center">
                                                     <div class="profile-pic-div">
                                                         <img src="{{ asset('img/inicio/user.jpg') }}" id="photo">
-                                                        <input type="file" id="file" name="foto">
+                                                        <input type="file" id="file" name="foto" >
                                                         <label for="file" id="uploadBtn">
                                                             <p class="icon_camara"><i class="bi bi-camera-fill"></i></p>
                                                         </label>
-                                                      </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cont_form rr"  style="padding:100px 50px 40px 50px;">
-                                        <div class="row">
-
-
-                                            <div class="col-4">
-                                                <div class="form-group mb-3">
-                                                    <label for="priemrionome">Primeiro Nome<span>*</span></label>
-                                                    <input type="text" name="primeiro" id="priemrionome"
-                                                        class="form-control form-control-sm">
-                                                </div>
-                                                <div class="form-group mb-3">
-                                                    <label for="data_nasc">Nascimento<span>*</span></label>
-                                                    <input type="date" name="data_nasc" id="data_nasc"
-                                                        class="form-control form-control-sm">
-                                                </div>
-                                                <div class="form-group mb-3">
-                                                    <label for="password">Password<span>*</span></label>
-                                                    <input type="password" name="password" id="password"
-                                                        class="form-control form-control-sm">
-                                                </div>
-                                                <div class="form-group mb-3">
-                                                    <label for="nif">Nif</label>
-                                                    <input type="text" name="nif" id="nif"
-                                                        class="form-control form-control-sm">
-                                                </div>
-                                                
-                                                <div class="form-group mb-3">
-                                                    <label for="cod_postal">Código Postal</label>
-                                                    <input type="text" name="cod_postal" id="cod_postal"
-                                                        class="form-control form-control-sm">
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-4">
-                                                <div class="form-group mb-3">
-                                                    <label for="apelido">Apelido<span>*</span></label>
-                                                    <input type="text" name="apelido" id="apelido"
-                                                        class="form-control form-control-sm">
-                                                </div>
-                                                <div class="form-group mb-3">
-                                                    <label for="telefone">Telefone<span>*</span></label>
-                                                    <input type="tel" name="telefone" id="telefone"
-                                                        class="form-control form-control-sm">
-                                                </div>
-                                                <div class="form-group mb-3">
-                                                    <label for="password">Confirmar Password<span>*</span></label>
-                                                    <input type="password" name="password" id="password"
-                                                        class="form-control form-control-sm" value="">
-                                                </div>
-                                                
-                                                <div class="form-group mb-3">
-                                                    <label for="localidade">Localidade</label>
-                                                    <input type="text" name="localidade" id="localidade"
-                                                        class="form-control form-control-sm">
-                                                </div>
-
-                                                <div class="form-group mb-3">
-                                                    <label for="perfil">Perfil<span>*</span></label>
-                                                    <select class="form-select form-select-sm" name="perfil"
-                                                        id="perfil">
-                                                        <option selected disabled hidden>escolhe...</option>
-                                                        <option value="aluno">Aluno</option>
-                                                        <option value="admin">Administrador</option>
-                                                        <option value="professor">Professor</option>
-                                                    </select>
-                                                </div>
-                                               
-                                            </div>
-
-                                            <div class="col-4">
-                                                <div class="form-group mb-3">
-                                                    <label for="genero">Género<span>*</span></label>
-                                                    <select class="form-select form-select-sm" name="genero"
-                                                        id="genero">
-                                                        <option selected disabled hidden>escolhe...</option>
-                                                        <option value="feminino">Feminino</option>
-                                                        <option value="masculino">Masculino</option>
-                                                        <option value="outro">Outro</option>
-                                                        <option value="nao_divulgar">Prefiro não divulgar</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group mb-3">
-                                                    <label for="email">Email<span>*</span></label>
-                                                    <input type="text" name="email" id="email"
-                                                        class="form-control form-control-sm">
-                                                </div>
-                                                <div class="form-group mb-3">
-                                                    <label for="cc">CC</label>
-                                                    <input type="text" name="cc" id="cc"
-                                                        class="form-control form-control-sm">
-                                                </div>
-                                                <div class="form-group mb-3">
-                                                    <label for="rua">Rua</label>
-                                                    <input type="text" name="rua" id="rua"
-                                                        class="form-control form-control-sm">
-                                                </div>
-                                               
-                                                <div class="form-group mb-3">
-                                                    <label for="modalidade_id">Modalidade</label>
-                                                    <select class="form-select form-select-sm" name="modalidade_id"
-                                                        id="modalidade_id">
-                                                        <option selected disabled hidden>escolhe...</option>
-                                                        @foreach ($modalidade as $mode)
-                                                            <option value=" {{ $mode->id }}">{{ $mode->modalidade }}
-                                                            </option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="buttons d-flex justify-content-start">
-                                                    <p id="spancampo">( <span style="  color: #eeb2b5;">*</span> ) - Campo Onrigatório</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="buttons d-flex justify-content-end ">
-                                                    <div id="adduser">
-                                                        <button type="submit" class="btn add">Guardar</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class="cont_form rr" style="padding:100px 50px 40px 50px;">
+                                            <div class="row">
+
+
+                                                <div class="col-4">
+                                                    <div class="form-group mb-3">
+                                                        <label for="priemrionome">Primeiro Nome<span>*</span></label>
+                                                        <input type="text" name="primeiro" id="priemrionome"
+                                                            class="form-control form-control-sm" value="{{old('primeiro')}}">
+
+                                                        <span>
+                                                            @error('primeiro')
+                                                                <p class="msg_p">{{ $message }}</p>
+                                                            @enderror
+
+                                                        </span>
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <label for="data_nasc">Nascimento<span>*</span></label>
+                                                        <input type="date" name="data_nasc" id="data_nasc"
+                                                            class="form-control form-control-sm" value="{{old('data_nasc')}}">
+
+                                                        <span>
+                                                            @error('data_nasc')
+                                                                <p class="msg_p">{{ $message }}</p>
+                                                            @enderror
+
+                                                        </span>
+
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <label for="password">Password<span>*</span></label>
+                                                        <input type="password" name="password" id="password"
+                                                            class="form-control form-control-sm" >
+
+                                                        <span>
+                                                            @error('password')
+                                                                <p class="msg_p">{{ $message }}</p>
+                                                            @enderror
+
+                                                        </span>
+
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <label for="nif">Nif</label>
+                                                        <input type="text" name="nif" id="nif"
+                                                            class="form-control form-control-sm" value="{{old('nif')}}">
+                                                    </div>
+
+                                                    <div class="form-group mb-3">
+                                                        <label for="cod_postal">Código Postal</label>
+                                                        <input type="text" name="cod_postal" id="cod_postal"
+                                                            class="form-control form-control-sm" value="{{old('cod_postal')}}">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-4">
+                                                    <div class="form-group mb-3">
+                                                        <label for="apelido">Apelido<span>*</span></label>
+                                                        <input type="text" name="apelido" id="apelido"
+                                                            class="form-control form-control-sm" value="{{old('apelido')}}">
+
+                                                        <span>
+                                                            @error('apelido')
+                                                                <p class="msg_p">{{ $message }}</p>
+                                                            @enderror
+
+                                                        </span>
+
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <label for="telefone">Telefone<span>*</span></label>
+                                                        <input type="tel" name="telefone" id="telefone"
+                                                            class="form-control form-control-sm" value="{{old('telefone')}}">
+
+                                                            <span>
+                                                                @error('telefone')
+                                                                    <p class="msg_p">{{ $message }}</p>
+                                                                @enderror
+    
+                                                            </span>
+
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <label for="password">Confirmar Password<span>*</span></label>
+                                                        <input type="password" name="passwordc" id="password"
+                                                            class="form-control form-control-sm">
+                                                            
+                                                    </div>
+
+                                                    <div class="form-group mb-3">
+                                                        <label for="localidade">Localidade</label>
+                                                        <input type="text" name="localidade" id="localidade"
+                                                            class="form-control form-control-sm" value="{{old('localidade')}}">
+                                                    </div>
+
+                                                    <div class="form-group mb-3">
+                                                        <label for="perfil">Perfil<span>*</span></label>
+                                                        <select class="form-select form-select-sm" name="perfil"
+                                                            id="perfil">
+                                                            <option selected disabled hidden>escolhe...</option>
+                                                            <option value="Aluno">Aluno</option>
+                                                            <option value="Administrador">Administrador</option>
+                                                            <option value="Professor">Professor</option>
+                                                        </select>
+
+                                                        <span>
+                                                            @error('perfil')
+                                                                <p class="msg_p">{{ $message }}</p>
+                                                            @enderror
+
+                                                        </span>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-4">
+                                                    <div class="form-group mb-3">
+                                                        <label for="genero">Género<span>*</span></label>
+                                                        <select class="form-select form-select-sm" name="genero"
+                                                            id="genero">
+                                                            <option selected disabled hidden>escolhe...</option>
+                                                            <option value="Feminino">Feminino</option>
+                                                            <option value="Masculino">Masculino</option>
+                                                            <option value="Outro">Outro</option>
+                                                            <option value="Prefiro não divulgar">Prefiro não divulgar</option>
+                                                        </select>
+
+                                                        <span>
+                                                            @error('genero')
+                                                                <p class="msg_p">{{ $message }}</p>
+                                                            @enderror
+
+                                                        </span>
+
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <label for="email">Email<span>*</span></label>
+                                                        <input type="text" name="email" id="email"
+                                                            class="form-control form-control-sm" value="{{old('email')}}">
+
+                                                        <span>
+                                                            @error('email')
+                                                                <p class="msg_p">{{ $message }}</p>
+                                                            @enderror
+
+                                                        </span>
+
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <label for="cc">CC</label>
+                                                        <input type="text" name="cc" id="cc"
+                                                            class="form-control form-control-sm" value="{{old('cc')}}">
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <label for="rua">Rua</label>
+                                                        <input type="text" name="rua" id="rua"
+                                                            class="form-control form-control-sm" value="{{old('rua')}}">
+                                                    </div>
+
+                                                    <div class="form-group mb-3">
+                                                        <label for="modalidade_id">Modalidade</label>
+                                                        <select class="form-select form-select-sm" name="modalidade_id"
+                                                            id="modalidade_id">
+                                                            <option selected disabled hidden>escolhe...</option>
+                                                            @foreach ($modalidade as $mode)
+                                                                <option value=" {{ $mode->id }}">
+                                                                    {{ $mode->modalidade }}
+                                                                </option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="buttons d-flex justify-content-start">
+                                                        <p id="spancampo">( <span style="  color: #eeb2b5;">*</span> ) -
+                                                            Campo Onrigatório</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="buttons d-flex justify-content-end ">
+                                                        <div id="adduser">
+                                                            <button type="submit" class="btn add">Guardar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
 

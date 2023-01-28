@@ -40,6 +40,30 @@ class UsersBackController extends Controller
     public function store(Request $request)
     {
 
+        $request->validate([
+
+'primeiro'=>'required',
+'apelido'=>'required',
+'email'=>'required',
+'data_nasc'=>'required',
+'genero'=>'required',
+'perfil'=>'required',
+'password'=>'required',
+'telefone'=>'required'
+
+        ],
+    [
+        'primeiro.required'=>'Campo Obrigatório',
+        'apelido.required'=>'Campo Obrigatório',
+        'email.required'=>'Campo Obrigatório',
+        'data_nasc.required'=>'Campo Obrigatório',
+        'genero.required'=>'Campo Obrigatório',
+        'perfil.required'=>'Campo Obrigatório',
+        'password.required'=>'Campo Obrigatório',
+        'telefone.required'=>'Campo Obrigatório',
+    ]);
+
+
        $user = new User();
         $user->primeiro = $request->input('primeiro');
         $user->apelido = $request->input('apelido');
@@ -72,39 +96,66 @@ class UsersBackController extends Controller
     }
     public function edit($id)
     {
-        $modalidade = Modalidade::all();
+      
         $user = User::find($id);
-        return view('admin.user_edit', compact('user'), compact('modalidade'));
+        $modalidade = Modalidade::all();
+
+        return view('admin.user_edit', compact('modalidade', 'user'));
     }
     public function update(Request $request, $id)
     {  
-        $user = User::find($id);
-        $user->primeiro = $request->input('primeiro');
-        $user->apelido = $request->input('apelido');
-        $user->email = $request->input('email');
-        $user->data_nasc = $request->input('data_nasc');
-        $user->cc = $request->input('cc');
-        $user->nif = $request->input('nif');
-        $user->genero = $request->input('genero');
-        $user->perfil = $request->input('perfil');
-        $user->password = Hash::make($request->password);
-        $user->telefone = $request->input('telefone');
-        $user->localidade = $request->input('localidade');
-        $user->rua = $request->input('rua');
-        $user->cod_postal = $request->input('cod_postal');
-        if ($request->hasfile('foto')) {
-            $destination = 'storage/professores/' . $user->foto;
-            if (File::exists($destination)) {
-                File::delete($destination);
-            }
-            $file = $request->file('foto');
-            $extention = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $extention;
-            $file->move('storage/professores/', $filename);
-            $user->foto = $filename;
-        }
 
-        $user->update();
+         $request->validate([
+
+             'primeiro'=>'required',
+             'apelido'=>'required',
+             'email'=>'required',
+             'data_nasc'=>'required',
+             'genero'=>'required',
+             'perfil'=>'required',
+             'password'=>'required',
+             'telefone'=>'required'
+            
+                     ],
+                 [
+                     'primeiro.required'=>'Campo Obrigatório',
+                     'apelido.required'=>'Campo Obrigatório',
+                     'email.required'=>'Campo Obrigatório',
+                     'data_nasc.required'=>'Campo Obrigatório',
+                     'genero.required'=>'Campo Obrigatório',
+                     'perfil.required'=>'Campo Obrigatório',
+                     'password.required'=>'Campo Obrigatório',
+                     'telefone.required'=>'Campo Obrigatório',
+                 ]);
+
+
+         $user = User::find($id);
+         $user->primeiro = $request->input('primeiro');
+         $user->apelido = $request->input('apelido');
+         $user->email = $request->input('email');
+         $user->data_nasc = $request->input('data_nasc');
+         $user->cc = $request->input('cc');
+         $user->nif = $request->input('nif');
+         $user->genero = $request->input('genero');
+         $user->perfil = $request->input('perfil');
+         $user->password = Hash::make($request->password);
+         $user->telefone = $request->input('telefone');
+         $user->localidade = $request->input('localidade');
+         $user->rua = $request->input('rua');
+         $user->cod_postal = $request->input('cod_postal');
+         if ($request->hasfile('foto')) {
+             $destination = 'storage/professores/' . $user->foto;
+             if (File::exists($destination)) {
+                 File::delete($destination);
+             }
+             $file = $request->file('foto');
+             $extention = $file->getClientOriginalExtension();
+             $filename = time() . '.' . $extention;
+             $file->move('storage/professores/', $filename);
+             $user->foto = $filename;
+         }
+         $user->modalidade()->sync($request['modalidade_id']);
+         $user->update();
        
 
         return redirect()->back()->with('status', 'User editado com sucesso.');
