@@ -123,11 +123,10 @@ class PedidoprofessorController extends Controller
         return view('admin.pedprof.pedprof_archive', compact('arquivados'));
     }
 
-    public function delete(PedidoProfessor $pedidos, Request $request)
+    public function delete(PedidoProfessor $pedidos)
     {
-        $pedidos = PedidoProfessor::find($request->pedprof_delete_id);
         $pedidos->delete();
-        return redirect()->route('pedidosprof', compact($pedidos));
+        return redirect()->route('pedidosprof');
     }
 
     public function restore($id)

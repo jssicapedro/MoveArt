@@ -11,33 +11,6 @@
 @endsection
 
 @section('main')
-
-<!-- Modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            {{-- <form action="{{ route('pedprof.destroy', $pedidos->id) }}" method="POST">
-                @csrf
-                @method('DELETE') --}}
-                <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Arquivar pedido</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <input type="text" name="pedprof_delete_id" id="pedprof_id">
-                    <h5>Quer mesmo arquivar o pedido?</h5>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-danger">Arquivar</button>
-                </div>
-            <form>
-        </div>
-    </div>
-</div>
-
-
-
 <div class="dashboard_main">
     <div class="pedidos_main">
         <h1>Pedidos para Professor <span class="quantidade">({{$quantidade}} pendentes)</span></h1>
@@ -105,13 +78,6 @@
                                     <li></li>
                                     @endif
                                     <li>
-                                        <button type="button" value="{{$pedidos->id}}" data-toggle="modal" data-target="#deletedModal" class="btn btn-danger deletePedBtn">
-                                            <span class="material-symbols-outlined delete">
-                                                delete
-                                            </span>
-                                        </button>
-                                    </li>
-                                    <!-- <li>
                                         <form action="{{ route('pedprof.destroy', $pedidos->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
@@ -123,7 +89,7 @@
                                                 </a>
                                             </button>
                                         </form>
-                                    </li> -->
+                                    </li>
                                 </ul>
                             </td>
                         </tr>
@@ -136,30 +102,6 @@
             </div>
         </div>
     </div>
-
-
-    <!-- <div class="modal fade deletePedBtn" id="deleteModal" tabindex="-1" aria-labelledby="exempleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                {{-- <form action="{{ route('pedprof.destroy', $pedidos->id) }}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exempleModalLabel">Arquivar Pedido</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-boddy">
-                        <input type="hidden" name="category_delete_id" id="category_id">
-                        <h5>Tens a certeza que queres arquivar o pedido?</h5>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-danger">Arquivar</button>
-                    </div>
-                </form> --}}
-            </div>
-        </div>
-    </div> -->
-</div>
 </div>
 @endsection
 
@@ -216,14 +158,6 @@
             }
 
         });
-
-        $('.deletePedBtn').click(function(e) {
-            e.preventDefault();
-
-            var pedido_id = $(this).val();
-            $('#pedprof_id').val(pedido_id);
-            $('#deleteModal').modal('show');
-        })
     });
 </script>
 @endsection
