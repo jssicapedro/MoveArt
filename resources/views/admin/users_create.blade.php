@@ -82,7 +82,7 @@
 
                                                         <span>
                                                             @error('primeiro')
-                                                                {{ $message }}
+                                                                <p class="msg_p">{{ $message }}</p>
                                                             @enderror
 
                                                         </span>
@@ -94,7 +94,7 @@
 
                                                         <span>
                                                             @error('data_nasc')
-                                                                {{ $message }}
+                                                                <p class="msg_p">{{ $message }}</p>
                                                             @enderror
 
                                                         </span>
@@ -107,7 +107,7 @@
 
                                                         <span>
                                                             @error('password')
-                                                                {{ $message }}
+                                                                <p class="msg_p">{{ $message }}</p>
                                                             @enderror
 
                                                         </span>
@@ -135,7 +135,7 @@
 
                                                         <span>
                                                             @error('apelido')
-                                                                {{ $message }}
+                                                                <p class="msg_p">{{ $message }}</p>
                                                             @enderror
 
                                                         </span>
@@ -148,7 +148,7 @@
 
                                                             <span>
                                                                 @error('telefone')
-                                                                    {{ $message }}
+                                                                    <p class="msg_p">{{ $message }}</p>
                                                                 @enderror
     
                                                             </span>
@@ -172,14 +172,14 @@
                                                         <select class="form-select form-select-sm" name="perfil"
                                                             id="perfil">
                                                             <option selected disabled hidden>escolhe...</option>
-                                                            <option value="aluno">Aluno</option>
-                                                            <option value="admin">Administrador</option>
-                                                            <option value="professor">Professor</option>
+                                                            <option value="Aluno">Aluno</option>
+                                                            <option value="Administrador">Administrador</option>
+                                                            <option value="Professor">Professor</option>
                                                         </select>
 
                                                         <span>
                                                             @error('perfil')
-                                                                {{ $message }}
+                                                                <p class="msg_p">{{ $message }}</p>
                                                             @enderror
 
                                                         </span>
@@ -194,15 +194,15 @@
                                                         <select class="form-select form-select-sm" name="genero"
                                                             id="genero">
                                                             <option selected disabled hidden>escolhe...</option>
-                                                            <option value="feminino">Feminino</option>
-                                                            <option value="masculino">Masculino</option>
-                                                            <option value="outro">Outro</option>
-                                                            <option value="nao_divulgar">Prefiro não divulgar</option>
+                                                            <option value="Feminino">Feminino</option>
+                                                            <option value="Masculino">Masculino</option>
+                                                            <option value="Outro">Outro</option>
+                                                            <option value="Prefiro não divulgar">Prefiro não divulgar</option>
                                                         </select>
 
                                                         <span>
                                                             @error('genero')
-                                                                {{ $message }}
+                                                                <p class="msg_p">{{ $message }}</p>
                                                             @enderror
 
                                                         </span>
@@ -215,7 +215,7 @@
 
                                                         <span>
                                                             @error('email')
-                                                                {{ $message }}
+                                                                <p class="msg_p">{{ $message }}</p>
                                                             @enderror
 
                                                         </span>
@@ -229,7 +229,7 @@
                                                     <div class="form-group mb-3">
                                                         <label for="rua">Rua</label>
                                                         <input type="text" name="rua" id="rua"
-                                                            class="form-control form-control-sm">
+                                                            class="form-control form-control-sm" value="{{old('rua')}}">
                                                     </div>
 
                                                     <div class="form-group mb-3">

@@ -237,18 +237,18 @@ p#spancampo{
       background-color: #d9a1a4;
        color: #fff;
       }
-      .admin_id_perfil{
+      .Administrador{
         background-color: #d296d66f;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 2px 0px;
+        padding: 2px 5px;
         border: 1px solid #d296d6;
         border-radius: 25px;
         color: #d296d6;
 
       }
-      .prof_id_perfil{
+      .Professor{
         background-color: #f7d5a171;
         display: flex;
         justify-content: center;
@@ -259,7 +259,7 @@ p#spancampo{
         color: #e5c491;
 
       }
-      .aluno_id_perfil{
+      .Aluno{
         background-color: #eeb2b574;
         display: flex;
         justify-content: center;
@@ -309,4 +309,9 @@ p#spancampo{
           }
           .icon_delete{
             padding: 0 0 25px 0;
+          }
+
+          p.msg_p{
+            font-size: 13px;
+            color: #eeb2b5;
           }

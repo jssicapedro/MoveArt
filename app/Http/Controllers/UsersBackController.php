@@ -96,9 +96,11 @@ class UsersBackController extends Controller
     }
     public function edit($id)
     {
-        $modalidade = Modalidade::all();
+      
         $user = User::find($id);
-        return view('admin.user_edit', compact('user'), compact('modalidade'));
+        $modalidade = Modalidade::all();
+
+        return view('admin.user_edit', compact('modalidade', 'user'));
     }
     public function update(Request $request, $id)
     {  
@@ -152,10 +154,9 @@ class UsersBackController extends Controller
              $file->move('storage/professores/', $filename);
              $user->foto = $filename;
          }
-
+         $user->modalidade()->sync($request['modalidade_id']);
          $user->update();
-
- 
+       
 
         return redirect()->back()->with('status', 'User editado com sucesso.');
     }

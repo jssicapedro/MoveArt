@@ -140,11 +140,11 @@
                                                 <div class="form-group mb-3">
                                                     <label for="perfil">Perfil<span>*</span></label>
                                                     <select class="form-select form-select-sm" name="perfil"
-                                                        id="perfil">
-                                                        <option selected disabled hidden>escolhe...</option>
-                                                        <option value="aluno">Aluno</option>
-                                                        <option value="admin">Administrador</option>
-                                                        <option value="professor">Professor</option>
+                                                        id="perfil" value="{{ $user->perfil}}">
+                                    
+                                                        <option value="Aluno" {{ $user->perfil =="Aluno" ? 'selected' : ''}}>Aluno</option>
+                                                        <option value="Administrador" {{ $user->perfil =="Administrador" ? 'selected' : ''}}>Administrador</option>
+                                                        <option value="Professor" {{ $user->perfil =="Professor" ? 'selected' : ''}}>Professor</option>
                                                     </select>
                                                 </div>
                                                
@@ -154,12 +154,12 @@
                                                 <div class="form-group mb-3">
                                                     <label for="genero">Género<span>*</span></label>
                                                     <select class="form-select form-select-sm" name="genero"
-                                                        id="genero">
+                                                        id="genero" value="{{ $user->genero}}">
                                                         <option selected disabled hidden>escolhe...</option>
-                                                        <option value="feminino">Feminino</option>
-                                                        <option value="masculino">Masculino</option>
-                                                        <option value="outro">Outro</option>
-                                                        <option value="nao_divulgar">Prefiro não divulgar</option>
+                                                        <option value="Feminino" {{ $user->genero =="Feminino" ? 'selected' : ''}}>Feminino</option>
+                                                        <option value="Masculino" {{ $user->genero =="Masculino" ? 'selected' : ''}}>Masculino</option>
+                                                        <option value="Outro" {{ $user->genero =="Outro" ? 'selected' : ''}}>Outro</option>
+                                                        <option value="Prefiro não divulgar" {{ $user->genero =="Prefiro não divulgar" ? 'selected' : ''}}>Prefiro não divulgar</option>
                                                     </select>
                                                 </div>
                                                 <div class="form-group mb-3">
@@ -181,10 +181,10 @@
                                                 <div class="form-group mb-3">
                                                     <label for="modalidade_id">Modalidade</label>
                                                     <select class="form-select form-select-sm" name="modalidade_id"
-                                                        id="modalidade_id">
+                                                        id="modalidade_id" >
                                                         <option selected disabled hidden>escolhe...</option>
                                                         @foreach ($modalidade as $mode)
-                                                            <option value=" {{ $mode->id }}">{{ $mode->modalidade }}
+                                                            <option value="{{ $mode->id  }}">{{ $mode->modalidade }}
                                                             </option>
                                                         @endforeach
                                                     </select>
