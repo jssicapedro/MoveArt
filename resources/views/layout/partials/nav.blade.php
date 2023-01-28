@@ -27,7 +27,13 @@
               </ul>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="{{ asset('eventosFO') }}">Eventos</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{{ asset('mapaaulas') }}">Mapa de Aulas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ asset('faqs') }}">FAQs</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ asset('contactos') }}">Contactos</a>

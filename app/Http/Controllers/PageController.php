@@ -69,6 +69,10 @@ class PageController extends Controller
         return view('eventosFO', compact('evento'));
     }
 
+    public function faqs(){
+        return view('faqs');
+    }
+
     protected $table='modalidade';
 
     /* ------- landingPages ------- */

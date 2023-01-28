@@ -24,6 +24,7 @@ Route::get('/mapaaulas', [PageController::class, 'mapaaulas'])->name('mapaaulas'
 
 Route::get('/eventosFO', [PageController::class, 'eventosFO'])->name('eventosFO');
 
+Route::get('/faqs', [PageController::class, 'faqs'])->name('faqs');
 
 Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO');
 
