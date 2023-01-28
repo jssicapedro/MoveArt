@@ -51,7 +51,7 @@
             <li>
               <a class="dropdown-item" href="{{ asset('perfil') }}"> Perfil</a>
 
-              @if(Auth::user()->perfil == 'admin')
+              @if(Auth::user()->perfil == 'Administrador')
               <a class="dropdown-item" href="{{ asset('dashboardBO') }}"> Administração</a>
               @endif
 
