@@ -37,10 +37,10 @@
                     <div class="col-6">
                         <label for="genero">Género:</label>
                         <select id="genero" name="genero" class="form-control">
-                            <option value="feminino">Feminino</option>
-                            <option value="masculino">Masculino</option>
-                            <option value="outro">Outro</option>
-                            <option value="nao_divulgar">Prefiro não divulgar</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Outro">Outro</option>
+                            <option value="Prefiro não divulgar">Prefiro não divulgar</option>
                         </select>
                     </div>
                     <div class="col-6">
@@ -59,10 +59,10 @@
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <input type="password" class="form-control" name="password" placeholder="Palavra-Passe">
+                        <input type="password" class="form-control" name="password" placeholder="Palavra-Passe" required>
                     </div>
                     <div class="col-6">
-                        <input type="password" class="form-control" name="password_confirmation" placeholder="Confirmar Palavra-Passe">
+                        <input type="password" class="form-control" name="password_confirmation" required placeholder="Confirmar Palavra-Passe">
                     </div>
                 </div>
             </div>
@@ -80,8 +80,8 @@
                         </select>
                         <section class="cards">
                             <article class="cart card--1">
-                                <div class="card_img" name="img_anual" style="background-image: url('./storage/modalidades/'.$modalidade->foto_anual) }}"></div>
-                                <div class="card_img--hover" name="img_anual" style="background-image: url('./storage/modalidades/'.$modalidade->foto_anual) }}"></div>
+                                <div class="card_img" name="img_mensal" style="background-image: url('{{ asset('img/inscricoes/fundo3.jpg')}}');"></div>
+                                <div class="card_img--hover" name="img_mensal" style="background-image: url('{{ asset('img/inscricoes/fundo3.jpg')}}');"></div>
                                 <div class="card_info_1">
                                     <h3 class="card_preco_1">
                                         <input type="radio" name="tp_ins" value="anual" id="anual">
@@ -91,8 +91,8 @@
                                 </div>
                             </article>
                             <article class="cart card--2">
-                                <div class="card_img" name="img_mensal" style="background-image: url('storage/modalidades/'.$modalidade->foto_mensal) }}"></div>
-                                <div class="card_img--hover" name="img_mensal" style="background-image: url('storage/modalidades/'.$modalidade->foto_mensal) }}"></div>
+                                <div class="card_img" style="background-image: url('{{ asset('img/inscricoes/fundo2.jpg')}}');"></div>
+                                <div class="card_img--hover" style="background-image: url('{{ asset('img/inscricoes/fundo2.jpg')}}');"></div>
                                 <div class="card_info_2">
                                     <h3 class="card_preco_2">
                                         <input type="radio" name="tp_ins" value="mensal" id="mensal">
@@ -100,11 +100,33 @@
                                     </h3>
                                 </div>
                             </article>
-
                         </section>
                     </div>
                 </div>
             </div>
+            <!-- <div class="tp_pagamento">
+                <div class="titulo">
+                    <h2>Modo de pagamento:</h2>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" name="pagamento" value="paypal" id="paypal">
+                        <img src="{{asset('img/inscricoes/paypal.png')}}" alt="">
+                    </li>
+                    <li>
+                        <input type="radio" name="pagamento" value="mbway" id="mbway">
+                        <img src="{{asset('img/inscricoes/mb_way.png')}}" alt="">
+                    </li>
+                    <li>
+                        <input type="radio" name="pagamento" value="multibanco" id="multibanco">
+                        <img src="{{asset('img/inscricoes/multibanco.png')}}" alt="">
+                    </li>
+                    <li>
+                        <input type="radio" name="pagamento" value="visa" id="visa">
+                        <img src="{{asset('img/inscricoes/visa.png')}}" alt="">
+                    </li>
+                </ul>
+            </div> -->
         </fieldset>
         <div class="row">
             <div class="col">
@@ -117,15 +139,6 @@
             </div>
         </div>
     </form>
-    @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
     </div>
 </section>
 @endsection

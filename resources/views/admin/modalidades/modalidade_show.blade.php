@@ -16,10 +16,11 @@
 
 @section('main')
 <div class="dashboard_main">
-    <h1 class="title">
+    <div class="mod_show_main">
+        <h1 class="title">
         <i class="fa-solid fa-eye"></i> Ver Modalidade
     </h1>
-    <div class="mod_show_main">
+    <button class="return" ><a href="{{ asset('admin/modalidades/')}}"><img class="icon_return" src="https://img.icons8.com/ios/50/null/left3.png"/></a></button>
         <form action="{{ route('modalidades.show', $modalidade->id) }}">
             <div class="row info">
                 <div class="col nome">

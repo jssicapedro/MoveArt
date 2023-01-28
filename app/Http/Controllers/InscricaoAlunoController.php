@@ -43,7 +43,7 @@ class InscricaoAlunoController extends Controller
             'primeiro' => $request->primeiro,
             'apelido' => $request->apelido,
             'genero' => $request->genero,
-            'perfil' => 'aluno',
+            'perfil' => 'Aluno',
             'data_nasc' => $request->data_nasc,
             'email' => $request->email,
             'password' => Hash::make($request->password),
