@@ -26,7 +26,7 @@
                         <h1>Venha-Nos Visitar!</h1>
                         <p>A dança para nós não é só uma atividade é um estilo de vida!</p>
                         <div class="hero_btn">
-                            <a href="#">
+                            <a href="#show">
                                 <div class="button">Saiba Mais</div>
                             </a>
                         </div>
@@ -41,12 +41,13 @@
 
 @section('main')
      <!-- start about us -->
-    <section id="about_us">
+ 
+     <div class="section-padding" id="show">
+    <div id="about_us">
 
         <div class="container d-flex align-items-center justify-content-center">
 
-            <div data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom" class="row sli_all  d-flex align-items-center justify-content-center">
+            <div class="row sli_all  d-flex align-items-center justify-content-center">
 
                 <div class="col-xl-6 col-md-6 columslider d-flex justify-content-end">
 
@@ -134,7 +135,9 @@
 
         </div>
 
-    </section>
+    </div>
+</div>
+
     <!-- end about us -->
 
 
@@ -145,7 +148,7 @@
     <section id="our_team">
         <div class="container-fluid group_equipa">
 
-            <div class="row p-0" data-aos="fade-up">
+            <div class="row p-0">
                 <div class="col-xl-2 col-md-2 col-6 img_box p-0">
                     <img src="{{ asset('img/inicio/pessoa6.png') }}" class="img-fluid" alt="funcionário">
                 </div>
