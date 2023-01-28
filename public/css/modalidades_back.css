@@ -50,7 +50,12 @@ main {
 .modalidades_main .drop li {
     padding: 5px;
 }
-
+.modalidades_main .drop i.fa-eye:hover {
+    color: cornflowerblue;
+}
+.modalidades_main .drop i.fa-pen-ruler:hover {
+    color: blueviolet;
+}
 .modalidades_main .drop i.fa-trash:hover {
     color: red;
 }
