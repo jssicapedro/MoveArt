@@ -17,7 +17,7 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::check() && Auth::user()->perfil == 'admin'){
+        if(Auth::check() && Auth::user()->perfil == 'Administrador'){
             return $next($request);
         }else if(!Auth::check()){
             return redirect('/login');
