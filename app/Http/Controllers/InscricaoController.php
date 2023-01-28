@@ -22,7 +22,7 @@ class InscricaoController extends Controller
 
         return response()->json($preco_anual);
     }
-    public function imgmensal(Request $request)
+    /* public function imgmensal(Request $request)
     {
         $img_mensal = Modalidade::select('foto_mensal')->where('id',$request->id)->first();
         return response()->json($img_mensal);
@@ -31,5 +31,5 @@ class InscricaoController extends Controller
     {
         $img_anual = Modalidade::select('foto_anual')->where('id',$request->id)->first();
         return response()->json($img_anual);
-    }
+    } */
 }
