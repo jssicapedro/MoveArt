@@ -160,6 +160,7 @@ body {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  line-break: anywhere;
 }
 .baixo table thead td {
   font-weight: 600;
@@ -550,7 +551,7 @@ tbody{
   }
 
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
@@ -564,6 +565,7 @@ tbody{
     position: relative;
     overflow: hidden;
     transition: all .5s;
+    line-break: anywhere;
   }
 
   .card:hover {
@@ -624,7 +626,7 @@ tbody{
 }
 
 .card:hover .content {
-    height: 190px;
+    height: 250px;
     padding: 20px;
     opacity: 1;
     transform: translateY(0);

@@ -12,12 +12,13 @@
     margin: 0 auto;
     padding: 4rem;
     width: 48rem;
-    margin-top: -2%;
+    margin-top: -3%;
   }
 
   h2{
     text-align: center;
-    font-size: 50px;
+    font-size: 70px;
+    margin-bottom: 8%;
   }
   
   .conteudo .pergunta-resposta {
@@ -26,6 +27,26 @@
   
   .conteudo .pergunta-resposta button[aria-expanded='true'] {
     border-bottom: 1px solid #03b5d2;
+  }
+
+  #botao-pergunta1{
+    background-color: #ea9e7e;
+    border-radius: 45px;
+    margin-top: 2%;
+    color: black;
+  }
+
+  #botao-pergunta1:hover{
+    background-color: #f2c5b2;
+    border-radius: 65px;
+    margin-top: 2%;
+    color: black;
+    font-size: 19px;
+    transition: 0.3s;
+  }
+
+  .pergunta-resposta{
+    margin-bottom: 15%;
   }
   
   .conteudo button {
@@ -57,13 +78,15 @@
   
   .conteudo button .pergunta {
     padding: 1em 1.5em 1em 0;
+    margin-left: 5%;
+    font-weight: 500;
   }
   
   .conteudo button .icon {
     display: inline-block;
     position: absolute;
-    top: 18px;
-    right: 0;
+    top: 22px;
+    right: 5%;
     width: 22px;
     height: 22px;
     border: 1px solid;
@@ -102,6 +125,8 @@
     max-height: 9em;
     transition: all 200ms linear;
     will-change: opacity, max-height;
+    background-color: #f5956d;
+    border-radius: 30px;
   }
   .conteudo .resposta {
     opacity: 0;
@@ -112,6 +137,8 @@
   }
   .conteudo .resposta p {
     font-size: 1rem;
-    font-weight: 300;
     margin: 2em 0;
+    margin-left: 4%;
+    margin-right: 4%;
+    font-weight: 400;
   }
