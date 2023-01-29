@@ -144,7 +144,7 @@
                                                                 <img src="{{ asset('img/inicio/user.jpg') }}"
                                                                     alt="user">
                                                             @else
-                                                                <img src="{{ url('storage/professores/' . $user->foto) }}"
+                                                                <img src="{{ url('storage/users/' . $user->foto) }}"
                                                                     alt="user">
                                                             @endif
                                                         </div>
@@ -195,7 +195,7 @@
                                                                                     <img src="{{ asset('img/inicio/user.jpg') }}"
                                                                                         alt="user">
                                                                                 @else
-                                                                                    <img src="{{ url('storage/professores/' . $user->foto) }}"
+                                                                                    <img src="{{ url('storage/users/' . $user->foto) }}"
                                                                                         alt="user">
                                                                                 @endif
                                                                             </div>

@@ -9,22 +9,26 @@ body
   box-sizing: border-box;
   font-size: 100%;
   font-family: 'Poppins', sans-serif;
+  background-color: transparent;
 } 
 
 .section-padding {
     padding: 0px;
   }
-#user_photo img{
-  max-height:100%; 
-  max-width:100%;
-  object-fit: contain;
+  #accordion #user_photo img{
+  min-width: 100%;
+  min-height: 100%
 }
-#user_photo{
+
+#accordion #user_photo{
   border-radius: 50%;
   background-color: #f2f2f2;
   width: 60px;
   height: 60px;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
 }
 .active>.page-link, .page-link.active{
   background-color: #747474;
@@ -48,12 +52,14 @@ body
   background-color: #f2f2f2;
   width: 200px;
   height: 200px;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
 }
 #view_user_photo img{
-  max-height:100%; 
-  max-width:100%;
-  object-fit: contain;
+  min-width: 100%;
+  min-height: 100%
 }
 #expand_user{
   padding: 30px 30px;
@@ -144,24 +150,41 @@ tr.bottom_tr{
     left: 250px;
     transition: 0.5s;
   }
-
-  .profile-pic-div{
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    bottom: -50%;
-    transform: translate(-50%,-20%);
+  .sec_row .profile-pic-div{
+    height: 150px;
+    width: 150px;
+    position: relative;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: rgb(251, 251, 251);
+    
+}
+.sec_row .profile-pic-div img{
+  min-width: 100%;
+  min-height: 100%;
+
 }
 
-#photo{
-    height: 100%;
-    width: 100%;
+.profile-pic-div .fotoo img{
+  min-width: 100%;
+  min-height: 100%;
+
+}
+.profile-pic-div .fotoo{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(251, 251, 251);
 }
 
 #file{
@@ -169,47 +192,44 @@ tr.bottom_tr{
 }
 
 #uploadBtn{
-    height: 40px;
+    height: 30px;
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    background: rgba(0, 0, 0, 0.7);
+    background: #383838b8;
     color: white;
-    line-height: 30px;
-    font-family: sans-serif;
-    font-size: 15px;
     cursor: pointer;
     display: block;
 }
 #uploadBtn:hover{
-  background: rgba(110, 110, 110, 0.7);
+  background: #38383898;
 }
 .foto{
-  position: relative;
   min-height: 150px;
 }
 
 .icon_camara{
-padding-top: 5px;
+padding-top: 2px;
 }
 .icon_camara i{
-font-size: 25px;
+font-size: 18px;
   }
   .form_add label{
     font-size: 15px;
-    color: #8a8a8a;
+    color: #383838;
+    padding: 0 0 15px 0;
   }
   .form_add label span{
     font-size: 15px;
-    color: #eeb2b5;
+    color: #eb535b;
   }
 
 p#spancampo{
   font-size: 13px;
-  color: #8a8a8a;
+  color: #383838;
 }
 
   #adduser{
@@ -315,4 +335,44 @@ p#spancampo{
             font-size: 13px;
             color: #eeb2b5;
           }
-      
+      .input_style{
+        height: 44px; 
+        border-radius:25px;
+      }
+      .sec_row{
+        padding-top: 30px;
+        height: 160px !important;
+      }
+      .first_row{
+        padding-top: 80px;
+      }
+.col_height{
+  height: 130px;
+}
+.desc_form h6{
+  font-size: 15px;
+  color: #383838;
+  font-weight: 600;
+}
+.sixth_row{
+  padding: 40px 0 30px 0;
+}
+.buttons p{
+  margin: 0;
+}
+.desc_form hr{
+  color: #E6AB97;
+    background-color: #E6AB97;
+    opacity: 1;
+    height: 5px !important;
+    width: 60px;
+    text-align: center;
+    margin: 0;
+    border-radius: 25px;
+}
+.form-control-sm {
+  background-color: #f4f4f4;
+}
+.form-select-sm {
+  background-color: #f4f4f4;
+}
