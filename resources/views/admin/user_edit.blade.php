@@ -19,7 +19,7 @@
 @section('main')
     <div id="user_main_content">
         <div class="container " style="height: auto">
-            <div id="area" style="padding:40px 100px 0 100px;">
+            <div id="area" style="padding:40px 40px 0 100px;">
 
                 <div class="head_area">
                     <div class="row">
