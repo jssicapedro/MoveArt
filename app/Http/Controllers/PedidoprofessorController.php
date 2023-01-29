@@ -17,7 +17,6 @@ class PedidoprofessorController extends Controller
     {
         $pedidos = PedidoProfessor::all();
         $quantidade = $pedidos->where('estado_do_pedido', 'pendente')->count();
-        /* dd($quantidade); */
         return view('admin.pedprof.pedprof', compact('pedidos'), compact('quantidade'));
     }
 

@@ -28,7 +28,9 @@ class InscricaoAlunoController extends Controller
             'genero' => 'required',
             'data_nasc' => 'required',
             'email' => 'required|email',
-            'password' => 'required|confirmed'
+            'password' => 'required|confirmed',
+            'password_confirmation' => 'required',
+            'type_insc' => 'required',
         ],
         [
             'primeiro.required' => 'Preencha o Nome',
@@ -36,7 +38,9 @@ class InscricaoAlunoController extends Controller
             'genero.required' => 'Preencha o Género',
             'data_nasc.required' => 'Preencha a Data de Nascimento',
             'email.required' => 'Preencha o email',
-            'password.required' => 'Preencha a password'
+            'password.required' => 'Preencha a password',
+            'password_confirmation.required' => 'Preencha a confirmação de password',
+            'type_insc.required' => 'Escolha o tipo de inscrição'
         ]);
         $user = User::create([
             //nome do input=> função request -> nome do campo na bd

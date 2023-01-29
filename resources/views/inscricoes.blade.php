@@ -28,9 +28,15 @@
                 <div class="row">
                     <div class="col-6">
                         <input type="text" class="form-control" name="primeiro" placeholder="Nome...">
+                        @if ($errors->has('primeiro'))
+                        <span class="text-danger">{{ $errors->first('primeiro') }}</span>
+                        @endif
                     </div>
                     <div class="col-6">
                         <input type="text" class="form-control" name="apelido" placeholder="Apelido...">
+                        @if ($errors->has('apelido'))
+                        <span class="text-danger">{{ $errors->first('apelido') }}</span>
+                        @endif
                     </div>
                 </div>
                 <div class="row">
@@ -42,10 +48,16 @@
                             <option value="Outro">Outro</option>
                             <option value="Prefiro não divulgar">Prefiro não divulgar</option>
                         </select>
+                        @if ($errors->has('genero'))
+                        <span class="text-danger">{{ $errors->first('genero') }}</span>
+                        @endif
                     </div>
                     <div class="col-6">
                         <label for="idade">Data de Nascimento:</label>
                         <input type="date" class="form-control" name="data_nasc" id="idade">
+                        @if ($errors->has('data_nasc'))
+                        <span class="text-danger">{{ $errors->first('data_nasc') }}</span>
+                        @endif
                     </div>
                 </div>
         </fieldset>
@@ -55,14 +67,23 @@
                 <div class="row">
                     <div class="col-6">
                         <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                        @if ($errors->has('email'))
+                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                        @endif
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <input type="password" class="form-control" name="password" placeholder="Palavra-Passe" required>
+                        <input type="password" class="form-control" name="password" placeholder="Palavra-Passe">
+                        @if ($errors->has('password'))
+                        <span class="text-danger">{{ $errors->first('password') }}</span>
+                        @endif
                     </div>
                     <div class="col-6">
-                        <input type="password" class="form-control" name="password_confirmation" required placeholder="Confirmar Palavra-Passe">
+                        <input type="password" class="form-control" name="password_confirmation" placeholder="Confirmar Palavra-Passe">
+                        @if ($errors->has('password_confirmation'))
+                        <span class="text-danger">{{ $errors->first('password_confirmation') }}</span>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -87,7 +108,6 @@
                                         <input type="radio" name="tp_ins" value="anual" id="anual">
                                         Anual: <span class="valor_anual">880</span>€
                                     </h3>
-
                                 </div>
                             </article>
                             <article class="cart card--2">
@@ -100,7 +120,11 @@
                                     </h3>
                                 </div>
                             </article>
+                            
                         </section>
+                        @if ($errors->has('type_insc'))
+                            <span class="text-danger">{{ $errors->first('type_insc') }}</span>
+                            @endif
                     </div>
                 </div>
             </div>
