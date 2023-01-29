@@ -6,12 +6,10 @@ use Illuminate\Support\Facades\Gate;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\InscricaoAlunoController;
 use App\Http\Controllers\InscricaoController;
-
 use App\Http\Controllers\PatrocinioController;
 use App\Http\Controllers\PedidoprofessorController;
 use App\Http\Controllers\ModalidadesBackController;
 use App\Http\Controllers\UsersBackController;
-use App\Models\Modalidade;
 
 use App\Http\Controllers\EventosController;
 
@@ -62,9 +60,6 @@ Route::get('/natal', [PageController::class, 'natal'])->name('natal');
 
 
 /* ------- Back ------- */
-/* Gate::check(abilities: 'back_premission'); */
-
-
 Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO')->middleware('admin');
 
 /* users */
@@ -101,15 +96,5 @@ Route::get('/admin/modalidades/edit/{modalidade}',[ModalidadesBackController::cl
 Route::post('/admin/modalidades/edit/{mod}',[ModalidadesBackController::class, 'update'])->name('modalidades.update')->middleware('admin');
 Route::delete('/admin/modalidades/delete/{modalidade}',[ModalidadesBackController::class, 'delete'])->name('modalidades.delete')->middleware('admin');
 Route::post('/admin/modalidades/update/{modalidade}',[ModalidadesBackController::class, 'update'])->name('modalidades.update')->middleware('admin');
-
-/*EventosBO
-Route::get('/eventos/novo', [EventosController::class, 'create']);
-Route::post('/eventos/novo', [EventosController::class, 'store'])->name('registar_evento');
-Route::get('/eventos/ver/{id}', [EventosController::class, 'show']);
-Route::get('/eventos/editar/{id}', [EventosController::class, 'edit']);
-Route::post('/eventos/editar/{id}', [EventosController::class, 'update'])->name('alterar_evento');
-Route::get('/eventos/excluir/{id}', [EventosController::class, 'delete']);
-Route::post('/eventos/excluir/{id}', [EventosController::class, 'destroy'])->name('excluir_evento');
-*/
 
 Route::resource("/evento", EventosController::class)->middleware('admin');
