@@ -31,40 +31,53 @@ class UsersBackController extends Controller
 
         return view('admin.users', compact('users'));
     }
+
     public function create()
     {
         $modalidade = Modalidade::all();
         $users = User::all();
         return view('admin.users_create', compact('modalidade'), compact('users'));
     }
+
     public function store(Request $request)
     {
 
-        $request->validate([
+        $request->validate(
+            [
 
-'primeiro'=>'required',
-'apelido'=>'required',
-'email'=>'required',
-'data_nasc'=>'required',
-'genero'=>'required',
-'perfil'=>'required',
-'password'=>'required',
-'telefone'=>'required'
+                'primeiro' => 'required',
+                'apelido' => 'required',
+                'email' => 'required|email|unique:users',
+                'data_nasc' => 'required',
+                'genero' => 'required',
+                'perfil' => 'required',
+                'password' => 'required',
+                'telefone' => 'required|digits:9',
+                'cc' => 'nullable|digits:9|unique:users',
+                'nif' => 'nullable|digits:9',
+                'localidade' => 'nullable|min:3|max:1000',
 
-        ],
-    [
-        'primeiro.required'=>'Campo Obrigatório',
-        'apelido.required'=>'Campo Obrigatório',
-        'email.required'=>'Campo Obrigatório',
-        'data_nasc.required'=>'Campo Obrigatório',
-        'genero.required'=>'Campo Obrigatório',
-        'perfil.required'=>'Campo Obrigatório',
-        'password.required'=>'Campo Obrigatório',
-        'telefone.required'=>'Campo Obrigatório',
-    ]);
+            ],
+            [
+                'primeiro.required' => 'Campo obrigatório',
+                'apelido.required' => 'Campo obrigatório',
+                'email.required' => 'Campo obrigatório',
+                'email.email' => 'Email inválido',
+                'email.unique' => 'Email utilizado por outra conta',
+                'data_nasc.required' => 'Campo obrigatório',
+                'genero.required' => 'Campo obrigatório',
+                'perfil.required' => 'Campo obrigatório',
+                'password.required' => 'Campo obrigatório',
+                'telefone.required' => 'Campo obrigatório',
+                'telefone.digits' => 'Número de telefone inválido',
+                'cc.digits' => 'CC inválido',
+                'cc.unique' => 'CC utilizado por outra conta',
+                'nif.digits' => 'Nif inválido',
+            ]
+        );
 
 
-       $user = new User();
+        $user = new User();
         $user->primeiro = $request->input('primeiro');
         $user->apelido = $request->input('apelido');
         $user->email = $request->input('email');
@@ -96,67 +109,69 @@ class UsersBackController extends Controller
     }
     public function edit($id)
     {
-      
+
         $user = User::find($id);
         $modalidade = Modalidade::all();
 
         return view('admin.user_edit', compact('modalidade', 'user'));
     }
     public function update(Request $request, $id)
-    {  
+    {
 
-         $request->validate([
+        $request->validate(
+            [
 
-             'primeiro'=>'required',
-             'apelido'=>'required',
-             'email'=>'required',
-             'data_nasc'=>'required',
-             'genero'=>'required',
-             'perfil'=>'required',
-             'password'=>'required',
-             'telefone'=>'required'
-            
-                     ],
-                 [
-                     'primeiro.required'=>'Campo Obrigatório',
-                     'apelido.required'=>'Campo Obrigatório',
-                     'email.required'=>'Campo Obrigatório',
-                     'data_nasc.required'=>'Campo Obrigatório',
-                     'genero.required'=>'Campo Obrigatório',
-                     'perfil.required'=>'Campo Obrigatório',
-                     'password.required'=>'Campo Obrigatório',
-                     'telefone.required'=>'Campo Obrigatório',
-                 ]);
+                'primeiro' => 'required',
+                'apelido' => 'required',
+                'email' => 'required',
+                'data_nasc' => 'required',
+                'genero' => 'required',
+                'perfil' => 'required',
+                'password' => 'required',
+                'telefone' => 'required'
+
+            ],
+            [
+                'primeiro.required' => 'Campo obrigatório',
+                'apelido.required' => 'Campo obrigatório',
+                'email.required' => 'Campo obrigatório',
+                'data_nasc.required' => 'Campo obrigatório',
+                'genero.required' => 'Campo obrigatório',
+                'perfil.required' => 'Campo obrigatório',
+                'password.required' => 'Campo obrigatório',
+                'telefone.required' => 'Campo obrigatório',
+            ]
+        );
 
 
-         $user = User::find($id);
-         $user->primeiro = $request->input('primeiro');
-         $user->apelido = $request->input('apelido');
-         $user->email = $request->input('email');
-         $user->data_nasc = $request->input('data_nasc');
-         $user->cc = $request->input('cc');
-         $user->nif = $request->input('nif');
-         $user->genero = $request->input('genero');
-         $user->perfil = $request->input('perfil');
-         $user->password = Hash::make($request->password);
-         $user->telefone = $request->input('telefone');
-         $user->localidade = $request->input('localidade');
-         $user->rua = $request->input('rua');
-         $user->cod_postal = $request->input('cod_postal');
-         if ($request->hasfile('foto')) {
-             $destination = 'storage/professores/' . $user->foto;
-             if (File::exists($destination)) {
-                 File::delete($destination);
-             }
-             $file = $request->file('foto');
-             $extention = $file->getClientOriginalExtension();
-             $filename = time() . '.' . $extention;
-             $file->move('storage/professores/', $filename);
-             $user->foto = $filename;
-         }
-         $user->modalidade()->sync($request['modalidade_id']);
-         $user->update();
-       
+        $user = User::find($id);
+        $user->primeiro = $request->input('primeiro');
+        $user->apelido = $request->input('apelido');
+        $user->email = $request->input('email');
+        $user->data_nasc = $request->input('data_nasc');
+        $user->cc = $request->input('cc');
+        $user->nif = $request->input('nif');
+        $user->genero = $request->input('genero');
+        $user->perfil = $request->input('perfil');
+        $user->password = Hash::make($request->password);
+        $user->telefone = $request->input('telefone');
+        $user->localidade = $request->input('localidade');
+        $user->rua = $request->input('rua');
+        $user->cod_postal = $request->input('cod_postal');
+        if ($request->hasfile('foto')) {
+            $destination = 'storage/professores/' . $user->foto;
+            if (File::exists($destination)) {
+                File::delete($destination);
+            }
+            $file = $request->file('foto');
+            $extention = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extention;
+            $file->move('storage/professores/', $filename);
+            $user->foto = $filename;
+        }
+        $user->modalidade()->sync($request['modalidade_id']);
+        $user->update();
+
 
         return redirect()->back()->with('status', 'User editado com sucesso.');
     }

@@ -50,9 +50,7 @@
                 <div>
 
 
-                    <div id="accordion">
-                        <div style="padding:0px 0; ">
-                            <div>
+                
                                 <form action="{{ url('add-user') }}" method="post" enctype="multipart/form-data">
                                     @csrf
 
@@ -117,12 +115,18 @@
                                                         <label for="nif">Nif</label>
                                                         <input type="text" name="nif" id="nif"
                                                             class="form-control form-control-sm" value="{{old('nif')}}">
+                                                            @error('nif')
+                                                            <p class="msg_p">{{ $message }}</p>
+                                                        @enderror
                                                     </div>
 
                                                     <div class="form-group mb-3">
                                                         <label for="cod_postal">Código Postal</label>
                                                         <input type="text" name="cod_postal" id="cod_postal"
                                                             class="form-control form-control-sm" value="{{old('cod_postal')}}">
+                                                            @error('cod_postal')
+                                                            <p class="msg_p">{{ $message }}</p>
+                                                        @enderror
                                                     </div>
                                                 </div>
 
@@ -165,6 +169,9 @@
                                                         <label for="localidade">Localidade</label>
                                                         <input type="text" name="localidade" id="localidade"
                                                             class="form-control form-control-sm" value="{{old('localidade')}}">
+                                                            @error('localidade')
+                                                            <p class="msg_p">{{ $message }}</p>
+                                                        @enderror
                                                     </div>
 
                                                     <div class="form-group mb-3">
@@ -225,11 +232,17 @@
                                                         <label for="cc">CC</label>
                                                         <input type="text" name="cc" id="cc"
                                                             class="form-control form-control-sm" value="{{old('cc')}}">
+                                                            @error('cc')
+                                                            <p class="msg_p">{{ $message }}</p>
+                                                        @enderror
                                                     </div>
                                                     <div class="form-group mb-3">
                                                         <label for="rua">Rua</label>
                                                         <input type="text" name="rua" id="rua"
                                                             class="form-control form-control-sm" value="{{old('rua')}}">
+                                                            @error('rua')
+                                                            <p class="msg_p">{{ $message }}</p>
+                                                        @enderror
                                                     </div>
 
                                                     <div class="form-group mb-3">
@@ -251,7 +264,7 @@
                                                 <div class="col-6">
                                                     <div class="buttons d-flex justify-content-start">
                                                         <p id="spancampo">( <span style="  color: #eeb2b5;">*</span> ) -
-                                                            Campo Onrigatório</p>
+                                                            Campo obrigatório</p>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -268,9 +281,6 @@
 
                                 </form>
 
-                            </div>
-                        </div>
-                    </div>
 
 
                 </div>
