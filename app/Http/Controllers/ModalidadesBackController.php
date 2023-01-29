@@ -29,13 +29,23 @@ class ModalidadesBackController extends Controller
                 'modalidade' => 'required',
                 'descricao' => 'required',
                 'valor_mensal' => 'required',
-                'valor_anual' => 'required'
+                'valor_anual' => 'required',
+                'foto_mensal' => 'required',
+                'foto_anual' => 'required',
+                'foto_horario' => 'required',
+                'foto_desc' => 'required',
+                'foto_banner' => 'required',
             ],
             [
-                'modalidade.required' => 'Preencha o Nome',
-                'descricao.required' => 'Preencha o Apelido',
-                'valor_mensal.required' => 'Preencha o Género',
-                'valor_anual.required' => 'Preencha a Data de Nascimento',
+                'modalidade.required' => '*Preencha o Nome',
+                'descricao.required' => '*Preencha o Apelido',
+                'valor_mensal.required' => '*Preencha o Género',
+                'valor_anual.required' => '*Preencha a Data de Nascimento',
+                'foto_mensal.required' => '*Coloque uma imagem',
+                'foto_anual.required' => '*Coloque uma imagem',
+                'foto_horario.required' => '*Coloque uma imagem', 
+                'foto_desc.required' => '*Coloque uma imagem',
+                'foto_banner.required' => '*Coloque uma imagem', 
             ]
         ); 
         if ($request->file('foto_desc')->isValid()) {
@@ -84,13 +94,23 @@ class ModalidadesBackController extends Controller
                 'modalidade' => 'required',
                 'descricao' => 'required',
                 'valor_mensal' => 'required',
-                'valor_anual' => 'required'
+                'valor_anual' => 'required',
+                'foto_mensal' => 'required',
+                'foto_anual' => 'required',
+                'foto_horario' => 'required',
+                'foto_desc' => 'required',
+                'foto_banner' => 'required',
             ],
             [
-                'modalidade.required' => 'Preencha o Nome',
-                'descricao.required' => 'Preencha o Apelido',
-                'valor_mensal.required' => 'Preencha o Género',
-                'valor_anual.required' => 'Preencha a Data de Nascimento',
+                'modalidade.required' => '*Preencha o Nome',
+                'descricao.required' => '*Preencha o Apelido',
+                'valor_mensal.required' => '*Preencha o Género',
+                'valor_anual.required' => '*Preencha a Data de Nascimento',
+                'foto_mensal.required' => '*Coloque uma imagem',
+                'foto_anual.required' => '*Coloque uma imagem',
+                'foto_horario.required' => '*Coloque uma imagem', 
+                'foto_desc.required' => '*Coloque uma imagem',
+                'foto_banner.required' => '*Coloque uma imagem',
             ]
         );
 
