@@ -127,8 +127,8 @@ class UsersBackController extends Controller
         $request->validate(
             [
 
-                'primeiro' => 'required|regex:/^[a-zA-Z]+$/u',
-                'apelido' => 'required|regex:/^[a-zA-Z]+$/u',
+                'primeiro' => 'required|regex:/^[A-zÀ-ú]/',
+                'apelido' => 'required|regex:/^[A-zÀ-ú]/',
                 'email' => 'required|email',
                 'data_nasc' => 'required',
                 'genero' => 'required',
