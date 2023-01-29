@@ -27,6 +27,7 @@
       <div class="col-2" style="text-align: center;">Valor Mensal</div>
       <div class="col-1" style="text-align: center;"></div>
     </div>
+    @if(isset($modalidade))
     @foreach($modalidade as $mod)
     <div class="row info">
       <div class="col-1" style="text-align: center;">{{$mod->id}}</div>
@@ -54,6 +55,9 @@
 
     </div>
     @endforeach
+    @else
+    <div class="alert alert-danger">Sem modalidades registadas</div>
+    @endif
   </div>
 </div>
 @endsection
