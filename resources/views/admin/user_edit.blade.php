@@ -201,7 +201,7 @@
 
                                     <div class="col-3 col_height  offset-md-3">
                                         <div class="form-group mb-3">
-                                            <label for="password">Password<span>*</span>:</label>
+                                            <label for="password">Password:</label>
                                             <input type="password" name="password" id="password"
                                                 class="form-control form-control-sm input_style">
 
@@ -216,7 +216,7 @@
                                     </div>
                                     <div class="col-3 col_height">
                                         <div class="form-group mb-3">
-                                            <label for="password_confirmation">Confirmar Password<span>*</span>:</label>
+                                            <label for="password_confirmation">Confirmar Password:</label>
                                             <input type="password" name="password_confirmation"
                                                 id="password_confirmation"
                                                 class="form-control form-control-sm input_style">
@@ -332,7 +332,7 @@
                                     </div>
                                     <div class="col-3 col_height">
                                         <div class="form-group mb-3">
-                                            <label for="modalidade_id">Modalidade<span>*</span>:</label>
+                                            <label for="modalidade_id">Modalidade:</label>
                                             <select class="form-select form-select-sm input_style" name="modalidade_id"
                                                 id="modalidade_id">
                                                 <option selected disabled hidden>escolhe...</option>
@@ -340,13 +340,7 @@
                                                     <option value="{{ $mod->id }}">{{ $mod->modalidade }}</option>
                                                 @endforeach
 
-                                            </select>
-                                            <span>
-                                                @error('modalidade_id')
-                                                    <p class="msg_p">{{ $message }}</p>
-                                                @enderror
-
-                                            </span>
+                                            </select> 
                                         </div>
                                     </div>
                                 </div>

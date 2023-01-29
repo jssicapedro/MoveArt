@@ -135,7 +135,7 @@ class UsersBackController extends Controller
                 'perfil' => 'required',
                 'password' => 'nullable|confirmed|min:6',
                 'telefone' => 'required|digits:9',
-                'cc' => 'nullable|digits:9|unique:users',
+                'cc' => 'nullable|digits:9',
                 'nif' => 'nullable|digits:9',
                 'localidade' => 'nullable|min:3|max:1000',
                 'modalidade_id'=> 'nullable',
@@ -155,7 +155,6 @@ class UsersBackController extends Controller
                 'telefone.required' => 'Campo obrigatório',
                 'telefone.digits' => 'Número de telefone inválido',
                 'cc.digits' => 'CC inválido',
-                'cc.unique' => 'CC utilizado por outra conta',
                 'nif.digits' => 'Nif inválido',
 
             ]
