@@ -33,7 +33,7 @@
                         <div class="col-6 head_title">
 
                             <h2>
-                                Criar Utilizador
+                                Adicionar Utilizador
                             </h2>
 
                         </div>
