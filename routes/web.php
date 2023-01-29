@@ -17,7 +17,7 @@ use App\Http\Controllers\EventosController;
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/registo', [InscricaoAlunoController::class, 'index'])->name('registo');
+Route::get('/register', [InscricaoAlunoController::class, 'create'])->name('register');
 
 Route::get('/', [PageController::class, 'index'])->name('/');
 /* danca */
