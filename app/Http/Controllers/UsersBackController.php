@@ -138,7 +138,7 @@ class UsersBackController extends Controller
                 'cc' => 'nullable|digits:9|unique:users',
                 'nif' => 'nullable|digits:9',
                 'localidade' => 'nullable|min:3|max:1000',
-                'modalidade_id'=> 'required',
+                'modalidade_id'=> 'nullable',
             ],
             [
                 'primeiro.required' => 'Campo obrigatório',
@@ -157,7 +157,7 @@ class UsersBackController extends Controller
                 'cc.digits' => 'CC inválido',
                 'cc.unique' => 'CC utilizado por outra conta',
                 'nif.digits' => 'Nif inválido',
-                'modalidade_id.required' => 'Campo obrigatório',
+
             ]
         );
 
