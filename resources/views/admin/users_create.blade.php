@@ -54,7 +54,7 @@
                     <form action="{{ url('add-user') }}" method="post" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="container form_add" style="background-color: white;border-radius:25px;">
+                        <div class="container form_add" style="background-color: white;border-radius:9px;">
                             <div style="padding: 0 80px;">
                             <div class="row first_row">
                                 <div class="col-12 offset-md-3">
