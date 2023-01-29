@@ -100,7 +100,7 @@ class UsersBackController extends Controller
             $file = $request->file('foto');
             $extention = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extention;
-            $file->move('storage/professores/', $filename);
+            $file->move('storage/users/', $filename);
             $user->foto = $filename;
         }
         $user->save();
@@ -177,14 +177,14 @@ class UsersBackController extends Controller
         $user->rua = $request->input('rua');
         $user->cod_postal = $request->input('cod_postal');
         if ($request->hasfile('foto')) {
-            $destination = 'storage/professores/' . $user->foto;
+            $destination = 'storage/users/' . $user->foto;
             if (File::exists($destination)) {
                 File::delete($destination);
             }
             $file = $request->file('foto');
             $extention = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extention;
-            $file->move('storage/professores/', $filename);
+            $file->move('storage/users/', $filename);
             $user->foto = $filename;
         }
         $user->modalidade()->sync($request['modalidade_id']);
@@ -197,7 +197,7 @@ class UsersBackController extends Controller
     {
         $user = User::find($request->id_user);
         if ($user) {
-            $destination = 'storage/professores/' . $user->foto;
+            $destination = 'storage/users/' . $user->foto;
             if (File::exists($destination)) {
                 File::delete($destination);
             }
