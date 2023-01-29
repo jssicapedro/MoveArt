@@ -15,12 +15,12 @@ body
 .section-padding {
     padding: 0px;
   }
-#user_photo img{
+  #accordion #user_photo img{
   min-width: 100%;
   min-height: 100%
 }
 
-#user_photo{
+#accordion #user_photo{
   border-radius: 50%;
   background-color: #f2f2f2;
   width: 60px;
@@ -150,7 +150,7 @@ tr.bottom_tr{
     left: 250px;
     transition: 0.5s;
   }
-  .profile-pic-div{
+  .sec_row .profile-pic-div{
     height: 150px;
     width: 150px;
     position: relative;
@@ -163,18 +163,18 @@ tr.bottom_tr{
     background-color: rgb(251, 251, 251);
     
 }
-.profile-pic-div img{
+.sec_row .profile-pic-div img{
   min-width: 100%;
   min-height: 100%;
 
 }
 
-.fotoo img{
+.profile-pic-div .fotoo img{
   min-width: 100%;
   min-height: 100%;
 
 }
-  .fotoo{
+.profile-pic-div .fotoo{
     height: 150px;
     width: 150px;
     position: relative;
