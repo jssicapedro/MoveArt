@@ -16,7 +16,6 @@
 
 @section('main')
 <section id="form_student">
-    @include('layout.flash-message')
     <div class="title">
         <h2>Torna-te um profissional na dança!</h2>
         <h4>Escolhe a tua dança e torna-te um(a) aluno(a).</h4>
@@ -38,10 +37,10 @@
                     <div class="col-6">
                         <label for="genero">Género:</label>
                         <select id="genero" name="genero" class="form-control">
-                            <option value="feminino">Feminino</option>
-                            <option value="masculino">Masculino</option>
-                            <option value="outro">Outro</option>
-                            <option value="nao_divulgar">Prefiro não divulgar</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Outro">Outro</option>
+                            <option value="Prefiro não divulgar">Prefiro não divulgar</option>
                         </select>
                     </div>
                     <div class="col-6">
@@ -81,25 +80,23 @@
                         </select>
                         <section class="cards">
                             <article class="cart card--1">
-                                <div class="card_img" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
-                                <div class="card_img--hover" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
+                                <div class="card_img" name="img_mensal" style="background-image: url('{{ asset('img/inscricoes/fundo3.jpg')}}');"></div>
+                                <div class="card_img--hover" name="img_mensal" style="background-image: url('{{ asset('img/inscricoes/fundo3.jpg')}}');"></div>
                                 <div class="card_info_1">
-                                    <span class="card_epoca">Anual</span>
-                                    <input type="radio" name="tp_ins" value="anual" id="anual">
                                     <h3 class="card_preco_1">
-                                        <span class="valor_anual">880</span>€
+                                        <input type="radio" name="tp_ins" value="anual" id="anual">
+                                        Anual: <span class="valor_anual">880</span>€
                                     </h3>
 
                                 </div>
                             </article>
                             <article class="cart card--2">
-                                <div class="card_img" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
-                                <div class="card_img--hover" style="background-image: url('{{ asset('img/modalidades/ballet.jpg')}}');"></div>
+                                <div class="card_img" style="background-image: url('{{ asset('img/inscricoes/fundo2.jpg')}}');"></div>
+                                <div class="card_img--hover" style="background-image: url('{{ asset('img/inscricoes/fundo2.jpg')}}');"></div>
                                 <div class="card_info_2">
-                                    <span class="card_epoca">Mensal</span>
-                                    <input type="radio" name="tp_ins" value="mensal" id="mensal">
                                     <h3 class="card_preco_2">
-                                        <span class="valor_mensal">75</span>€
+                                        <input type="radio" name="tp_ins" value="mensal" id="mensal">
+                                        Mensal: <span class="valor_mensal">75</span>€
                                     </h3>
                                 </div>
                             </article>
@@ -186,6 +183,26 @@
 
                     var price = data.valor_anual;
                     div.find("span.valor_anual").html(price);
+                },
+                error: function() {}
+            });
+        });
+        $(document).on('change', '.tp_danca', function() {
+            var mod_id = $(this).val();
+            var div = $(this).parent();
+            var op = " ";
+            $.ajax({
+                type: 'GET',
+                url: '/imgmensal',
+                data: {
+                    'id': mod_id
+                },
+                dataType: 'json',
+                contentType: 'json',
+                success: function(data) {
+
+                    var price = data.img_mensal;
+                    div.find("span.img_mensal").html(price);
                 },
                 error: function() {}
             });

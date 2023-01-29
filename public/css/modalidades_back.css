@@ -31,11 +31,6 @@ main {
     margin-top: 10px;
     border-radius: 5px;
 }
-
-/* .modalidades_main .col.option
-{
-    
-} */
 .modalidades_main .drop {
     display: flex;
     align-items: center;
@@ -55,7 +50,12 @@ main {
 .modalidades_main .drop li {
     padding: 5px;
 }
-
+.modalidades_main .drop i.fa-eye:hover {
+    color: cornflowerblue;
+}
+.modalidades_main .drop i.fa-pen-ruler:hover {
+    color: blueviolet;
+}
 .modalidades_main .drop i.fa-trash:hover {
     color: red;
 }
@@ -151,10 +151,9 @@ input.form-control.va {
     font-size: 10pt;
     padding: 5px;
     border-bottom: 2px solid #f19fc5;
-    margin-bottom: 10px;
 }
 
-.mod_create_main .imagens i.fa-plus {
+.mod_create_main .imagens i.fa-file-arrow-up {
     font-size: 18pt;
     border: 1px solid rgb(231, 231, 231);
     background-color: rgb(231, 231, 231);
@@ -162,7 +161,7 @@ input.form-control.va {
     padding: 25px;
 }
 
-.mod_create_main .imagens i.fa-plus:hover {
+.mod_create_main .imagens i.fa-file-arrow-up:hover {
     cursor: pointer;
 }
 
@@ -170,7 +169,10 @@ input.form-control.va {
     display: none;
     visibility: none;
 }
-
+span.aviso {
+    color: red;
+    font-size: 8pt;
+}
 .first,
 .imgs {
     display: flex;
@@ -300,13 +302,31 @@ button#button:hover i {
 
 /*---------------- Modalidade Show ----------------*/
 h1.title {
-    padding-left: 10%;
     padding-bottom: 10px;
 }
 
+button.return
+{
+    width: 100px;
+    height: 40px;
+    background-color: #f19fc5;
+    border: 1px solid #f19fc5;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button.return a
+{
+    text-decoration: none;
+}
+button.return img
+{
+    width: 70%;
+    filter: drop-shadow(2px 2px 2px #6c4859);
+}
 .mod_show_main {
     width: 80%;
-    background: rgba(255, 255, 255, 0.827);
     padding: 15px;
     margin: auto;
     border-radius: 10px;
@@ -314,8 +334,10 @@ h1.title {
 
 .mod_show_main form {
     display: flex;
+    background: rgba(255, 255, 255, 0.827);
     flex-direction: column;
     padding: 10px;
+    margin-top: 10px;
 }
 
 .mod_show_main form .row.info {
