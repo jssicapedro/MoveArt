@@ -34,9 +34,8 @@ class UsersBackController extends Controller
 
     public function create()
     {
-        $modalidade = Modalidade::all();
-        $users = User::all();
-        return view('admin.users_create', compact('modalidade'), compact('users'));
+       
+        return view('admin.users_create');
     }
 
     public function store(Request $request)
@@ -45,8 +44,8 @@ class UsersBackController extends Controller
         $request->validate(
             [
 
-                'primeiro' => 'required|regex:/^[a-zA-Z]+$/u',
-                'apelido' => 'required|regex:/^[a-zA-Z]+$/u',
+                'primeiro' => 'required|regex:/^[A-zÀ-ú]/',
+                'apelido' => 'required|regex:/^[A-zÀ-ú]/',
                 'email' => 'required|email|unique:users',
                 'data_nasc' => 'required',
                 'genero' => 'required',

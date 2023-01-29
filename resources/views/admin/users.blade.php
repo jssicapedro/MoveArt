@@ -188,7 +188,7 @@
                                                             aria-labelledby="headingThree" data-parent="#accordion">
                                                             <div class="container">
                                                                 <div id="expand_user">
-                                                                    <div class="row gx-3">
+                                                                    <div class="row gx-5">
                                                                         <div class="col-3 nas">
                                                                             <div id="view_user_photo">
                                                                                 @if ($user->foto == null)
