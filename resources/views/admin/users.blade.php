@@ -62,7 +62,7 @@
 
     <div id="user_main_content">
         <div class="container " style="height: auto">
-            <div id="area" style="padding:40px 100px 50px 100px;">
+            <div id="area" style="padding:40px 40px 50px 100px;">
 
                 <div class="head_area">
                     <div class="row">
@@ -188,7 +188,7 @@
                                                             aria-labelledby="headingThree" data-parent="#accordion">
                                                             <div class="container">
                                                                 <div id="expand_user">
-                                                                    <div class="row">
+                                                                    <div class="row gx-3">
                                                                         <div class="col-3 nas">
                                                                             <div id="view_user_photo">
                                                                                 @if ($user->foto == null)

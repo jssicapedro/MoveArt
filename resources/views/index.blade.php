@@ -342,14 +342,14 @@
                     <li class="splide__slide img-box">
                         <div class="containe">
                             <div class="content">
-                                <a href="{{ asset('.$modalidades->modalidade.') }}" target="_blank">
+                               
                                     <div class="content-overlay"></div>
                                     <img src="{{ url('storage/modalidades/'.$modalidades->foto_mensal) }}" class="content-image"
                                     alt="{{$modalidades->modalidade}}">
                                     <div class="content-details fadeIn-bottom">
                                         <h2 class="content-title">{{$modalidades->modalidade}}</h2>
                                     </div>
-                                </a>
+                               
                             </div>
                         </div>
                     </li>
@@ -421,10 +421,10 @@
                             </div>
                             <h3>{{$eventos->nome}}</h3>
                         </div>
-                        <div class="img_event position-relative" style="border-radius: 4px;">
+                        <a href="http://moveloja.epizy.com/pt/product-category/eventos/" class="img_event position-relative" style="border-radius: 4px;">
                             <img src="{{ url('storage/eventos/'.$eventos->foto) }}"
                                 alt="{{$eventos->nome}}">
-                        </div>
+                        </a>
                     </div>
                 </div>
                 @endforeach
