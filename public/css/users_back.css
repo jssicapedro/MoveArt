@@ -16,16 +16,19 @@ body
     padding: 0px;
   }
 #user_photo img{
-  max-height:100%; 
-  max-width:100%;
-  object-fit: contain;
+  min-width: 100%;
+  min-height: 100%
 }
+
 #user_photo{
   border-radius: 50%;
   background-color: #f2f2f2;
   width: 60px;
   height: 60px;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
 }
 .active>.page-link, .page-link.active{
   background-color: #747474;
@@ -49,12 +52,14 @@ body
   background-color: #f2f2f2;
   width: 200px;
   height: 200px;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
 }
 #view_user_photo img{
-  max-height:100%; 
-  max-width:100%;
-  object-fit: contain;
+  min-width: 100%;
+  min-height: 100%
 }
 #expand_user{
   padding: 30px 30px;
@@ -145,20 +150,41 @@ tr.bottom_tr{
     left: 250px;
     transition: 0.5s;
   }
-
   .profile-pic-div{
     height: 150px;
     width: 150px;
     position: relative;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: rgb(251, 251, 251);
+    
+}
+.profile-pic-div img{
+  min-width: 100%;
+  min-height: 100%;
+
 }
 
-#photo{
-    height: 100%;
-    width: 100%;
+.fotoo img{
+  min-width: 100%;
+  min-height: 100%;
+
+}
+  .fotoo{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(251, 251, 251);
 }
 
 #file{

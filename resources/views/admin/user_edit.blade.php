@@ -74,7 +74,7 @@
                                                         <img src="{{ asset('img/inicio/user.jpg') }}" alt="user"
                                                             id="photo">
                                                     @else
-                                                        <img src="{{ url('storage/professores/' . $user->foto) }}"
+                                                        <img src="{{ url('storage/users/' . $user->foto) }}"
                                                             id="photo">
                                                     @endif
 
