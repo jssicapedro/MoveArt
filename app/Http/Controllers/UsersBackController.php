@@ -45,22 +45,24 @@ class UsersBackController extends Controller
         $request->validate(
             [
 
-                'primeiro' => 'required',
-                'apelido' => 'required',
+                'primeiro' => 'required|regex:/^[a-zA-Z]+$/u',
+                'apelido' => 'required|regex:/^[a-zA-Z]+$/u',
                 'email' => 'required|email|unique:users',
                 'data_nasc' => 'required',
                 'genero' => 'required',
                 'perfil' => 'required',
-                'password' => 'required',
+                'password' => 'required|confirmed|min:6',
                 'telefone' => 'required|digits:9',
                 'cc' => 'nullable|digits:9|unique:users',
                 'nif' => 'nullable|digits:9',
                 'localidade' => 'nullable|min:3|max:1000',
-
+                'modalidade_id'=> 'required',
             ],
             [
                 'primeiro.required' => 'Campo obrigatório',
+                'primeiro.regex' => 'Nome inválido',
                 'apelido.required' => 'Campo obrigatório',
+                'apelido.regex' => 'Apelido inválido',
                 'email.required' => 'Campo obrigatório',
                 'email.email' => 'Email inválido',
                 'email.unique' => 'Email utilizado por outra conta',
@@ -68,11 +70,14 @@ class UsersBackController extends Controller
                 'genero.required' => 'Campo obrigatório',
                 'perfil.required' => 'Campo obrigatório',
                 'password.required' => 'Campo obrigatório',
+                'password.confirmed' => 'A Confirmação da password não corresponde',
+                'password.min' => 'Password demasiado pequena',
                 'telefone.required' => 'Campo obrigatório',
                 'telefone.digits' => 'Número de telefone inválido',
                 'cc.digits' => 'CC inválido',
                 'cc.unique' => 'CC utilizado por outra conta',
                 'nif.digits' => 'Nif inválido',
+                'modalidade_id.required' => 'Campo obrigatório',
             ]
         );
 
@@ -100,6 +105,7 @@ class UsersBackController extends Controller
         }
         $user->save();
 
+       
         $mod = new UserModalidade();
         $mod->modalidade_id = $request->input('modalidade_id');
         $mod->user_id = $user->id;
@@ -121,25 +127,37 @@ class UsersBackController extends Controller
         $request->validate(
             [
 
-                'primeiro' => 'required',
-                'apelido' => 'required',
-                'email' => 'required',
+                'primeiro' => 'required|regex:/^[a-zA-Z]+$/u',
+                'apelido' => 'required|regex:/^[a-zA-Z]+$/u',
+                'email' => 'required|email',
                 'data_nasc' => 'required',
                 'genero' => 'required',
                 'perfil' => 'required',
-                'password' => 'required',
-                'telefone' => 'required'
-
+                'password' => 'nullable|confirmed|min:6',
+                'telefone' => 'required|digits:9',
+                'cc' => 'nullable|digits:9|unique:users',
+                'nif' => 'nullable|digits:9',
+                'localidade' => 'nullable|min:3|max:1000',
+                'modalidade_id'=> 'required',
             ],
             [
                 'primeiro.required' => 'Campo obrigatório',
+                'primeiro.regex' => 'Nome inválido',
                 'apelido.required' => 'Campo obrigatório',
+                'apelido.regex' => 'Apelido inválido',
                 'email.required' => 'Campo obrigatório',
+                'email.email' => 'Email inválido',
                 'data_nasc.required' => 'Campo obrigatório',
                 'genero.required' => 'Campo obrigatório',
                 'perfil.required' => 'Campo obrigatório',
-                'password.required' => 'Campo obrigatório',
+                'password.confirmed' => 'A Confirmação da password não corresponde',
+                'password.min' => 'Password demasiado pequena',
                 'telefone.required' => 'Campo obrigatório',
+                'telefone.digits' => 'Número de telefone inválido',
+                'cc.digits' => 'CC inválido',
+                'cc.unique' => 'CC utilizado por outra conta',
+                'nif.digits' => 'Nif inválido',
+                'modalidade_id.required' => 'Campo obrigatório',
             ]
         );
 

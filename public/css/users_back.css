@@ -9,6 +9,7 @@ body
   box-sizing: border-box;
   font-size: 100%;
   font-family: 'Poppins', sans-serif;
+  background-color: transparent;
 } 
 
 .section-padding {
@@ -146,13 +147,9 @@ tr.bottom_tr{
   }
 
   .profile-pic-div{
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    bottom: -50%;
-    transform: translate(-50%,-20%);
+    height: 150px;
+    width: 150px;
+    position: relative;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -169,47 +166,44 @@ tr.bottom_tr{
 }
 
 #uploadBtn{
-    height: 40px;
+    height: 30px;
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    background: rgba(0, 0, 0, 0.7);
+    background: #383838b8;
     color: white;
-    line-height: 30px;
-    font-family: sans-serif;
-    font-size: 15px;
     cursor: pointer;
     display: block;
 }
 #uploadBtn:hover{
-  background: rgba(110, 110, 110, 0.7);
+  background: #38383898;
 }
 .foto{
-  position: relative;
   min-height: 150px;
 }
 
 .icon_camara{
-padding-top: 5px;
+padding-top: 2px;
 }
 .icon_camara i{
-font-size: 25px;
+font-size: 18px;
   }
   .form_add label{
     font-size: 15px;
-    color: #8a8a8a;
+    color: #383838;
+    padding: 0 0 15px 0;
   }
   .form_add label span{
     font-size: 15px;
-    color: #eeb2b5;
+    color: #eb535b;
   }
 
 p#spancampo{
   font-size: 13px;
-  color: #8a8a8a;
+  color: #383838;
 }
 
   #adduser{
@@ -315,4 +309,38 @@ p#spancampo{
             font-size: 13px;
             color: #eeb2b5;
           }
-      
+      .input_style{
+        height: 44px; 
+        border-radius:25px;
+      }
+      .sec_row{
+        padding-top: 30px;
+        height: 160px !important;
+      }
+      .first_row{
+        padding-top: 80px;
+      }
+.col_height{
+  height: 130px;
+}
+.desc_form h6{
+  font-size: 15px;
+  color: #383838;
+  font-weight: 600;
+}
+.sixth_row{
+  padding: 40px 0 30px 0;
+}
+.buttons p{
+  margin: 0;
+}
+.desc_form hr{
+  color: #E6AB97;
+    background-color: #E6AB97;
+    opacity: 1;
+    height: 5px !important;
+    width: 60px;
+    text-align: center;
+    margin: 0;
+    border-radius: 25px;
+}
