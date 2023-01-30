@@ -94,7 +94,7 @@ body {
   position: relative;
   font-weight: 500;
   font-size: 2.5rem;
-  color: #b48ff7;
+  color: #d08768;
 }
 
 .estatistica .caixa .nome {
@@ -126,7 +126,7 @@ body {
 }
 .dashboard_subtitulo h2 {
   font-weight: 600;
-  color: #b48ff7;
+  color: #d08768;
 }
 .dashboard_subtitulo .btn {
   position: relative;

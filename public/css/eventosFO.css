@@ -92,6 +92,7 @@ section{
 }
 .swiper-3d, .swiper-3d.swiper-css-mode .swiper-wrapper {
     perspective: 800px;
+    height: 50%;
 }
 
 .home .content h3 span{
@@ -269,6 +270,13 @@ section{
     z-index: 2;
     position: relative;
     opacity: .8;
+}
+.card img {
+    vertical-align: middle;
+    border-style: none;
+    width: 80%;
+    height: 100%;
+    margin-left: 0;
 }
 .card:hover .img {
     width: 380px;

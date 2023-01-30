@@ -25,8 +25,6 @@
             </div>@endauth
         </div>
 
-
-
         <div class="details">
             <div class="estatistica">
                 <div class="caixa">
@@ -208,5 +206,8 @@
         </div>
     </div>
 </div>
+@endsection
 
+@section('script')
+<script src="{{ asset('js/dashboardBO/dashboardBO.js') }}"></script>
 @endsection

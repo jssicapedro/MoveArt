@@ -37,7 +37,15 @@ class EventosController extends Controller
         ]);
         
         /*cria todos a informacao escrita*/
-        evento::create($input);
+        $evento = evento::create($input);
+
+        if ($request->hasFile('foto')) {
+            $img_path = $request->file( 'foto' )->store(
+            'public/img/eventosBO' );
+            $evento->foto = basename($img_path);
+            $evento->save();
+        }
+
        /*redireciona para o index após adicionar com a flash message*/ 
        return redirect('evento')->with('flash_message', 'Evento Adicionado!');  
     }
