@@ -1,7 +1,19 @@
-/* *{
-    border: 1px solid red;
+body{
+    overflow: hidden;
 }
- */
+
+#app{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-expand-md {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    z-index: 2;
+}
+
 .main_login{
     width: 75vw!important;
     height: 75vh;
@@ -17,10 +29,6 @@
     align-items: center;
     width: 100%;
 }
-
-/* .login_page .img{
-    width: 50vw;
-} */
 
 .main_login img{
     width: 40%;
@@ -163,16 +171,17 @@ input#password:hover {
 }
 
 .gradient {
-	position: relative;
-    height: calc(100vh - 300px);
+    position: relative;
+    height: 108vh;
     background: linear-gradient(225deg, var(--rosa), var(--roxo), var(--castanho));
     background-size: 180% 180%;
     animation: gradient-animation 6s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* left: -30%; */
-    border-radius: 29% 47% 33% 48% / 12% 68% 31% 37%;
+    left: -40%;
+    border-radius: 0 47% 33% 0;
+    width: 50vw;
 }
 
 .gradient img{

@@ -1,12 +1,9 @@
-softdele -> pedido professor 
-            - apaga o registo do pedido passados 6meses
+softdele -> apaga o registo do pedido professor passados 6meses
 
-validações de formulários > mensagem de erro/sucesso ✅ -  deixou de funcionar
+validações de formulários > mensagem de erro/sucesso ✅
                           > erro -> não guarda os valores anteriormente inseridos
 
-As flash messagem não estão a funcionar nem no pedido nem no patrocínio
 Alerta mostra o id do pedido mas n funciona com o formulário
-
 
 Alertas de confirmação
       > confirmar se o admin  
@@ -16,4 +13,12 @@ Alertas de confirmação
 
 gerar nova página de modalidade automaticamente
 
-quando restaurar um pedido mandar para a listagem
+
+
+
+validação do numero de telefone
+falar sobre o email
+
+relatório:
+ -> navbar
+ -> patrocinio

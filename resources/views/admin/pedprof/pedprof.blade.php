@@ -22,7 +22,6 @@
                 <table id="pedprof" class="table table-striped align-middle dataTable no-footer display">
                     <thead>
                         <tr class="title">
-                            <th style="text-align: center;">id</th>
                             <th style="text-align: center;">Nome</th>
                             <th style="text-align: center;">Modalidade</th>
                             <th style="text-align: center;">Email</th>
@@ -40,7 +39,6 @@
                         @if (count($pedidos))
                         @foreach($pedidos as $pedidos)
                         <tr>
-                            <td>{{$pedidos->id}}</td>
                             <td>{{$pedidos->primeiro}} {{$pedidos->apelido}}</td>
                             <td>{{$pedidos->modalidade}}</td>
                             <td>{{$pedidos->email}}</td>
@@ -114,13 +112,10 @@
             searching: false,
 
             "columns": [
+                {
+                    "bSortable": false
+                },
                 null,
-                {
-                    "bSortable": false
-                },
-                {
-                    "bSortable": false
-                },
                 {
                     "bSortable": false
                 },

@@ -56,12 +56,16 @@
     <li>Para importar para a máquina</li>
     <pre>php artisan db:seed</pre>
 </ol>
+
 <h2>Caso sejam alteradas as base de dados</h2>
 <p>Execute</p>
 <pre>php artisan migrate:fresh --seed</pre>
 
 <h1>Imagens da Base de Dados</h1>
-<p>De modo a todos os elementos do grupo terem acesso ás imagens da base de dados, pede-se que descarreguem as diretorias para <b>storage>app>public</b></p>
-<p>De seguida devem executar o comando abaixo:</p>
+<pre>rm -rf public/storage</pre>
+<p>Este apaga qualquer referencia que a pasta public tenha com a pasta storage.</p>
+<p>De seguida deve transferir todas as pastas a partir deste <a href="https://myipleiria-my.sharepoint.com/:f:/g/personal/2211700_my_ipleiria_pt/Etw0RBexQ7pDlgS0mey3JpIBMdkq_ReRPqK0ruSkwZGOFw?e=4BOJna">link</a>.</p>
+<p>Após a transferência deve colocar as pastas na diretoria <b>storage>app>public</b> executar</p>
+<p>Por fim, deve executar o comando abaixo:</p>
 <pre>php artisan storage:link</pre>
 <p>| Caso este ultimo código dê erro ir a <b>moveart>public<b> e apagar a pasta <b>storage</b> e voltar a executar o comando</p>

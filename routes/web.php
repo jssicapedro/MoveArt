@@ -6,12 +6,10 @@ use Illuminate\Support\Facades\Gate;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\InscricaoAlunoController;
 use App\Http\Controllers\InscricaoController;
-
 use App\Http\Controllers\PatrocinioController;
 use App\Http\Controllers\PedidoprofessorController;
 use App\Http\Controllers\ModalidadesBackController;
 use App\Http\Controllers\UsersBackController;
-use App\Models\Modalidade;
 
 use App\Http\Controllers\EventosController;
 
@@ -19,7 +17,7 @@ use App\Http\Controllers\EventosController;
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/registo', [InscricaoAlunoController::class, 'index'])->name('registo');
+Route::get('/register', [InscricaoAlunoController::class, 'create'])->name('register');
 
 Route::get('/', [PageController::class, 'index'])->name('/');
 /* danca */
@@ -54,7 +52,6 @@ Route::post('/patrocinio', [PatrocinioController::class, 'store'])->name('regist
 Route::get('/notificacoes', [PageController::class, 'notifications'])->name('notifications');
 Route::get('/patrocinioland', [PageController::class, 'patrocinio'])->name('patrocinio');
 Route::get('/festival', [PageController::class, 'festival'])->name('festival');
-
 Route::get('/landingA', [PageController::class, 'landingA'])->name('landingA');
 Route::get('/landingD', [PageController::class, 'landingD'])->name('landingD');
 Route::get('/eventos', [PageController::class, 'eventos'])->name('eventos');
@@ -62,9 +59,6 @@ Route::get('/natal', [PageController::class, 'natal'])->name('natal');
 
 
 /* ------- Back ------- */
-/* Gate::check(abilities: 'back_premission'); */
-
-
 Route::get('/dashboardBO', [PageController::class, 'dashboardBO'])->name('dashboardBO')->middleware('admin');
 
 /* users */
@@ -98,18 +92,8 @@ Route::get('/admin/modalidades/create',[ModalidadesBackController::class, 'creat
 Route::post('/admin/modalidades/store',[ModalidadesBackController::class, 'store'])->name('modalidades.store')->middleware('admin');
 Route::get('/admin/modalidades/show/{modalidade}',[ModalidadesBackController::class, 'show'])->name('modalidades.show')->middleware('admin');
 Route::get('/admin/modalidades/edit/{modalidade}',[ModalidadesBackController::class, 'edit'])->name('modalidades.edit')->middleware('admin');
-Route::post('/admin/modalidades/edit/{mod}',[ModalidadesBackController::class, 'update'])->name('modalidades.update')->middleware('admin');
+/* Route::post('/admin/modalidades/edit/{mod}',[ModalidadesBackController::class, 'update'])->name('modalidades.update')->middleware('admin'); */
 Route::delete('/admin/modalidades/delete/{modalidade}',[ModalidadesBackController::class, 'delete'])->name('modalidades.delete')->middleware('admin');
-Route::post('/admin/modalidades/update/{modalidade}',[ModalidadesBackController::class, 'update'])->name('modalidades.update')->middleware('admin');
-
-/*EventosBO
-Route::get('/eventos/novo', [EventosController::class, 'create']);
-Route::post('/eventos/novo', [EventosController::class, 'store'])->name('registar_evento');
-Route::get('/eventos/ver/{id}', [EventosController::class, 'show']);
-Route::get('/eventos/editar/{id}', [EventosController::class, 'edit']);
-Route::post('/eventos/editar/{id}', [EventosController::class, 'update'])->name('alterar_evento');
-Route::get('/eventos/excluir/{id}', [EventosController::class, 'delete']);
-Route::post('/eventos/excluir/{id}', [EventosController::class, 'destroy'])->name('excluir_evento');
-*/
+Route::put('/admin/modalidades/update/{modalidade}',[ModalidadesBackController::class, 'update'])->name('modalidades.update')->middleware('admin');
 
 Route::resource("/evento", EventosController::class)->middleware('admin');

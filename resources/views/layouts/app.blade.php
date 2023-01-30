@@ -80,11 +80,6 @@
         <main class="main_login">
             @yield('content')
         </main>
-
-        <!-- ======= Footer ======= -->
-    <footer id="footer">
-        @include('layout.partials.footer')
-    </footer><!-- End Footer -->
     </div>
 </body>
 </html>

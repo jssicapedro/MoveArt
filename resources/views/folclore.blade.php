@@ -28,7 +28,7 @@
         @foreach($profs as $prof)
         <div>
             <img class="grafic1" style="position: absolute;" src="{{ asset('img/dancas/folclore/folclore_prof_.png') }}" alt="">
-            <img class="prof" src="{{ url('storage/professores/'.$prof->foto) }}" alt="{{$prof->primeiro}} {{$prof->apelido}} professor(a) de {!! $modalidade->modalidade !!}">
+            <img class="prof" src="{{ url('storage/users/'.$prof->foto) }}" alt="{{$prof->primeiro}} {{$prof->apelido}} professor(a) de {!! $modalidade->modalidade !!}">
             <h3>{{$prof->primeiro}} {{$prof->apelido}}</h3>
         </div>
         @endforeach

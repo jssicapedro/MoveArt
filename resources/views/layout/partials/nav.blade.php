@@ -68,7 +68,7 @@
           </form>
     </div>
     @else
-    <a class="nav-link" href="{{ asset('login') }}">Login</a>
+    <a class="nav-link" href="{{ asset('login') }}">Login/Registar</a>
     @endauth
     </li>
     </ul>

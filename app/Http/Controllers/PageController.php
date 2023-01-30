@@ -13,8 +13,6 @@ use Auth;
 
 class PageController extends Controller
 {
-
-
     /* ------- Front ------- */
     public function index(){
         $evento = Evento::all();

@@ -20,8 +20,10 @@
         <h1>
             <i class="fa-solid fa-pen-ruler"></i> Editar Modalidade
         </h1>
-        <form action="{{ route('modalidades.update', ['mod'=> $modalidade->id]) }}" method="POST" >
+        <button class="return" style="margin-left: 10px;"><a href="{{ asset('admin/modalidades/')}}"><img class="icon_return" src="https://img.icons8.com/ios/50/null/left3.png"/></a></button>
+        <form action="{{ route('modalidades.update', ['modalidade'=> $modalidade->id]) }}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
             <div class="first">
                 <div class="primeira_info">
                     <legend><i class="fa-solid fa-circle-info"></i> Primeira Informação</legend>
@@ -87,32 +89,48 @@
                 <div class="imgs_edit">
                     <div class="first_imgs">
                         <div class="title_fm">Foto Descrição</div>
-                        <label for="fm"><i class="fa fa-plus"></i></label>
-                        <input type="file" class="upload_img" name="" id="fm" accept=".jpg, .jpeg, .png">
-                        <div class="title_fh">Foto do horário</div>
+                        <label for="fm"><i class="fa-solid fa-file-arrow-up"></i></label>
+                        <input type="file" class="upload_img" name="foto_desc" id="fm" accept=".jpg, .jpeg, .png">
+                        <span class="aviso">*Ficheiro apenas em formato JPG,JPEG ou PNG</span>
 
-                        <label for="fh"><i class="fa fa-plus"></i></label>
-                        <input type="file" class="upload_img" name="" id="fh" accept=".jpg, .jpeg, .png">
+                        <div class="title_fh">Foto do horário</div>
+                        <label for="fh"><i class="fa-solid fa-file-arrow-up"></i></label>
+                        <input type="file" class="upload_img" name="foto_horario" id="fh" accept=".jpg, .jpeg, .png">
+                        <span class="aviso">*Ficheiro apenas em formato JPG,JPEG ou PNG</span>
                     </div>
+
                     <div class="second_imgs">
                         <div class="title_fmm">Foto modalidade Mensal</div>
-                        <label for="fmm"><i class="fa fa-plus"></i></label>
-                        <input type="file" class="upload_img" name="" id="fmm" accept=".jpg, .jpeg, .png">
+                        <label for="fmm"><i class="fa-solid fa-file-arrow-up"></i></label>
+                        <input type="file" class="upload_img" name="foto_mensal" id="fmm" accept=".jpg, .jpeg, .png">
+                        <span class="aviso">*Ficheiro apenas em formato JPG,JPEG ou PNG</span>
 
                         <div class="title_fma">Foto modalidade Anual</div>
-                        <label for="fma"><i class="fa fa-plus"></i></label>
-                        <input type="file" class="upload_img" name="" id="fma" accept=".jpg, .jpeg, .png">
+                        <label for="fma"><i class="fa-solid fa-file-arrow-up"></i></label>
+                        <input type="file" class="upload_img" name="foto_anual" id="fma" accept=".jpg, .jpeg, .png">
+                        <span class="aviso">*Ficheiro apenas em formato JPG,JPEG ou PNG</span>
                     </div>
+
                     <div class="banner_img">
                         <div class="title_b">Foto Banner</div>
-                        <label for="b"><i class="fa fa-plus"></i></label>
-                        <input type="file" class="upload_img" name="foto_mensal" id="b" accept=".jpg, .jpeg, .png">
+                        <label for="b"><i class="fa-solid fa-file-arrow-up"></i></label>
+                        <input type="file" class="upload_img" name="foto_banner" id="b" accept=".jpg, .jpeg, .png">
+                        <span class="aviso">*Ficheiro apenas em formato JPG,JPEG ou PNG</span>
                     </div>
                 </div>
             </div>
             <button type="submit" id="button" class="button">
             Atualizar<i id="arrow-hover" class="fa-solid fa-circle-check"></i>
             </button>
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         </form>
     </div>
 </div>

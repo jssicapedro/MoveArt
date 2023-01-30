@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\PedidoProfessor;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Redirect;
 use App\Mail\RespostaPedidoRecusado;
 use App\Mail\RespostaPedidoAceite;
 use Illuminate\Support\Facades\Mail;
@@ -17,7 +15,6 @@ class PedidoprofessorController extends Controller
     {
         $pedidos = PedidoProfessor::all();
         $quantidade = $pedidos->where('estado_do_pedido', 'pendente')->count();
-        /* dd($quantidade); */
         return view('admin.pedprof.pedprof', compact('pedidos'), compact('quantidade'));
     }
 
@@ -131,8 +128,7 @@ class PedidoprofessorController extends Controller
 
     public function restore($id)
     {
-        /* PedidoProfessor::whereId($id)->restore(); */
         PedidoProfessor::withTrashed()->find($id)->restore();
-        return back();
+        return redirect()->route('pedidosprof');
     }
 }
