@@ -48,7 +48,7 @@
               </div>
               <div class="size-container">
                 <h3 class="title">Localização</h3>
-                <div class="sizes">
+                <div class="localizacao">
                 {{ $eventos->localizacao }}
                 </div>
               </div>
@@ -61,16 +61,5 @@
           </div>
         </div>
       </section>
-
-
-<!--
-<h1>Editar Evento</h1>
-<h1>{{ $eventos->nome }}</h1>
-
-<h5>Data : {{ $eventos->data }}</h5>
-<h5>Localização : {{ $eventos->localizacao }}</h5>
-<h5>Foto : {{ $eventos->foto }}</h5>
-<h5>Descrição : {{ $eventos->descricao }}</h5>
-</div>-->
 
 @stop

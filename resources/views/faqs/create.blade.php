@@ -27,9 +27,9 @@
         <h3>Adicionar FAQ</h3><br>
     <form action="{{ url('faq') }}" method="post">
         {!! csrf_field() !!}
-        <label for="">Pergunta</label><br>
+        <label for=""><img src="{{ asset('img/eventosBO/question.png') }}" style="width:30px; height:; " alt=""></label><br>
         <input type="text" name="pergunta" placeholder="Pergunta" ><br>
-        <label for="">Resposta</label><br>
+        <label for=""><img src="{{ asset('img/eventosBO/answer.png') }}" style="width:30px; height:; " alt=""></label><br>
         <input type="text" name="resposta" placeholder="Resposta" ><br>
         <input type="submit" value="Adicionar"  class="btn btn-success"></br>
     </form>

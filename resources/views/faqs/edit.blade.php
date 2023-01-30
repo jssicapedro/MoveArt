@@ -29,10 +29,10 @@
       <form action="{{ url('faq/' .$faqs->id) }}" method="post">
         {!! csrf_field() !!}
         @method("PATCH")
-        <input type="hidden" name="id" id="id" value="{{$eventos->id}}" id="id" />
-        <label>Pergunta</label></br>
+        <input type="hidden" name="id" id="id" value="{{$faqs->id}}" id="id" />
+        <label><img src="{{ asset('img/eventosBO/question.png') }}" style="width:30px; height:; " alt=""></label></br>
         <input type="text" name="pergunta" id="pergunta" placeholder="Pergunta" value="{{$faqs->pergunta}}" class="form-control"></br>
-        <label>Resposta</label></br>
+        <label><img src="{{ asset('img/eventosBO/answer.png') }}" style="width:30px; height:; " alt=""></label></br>
         <input type="text" name="resposta" id="resposta" placeholder="Resposta" value="{{$faqs->resposta}}" class="form-control"></br>
         <input type="submit" value="Atualizar" class="btn btn-success"></br>
     </form>

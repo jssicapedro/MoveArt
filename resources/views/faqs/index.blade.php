@@ -30,9 +30,6 @@
         <li class="nav-item">
             <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img src="{{ asset('img/eventosBO/list.png') }}" style="width:25px; height:; " alt=""></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><img src="{{ asset('img/eventosBO/menu.png') }}" style="width:25px; height:; " alt=""></a>
-        </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
@@ -67,36 +64,8 @@
                     </tbody>
                 </table>
         </div>
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-        <div class="container">
-            <div class="row">
-            @if (isset($faqs))
-                @foreach($faqs as $item)
-                <div class="column">
-                <div class="card">
-                    <div class="img">
-                        <img src="{{asset('img/eventosBO/'.$item->foto)}}">
-                    </div>
-                    <div class="content">
-                    <h3>{{$item->nome}}</h3><hr>
-                    <h6><i class="bi bi-calendar4-event"></i> {{ date('d-m-Y', strtotime($item->data))}}</h6><hr>
-                    <h6><i class="bi bi-geo-alt-fill"></i> {{$item->localizacao}}</h6><hr>
-                    </div>
-                    <div class="arrow">
-                        <span>&#8673;</span>
-                    </div>
-                </div>
-                </div>
-                @endforeach
-                @else
-                <h6>Não há nenhum evento agendado</h6>
-                @endif
-            </div>
         </div>
-        </div>
-        </div>   
-        
-                
+        </div>     
         </div>
 </div>
 @endsection

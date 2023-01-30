@@ -27,16 +27,16 @@
         <h3>Adicionar Evento</h3><br>
     <form action="{{ url('evento') }}" method="post">
         {!! csrf_field() !!}
-        <label for="">Nome</label><br>
+        <label for=""><img src="{{ asset('img/eventosBO/spotlight.png') }}" style="width:30px; height:; " alt=""></label><br>
         <input type="text" name="nome" placeholder="Nome" ><br>
-        <label for="">Data</label><br>
+        <label for=""><img src="{{ asset('img/eventosBO/calendar.png') }}" style="width:30px; height:; " alt=""></label><br>
         <input type="date" name="data" placeholder="Data" ><br>
-        <label for="">Localizacao</label><br>
+        <label for=""><img src="{{ asset('img/eventosBO/location.png') }}" style="width:30px; height:; " alt=""></label><br>
         <input type="text" name="localizacao" placeholder="Localização" ><br>
-        <label for="inputImage">Foto</label></br>
+        <label for="inputImage"><img src="{{ asset('img/eventosBO/image.png') }}" style="width:30px; height:; " alt=""></label></br>
         <small id="fileHelp" style="color:red; padding-top:7px;" class="form-text text-muted">A imagem não deve passar as 2MB </small><br>
         <input type="file" class="form-control-file" name="foto" id="inputImage" aria-describedby="fileHelp">
-        <label for="">Descrição</label><br>
+        <label for=""><img src="{{ asset('img/eventosBO/info.png') }}" style="width:30px; height:; " alt=""></label><br>
         <input type="text" name="descricao" placeholder="Descrição" ><br>
         <input type="submit" value="Adicionar"  class="btn btn-success"></br>
     </form>
