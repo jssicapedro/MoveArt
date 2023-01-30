@@ -10,7 +10,7 @@
     <div class="junção_de_tudo_perfil">
         <div class="bloco_um_da_divisão_do_perfil">
             <div class="foto_do_perfil_perfi">
-                <img src="{{ asset('storage/professores/' . Auth::user()->foto) }}" alt="">
+                <img src="{{ asset('storage/users/' . Auth::user()->foto) }}" alt="">
             </div>
             <div class="tudo_meu_perfil_perfil">
                 <div class="meu_perfil_perfil">

@@ -76,6 +76,7 @@ class PageController extends Controller
     public function edit_perfil(){
         return view('perfil/update_perfil');
     }
+
      public function update_perfil(PerfilRequest $request) {
         $user = Auth::user();
         $fields=$request->validated();
@@ -83,6 +84,7 @@ class PageController extends Controller
         $user->save();
         return redirect()->route('perfil')->with('success','Perfil atualizado com sucesso');
      }
+     
 
     /* ------- landingPages ------- */
     public function notifications(){
