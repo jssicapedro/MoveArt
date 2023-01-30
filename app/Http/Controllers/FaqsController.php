@@ -23,17 +23,12 @@ class FaqsController extends Controller
     public function store(Request $request)
     {
         $input = $request->validate([
-            'nome' => 'required',
-            'data' => 'required|date',
-            'localizacao' => 'required',
-            'foto' => 'sometimes',
-            'descricao' => 'required',
+            'pergunta' => 'required',
+            'resposta' => 'required',
         ],
         [
-            'nome.required' => 'Preencha o campo do Nome',
-            'data.required' => 'Adicione uma data',
-            'localizacao.required' => 'Adicione uma localizacao',
-            'descricao.required' => 'Adicione uma descrição'
+            'pergunta.required' => 'Insira uma pergunta',
+            'resposta.required' => 'Insira uma resposta'
         ]);
         
         /*cria todos a informacao escrita*/

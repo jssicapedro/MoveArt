@@ -16,8 +16,10 @@
       <h2>FAQs</h2>
       <div class="conteudo">
         <div class="pergunta-resposta">
+        @if (isset($faqs))
+@foreach($faqs as $item)
           <button id="botao-pergunta1" aria-expanded="false">
-            <span class="pergunta">Qual a idade mínima para me inscrever na MoveArt</span>
+            <span class="pergunta">{{ $item->pergunta }}</span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="resposta">
@@ -26,53 +28,14 @@
               incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
               Ut tortor pretium viverra suspendisse potenti.
             </p>
+            @endforeach
+      @else
+      <td>Não existem categorias registadas</td>
+      @endif
           </div>
-          <button id="botao-pergunta1" aria-expanded="false">
-            <span class="pergunta">Posso-me inscrever em mais que uma modalidade?</span>
-            <span class="icon" aria-hidden="true"></span>
-          </button>
-          <div class="resposta">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
-              Ut tortor pretium viverra suspendisse potenti.
-            </p>
-          </div>
-          <button id="botao-pergunta1" aria-expanded="false">
-            <span class="pergunta">Os produtos da loja só são enviados para Portugal?</span>
-            <span class="icon" aria-hidden="true"></span>
-          </button>
-          <div class="resposta">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
-              Ut tortor pretium viverra suspendisse potenti.
-            </p>
-          </div>
-          <button id="botao-pergunta1" aria-expanded="false">
-            <span class="pergunta">Onde fica a associação MoveArt?</span>
-            <span class="icon" aria-hidden="true"></span>
-          </button>
-          <div class="resposta">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
-              Ut tortor pretium viverra suspendisse potenti.
-            </p>
-          </div>
-          <button id="botao-pergunta1" aria-expanded="false">
-            <span class="pergunta">Quantos tipos de dança existem na associação?</span>
-            <span class="icon" aria-hidden="true"></span>
-          </button>
-          <div class="resposta">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
-              Ut tortor pretium viverra suspendisse potenti.
-            </p>
-        </div>
       </div>
-    </div>
+</div>
+
 @endsection
 
 @section('script')

@@ -70,8 +70,9 @@ class PageController extends Controller
         return view('eventosFO', compact('evento'));
     }
 
-    public function faqs(){
-        return view('faqs');
+    public function faqsFO(){
+        $faq = Faq::all();
+        return view('faqsFO', compact('faq'));
     }
 
     protected $table='modalidade';
