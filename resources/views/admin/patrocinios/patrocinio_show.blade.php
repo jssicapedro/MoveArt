@@ -8,7 +8,7 @@
 
 @section('main')
 <div class="dashboard_main">
-    <div class="patrocinio_main">
+    <div class="patrocinio_show">
         <a class="voltar" href="{{ asset('admin/patrocinio')}}">Voltar</a>
         <div class="about">
             <h1>Sobre o patrocínio</h1>

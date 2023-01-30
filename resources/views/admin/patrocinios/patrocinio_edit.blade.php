@@ -8,10 +8,10 @@
 
 @section('main')
 <div class="dashboard_main">
-    <div class="patrocinio_main">
+    <div class="patrocinio_edit">
         <a class="voltar" href="{{ asset('admin/patrocinio')}}">Voltar</a>
         <div class="about">
-            <h1>Sobre o patrocínio</h1>
+            <h1>Responder ao patrocínio</h1>
             <hr>
             <form action="{{ route('patrocinios.update', ['patrocinio' => $patrocinio->id]) }}" method="POST">
                 @csrf

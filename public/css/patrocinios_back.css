@@ -1,10 +1,30 @@
-.patrocinio_main {
-    display: flex;
-    flex-direction: column;
-    margin: 5%;
+body{
+    overflow: hidden;
 }
 
-.patrocinio_main h1 {
+.patrocinio_main {
+    display: flex;
+     flex-direction: column;
+     height: 90vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 50px;
+ }
+
+.patrocinio_show,
+.patrocinio_edit{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 5%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+}
+
+.patrocinio_main h1,
+.patrocinio_show h1,
+.patrocinio_edit h1 {
     margin: 20px 0;
     font-size: 50px;
     text-align: center;
@@ -14,7 +34,9 @@
     font-size: 18pt;
 }
 
-.patrocinio_main hr {
+.patrocinio_main hr,
+.patrocinio_show hr,
+.patrocinio_edit hr  {
     margin: 0 0 20px;
 }
 
@@ -93,8 +115,9 @@
     color: red;
 }
 
-.voltar,
-.enviar {
+.patrocinio_show .voltar,
+.patrocinio_edit .voltar,
+.patrocinio_edit .enviar {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
@@ -110,19 +133,25 @@
     margin-bottom: 20px;
 }
 
-.about {
+.voltar:hover{
+    color: var(--branco);
+}
+
+.patrocinio_show .about,
+.patrocinio_edit .about {
     background-color: var(--branco_footer);
     padding: 20px;
 }
 
-.patrocinio_main .sobre {
+.patrocinio_show .sobre,
+.patrocinio_edit .sobre {
     font-size: 20px;
     height: 5vh;
     line-height: 5vh;
-    margin: 5% 0 2%;
 }
 
-.patrocinio_main .conteudo {
+.patrocinio_show .conteudo,
+.patrocinio_edit .conteudo{
     margin: 5px 0;
     height: 4vh;
     display: flex;
@@ -133,38 +162,41 @@
     padding: 10px;
 }
 
-.patrocinio_main .msg {
+.patrocinio_show .msg,
+.patrocinio_edit .msg {
     width: 50%;
 }
 
-.patrocinio_main .msg .conteudo {
+.patrocinio_show .msg .conteudo,
+.patrocinio_edit .msg .conteudo {
     padding: 20px 10px;
     height: 15vh;
     align-items: flex-start;
 }
 
-.patrocinio_main .resp,
-.patrocinio_main .msg {
+.patrocinio_show .resp,
+.patrocinio_show .msg,
+.patrocinio_edit .resp,
+.patrocinio_edit .msg {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.patrocinio_main .resp .conteudo,
-.patrocinio_main .msg .conteudo {
+.patrocinio_show .resp .conteudo,
+.patrocinio_show .msg .conteudo,
+.patrocinio_edit .resp .conteudo,
+.patrocinio_edit .msg .conteudo {
     height: 100px;
     width: 100%;
 }
 
-.patrocinio_main .btn {
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    align-content: center;
+.patrocinio_show .btn,
+.patrocinio_edit .btn {
+    float: right;
 }
 
-.patrocinio_main .enviar {
+.patrocinio_edit .enviar {
     border: none;
     background-color: var(--amarelo);
 }
@@ -196,6 +228,10 @@
 
 .patrocinio_main .alerta ul{
     list-style: none;
+}
+
+.table-wrapper{
+    width: 70vw;
 }
 
 @media (max-width:1400px) {

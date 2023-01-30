@@ -5,7 +5,7 @@ body{
 .pedidos_main {
     display: flex;
     flex-direction: column;
-    margin: 5%;
+    margin: 15px 5%;
 }
 
 .pedidos_main h1 {
@@ -251,7 +251,6 @@ body{
     display: flex;
     flex-direction: column;
     width: 30em;
-    /* height: 25vh; */
     background: var(--branco_footer);
     justify-content: space-evenly;
     border: 3px solid var(--cinzaBorda);

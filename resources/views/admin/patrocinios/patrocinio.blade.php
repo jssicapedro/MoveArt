@@ -118,10 +118,10 @@
                     "bSortable": false
                 },
             ],
-            pageLength: 10,
+            pageLength: 5,
             lengthMenu: [
-                [5, 10, 20, -1],
-                [5, 10, 20, 'Todos']
+                [5, 3],
+                [5, 3]
             ],
             "order": [
                 [0, 'desc']
