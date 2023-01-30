@@ -360,7 +360,7 @@ body {
 
 .baixo .dashboard_funcionarios {
   position: relative;
-  min-height: 500px;
+  min-height: 200px;
   background: var(--white);
   padding: 20px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.05);

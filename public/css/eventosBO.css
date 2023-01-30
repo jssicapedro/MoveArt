@@ -219,7 +219,7 @@ tbody{
     width: 860px;
   }
   
-  .shoeBackground {
+  .cartaShow {
     position: relative;
     width: 50%;
     height: 475px;
@@ -704,7 +704,7 @@ tbody{
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     padding: 16px;
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: #ffba9c;
     margin-top: 8%;
     border-radius: 16px;
     cursor: pointer;

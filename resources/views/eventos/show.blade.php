@@ -25,7 +25,7 @@
 <section>
         <div class="shows">
           <div class="carta">
-            <div class="shoeBackground">
+            <div class="cartaShow">
             <img src="/img/eventosBO/{{ $eventos->foto }}" style="width:100%; border-radius:5px; " alt="">
             </div>
             <div class="info">
@@ -43,12 +43,12 @@
               <div class="color-container">
                 <h3>Data</h3>
                 <div class="colors">
-                {{ $eventos->data }}
+                {{ date('d-m-Y', strtotime($eventos->data))}}
                 </div>
               </div>
               <div class="size-container">
                 <h3 class="title">Localização</h3>
-                <div class="localizacao">
+                <div class="sizes">
                 {{ $eventos->localizacao }}
                 </div>
               </div>
@@ -61,5 +61,6 @@
           </div>
         </div>
       </section>
+
 
 @stop
