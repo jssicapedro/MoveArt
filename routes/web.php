@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\InscricaoController;
 use App\Http\Controllers\EventosController;
+use App\Http\Controllers\FaqsController;
 
 /* ------- Front ------- */
 Route::get('/', [PageController::class, 'index'])->name('/');
