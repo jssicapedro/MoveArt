@@ -67,3 +67,4 @@ Route::post('/eventos/excluir/{id}', [EventosController::class, 'destroy'])->nam
 */
 
 Route::resource("/evento", EventosController::class);
+Route::resource("/faqsBO", FaqsController::class);

@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Modalidade;
 use App\Models\Evento;
 use App\Models\Patrocinio;
+use App\Models\Faq;
 
 
 class PageController extends Controller
