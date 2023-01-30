@@ -13,31 +13,26 @@
 
 @section('main')
 <div class="faqs">
-@if (isset($faqs))
-    @foreach($faqs as $faq)
-      <h2>FAQs</h2>
-      <div class="conteudo">
-        <div class="pergunta-resposta">
-          <button id="botao-pergunta1" aria-expanded="false">
-            <span class="pergunta">dasdasda</span>
-            <span class="icon" aria-hidden="true"></span>
-          </button>
-          <div class="resposta">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
-              Ut tortor pretium viverra suspendisse potenti.
-            </p>
-          </div>
+  <h2>FAQs</h2>
+  @if (isset($faqs))
+  @foreach($faqs as $faq)
+  <div class="conteudo">
+    <div class="pergunta-resposta">
+      <button id="botao-pergunta1" aria-expanded="false">
+        <span class="pergunta">{{$faq->pergunta}}</span>
+        <span class="icon" aria-hidden="true"></span>
+      </button>
+      <div class="resposta">
+        <p>{{$faq->resposta}}</p>
       </div>
-      @endforeach
-                    @else
-                    <h6>Não existem dados registados</h6>
-                    @endif
-</div>
-
+    </div>
+    @endforeach
+    @else
+    <h6>Não existem dados registados</h6>
+    @endif
+  </div>
 @endsection
 
-@section('script')
-<script src="{{ asset('js/faqs/faqs.js') }}"></script>
-@endsection
+  @section('script')
+  <script src="{{ asset('js/faqs/faqs.js') }}"></script>
+  @endsection
