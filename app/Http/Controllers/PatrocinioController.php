@@ -27,18 +27,21 @@ class PatrocinioController extends Controller
 
     public function store(Request $request, Patrocinio $patrocinio)
     {
+        //dd($request);
         $request->validate(
             [
                 'nome' => 'required',
                 'email' => 'required|email',
                 'valor' => 'required',
                 'mensagem' => 'required',
+                'telefone' =>'nullable|regex:/^\+351 ?9[1236]\d ?(\d{3}) ?\d{3}$/'
             ],
             [
                 'nome.required' => 'Preencha o campo do NOME',
                 'email.required' => 'Preencha o campo do EMAIL',
                 'valor.required' => 'Preencha o campo do VALOR',
                 'mensagem.required' => 'Preencha o campo do MENSAGEM',
+                'telefone.sometimes' => 'Número de telefone inválido',
             ]
         );
 
@@ -46,7 +49,7 @@ class PatrocinioController extends Controller
             'nome' => $request->nome,
             'email' => $request->email,
             'valor' => $request->valor,
-            'telefone' => $request->telefone,
+            'telefone' => str_replace(' ', '', $request->telefone),
             'mensagem' => $request->mensagem,
         ]);
 

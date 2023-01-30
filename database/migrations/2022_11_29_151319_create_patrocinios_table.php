@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nome',150);
             $table->string('email',150);
             $table->double('valor');
-            $table->string('telefone', 9)->nullable();
+            $table->string('telefone', 13)->nullable();
             $table->text('mensagem')->nullable();
             $table->enum('estado', ['respondido', 'sem resposta'])->default('sem resposta');
             $table->text('resposta')->nullable();

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("primeiro", 150);
             $table->string("apelido", 150);
-            $table->string('telefone', 9);
+            $table->string('telefone', 13);
             $table->string("cv");
             $table->string("email");
             $table->date('data_nac')->nullable();

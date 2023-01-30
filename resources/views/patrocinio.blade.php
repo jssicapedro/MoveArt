@@ -27,20 +27,23 @@
             <div class="row">
                 <div class="col-6">
                     <label for="">Nome da empresa *</label> <br />
-                    <input type="text" name="nome" class="form-control" placeholder="Nome Empresa">
+                    <input type="text" name="nome" class="form-control" placeholder="Nome Empresa" value="{{ old('nome', '') }}">
                     @if ($errors->has('nome'))
                     <span class="text-danger">{{ $errors->first('nome') }}</span>
                     @endif
                 </div>
                 <div class="col-6">
                     <label for="">Telefone</label> <br />
-                    <input type="tel" name="telefone" class="form-control" placeholder="Telefone..." max="9">
+                    <input type="tel" name="telefone" class="form-control" placeholder="Telefone..." max="9" value="{{ old('telefone', '') }}">
+                    @if ($errors->has('telefone'))
+                    <span class="text-danger">{{ $errors->first('telefone') }}</span>
+                    @endif
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
                     <label for="">Email *</label> <br />
-                    <input type="email" name="email" class="form-control" placeholder="Email...">
+                    <input type="email" name="email" class="form-control" placeholder="Email..." value="{{ old('email', '') }}">
                     @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                     @endif
@@ -48,7 +51,7 @@
                 <div class="col-4">
                     <label for="">Valor *</label> <br />
                     <div class="input-group">
-                        <input type="number" min="50" name="valor" class="form-control" placeholder="Valor Patrocínio">
+                        <input type="number" min="50" name="valor" class="form-control" placeholder="Valor Patrocínio" value="{{ old('valor', '') }}">
                         <div class="input-group-append">
                             <span class="input-group-text">€</span>
                         </div>
@@ -62,7 +65,7 @@
             <div class="row">
                 <div class="col">
                     <label for="">Mensagem *</label> <br />
-                    <textarea name="mensagem" class="form-control" id="" cols="30" rows="10" placeholder="Breve mensagem sobre o patrocínio"></textarea>
+                    <textarea name="mensagem" class="form-control" id="" cols="30" rows="10" placeholder="Breve mensagem sobre o patrocínio">{{ old('mensagem', '') }}</textarea>
                 </div>
                 @if ($errors->has('mensagem'))
                     <span class="text-danger">{{ $errors->first('mensagem') }}</span>

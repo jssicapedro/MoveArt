@@ -41,14 +41,14 @@
 </head>
 
 <body>
-    <img src="/public/img/logo/logoBallet_p.png" alt="logo MoveArt">
-    <img src="/public/img/email/banner.png" alt="Obrigado por ajudares!">
+    <img src="{{ asset('img/logo/logoBallet_p.png') }}" alt="logo MoveArt">
+    <img src="{{ asset('img/email/banner.png') }}" alt="Obrigado por ajudares!">
     <p>Olá {{ $details->nome }}, </p>
-    <p>A MoveArt agradece o teu patrocínio..</p>
-    <p><p>{{ $details->resposta }}</p></p>
+    <p>A MoveArt agradece o teu patrocínio.</p>
+    <p>{{ $details->resposta }}</p>
     <p>Obrigado pela sua escolha!</p>
     <hr>
-    <img src="/public/img/logo/logoBallet_p.png" alt="logo_footer MoveArt">
+    <img src="{{ asset('img/logo/logoBallet_p.png') }}" alt="logo_footer MoveArt">
     <div class="redes">
         <a href="https://www.facebook.com" target="_blank">
             <img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/circle-gray/facebook@2x.png" width="32" height="32" alt="Facebook" title="Facebook" style="display:block;height:auto;border:0; background: transparent;">
@@ -64,12 +64,3 @@
 </body>
 
 </html>
-
-
-<!-- 
-    as imagens não funcionam pq o URL refere-se a um arquivo q se encontra no computador pessoal. No entanto a imagem passa por um proxy (aplicação de servidor que atua como intermediário entre um cliente que solicita um recurso e o servidor que fornece esse recurso). O browser não consegue aceder ao URL do meu proxy, por isso a imagem não vai aparecer. 
-
-    Uma solução seria garantir que o caminho que estou a usar seja acessível fora da rede local; por exemplo, hospedando as imagens em um servidor externo. 
-
-fonte: https://stackoverflow.com/questions/20836911/images-not-displayed-for-gmail
--->
