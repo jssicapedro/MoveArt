@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.masterError')
 
 @section('title', 'Erro 404')
 
