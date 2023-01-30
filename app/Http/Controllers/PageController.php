@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Modalidade;
+use App\Models\UserModalidade;
 use App\Models\Evento;
 use App\Models\Patrocinio;
 use App\Models\Faq;
-
 
 class PageController extends Controller
 {
@@ -106,8 +106,14 @@ class PageController extends Controller
         $modalidade = Modalidade::all();
         $users = User::all();
         $patrocinios = Patrocinio::all();
-        
-        return view('dashboardBO', compact('evento','modalidade','users','patrocinios'));
+
+        $alunos_ballet = UserModalidade::where('modalidade_id', '1')->count();
+        $alunos_hiphop = UserModalidade::where('modalidade_id', '2')->count();
+        $alunos_espanhola = UserModalidade::where('modalidade_id', '3')->count();
+        $alunos_oriental = UserModalidade::where('modalidade_id', '4')->count();
+        $alunos_folclore = UserModalidade::where('modalidade_id', '5')->count();
+
+        return view('dashboardBO', compact('evento','modalidade','users','patrocinios', 'alunos_ballet', 'alunos_hiphop', 'alunos_espanhola', 'alunos_oriental', 'alunos_folclore'));
     }
 
 }
