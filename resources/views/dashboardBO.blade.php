@@ -90,7 +90,7 @@
                     @foreach($modalidade as $modalidades)
                     <tr>
                         <td>{{$modalidades->modalidade}}</td>
-                        <td>{{$alunos_ballet}}</td>
+                        <td>{{$alunos_hiphop}}</td>
                     </tr>
                     @endforeach
                     @else
