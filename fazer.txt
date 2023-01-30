@@ -13,12 +13,6 @@ Alertas de confirmação
 
 gerar nova página de modalidade automaticamente
 
-
-
-
-validação do numero de telefone
-falar sobre o email
-
 relatório:
- -> navbar
- -> patrocinio
+ -> atualiza validação do telefone
+ -> erro 404 e 401

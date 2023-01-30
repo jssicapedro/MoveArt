@@ -44,16 +44,12 @@
                 <div class="row resp">
                     <div class="col">
                         <label class="sobre" for="">Responder</label> <br />
-                        <textarea name="resposta" class="conteudo">{{$patrocinio->resposta}}</textarea>
-                        @if ($errors->any())
-                        <div class="alerta alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
+                        <textarea name="resposta" class="conteudo" value="{{ old('resposta', '') }}">{{$patrocinio->resposta}}</textarea>
+                        
+                        @if ($errors->has('resposta'))
+                        <span class="text-danger">{{ $errors->first('resposta') }}</span>
                         @endif
+
                     </div>
                 </div>
                 <input type="hidden" name="estado" class="conteudo" value="respondido">

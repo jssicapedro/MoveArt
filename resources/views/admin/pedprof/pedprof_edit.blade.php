@@ -56,7 +56,7 @@
                     </div>
                     <div class="responderPedido">
                         <h2>Resposta</h2>
-                        <textarea name="resposta" class="conteudo">{{$pedidos->resposta}}</textarea>
+                        <textarea name="resposta" class="conteudo" value="{{ old('resposta', '') }}">{{$pedidos->resposta}}</textarea>
                         @if ($errors->has('resposta'))
                         <span class="text-danger">{{ $errors->first('resposta') }}</span>
                         @endif

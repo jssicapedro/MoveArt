@@ -27,14 +27,14 @@
             <div class="row">
                 <div class="col-6">
                     <label for="">Nome: *</label>
-                    <input name="primeiro" type="text" class="form-control" placeholder="Nome...">
+                    <input name="primeiro" type="text" class="form-control" placeholder="Nome..." value="{{ old('primeiro', '') }}">
                     @if ($errors->has('primeiro'))
                     <span class="text-danger">{{ $errors->first('primeiro') }}</span>
                     @endif
                 </div>
                 <div class="col-6">
                     <label for="">Apelido: *</label>
-                    <input name="apelido" type="text" class="form-control" placeholder="Apelido...">
+                    <input name="apelido" type="text" class="form-control" placeholder="Apelido..." value="{{ old('apelido', '') }}">
                     @if ($errors->has('apelido'))
                     <span class="text-danger">{{ $errors->first('apelido') }}</span>
                     @endif
@@ -43,14 +43,14 @@
             <div class="row">
                 <div class="col-6">
                     <label for="">Email: *</label>
-                    <input name="email" type="email" class="form-control" name="prof_email" id="prof_email" placeholder="Email...">
+                    <input name="email" type="email" class="form-control" name="prof_email" id="prof_email" placeholder="Email..." value="{{ old('email', '') }}">
                     @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                     @endif
                 </div>
                 <div class="col-5">
                     <label for="">Telefone: *</label>
-                    <input name="telefone" type="tel" class="form-control" placeholder="Telefone" max="9">
+                    <input name="telefone" type="tel" class="form-control" placeholder="Telefone" max="9" value="{{ old('telefone', '') }}">
                     @if ($errors->has('telefone'))
                     <span class="text-danger">{{ $errors->first('telefone') }}</span>
                     @endif
@@ -59,7 +59,7 @@
             <div class="row">
                 <div class="col-6">
                     <label for="">Data de Nascimento: *</label>
-                    <input type="date" class="form-control" name="data_nac" id="dta_nasc" placeholder="Data de Nascimento">
+                    <input type="date" class="form-control" name="data_nac" id="dta_nasc" placeholder="Data de Nascimento" value="{{ old('data_nac', '') }}">
                     @if ($errors->has('data_nac'))
                     <span class="text-danger">{{ $errors->first('data_nac') }}</span>
                     @endif
@@ -67,12 +67,12 @@
                 <div class="col-6">
                     <label for="tp_modalidade">Tipo de Modalidade:</label>
                     <select name="modalidade" id="tp_modalidade" class="form-control">
-                        <option value="Indiferente">Indiferente</option>
-                        <option value="Ballet">Ballet</option>
-                        <option value="Hip-Hop">Hip-Hop</option>
-                        <option value="Dança Espanhola">Dança Espanhola</option>
-                        <option value="Dança Oriental">Dança Oriental</option>
-                        <option value="Folclore">Folclore</option>
+                        <option @if(old('modalidade', '') == "Indiferente") selected @endif value="Indiferente">Indiferente</option>
+                        <option @if(old('modalidade', '') == "Ballet") selected @endif value="Ballet">Ballet</option>
+                        <option @if(old('modalidade', '') == "Hip-Hop") selected @endif value="Hip-Hop">Hip-Hop</option>
+                        <option @if(old('modalidade', '') == "Dança Espanhola") selected @endif value="Dança Espanhola">Dança Espanhola</option>
+                        <option @if(old('modalidade', '') == "Dança Oriental") selected @endif value="Dança Oriental">Dança Oriental</option>
+                        <option @if(old('modalidade', '') == "Folclore") selected @endif value="Folclore">Folclore</option>
                     </select>
                 </div>
             </div>
