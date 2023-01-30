@@ -20,7 +20,7 @@
         <h2>Torna-te um profissional na dança!</h2>
         <h4>Escolhe a tua dança e torna-te um(a) aluno(a).</h4>
     </div>
-    <form action="{{route('inscricao_aluno_register')}}" method="POST">
+    <form action="{{route('register')}}" method="POST">
         @csrf
         <fieldset>
             <legend>Perfil</legend>

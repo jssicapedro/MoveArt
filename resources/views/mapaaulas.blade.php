@@ -85,7 +85,7 @@
             <h2 class="section__title">
                 Inscreve-te na nossa associação
             </h2>
-            <button>Novo Registo</button>
+            <button><a href="{{ asset('register') }}">Novo Registo</a></button>
         </div>
     </div>
 </section>

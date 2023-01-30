@@ -20,6 +20,7 @@ class InscricaoAlunoController extends Controller
         $modalidade = Modalidade::all();
         return view('inscricoes', compact('modalidade'));
     }
+    
     public function store(Request $request)
     {
         $request->validate([
