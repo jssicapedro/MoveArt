@@ -71,7 +71,8 @@ class PageController extends Controller
     }
 
     public function faqs(){
-        return view('faqs');
+        $faq = Faq::all();
+        return view('faqs', compact('faq'));
     }
 
 

@@ -13,6 +13,8 @@
 
 @section('main')
 <div class="faqs">
+@if (isset($faqs))
+    @foreach($faqs as $faq)
       <h2>FAQs</h2>
       <div class="conteudo">
         <div class="pergunta-resposta">
@@ -28,6 +30,10 @@
             </p>
           </div>
       </div>
+      @endforeach
+                    @else
+                    <h6>Não existem dados registados</h6>
+                    @endif
 </div>
 
 @endsection

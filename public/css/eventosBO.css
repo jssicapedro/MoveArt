@@ -492,11 +492,7 @@ tbody{
   
   
   
-  @media (max-width: 1070px) {
-    .shoe {
-      width: 135%;
-    }
-  }
+
   
   @media (max-width: 1000px) {
     .card {
