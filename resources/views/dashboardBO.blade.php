@@ -128,7 +128,7 @@
                     <tr>
                         <td>{{$user->primeiro}}</td>
                         <td>{{$user->email}}</td>
-                        <td>{{$user->data_nasc}}</td>
+                        <td>{{ date('d-m-Y', strtotime($user->data_nasc))}}</td>
                         <td>{{$user->genero}}</td>
                         <td>{{$user->perfil}}</td>
                     </tr>
@@ -140,41 +140,6 @@
                 </table>
             </div>
 
-
-            <div class="dashboard_eventos">
-                <div class="dashboard_subtitulo">
-                    <h2>Próximos Eventos</h2>
-                </div>
-               
-                <table>
-                    <thead>
-                        <tr>
-                            <td>Imagem</td>
-                            <td>Nome</td>
-                            <td>Data</td>
-                        </tr>
-                    </thead>
-
-                    
-                    <tbody>
-                    @if (count($evento))
-                    @foreach($evento as $eventos)
-                    <tr>
-                        <td><img src="{{asset('img/eventosBO/'.$eventos->foto)}}" style="width:60px; height:;" class="img-post" alt=""></td>
-                        <td>{{$eventos->nome}}</td>
-                        <td>{{$eventos->data}}</td>
-                    </tr>
-                    @endforeach
-                    @else
-                    <td>Não existem categorias registadas</td>
-                    @endif
-                    </tbody>
-                </table>
-
-            </div>
-
-            <div>
-            </div>
 
             <div class="dashboard_patrocinios">
                 <div class="dashboard_subtitulo">

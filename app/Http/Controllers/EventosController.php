@@ -23,8 +23,8 @@ class EventosController extends Controller
     public function store(Request $request)
     {
         $input = $request->validate([
-            'nome' => 'required',
-            'data' => 'required|date',
+            'nome' => 'required|min:3|max:100|regex:/^[A-ZÀ-úa-z\s]+$/',
+            'data' => 'required|date|after_or_equal:now',
             'localizacao' => 'required',
             'foto' => 'sometimes',
             'descricao' => 'required',

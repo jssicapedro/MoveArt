@@ -23,8 +23,8 @@ class FaqsController extends Controller
     public function store(Request $request)
     {
         $input = $request->validate([
-            'pergunta' => 'required',
-            'resposta' => 'required',
+            'pergunta' => 'required|min:3|max:100|regex:/^[A-ZÀ-úa-z\s]+$/',
+            'resposta' => 'required|min:3|max:100|regex:/^[A-ZÀ-úa-z\s]+$/',
         ],
         [
             'pergunta.required' => 'Insira uma pergunta',

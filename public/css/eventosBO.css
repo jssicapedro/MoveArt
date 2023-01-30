@@ -300,7 +300,10 @@ tbody{
 }
 
 .conteudo button[aria-expanded='true'] {
-  color: #575858;
+  color: #000000;
+}
+.conteudo .pergunta-resposta button[aria-expanded='true'] {
+  border-bottom: 1px solid #000000;
 }
 
 .conteudo button {

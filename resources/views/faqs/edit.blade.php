@@ -13,7 +13,7 @@
                 <ion-icon name="menu-outline"></ion-icon>
             </div>
 
-            <h1>Eventos</h1>
+            <h1>FAQs</h1>
             @auth
             <div class="utilizador_dashboard">
                 <span>Olá, {{ Auth::user()->primeiro }}</span>

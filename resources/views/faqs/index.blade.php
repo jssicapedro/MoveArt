@@ -13,7 +13,7 @@
                 <ion-icon name="menu-outline"></ion-icon>
             </div>
 
-            <h1>faqs</h1>
+            <h1>FAQs</h1>
             @auth
             <div class="utilizador_dashboard">
                 <span>Olá, {{ Auth::user()->primeiro }}</span>
@@ -53,7 +53,7 @@
                                 <form method="POST" action="{{ url('/faq' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                     {{ method_field('DELETE') }}
                                     {{ csrf_field() }}
-                                <button type="submit" class="btn btn-danger btn-sm" title="Delete evento" onclick="return confirm(&quot;De certeza que quer eliminar este evento?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i><img src="{{ asset('img/eventosBO/bin.png') }}" style="width:25px; height:; " alt=""></button>
+                                <button type="submit" class="btn btn-danger btn-sm" title="Delete evento" onclick="return confirm(&quot;De certeza que quer eliminar este FAQ?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i><img src="{{ asset('img/eventosBO/bin.png') }}" style="width:25px; height:; " alt=""></button>
                                 </form>
                             </td>
                         </tr>

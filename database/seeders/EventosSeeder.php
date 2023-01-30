@@ -30,6 +30,48 @@ class EventosSeeder extends Seeder
                 'foto' => '',
                 'descricao' => 'Batalha de House vs Hip-Hop. Escolhe a melhor!',
             ],
+            [
+                'nome' => '2024',
+                'data'=> '2023-12-31 21:30:00',
+                'localizacao' => 'MoveArt Studio',
+                'foto' => '2023.png',
+                'descricao' => 'Festa de final e início de ano com a MoveArt!',
+            ],
+            [
+                'nome' => 'Arraial',
+                'data'=> '2022-02-25 15:30:00',
+                'localizacao' => 'Jardim Luís de Camões',
+                'foto' => 'arraial.png',
+                'descricao' => 'Espetáculo de Dança Portuguesa',
+            ],
+            [
+                'nome' => 'Ballet sob as Estrelas',
+                'data'=> '2023-05-25 20:30:00',
+                'localizacao' => 'Jardim Luís de Camões',
+                'foto' => 'ballet.png',
+                'descricao' => 'Espetáculo de Ballet durante a noite',
+            ],
+            [
+                'nome' => 'Christmas Dance',
+                'data'=> '2023-12-23 20:30:00',
+                'localizacao' => 'Teatro José Luís da Silva',
+                'foto' => 'natal.png',
+                'descricao' => 'Espetáculo de Natal com a MoveArt',
+            ],
+            [
+                'nome' => 'Dance Party',
+                'data'=> '2023-11-01 20:30:00',
+                'localizacao' => 'MoveArt Studio',
+                'foto' => 'danceparty.png',
+                'descricao' => 'Espetáculo de dança da MoveArt',
+            ],
+            [
+                'nome' => 'Easter Dance',
+                'data'=> '2023-04-07 20:30:00',
+                'localizacao' => 'Teatro José Lúcio da Silva',
+                'foto' => 'easter.png',
+                'descricao' => 'A páscoa é melhor a dançar com a MoveArt',
+            ],
         ]);
     }
 }

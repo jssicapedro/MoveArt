@@ -256,6 +256,10 @@ section{
     background-image: linear-gradient(#d6a996);
 }
 
+.nav-item {
+    padding: 17px 0 17px 17px;
+    font-size: 15px;
+}
 
   .card .img {
     margin-top: -9%;

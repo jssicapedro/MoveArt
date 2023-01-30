@@ -16,10 +16,8 @@
       <h2>FAQs</h2>
       <div class="conteudo">
         <div class="pergunta-resposta">
-        @if (isset($faqs))
-@foreach($faqs as $item)
           <button id="botao-pergunta1" aria-expanded="false">
-            <span class="pergunta">{{ $item->pergunta }}</span>
+            <span class="pergunta">dasdasda</span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="resposta">
@@ -28,10 +26,6 @@
               incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
               Ut tortor pretium viverra suspendisse potenti.
             </p>
-            @endforeach
-      @else
-      <td>Não existem categorias registadas</td>
-      @endif
           </div>
       </div>
 </div>
