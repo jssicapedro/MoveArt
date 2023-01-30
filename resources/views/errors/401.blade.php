@@ -1,6 +1,6 @@
 @extends('layout.masterError')
 
-@section('title', 'Erro 403')
+@section('title', 'Erro 401')
 
 @section('links')
 <link rel="stylesheet" href="{{asset('css/error.css')}}">
