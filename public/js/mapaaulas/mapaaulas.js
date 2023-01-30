@@ -3,9 +3,9 @@ const filterContainer = document.querySelector(".gallery-filter"),
            
             filterContainer.addEventListener("click", (event) =>{
               if(event.target.classList.contains("filter-item")){
-                   // deactivate existing active 'filter-item'
+                   // desativa o active 'filter-item'
                    filterContainer.querySelector(".active").classList.remove("active");
-                   // activate new 'filter-item'
+                   // ativa'filter-item'
                    event.target.classList.add("active");
                    const filterValue = event.target.getAttribute("data-filter");
                    galleryItems.forEach((item) =>{

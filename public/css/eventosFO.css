@@ -1,4 +1,20 @@
 
+.imagem_principal_contactos {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background-position: center;
+    background-size:2000px; 
+    background-image: url('../img/eventosFO/walp.jpg');
+  }
+.imagem_principal_contactos h1{
+    font-size: 40pt;
+    display: flex;
+    justify-content: space-around;
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: 125px;
+}
 
 :root{
     --main-color:#d6a996;

@@ -57,7 +57,7 @@ body {
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   color: var(--bs-nav-pills-link-active-color);
-  background-color: #d296d6;
+  background-color: #d296d661;
 }
 
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
