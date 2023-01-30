@@ -148,12 +148,9 @@ class ModalidadesBackController extends Controller
         ]);
         return redirect('admin/modalidades');
     }
-    public function delete($modalidade)
+    public function delete(Modalidade $modalidade)
     {
-        Modalidade::destroy($modalidade);
-        return redirect('admin/modalidades');
-        /* dd($modalidade->id);
         $modalidade->delete();
-        return redirect('admin/modalidades'); */
+        return redirect('admin/modalidades');
     }
 }

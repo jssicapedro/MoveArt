@@ -31,12 +31,12 @@
                             <div class="title_nome">Nome da Modalidade</div>
                             <input type="text" class="form-control nome_mod" name="modalidade" id="">
                             @if ($errors->has('modalidade'))
-                        <span class="alert alert-danger">{{ $errors->first('modalidade') }}</span>
+                        <span class="text-alert" style=font-size:10pt;font-weight:bold;color:#ba2727;padding-left:5px;>{{ $errors->first('modalidade') }}</span>
                         @endif
                             <div class="title_desc">Breve descrição da Modalidade</div>
                             <textarea name="descricao" class="form-control desc_mod" id=""></textarea>
                             @if ($errors->has('descricao'))
-                        <span class="alert alert-danger">{{ $errors->first('descricao') }}</span>
+                        <span class="text-alert" style=font-size:10pt;font-weight:bold;color:#ba2727;padding-left:5px;>{{ $errors->first('descricao') }}</span>
                         @endif
                         </div>
                     </div>
@@ -48,12 +48,12 @@
                             <div class="title_vm">Valor Mensal</div>
                             <input type="number" class="form-control vm" name="valor_mensal" id="">
                             @if ($errors->has('valor_mensal'))
-                        <span class="alert alert-danger">{{ $errors->first('valor_mensal') }}</span>
+                        <span class="text-alert" style=font-size:10pt;font-weight:bold;color:#ba2727;padding-left:5px;>{{ $errors->first('valor_mensal') }}</span>
                         @endif
                             <div class="title_va">Valor Anual</div>
                             <input type="number" class="form-control va" name="valor_anual" id="">
                             @if ($errors->has('valor_anual'))
-                        <span class="alert alert-danger">{{ $errors->first('valor_anual') }}</span>
+                        <span class="text-alert" style=font-size:10pt;font-weight:bold;color:#ba2727;padding-left:5px;>{{ $errors->first('valor_anual') }}</span>
                         @endif
                         </div>
                     </div>
@@ -68,14 +68,14 @@
                         <input type="file" class="upload_img" name="foto_desc" id="fm" accept=".jpg, .jpeg, .png">
                         <span class="aviso">*Ficheiro apenas em formato JPG,JPEG ou PNG</span>
                         @if ($errors->has('foto_desc'))
-                        <span class="alert alert-danger">{{ $errors->first('foto_desc') }}</span>
+                        <span class="text-alert" style=font-size:10pt;font-weight:bold;color:#ba2727;padding-left:5px;>{{ $errors->first('foto_desc') }}</span>
                         @endif
                         <div class="title_fh">Foto do horário</div>
                         <label for="fh"><i class="fa-solid fa-file-arrow-up"></i></label>
                         <input type="file" class="upload_img" name="foto_horario" id="fh" accept=".jpg, .jpeg, .png">
                         <span class="aviso">*Ficheiro apenas em formato JPG,JPEG ou PNG</span>
                         @if ($errors->has('foto_horario'))
-                        <span class="alert alert-danger">{{ $errors->first('foto_horario') }}</span>
+                        <span class="text-alert" style=font-size:10pt;font-weight:bold;color:#ba2727;padding-left:5px;>{{ $errors->first('foto_horario') }}</span>
                         @endif
                     </div>
                     <div class="second_imgs">
@@ -84,14 +84,14 @@
                         <input type="file" class="upload_img" name="foto_mensal" id="fmm" accept=".jpg, .jpeg, .png">
                         <span class="aviso">*Ficheiro apenas em formato JPG,JPEG ou PNG</span>
                         @if ($errors->has('foto_mensal'))
-                        <span class="alert alert-danger">{{ $errors->first('foto_mensal') }}</span>
+                        <span class="text-alert" style=font-size:10pt;font-weight:bold;color:#ba2727;padding-left:5px;>{{ $errors->first('foto_mensal') }}</span>
                         @endif
                         <div class="title_fma">Foto modalidade Anual</div>
                         <label for="fma"><i class="fa-solid fa-file-arrow-up"></i></label>
                         <input type="file" class="upload_img" name="foto_anual" id="fma" accept=".jpg, .jpeg, .png">
                         <span class="aviso">*Ficheiro apenas em formato JPG,JPEG ou PNG</span>
                         @if ($errors->has('foto_anual'))
-                        <span class="alert alert-danger">{{ $errors->first('foto_anual') }}</span>
+                        <span class="text-alert" style=font-size:10pt;font-weight:bold;color:#ba2727;padding-left:5px;>{{ $errors->first('foto_anual') }}</span>
                         @endif
                     </div>
                     <div class="banner_img">
@@ -100,7 +100,7 @@
                         <input type="file" class="upload_img" name="foto_banner" id="b" accept=".jpg, .jpeg, .png">
                         <span class="aviso">*Ficheiro apenas em formato JPG,JPEG ou PNG</span>
                         @if ($errors->has('foto_banner'))
-                        <span class="alert alert-danger">{{ $errors->first('foto_banner') }}</span>
+                        <span class="text-alert" style=font-size:10pt;font-weight:bold;color:#ba2727;padding-left:5px;>{{ $errors->first('foto_banner') }}</span>
                         @endif
                     </div>
                 </div>

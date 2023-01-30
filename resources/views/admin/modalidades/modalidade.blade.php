@@ -41,7 +41,7 @@
             <li><a href="{{ route('modalidades.show', $mod->id) }}"><i class="fa-solid fa-eye"></i></a></li>
             <li><a href="{{ route('modalidades.edit', $mod->id) }}"><i class="fa-solid fa-pen-ruler"></i></a></li>
             <li>
-              <form action="{{ route('modalidades.delete', $mod->id) }}" method="POST">
+              <form action="{{ route('modalidades.delete', $mod) }}" method="POST">
                 @csrf
                 @method('delete')
                 <button type="submit" class="delete">
