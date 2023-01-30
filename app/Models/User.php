@@ -18,14 +18,20 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'foto',
         'primeiro',
         'apelido',
         'email',
         'data_nasc',
+        'telefone',
+        'localidade',
+        'rua',
+        'cod_postal',
+        'cc',
+        'nif',
         'genero',
         'perfil',
-        'password',
-       
+        'password',       
     ];/* colunas de preenchimento possivel */
 
 /* select * from = user:: */
@@ -52,4 +58,8 @@ class User extends Authenticatable
     public function modalidade(){
         return $this->belongsToMany(Modalidade::class, "users_modalidades");
     }   
+
+    public function deletemodalidade(){
+        return $this->hasMany(UserModalidade::class, 'user_id', 'id');
+    }  
 }

@@ -37,7 +37,7 @@ body {
 .dashboard_main {
   position: absolute;
   width: calc(100% - 300px);
-  left: 250px;
+  /* left: 250px; */
   min-height: 100vh;
   transition: 0.5s;
 }

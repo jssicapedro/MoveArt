@@ -68,8 +68,8 @@ main {
 
 .img_banner{
     width: 100vw;
-    height: 70vh;
-    background-position: center;
+    height: 50vh;
+    background-position: center -150px;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -81,7 +81,7 @@ main {
 }
 
 .about{
-    margin: 0 50px;
+    margin: 50px;
 }
 
 .about .txt{
