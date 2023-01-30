@@ -53,11 +53,11 @@
                     <img class="img_fh" src="{{ url('storage/modalidades/'.$modalidade->foto_horario) }}" alt="">
                 </div>
                 <div class="col">
-                    <div class="title_fmm">Foto modalidade Mensal</div>
+                    <div class="title_fmm">Foto Mensal</div>
                     <img class="img_fmm" src="{{ url('storage/modalidades/'.$modalidade->foto_mensal) }}" alt="">
                 </div>
                 <div class="col">
-                    <div class="title_fma">Foto modalidade Anual</div>
+                    <div class="title_fma">Foto Anual</div>
                     <img class="img_fma" src="{{ url('storage/modalidades/'.$modalidade->foto_anual) }}" alt="">
                 </div>
                 <div class="col">

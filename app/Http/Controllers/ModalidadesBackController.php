@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Modalidade;
+use App\Http\Controllers\Controller;
+
 
 class ModalidadesBackController extends Controller
 {
@@ -152,5 +154,16 @@ class ModalidadesBackController extends Controller
     {
         $modalidade->delete();
         return redirect('admin/modalidades');
+    }
+    public function arquivar()
+    {
+        $arquivos = Modalidade::onlyTrashed()
+            ->orderBy('id', 'desc')->get();
+
+        return view('admin.modalidades.modalidade_arquivar', compact('arquivos'));
+    }
+    public function restaurar($modalidade){
+        Modalidade::withTrashed()->find($modalidade)->restore();
+        return back();
     }
 }
