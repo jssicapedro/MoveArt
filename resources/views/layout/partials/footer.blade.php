@@ -48,14 +48,6 @@
                 <li><a href="">Bilhetes eventos</a></li>
             </ul>
         </div>
-        <div class="pagamentos">
-            <ul>
-                <li><img src="{{asset('img/footer/icons8-paypal-480.png')}}" alt=""></li>
-                <li><img src="{{asset('img/footer/icons8-multibanco-480.png')}}" alt=""></li>
-                <li><img src="{{asset('img/footer/icons8-mb-way-480.png')}}" alt=""></li>
-                <li><img src="{{asset('img/footer/icons8-visa-480.png')}}" alt=""></li>
-            </ul>
-        </div>
     </section>
     <section id="second_mobile">
         <div class="sobre_suporte">

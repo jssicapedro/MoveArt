@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Modalidade;
+use App\Http\Controllers\Controller;
+
 
 class ModalidadesBackController extends Controller
 {
@@ -29,13 +31,23 @@ class ModalidadesBackController extends Controller
                 'modalidade' => 'required',
                 'descricao' => 'required',
                 'valor_mensal' => 'required',
-                'valor_anual' => 'required'
+                'valor_anual' => 'required',
+                'foto_mensal' => 'required',
+                'foto_anual' => 'required',
+                'foto_horario' => 'required',
+                'foto_desc' => 'required',
+                'foto_banner' => 'required',
             ],
             [
-                'modalidade.required' => 'Preencha o Nome',
-                'descricao.required' => 'Preencha o Apelido',
-                'valor_mensal.required' => 'Preencha o Género',
-                'valor_anual.required' => 'Preencha a Data de Nascimento',
+                'modalidade.required' => '*Preencha o Nome',
+                'descricao.required' => '*Preencha o Apelido',
+                'valor_mensal.required' => '*Preencha o Género',
+                'valor_anual.required' => '*Preencha a Data de Nascimento',
+                'foto_mensal.required' => '*Coloque uma imagem',
+                'foto_anual.required' => '*Coloque uma imagem',
+                'foto_horario.required' => '*Coloque uma imagem', 
+                'foto_desc.required' => '*Coloque uma imagem',
+                'foto_banner.required' => '*Coloque uma imagem', 
             ]
         ); 
         if ($request->file('foto_desc')->isValid()) {
@@ -84,13 +96,23 @@ class ModalidadesBackController extends Controller
                 'modalidade' => 'required',
                 'descricao' => 'required',
                 'valor_mensal' => 'required',
-                'valor_anual' => 'required'
+                'valor_anual' => 'required',
+                'foto_mensal' => 'required',
+                'foto_anual' => 'required',
+                'foto_horario' => 'required',
+                'foto_desc' => 'required',
+                'foto_banner' => 'required',
             ],
             [
-                'modalidade.required' => 'Preencha o Nome',
-                'descricao.required' => 'Preencha o Apelido',
-                'valor_mensal.required' => 'Preencha o Género',
-                'valor_anual.required' => 'Preencha a Data de Nascimento',
+                'modalidade.required' => '*Preencha o Nome',
+                'descricao.required' => '*Preencha o Apelido',
+                'valor_mensal.required' => '*Preencha o Género',
+                'valor_anual.required' => '*Preencha a Data de Nascimento',
+                'foto_mensal.required' => '*Coloque uma imagem',
+                'foto_anual.required' => '*Coloque uma imagem',
+                'foto_horario.required' => '*Coloque uma imagem', 
+                'foto_desc.required' => '*Coloque uma imagem',
+                'foto_banner.required' => '*Coloque uma imagem',
             ]
         );
 
@@ -128,12 +150,20 @@ class ModalidadesBackController extends Controller
         ]);
         return redirect('admin/modalidades');
     }
-    public function delete($modalidade)
+    public function delete(Modalidade $modalidade)
     {
-        Modalidade::destroy($modalidade);
-        return redirect('admin/modalidades');
-        /* dd($modalidade->id);
         $modalidade->delete();
-        return redirect('admin/modalidades'); */
+        return redirect('admin/modalidades');
+    }
+    public function arquivar()
+    {
+        $arquivos = Modalidade::onlyTrashed()
+            ->orderBy('id', 'desc')->get();
+
+        return view('admin.modalidades.modalidade_arquivar', compact('arquivos'));
+    }
+    public function restaurar($modalidade){
+        Modalidade::withTrashed()->find($modalidade)->restore();
+        return back();
     }
 }

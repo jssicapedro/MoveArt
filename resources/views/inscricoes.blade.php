@@ -211,26 +211,6 @@
                 error: function() {}
             });
         });
-        $(document).on('change', '.tp_danca', function() {
-            var mod_id = $(this).val();
-            var div = $(this).parent();
-            var op = " ";
-            $.ajax({
-                type: 'GET',
-                url: '/imgmensal',
-                data: {
-                    'id': mod_id
-                },
-                dataType: 'json',
-                contentType: 'json',
-                success: function(data) {
-
-                    var price = data.img_mensal;
-                    div.find("span.img_mensal").html(price);
-                },
-                error: function() {}
-            });
-        });
     });
 </script>
 @endsection

@@ -92,8 +92,9 @@ Route::get('/admin/modalidades/create',[ModalidadesBackController::class, 'creat
 Route::post('/admin/modalidades/store',[ModalidadesBackController::class, 'store'])->name('modalidades.store')->middleware('admin');
 Route::get('/admin/modalidades/show/{modalidade}',[ModalidadesBackController::class, 'show'])->name('modalidades.show')->middleware('admin');
 Route::get('/admin/modalidades/edit/{modalidade}',[ModalidadesBackController::class, 'edit'])->name('modalidades.edit')->middleware('admin');
-/* Route::post('/admin/modalidades/edit/{mod}',[ModalidadesBackController::class, 'update'])->name('modalidades.update')->middleware('admin'); */
-Route::delete('/admin/modalidades/delete/{modalidade}',[ModalidadesBackController::class, 'delete'])->name('modalidades.delete')->middleware('admin');
 Route::put('/admin/modalidades/update/{modalidade}',[ModalidadesBackController::class, 'update'])->name('modalidades.update')->middleware('admin');
+Route::delete('/admin/modalidades/delete/{modalidade}',[ModalidadesBackController::class, 'delete'])->name('modalidades.delete')->middleware('admin');
+Route::get('/admin/modalidades/arquivos', [ModalidadesBackController::class, 'arquivar'])->name('modalidades.arquivos')->middleware('admin');
+Route::get('/admin/pedprof/restaurar/{arquivos}', [ModalidadesBackController::class, 'restaurar'])->name('restaurar.modalidade')->middleware('admin');
 
 Route::resource("/evento", EventosController::class)->middleware('admin');
