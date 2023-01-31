@@ -108,7 +108,7 @@
                 <img src="{{asset('img/landingpages/landingB/4.jpg')}}" class="d-block w-100" alt="A bela adormecida espetáculo">
               </div>
               <div class="carousel-item">
-                <img src="{{asset('img/landingpages/landingB/5.jpg')}}g" class="d-block w-100" alt="A bela adormecida espetáculo">
+                <img src="{{asset('img/landingpages/landingB/5.jpeg')}}" class="d-block w-100" alt="A bela adormecida espetáculo">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"

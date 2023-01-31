@@ -1,0 +1,18 @@
+softdele -> apaga o registo do pedido professor passados 6meses
+
+validações de formulários > mensagem de erro/sucesso ✅
+                          > erro -> não guarda os valores anteriormente inseridos
+
+Alerta mostra o id do pedido mas n funciona com o formulário
+
+Alertas de confirmação
+      > confirmar se o admin  
+         >> quer arquivar o pedido de professor
+         >> quer restaurar o pedido de professor
+         >> quer apagar o registo do patrocínio
+
+gerar nova página de modalidade automaticamente
+
+relatório:
+ -> atualiza validação do telefone
+ -> erro 404 e 401

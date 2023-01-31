@@ -1,0 +1,46 @@
+
+#main {
+  height: calc(100vh - 200px);
+  display: flex;
+  width: 80vw;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto -85px;
+}
+
+.erro404, .erro403 {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.erro404 img, .erro403 img {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ h1 {
+  font-weight: bolder;
+}
+
+@media (max-width: 900px) {
+  .erro{
+    flex-direction: column-reverse;
+    width: 100vw;
+  }
+  .erro .discription {
+    width: 100%;
+    text-align: center;
+  }
+  .erro img{
+    width: 70%;
+  }
+  .img{
+    display: flex;
+    justify-content: center;
+  }
+}

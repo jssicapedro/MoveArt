@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Patrocinio extends Model
 {
     use HasFactory;
@@ -17,5 +18,7 @@ class Patrocinio extends Model
         'valor',
         'telefone',
         'mensagem',
+        'resposta',
+        'estado',
     ];
 }

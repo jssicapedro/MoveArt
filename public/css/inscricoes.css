@@ -9,6 +9,30 @@ section#benner_inscricoes {
     align-items: flex-end;
 }
 
+section#banner_patrocinio {
+    min-height: 450px;
+    display: flex;
+    width: 100%;
+    background-image: url('../img/inscricoes/patrocinio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-position: center;
+}
+
+section#banner_professor {
+    min-height: 450px;
+    display: flex;
+    width: 100%;
+    background-image: url('../img/inscricoes/professor.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-position: center;
+}
+
 .info {
     text-align: center;
     padding: 10px;
@@ -142,14 +166,6 @@ section#imagem1 {
     background-position: center -56px;
 }
 
-section#imagem {
-    background-image: url('../img/inscricoes/fundo2.jpg');
-}
-
-section#imagem1 {
-    background-image: url('../img/inscricoes/fundo3.jpg');
-}
-
 span.cv {
     color: red;
     font-size: 8pt;
@@ -166,15 +182,6 @@ span.cv {
     display: flex;
 }
 
-.card--1 .card_img,
-.card--1 .card_img--hover {
-    background-image: url("../img/inscricoes/ballet.jpg");
-}
-
-.card--2 .card_img,
-.card--2 .card_img--hover {
-    background-image: url("../img/inscricoes/ballet.jpg");
-}
 .card_img {
     visibility: hidden;
     background-size: cover;
@@ -182,6 +189,7 @@ span.cv {
     background-repeat: no-repeat;
     width: 100%;
     height: 200px;
+    
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
@@ -199,7 +207,7 @@ span.cv {
     transition: 0.2s all ease-out;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     width: 100%;
     position: absolute;
     height: 235px;
@@ -231,7 +239,7 @@ span.cv {
     background-color: #fff;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    padding: 16px 24px 24px 24px;
+    padding: 40px 24px 0px 24px;
 }
 
 .card_epoca {

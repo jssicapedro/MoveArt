@@ -1,0 +1,216 @@
+/* roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* amaranth */
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --branco: #f4f4f4;
+    --preto: #000;
+    --rosa: #eeb2b5;
+    --amarelo: #f7d5a1;
+    --castanho: #d6a996;
+    --rosaE: #d296d6;
+    --roxo: #c7adf7;
+
+    --roboto: 'Roboto', sans-serif;
+    --amaranth: 'Amaranth', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--preto);
+    background-color: var(--branco);
+}
+
+header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+header img{
+    width: 250px;
+}
+
+header,
+main {
+    max-width: 80vw;
+}
+
+h1 {
+    font-family: var(--amaranth);
+    font-size: 80px;
+}
+
+h2 {
+    font-family: var(--amaranth);
+    font-size: 55px;
+    text-align: center;
+}
+
+h3 {
+    font-family: var(--amaranth);
+    font-size: 50px;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+footer img {
+    width: 180px;
+}
+
+footer .redes {
+    margin: 10px 0;
+    display: flex;
+    gap: 40px;
+}
+
+footer .redes a {
+    text-decoration: none;
+}
+
+footer .redes a img {
+    width: 20px;
+}
+
+footer .hr {
+    width: 90%;
+    height: 1px;
+    border: 1px solid #00000059;
+    margin: 10px 0;
+}
+
+.sobre{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre .apre{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    gap: 30px;
+}
+
+.txt p{
+    font-size: 20px;
+}
+
+.sobre .txt a {
+    width: 200px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 56px;
+    text-decoration: none;
+    color: var(--preto);
+    background-color: var(--rosa);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px #00000026;
+    font-family: var(--roboto) !important;
+    font-size: 20px;
+    position: relative;
+}
+
+.sobre .txt a:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: var(--rosaE);
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+
+.sobre .txt a:hover {
+    color: #fff;
+}
+
+.sobre .txt a:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.sobre .txt a:active {
+    top: 2px;
+}
+
+a span{
+    z-index: 2;
+}
+
+.vantagens{
+    width: 80vw;
+    margin: 5% 0 0;
+}
+
+.vantagens .sobre{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.gratis, .descontos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 30vh;
+    width: 25vw;
+    gap: 15%;
+}
+
+.material-symbols-outlined{
+    color: green;
+    font-size: 50px;
+}
+
+.vantagens ul{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+    width: 205px;
+
+}

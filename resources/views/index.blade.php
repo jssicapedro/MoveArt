@@ -4,10 +4,15 @@
 
 @section('links')
 <link href="{{ asset('css/inicio.css') }}" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 @endsection
 
 @section('script')
 <script src="{{ asset('js/inicio/inicio.js') }}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 @endsection
 
 @section('hero')
@@ -16,12 +21,13 @@
         <div class="container ">
             <div class="row ">
                 <div class="col col-xl-6 col-sm-12">
-                    <div id="hero_text">
-                        <h1>Venha-Nos Visitar!</h1>
+                    <div data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom" id="hero_text">
+                        <h1>Vêm Visitar-nos!</h1>
                         <p>A dança para nós não é só uma atividade é um estilo de vida!</p>
                         <div class="hero_btn">
-                            <a href="#">
-                                <div class="button">Saiba Mais</div>
+                            <a href="#show">
+                                <div class="button">Sabe Mais</div>
                             </a>
                         </div>
                     </div>
@@ -35,7 +41,9 @@
 
 @section('main')
      <!-- start about us -->
-    <section id="about_us">
+ 
+     <div class="section-padding" id="show">
+    <div id="about_us">
 
         <div class="container d-flex align-items-center justify-content-center">
 
@@ -101,12 +109,12 @@
 
                     <div>
                         <div class="text32  hr_class1">
-                            <h2>Eventos</h2>
+                            <h2>Sobre Nós</h2>
                             <hr style="width:85px; height:2px; text-align:center; margin:0 0 25px 0;">
                     </div>
 
                         <div class="pb-2 p_about">
-                            <p>Esta instituição de dança foi planeada e desenvolvida para guiar os utilizadores
+                            <p>Esta escola de dança foi planeada e desenvolvida para guiar os utilizadores
                                 potencialmente interessados pela dança, ao se inscrever no website será lhe oferecido
                                 não só
                                 aulas práticas, mas também a opção de compra do vestuário necessário oferta de pacotes
@@ -127,7 +135,9 @@
 
         </div>
 
-    </section>
+    </div>
+</div>
+
     <!-- end about us -->
 
 
@@ -332,13 +342,14 @@
                     <li class="splide__slide img-box">
                         <div class="containe">
                             <div class="content">
-                                <a href="{{ asset('ballet') }}" target="_blank">
+                               
                                     <div class="content-overlay"></div>
-                                    <img class="content-image" src="{{ asset('img/inicio/Ballet.jpg') }}">
+                                    <img src="{{ url('storage/modalidades/'.$modalidades->foto_mensal) }}" class="content-image"
+                                    alt="{{$modalidades->modalidade}}">
                                     <div class="content-details fadeIn-bottom">
                                         <h2 class="content-title">{{$modalidades->modalidade}}</h2>
                                     </div>
-                                </a>
+                               
                             </div>
                         </div>
                     </li>
@@ -410,10 +421,10 @@
                             </div>
                             <h3>{{$eventos->nome}}</h3>
                         </div>
-                        <div class="img_event position-relative" style="border-radius: 4px;">
-                            <img src="{{ asset('img/inicio/evento1.jpg') }}" class="card-img-top position-absolute bottom-0"
+                        <a href="http://moveloja.epizy.com/pt/product-category/eventos/" class="img_event position-relative" style="border-radius: 4px;">
+                            <img src="{{ url('storage/eventos/'.$eventos->foto) }}"
                                 alt="{{$eventos->nome}}">
-                        </div>
+                        </a>
                     </div>
                 </div>
                 @endforeach

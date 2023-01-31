@@ -1,7 +1,7 @@
 <footer>
     <section id="first">
         <div class="logo">
-            <img src="{{asset('img/footer/Logo Ballet Preto.png')}}" alt="">
+            <a href="{{ asset('/') }}"><img src="{{asset('img/footer/Logo Ballet Preto.png')}}" alt=""></a>
         </div>
         <div class="menu">
             <ul>
@@ -46,14 +46,6 @@
                 <li><a href="">Acessórios</a></li>
                 <li><a href="">Workshops</a></li>
                 <li><a href="">Bilhetes eventos</a></li>
-            </ul>
-        </div>
-        <div class="pagamentos">
-            <ul>
-                <li><img src="{{asset('img/footer/icons8-paypal-480.png')}}" alt=""></li>
-                <li><img src="{{asset('img/footer/icons8-multibanco-480.png')}}" alt=""></li>
-                <li><img src="{{asset('img/footer/icons8-mb-way-480.png')}}" alt=""></li>
-                <li><img src="{{asset('img/footer/icons8-visa-480.png')}}" alt=""></li>
             </ul>
         </div>
     </section>

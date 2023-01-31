@@ -22,6 +22,7 @@ class PatrociniosSeeder extends Seeder
                 'valor'=> '100',
                 'telefone'=> '',
                 'mensagem'=> 'Como patrocínio damos 100€ esperamos contribuir para que continuem com as ótimas aulas! Bom trabalho',
+                'estado'=> 'sem resposta'
             ],
             [
                 'nome'=> 'Leiria a dançar',
@@ -29,6 +30,7 @@ class PatrociniosSeeder extends Seeder
                 'valor'=> '50',
                 'telefone'=> '',
                 'mensagem'=> 'De forma a agradecer pelo trabalho que prestam e pelo ajuda na organização do nosso evento',
+                'estado'=> 'sem resposta'
             ],
         ]);
     }

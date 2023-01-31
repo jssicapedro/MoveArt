@@ -19,7 +19,7 @@
   <div class="primeiro_espaco">
     <div class="primeiro_espaco_texto">
       <h1>moveArt</h1>
-      <h2>Instituição de dança</h2>
+      <h2>Escola de dança</h2>
       <p>Temos aulas grátis para você experimentar</p>
       <div class="ponto-1">
         <button class="custom-btn btn-6"><span>Saiba</span></button>
@@ -47,7 +47,7 @@
 
     <div class="primeiro_espaco_texto_escondido">
       <h1>moveArt</h1>
-      <h2>Instituição de dança</h2>
+      <h2>Escola  de dança</h2>
       <p>Temos aulas grátis para você experimentar</p>
       <div class="ponto-1">
         <button class="custom-btn btn-6"><span>Saiba</span></button>

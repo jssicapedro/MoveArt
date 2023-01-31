@@ -1,0 +1,112 @@
+.junção_de_tudo_perfil {
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-around;
+}
+
+.bloco_um_da_divisão_do_perfil {
+  background-color: #f4f4f4;
+  height: 600px;
+  width: 400px;
+  border-radius: 5%;
+  filter: drop-shadow(2.5px 2.5px 5px black);
+}
+
+.foto_do_perfil_perfi img {
+  display: block;
+  height: 300px;
+  width: 400px;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+
+.tudo_meu_perfil_perfil{
+  margin: 0 25px;
+
+}
+
+hr {
+  margin: -1rem 0 1rem;
+  color: inherit;
+  border: 0;
+  border-top: 1px solid;
+  opacity: 0.15;
+}
+
+.tudo_meu_perfil_perfil{
+  display: flex;
+  margin-top: 25px;
+}
+
+.meu_perfil_perfil h1 {
+  font-size: 15pt;
+  margin-top: 5px;
+  width: 184px;
+}
+
+.texto_do_meu_perfil_perfil p{
+  opacity: .50;
+}
+
+.nome_da_pessoa_perfil,
+.numero_da_pessoa_perfil,
+.email_da_pessoa_perfil {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nome_da_pessoa_perfil h2,
+.numero_da_pessoa_perfil h2,
+.email_da_pessoa_perfil h2 {
+  font-size: 15pt;
+}
+
+.nome_da_pessoa_perfil p,
+.numero_da_pessoa_perfil p,
+.email_da_pessoa_perfil p {
+  font-size: 13pt !important;
+}
+
+.todas_as_informações_da_pessoa_bloco_um {
+  margin: 0 25px
+}
+
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.custom-btn-perfil {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+.btn-1-perfil {
+  background: rgb(238, 130, 238);
+  background: linear-gradient(0deg, rgb(238, 170, 238, 1) 0%, rgb(238, 188, 238, 1) 100%);
+  border: none;
+}
+
+.btn-1-perfil:hover {
+  background: rgb(238, 150, 238);
+  background: linear-gradient(0deg, rgb(238, 180, 238, 1) 0%, rgb(238, 198, 238, 1) 100%);
+}
+
+.todas_as_informações_da_pessoa_bloco_um p {
+  font-size: 15pt;
+}
