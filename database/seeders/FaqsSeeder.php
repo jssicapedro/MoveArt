@@ -17,13 +17,20 @@ class FaqsSeeder extends Seeder
     {
         Faq::insert([
             [
-                'pergunta'=> 'skjaxkjshaxkjh',
-                'resposta'=> 'jhxgcjhgzxjhcgx',
+                'pergunta'=> 'Qual a idade mínima para me inscrever na MoveArt?',
+                'resposta'=> 'Pode se inscrever na nossa associação a partir dos 3 anos.',
             ],
             [
-                'pergunta'=> 'zdczdczczdc',
-                'resposta'=> 'czcdzcdzcdzczdczdc',
-                
+                'pergunta'=> 'Os produtos da loja são envidados para fora de Portugal?',
+                'resposta'=> 'Não, os produtos são apenas enviados para Portugal continental',
+            ],
+            [
+                'pergunta'=> 'Onde fica a associação MoveArt?',
+                'resposta'=> 'A associação MoveArt fica em Leiria. A localização exata pode ser vista na página dos contactos.',
+            ],
+            [
+                'pergunta'=> 'Quantos tipos de dança existem na MoveArt?',
+                'resposta'=> 'Existem 5 tipos de dança',
             ],
         ]);
     }

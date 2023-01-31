@@ -30,7 +30,7 @@ class PedidoprofessorController extends Controller
                 'primeiro' => 'required',
                 'apelido' => 'required',
                 'email' => 'required|email',
-                'telefone' => 'required|regex:/^\+351 ?9[1236]\d ?(\d{3}) ?\d{3}$/',
+                'telefone' => 'required|regex:/^(\+351)? ?9[1236]\d ?(\d{3}) ?\d{3}$/',
                 'data_nac' => 'required',
                 'modalidade' => 'required',
                 'cv' => 'required',

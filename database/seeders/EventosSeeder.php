@@ -52,13 +52,6 @@ class EventosSeeder extends Seeder
                 'descricao' => 'Espetáculo de Ballet durante a noite',
             ],
             [
-                'nome' => 'Christmas Dance',
-                'data'=> '2023-12-23 20:30:00',
-                'localizacao' => 'Teatro José Luís da Silva',
-                'foto' => 'natal.png',
-                'descricao' => 'Espetáculo de Natal com a MoveArt',
-            ],
-            [
                 'nome' => 'Dance Party',
                 'data'=> '2023-11-01 20:30:00',
                 'localizacao' => 'MoveArt Studio',

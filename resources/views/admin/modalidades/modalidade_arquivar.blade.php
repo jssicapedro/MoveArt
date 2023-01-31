@@ -29,7 +29,7 @@
             <div class="col" style="text-align: center;">Valor Mensal</div>
             <div class="col" style="text-align: center;"></div>
         </div>
-        @if(isset($arquivos))
+        @if(count($arquivos))
         @foreach($arquivos as $mod)
         <div class="row info">
             <div class="col" style="text-align: center;">{{$mod->id}}</div>

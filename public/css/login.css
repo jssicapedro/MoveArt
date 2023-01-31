@@ -161,7 +161,6 @@ input#password:hover {
     --bs-btn-active-border-color: var(--amarelo) !important;
 }
 
-
 .justify-content-center {
     height: calc( 100vh - 55vh);
 }
@@ -211,5 +210,15 @@ input#password:hover {
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+@media( max-width: 1100px ){
+    .login_page .img {
+        display: none !important;
+    }
+    .form_login {
+        width: 60vw;
+        height: 80vh;
     }
 }
