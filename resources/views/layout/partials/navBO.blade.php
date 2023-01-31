@@ -43,7 +43,6 @@
                         <span class="titulo">Pedidos Professores</span>
                     </a>
                 </li>
-
                 <li>
                     <a href="{{ asset('admin/modalidades') }}">
                         <span class="icon">
@@ -52,7 +51,6 @@
                         <span class="titulo">Modalidades</span>
                     </a>
                 </li>
-
                 <li>
                     <a href="{{ asset('admin/patrocinio') }}">
                         <span class="icon">
@@ -61,7 +59,6 @@
                         <span class="titulo">Patrocínios</span>
                     </a>
                 </li>
-
                 <li>
                     <a href="{{ asset('evento') }}">
                         <span class="icon">
@@ -70,6 +67,15 @@
                         <span class="titulo">Eventos</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ asset('faq') }}">
+                        <span class="icon">
+                            <img src="{{ asset('img/eventosBO/help.png') }}" style="width:30px;" alt="">
+                        </span>
+                        <span class="titulo">FAQS</span>
+                    </a>
+                </li>
+
                 <hr>
                 <div class="logout">
 

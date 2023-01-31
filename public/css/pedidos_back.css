@@ -4,22 +4,71 @@ body{
 
 .pedidos_main {
     display: flex;
-    flex-direction: column;
-    margin: 15px 5%;
+     flex-direction: column;
+     height: 90vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 50px;
 }
 
-.pedidos_main h1 {
-    margin: 20px 0;
-    font-size: 35pt;
+
+.pedidos_show,
+.pedidos_edit{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 5%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+}
+
+.pedidos_main h1{
     text-align: center;
 }
 
-.pedidos_main .quantidade{
+.pedidos_main h1,
+.pedidos_show h1,
+.pedidos_edit h1 {
+    margin: 20px 0;
+    font-size: 50px;
+}
+
+.patrocinio_main .quantidade{
     font-size: 18pt;
 }
 
-.pedidos_main hr {
+.pedidos_main hr,
+.pedidos_show hr,
+.pedidos_edit hr  {
     margin: 0 0 20px;
+}
+
+.dataTables_length {
+    margin: 0 0 30px;
+}
+
+
+.pedidos_show .voltar,
+.pedidos_edit .voltar,
+.pedidos_edit .enviar {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.voltar {
+    width: 150px;
+    background-color: var(--roxo);
+    margin-bottom: 20px;
+}
+
+.voltar:hover{
+    color: var(--branco);
 }
 
 .pedidos_main .voltar,
@@ -43,7 +92,8 @@ body{
 
 .pedidos_main .voltar_quantidade{
     display: flex;
-    justify-content: space-between;
+    float: left;
+    width: 70vw;
 }
 
 .pedidos_main .enviar{
@@ -131,6 +181,10 @@ body{
     color: red;
 }
 
+.table-wrapper{
+    width: 70vw;
+}
+
 /* ##### paginação listagem ##### */
 
 .pedidos_main .paginate_button,
@@ -149,31 +203,33 @@ body{
 
 
 /* ##### show ##### */
-.pedidos_main .pedido_titulo {
+.pedidos_show .pedido_titulo{
     font-size: 35pt;
     text-align: left;
 }
 
-.pedidos_main .pedido_titulo span {
+.pedidos_show .pedido_titulo span {
     font-size: 20pt;
 }
 
-.pedidos_main .pedido {
-    gap: 90px;
-    margin: 0 auto;
+.pedidos_show .pedido {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.pedidos_main .info_exp {
+.pedidos_show .info_exp {
     display: flex;
     justify-content: space-evenly;
     gap: 90px;
 }
 
-.pedidos_main .informacao,
-.pedidos_main .experiencia,
-.pedidos_main .responder {
-    width: 25vw;
-    height: 25vh;
+.pedidos_show .informacao,
+.pedidos_show .experiencia,
+.pedidos_show .responder {
+    width: 25vw;/* 
+    height: 25vh; */
     background-color: var(--branco_footer);
     border: 1px solid var(--cinzaBorda);
     border-radius: 10px;
@@ -183,55 +239,54 @@ body{
     justify-content: space-evenly;
 }
 
-.pedidos_main .info_exp h2,
-.pedidos_main .responder h2 {
+.pedidos_show .info_exp h2,
+.pedidos_show .responder h2 {
     border-bottom: 3px solid var(--black2);
     border-radius: 10px;
     text-align: center;
     padding-bottom: 10px;
 }
 
-.pedidos_main .informacao p {
+.pedidos_show .informacao p {
     font-size: 16pt;
 }
 
-.pedidos_main .sob {
+.pedidos_show .sob {
     font-weight: bold;
 }
 
-.pedidos_main .info_exp .informacao a {
+.pedidos_show .info_exp .informacao a {
     color: var(--rosaE);
     text-decoration: none;
     font-weight: 500;
 }
 
-.pedidos_main .info_exp .experiencia a {
+.pedidos_show .info_exp .experiencia a {
     color: var(--castanho);
     text-decoration: none;
     font-weight: 500;
     font-size: 16pt;
 }
 
-.pedidos_main .responder {
-    margin: 90px auto 0;
+.pedidos_show .responder {
     display: flex;
 }
 
-.pedidos_main .responder p {
+.pedidos_show .responder p {
     text-align: center;
     font-size: 16pt;
 }
 
 
 /* ##### edit ##### */
-.pedidos_main .pedidos_sobre {
+.pedidos_edit .pedidos_sobre {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 50px;
 }
 
-.pedidos_main .pedidos_sobre .cont {
+.pedidos_edit .pedidos_sobre .cont {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
@@ -240,14 +295,14 @@ body{
     width: 100%;
 }
 
-.pedidos_main h2 {
+.pedidos_edit h2 {
     text-align: center;
     margin: 10px;
 }
 
-.pedidos_main .acerca,
-.pedidos_main .exp,
-.pedidos_main .responderPedido {
+.pedidos_edit .acerca,
+.pedidos_edit .exp,
+.pedidos_edit .responderPedido {
     display: flex;
     flex-direction: column;
     width: 30em;
@@ -259,25 +314,25 @@ body{
    
 }
 
-.pedidos_main .acerca_sob {
+.pedidos_edit .acerca_sob {
     display: flex;
     justify-content: space-between;
     margin: 5px 0;
 }
 
-.pedidos_main .acerca .sob_titulo,
-.pedidos_main .exp .sob_titulo {
+.pedidos_edit .acerca .sob_titulo,
+.pedidos_edit .exp .sob_titulo {
     font-weight: bold;
     font-size: 16pt;
 }
 
-.pedidos_main .acerca .sob_titulo{
+.pedidos_edit .acerca .sob_titulo{
     margin: 0;
 }
 
-.pedidos_main .acerca input,
-.pedidos_main .exp input,
-.pedidos_main .acerca_sob p.conteudo {
+.pedidos_edit .acerca input,
+.pedidos_edit .exp input,
+.pedidos_edit .acerca_sob p.conteudo {
     border: transparent;
     background: transparent;
     margin: 0 0 0 10px;
@@ -286,7 +341,7 @@ body{
 }
 
 
-.pedidos_main .acerca_sob a {
+.pedidos_edit .acerca_sob a {
     color: var(--castanho);
     text-decoration: none;
     font-weight: 500;
@@ -294,7 +349,7 @@ body{
     font-size: 16pt;
 }
 
-.pedidos_main .responderPedido textarea {
+.pedidos_edit .responderPedido textarea {
     text-align: center;
     height: 40%;
     padding: 10px;
@@ -303,22 +358,23 @@ body{
     background: var(--gray);
 }
 
-.pedidos_main .enviar {
+.pedidos_edit .enviar {
     border: none;
     background-color: var(--amarelo);
+    float: right;
 }
 
-.pedidos_main .enviar:hover {
+.pedidos_edit .enviar:hover {
     cursor: pointer;
 }
 
-.pedidos_main .btn {
+.pedidos_edit .btn {
     display: flex;
     width: 100%;
     justify-content: center;
 }
 
-.pedidos_main .btn ul {
+.pedidos_edit .btn ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -327,14 +383,14 @@ body{
     flex-wrap: wrap;
 }
 
-.pedidos_main .btn ul li {
+.pedidos_edit .btn ul li {
     width: 200px;
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.pedidos_main input[type='radio']:after {
+.pedidos_edit input[type='radio']:after {
     width: 15px;
     height: 15px;
     border-radius: 15px;
@@ -348,7 +404,7 @@ body{
     border: 2px solid white;
 }
 
-.pedidos_main input[value='aceite']:checked:after {
+.pedidos_edit input[value='aceite']:checked:after {
     width: 15px;
     height: 15px;
     border-radius: 15px;
@@ -362,7 +418,7 @@ body{
     border: 2px solid white;
 }
 
-.pedidos_main input[value='recusado']:checked:after {
+.pedidos_edit input[value='recusado']:checked:after {
     width: 15px;
     height: 15px;
     border-radius: 15px;
@@ -376,11 +432,11 @@ body{
     border: 2px solid white;
 }
 
-.pedidos_main .btn label{
+.pedidos_edit .btn label{
     line-height: 15px;
 }
 
-.pedidos_main .alerta {
+.pedidos_edit .alerta {
     padding: 10px;
     background-color: #f8d7da;
     border: 1px solid #f5c2c7;
@@ -389,7 +445,7 @@ body{
     margin: 10px 0;
 }
 
-.pedidos_main .alert {
+.pedidos_edit .alert {
     padding: 10px;
     background-color: #f8d7da;
     border: 1px solid #f5c2c7;
@@ -398,7 +454,7 @@ body{
     margin: 10px 0;
 }
 
-.pedidos_main .alert ul{
+.pedidos_edit .alert ul{
     list-style: none;
 }
 
@@ -435,16 +491,16 @@ body{
 }
 
 @media (max-width:1090px) {
-    .pedidos_main .pedido {
+    .pedidos_show .pedido {
         gap: 20px;
     }
 
-    .pedidos_main .info_exp {
+    .pedidos_show .info_exp {
         gap: 20px;
         flex-wrap: wrap;
     }
 
-    .pedidos_main .informacao, .pedidos_main .experiencia, .pedidos_main .responder {
+    .pedidos_show .informacao, .pedidos_show .experiencia, .pedidos_show .responder {
         width: auto;
     }
 
@@ -482,9 +538,9 @@ body{
 
 @media (max-width:900px) {
 
-    .pedidos_main .informacao,
-    .pedidos_main .experiencia,
-    .pedidos_main .responder {
+    .pedidos_show .informacao,
+    .pedidos_show .experiencia,
+    .pedidos_show .responder {
         width: 50vw;
     }
 
@@ -516,7 +572,7 @@ body{
         display: none;
     }
 
-    .pedidos_main .pedido {
+    .pedidos_show .pedido {
         flex-direction: column;
     }
 

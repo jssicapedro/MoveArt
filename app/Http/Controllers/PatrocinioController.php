@@ -41,7 +41,7 @@ class PatrocinioController extends Controller
                 'email.required' => 'Preencha o campo do EMAIL',
                 'valor.required' => 'Preencha o campo do VALOR',
                 'mensagem.required' => 'Preencha o campo do MENSAGEM',
-                'telefone.sometimes' => 'Número de telefone inválido',
+                'telefone.regex' => 'Número de telefone inválido',
             ]
         );
 

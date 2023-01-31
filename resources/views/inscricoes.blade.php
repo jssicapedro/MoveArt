@@ -20,7 +20,7 @@
         <h2>Torna-te um profissional na dança!</h2>
         <h4>Escolhe a tua dança e torna-te um(a) aluno(a).</h4>
     </div>
-    <form action="{{route('register')}}" method="POST">
+    <form action="{{route('inscricao_aluno_register')}}" method="POST">
         @csrf
         <fieldset>
             <legend>Perfil</legend>
@@ -122,8 +122,8 @@
                             </article>
                             
                         </section>
-                        @if ($errors->has('type_insc'))
-                            <span class="text-danger">{{ $errors->first('type_insc') }}</span>
+                        @if ($errors->has('tp_ins'))
+                            <span class="text-danger">{{ $errors->first('tp_ins') }}</span>
                             @endif
                     </div>
                 </div>

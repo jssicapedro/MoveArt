@@ -8,7 +8,7 @@
 
 @section('main')
 <div class="dashboard_main">
-    <div class="pedidos_main">
+    <div class="pedidos_edit">
         <a class="voltar" href="{{ asset('admin/pedprof')}}">Voltar</a>
         <div class="about">
             <h1>Responder a {{$pedidos->primeiro}}</h1>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="responderPedido">
                         <h2>Resposta</h2>
-                        <textarea name="resposta" class="conteudo" value="{{ old('resposta', '') }}">{{$pedidos->resposta}}</textarea>
+                        <textarea name="resposta" class="conteudo">{{ old('resposta', '') }}</textarea>
                         @if ($errors->has('resposta'))
                         <span class="text-danger">{{ $errors->first('resposta') }}</span>
                         @endif

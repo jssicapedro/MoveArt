@@ -44,7 +44,7 @@
                 <div class="row resp">
                     <div class="col">
                         <label class="sobre" for="">Responder</label> <br />
-                        <textarea name="resposta" class="conteudo" value="{{ old('resposta', '') }}">{{$patrocinio->resposta}}</textarea>
+                        <textarea name="resposta" class="conteudo"></textarea>
                         
                         @if ($errors->has('resposta'))
                         <span class="text-danger">{{ $errors->first('resposta') }}</span>

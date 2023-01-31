@@ -8,7 +8,7 @@
 
 @section('main')
 <div class="dashboard_main">
-    <div class="pedidos_main">
+    <div class="pedidos_show">
         <a class="voltar" href="{{ asset('admin/pedprof')}}">Voltar</a>
         <h1 class="pedido_titulo">{{$pedidos->primeiro}} {{$pedidos->apelido}} <br /> <span class="mod_surg">({{$pedidos->modalidade}})</span></h1>
         <div class="pedido">

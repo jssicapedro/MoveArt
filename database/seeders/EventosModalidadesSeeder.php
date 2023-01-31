@@ -16,18 +16,7 @@ class EventosModalidadesSeeder extends Seeder
     public function run()
     {
         EventoModalidade::insert([
-            [
-                'evento_id' => '1',
-                'modalidade_id' => '1',
-            ],
-            [
-                'evento_id' => '2',
-                'modalidade_id' => '2',
-            ],
-            [
-                'evento_id' => '3',
-                'modalidade_id' => '3',
-            ],
+            
         ]);
     }
 }

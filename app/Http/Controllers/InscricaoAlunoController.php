@@ -31,7 +31,7 @@ class InscricaoAlunoController extends Controller
             'email' => 'required|email',
             'password' => 'required|confirmed',
             'password_confirmation' => 'required',
-            'type_insc' => 'required',
+            'tp_ins' => 'required'
         ],
         [
             'primeiro.required' => 'Preencha o Nome',
@@ -41,7 +41,7 @@ class InscricaoAlunoController extends Controller
             'email.required' => 'Preencha o email',
             'password.required' => 'Preencha a password',
             'password_confirmation.required' => 'Preencha a confirmação de password',
-            'type_insc.required' => 'Escolha o tipo de inscrição'
+            'tp_ins.required' => 'Escolha o tipo de inscrição'
         ]);
         $user = User::create([
             //nome do input=> função request -> nome do campo na bd
@@ -60,7 +60,7 @@ class InscricaoAlunoController extends Controller
             'modalidade_id' => $request->modalidade_id,
             'user_id' => $user->id,
         ]);
-        return redirect()->route('login')->with('success', true);
+        return redirect('/login');
     }
     public function show()
     {

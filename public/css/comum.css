@@ -39,6 +39,16 @@ html {
   color: var(--preto);
 }
 
+html::-webkit-scrollbar{
+  width:1rem;
+}
+
+
+html::-webkit-scrollbar-thumb{
+  background: var(--rosa);
+  border-radius: 5rem;
+}
+
 header nav #mode {
   width: 45px;
   height: 45px;

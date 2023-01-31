@@ -210,14 +210,14 @@ body{
     cursor: pointer;
 }
 
-.patrocinio_main .row {
+.patrocinio_edit .row {
     display: flex;
     gap: 20px;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.patrocinio_main .alerta {
+.patrocinio_edit .alerta {
     padding: 10px;
     background-color: #f8d7da;
     border: 1px solid #f5c2c7;
@@ -226,7 +226,7 @@ body{
     margin: 10px 0;
 }
 
-.patrocinio_main .alerta ul{
+.patrocinio_edit .alerta ul{
     list-style: none;
 }
 

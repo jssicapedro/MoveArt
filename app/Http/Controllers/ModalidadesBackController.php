@@ -25,8 +25,8 @@ class ModalidadesBackController extends Controller
     }
     public function store(Request $request)
     {
-       
-         $request->validate(
+
+        $request->validate(
             [
                 'modalidade' => 'required',
                 'descricao' => 'required',
@@ -45,11 +45,11 @@ class ModalidadesBackController extends Controller
                 'valor_anual.required' => '*Preencha a Data de Nascimento',
                 'foto_mensal.required' => '*Coloque uma imagem',
                 'foto_anual.required' => '*Coloque uma imagem',
-                'foto_horario.required' => '*Coloque uma imagem', 
+                'foto_horario.required' => '*Coloque uma imagem',
                 'foto_desc.required' => '*Coloque uma imagem',
-                'foto_banner.required' => '*Coloque uma imagem', 
+                'foto_banner.required' => '*Coloque uma imagem',
             ]
-        ); 
+        );
         if ($request->file('foto_desc')->isValid()) {
             $nameFileDesc = $request->modalidade . '_desc.' . $request->foto_desc->extension();
             $request->foto_desc->storeAS('modalidades', $nameFileDesc);
@@ -104,14 +104,14 @@ class ModalidadesBackController extends Controller
                 'foto_banner' => 'required',
             ],
             [
-                'modalidade.required' => '*Preencha o Nome',
-                'descricao.required' => '*Preencha o Apelido',
-                'valor_mensal.required' => '*Preencha o Género',
-                'valor_anual.required' => '*Preencha a Data de Nascimento',
-                'foto_mensal.required' => '*Coloque uma imagem',
-                'foto_anual.required' => '*Coloque uma imagem',
-                'foto_horario.required' => '*Coloque uma imagem', 
-                'foto_desc.required' => '*Coloque uma imagem',
+                'modalidade.required' => 'Preencha o Nome',
+                'descricao.required' => 'Preencha o Apelido',
+                'valor_mensal.required' => 'Preencha o Género',
+                'valor_anual.required' => 'Preencha a Data de Nascimento',
+                'foto_mensal.required' => 'Coloque uma imagem',
+                'foto_anual.required' => 'Coloque uma imagem',
+                'foto_horario.required' => 'Coloque uma imagem',
+                'foto_desc.required' => 'Coloque uma imagem',
                 'foto_banner.required' => '*Coloque uma imagem',
             ]
         );
@@ -162,7 +162,8 @@ class ModalidadesBackController extends Controller
 
         return view('admin.modalidades.modalidade_arquivar', compact('arquivos'));
     }
-    public function restaurar($modalidade){
+    public function restaurar($modalidade)
+    {
         Modalidade::withTrashed()->find($modalidade)->restore();
         return back();
     }

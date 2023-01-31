@@ -24,7 +24,7 @@
             margin: 10px 0;
         }
 
-        img[alt="Pedido aceite"] {
+        img[alt="Pedido recusado"] {
             width: 100%;
         }
 
@@ -41,14 +41,14 @@
 </head>
 
 <body>
-    <img src="/public/img/logo/logoBallet_p.png" alt="logo MoveArt">
-    <img src="/public/img/email/banner_recusado.png" alt="Pedido aceite">
+    <img src="{{ asset('img/logo/logoBallet_p.png')}}" alt="logo MoveArt">
+    <img src="{{ asset('img/email/banner_recusado.png')}}" alt="Pedido recusado">
     <p>Olá {{ $details->primeiro }} {{ $details->apelido }}, </p>
     <p>o teu pedido para seres professor da nossa escola foi {{ $details->estado_do_pedido }}!</p>
     <p>{{ $details->resposta }}</p>
     <p>De momento achamos que não te enquadras para as nossa escola para mais esclarecimentos contacta o 917524872.</p>
     <hr>
-    <img src="/public/img/logo/logoBallet_p.png" alt="logo_footer MoveArt">
+    <img src="{{ asset('img/logo/logoBallet_p.png')}}" alt="logo_footer MoveArt">
     <div class="redes">
         <a href="https://www.facebook.com" target="_blank">
             <img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/circle-gray/facebook@2x.png" width="32" height="32" alt="Facebook" title="Facebook" style="display:block;height:auto;border:0; background: transparent;">

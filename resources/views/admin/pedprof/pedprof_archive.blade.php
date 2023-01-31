@@ -12,7 +12,9 @@
 <div class="dashboard_main">
     <div class="pedidos_main">
         <h1>Pedidos Arquivados</h1>
-        <a class="voltar" href="{{ asset('admin/pedprof')}}">Voltar</a>
+        <div class="voltar_quantidade">
+            <a class="voltar" href="{{ asset('admin/pedprof')}}">Voltar</a>
+        </div>
         <div class="table-wrapper">
             <div class="table-scroll">
                 <table id="arquivados" class="tabela-arquivados table table-striped align-middle dataTable no-footer display">
@@ -86,8 +88,8 @@
             ],
             pageLength: 10,
             lengthMenu: [
-                [5, 10, 20, -1],
-                [5, 10, 20, 'Todos']
+                [5, 3],
+                [5, 3]
             ],
             "order": [
                 [0, 'desc']
