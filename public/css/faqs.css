@@ -33,7 +33,6 @@
   #botao-pergunta1{
     background-color: #ea9e7e;
     border-radius: 45px;
-    margin-top: -%;
     margin-bottom: -10%;
     color: black;
   }
@@ -127,8 +126,9 @@
     max-height: 9em;
     transition: all 200ms linear;
     will-change: opacity, max-height;
-    background-color: #f5956d;
+    background-color: #ff7237c2;
     border-radius: 30px;
+    margin-top: 10%;
   }
 
   @media (max-width: 1070px) {
