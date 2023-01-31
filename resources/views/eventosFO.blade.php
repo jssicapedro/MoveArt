@@ -75,7 +75,7 @@
         <div class="column">
           <div class="card">
             <div class="img">
-                <img src="{{asset('img/eventosBO/'.$eventos->foto)}}">
+                <img src="{{ url('storage/eventos/'.$eventos->foto) }}">
             </div>
             <div class="content">
             <h3>{{$eventos->nome}}</h3><hr>

@@ -17,13 +17,12 @@ class FaqsSeeder extends Seeder
     {
         Faq::insert([
             [
-                'pergunta'=> 'skjaxkjshaxkjh',
-                'resposta'=> 'jhxgcjhgzxjhcgx',
+                'pergunta'=> 'Como me posso inscrever na MoveArt?',
+                'resposta'=> 'Temos todo o gosto em ter-te como nosso aluno. Vai ao menu Inscreve-te e escolhe o submenu aluno, nele vais encontrar um formulário que vai fazer com que vires nosso aluno!',
             ],
             [
-                'pergunta'=> 'zdczdczczdc',
-                'resposta'=> 'czcdzcdzcdzczdczdc',
-                
+                'pergunta'=> 'Quero ser professor?',
+                'resposta'=> 'Para se tornar professor da nossa escola, no menu Inscreve-te selecione a opção Professor. Depois basta preencheres o formulário com os teus dados e submeter o mesmo. Dentro de 3 dias será contactado independentemente se és aceite ou não.',
             ],
         ]);
     }
