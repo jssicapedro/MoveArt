@@ -55,39 +55,38 @@
                         </div>
                     </div>
                     <div class="responderPedido">
-                        <h2>Resposta</h2>
-                        <textarea name="resposta" class="conteudo">{{ old('resposta', '') }}</textarea>
-                        @if ($errors->has('resposta'))
-                        <span class="text-danger">{{ $errors->first('resposta') }}</span>
-                        @endif
-                        @if($pedidos->estado_do_pedido == 'aceite'||$pedidos->estado_do_pedido == 'recusado')
-                        <div class="alerta">
-                            <p class="error">Este pedido já foi respondido</p>
-                        </div>
-                        @else
-                        <div class="btn">
-                            <ul>
-                                <li>
-                                    <input type="radio" id="f-option" name="estado" value="aceite">
-                                    <label for="f-option">Aceitar</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="f-option" name="estado" value="recusado">
-                                    <label for="f-option">Recusar</label>
-                                </li>
-                            </ul>
-                            
-                        </div>
-                        @if ($errors->has('estado'))
-                            <span class="text-danger">{{ $errors->first('estado') }}</span>
+                            <h2>Resposta</h2>
+                    @if($pedidos->estado_do_pedido == 'aceite'||$pedidos->estado_do_pedido == 'recusado')
+                        
+                            <textarea name="resposta" class="conteudo">{{$pedidos->resposta}}</textarea>
+                            <div class="alerta">
+                                <p class="error">Este pedido já foi respondido</p>
+                            </div>
+                    @else
+                        
+                            <textarea name="resposta" class="conteudo"></textarea>
+                            @if ($errors->has('resposta'))
+                                <span class="text-danger">{{ $errors->first('resposta') }}</span>
                             @endif
-                        @endif
-                    </div>
+                            <div class="btn">
+                                <ul>
+                                    <li>
+                                        <input type="radio" id="f-option" name="estado" value="aceite">
+                                        <label for="f-option">Aceitar</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="f-option" name="estado" value="recusado">
+                                        <label for="f-option">Recusar</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            @if ($errors->has('estado'))
+                                <span class="text-danger">{{ $errors->first('estado') }}</span>
+                            @endif
+                            <input class="enviar" type="submit" value="Enviar resposta">
+                    @endif
+                    
                 </div>
-                @if($pedidos->estado_do_pedido == 'aceite'||$pedidos->estado_do_pedido == 'recusado')
-                @else
-                <input class="enviar" type="submit" value="Enviar resposta">
-                @endif
             </form>
         </div>
     </div>

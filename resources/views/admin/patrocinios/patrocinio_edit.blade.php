@@ -41,23 +41,29 @@
                         <textarea name="mensagem" class="conteudo" readonly>{{$patrocinio->mensagem}}</textarea>
                     </div>
                 </div>
-                <div class="row resp">
-                    <div class="col">
-                        <label class="sobre" for="">Responder</label> <br />
-                        <textarea name="resposta" class="conteudo"></textarea>
-                        
-                        @if ($errors->has('resposta'))
-                        <span class="text-danger">{{ $errors->first('resposta') }}</span>
-                        @endif
-
-                    </div>
-                </div>
-                <input type="hidden" name="estado" class="conteudo" value="respondido">
                 @if($patrocinio->estado =='respondido')
-                <div class="alerta">
-                    <p class="error">Este patrocínio já foi respondido</p>
-                </div>
+                    <div class="row resp">
+                        <div class="col">
+                            <label class="sobre" for="">Responder</label> <br />
+                            <textarea name="resposta" class="conteudo">{{$patrocinio->resposta}}</textarea>
+                        </div>
+                    </div>                    
+                    <div class="alerta">
+                        <p class="error">Este patrocínio já foi respondido</p>
+                    </div>
                 @else
+                <div class="row resp">
+                        <div class="col">
+                            <label class="sobre" for="">Responder</label> <br />
+                            <textarea name="resposta" class="conteudo">{{$patrocinio->resposta}}</textarea>
+                            
+                            @if ($errors->has('resposta'))
+                            <span class="text-danger">{{ $errors->first('resposta') }}</span>
+                            @endif
+
+                        </div>
+                    </div>
+                    <input type="hidden" name="estado" class="conteudo" value="respondido">
                 <div class="btn">
                     <input type="submit" value="ATUALIZAR" class="enviar">
                 </div>
