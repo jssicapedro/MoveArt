@@ -21,11 +21,6 @@
     font-size: 70px;
     margin-bottom: 8%;
   }
-
-  .conteudo{
-    width: 50vw;
-    margin: auto;
-  }
   
   .conteudo .pergunta-resposta {
     border-bottom: 1px solid #e5e5e5;
@@ -133,7 +128,7 @@
     will-change: opacity, max-height;
     background-color: #ff7237c2;
     border-radius: 30px;
-    marg0%in-top: 1;
+    margin-top: 10%;
   }
 
   @media (max-width: 1070px) {

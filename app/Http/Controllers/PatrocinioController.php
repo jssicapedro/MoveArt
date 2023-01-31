@@ -34,7 +34,7 @@ class PatrocinioController extends Controller
                 'email' => 'required|email',
                 'valor' => 'required',
                 'mensagem' => 'required',
-                'telefone' =>'nullable|regex:/^(+351\s?)?(91|92|93|96)\d{7}$/'
+                'telefone' =>'nullable|regex:/^(\+351)? ?9[1236]\d ?(\d{3}) ?\d{3}$/'
             ],
             [
                 'nome.required' => 'Preencha o campo do NOME',
