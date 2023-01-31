@@ -25,7 +25,6 @@ return new class extends Migration
             $table->string('foto_horario')->nullable();
             $table->string('foto_banner')->nullable();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
