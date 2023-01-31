@@ -17,7 +17,7 @@ class FaqsSeeder extends Seeder
     {
         Faq::insert([
             [
-                'pergunta'=> 'Qual a idade mínima para me inscrever na MoveArta?',
+                'pergunta'=> 'Qual a idade mínima para me inscrever na MoveArt?',
                 'resposta'=> 'Pode se inscrever na nossa associação a partir dos 3 anos.',
             ],
             [
