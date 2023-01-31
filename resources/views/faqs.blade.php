@@ -14,10 +14,10 @@
 @section('main')
 <div class="faqs">
   <h2>FAQs</h2>
-  @if (isset($faqs))
-  @foreach($faqs as $faq)
   <div class="conteudo">
     <div class="pergunta-resposta">
+    @if (isset($faqs))
+  @foreach($faqs as $faq)
       <button id="botao-pergunta1" aria-expanded="false">
         <span class="pergunta">{{$faq->pergunta}}</span>
         <span class="icon" aria-hidden="true"></span>

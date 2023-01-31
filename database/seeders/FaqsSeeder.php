@@ -17,12 +17,28 @@ class FaqsSeeder extends Seeder
     {
         Faq::insert([
             [
-                'pergunta'=> 'Como me posso inscrever na MoveArt?',
-                'resposta'=> 'Temos todo o gosto em ter-te como nosso aluno. Vai ao menu Inscreve-te e escolhe o submenu aluno, nele vais encontrar um formulário que vai fazer com que vires nosso aluno!',
+                'pergunta'=> 'Qual a idade mínima para me inscrever na MoveArta?',
+                'resposta'=> 'Pode se inscrever na nossa associação a partir dos 3 anos.',
             ],
             [
-                'pergunta'=> 'Quero ser professor?',
-                'resposta'=> 'Para se tornar professor da nossa escola, no menu Inscreve-te selecione a opção Professor. Depois basta preencheres o formulário com os teus dados e submeter o mesmo. Dentro de 3 dias será contactado independentemente se és aceite ou não.',
+                'pergunta'=> 'Posso me inscrever em mais que uma modalidade?',
+                'resposta'=> 'Sim, pode ser inscrever nas modalidades que pretender.',
+                
+            ],
+            [
+                'pergunta'=> 'Os produtos da loja são envidados para fora de Portugal?',
+                'resposta'=> 'Não, os produtos são apenas enviados para Portugal continental',
+                
+            ],
+            [
+                'pergunta'=> 'Onde fica a associação MoveArt?',
+                'resposta'=> 'A associação MoveArt fica em Leiria. A localização exata pode ser vista na página dos contactos.',
+                
+            ],
+            [
+                'pergunta'=> 'Quantos tipos de dança existem na MoveArt?',
+                'resposta'=> 'Existem 5 tipos de dança',
+                
             ],
         ]);
     }
