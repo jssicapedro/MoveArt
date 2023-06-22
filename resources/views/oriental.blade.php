@@ -8,7 +8,7 @@
 
 @section('hero')
 <section id="hero" class="inner-page d-flex align-items-center">
-    <div class="img_banner oriental"">
+    <div class="img_banner oriental">
         <h1>Danças Orientais</h1>
     </div>
 </section>

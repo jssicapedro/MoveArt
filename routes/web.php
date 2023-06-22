@@ -76,12 +76,42 @@ Route::get('edit-user/{id}', [UsersBackController::class, 'edit'])->middleware('
 Route::put('update-user/{id}', [UsersBackController::class, 'update'])->middleware('admin');
 Route::post('delete-user', [UsersBackController::class, 'destroy'])->middleware('admin');
 
+
+
+
+
+
+
+
+
+
 /* back patrocinio */
 Route::get('/admin/patrocinio', [PatrocinioController::class, 'index'])->name('patrocinios')->middleware('admin');
 Route::get('/admin/patrocinio/show/{patrocinio}', [PatrocinioController::class, 'show'])->name('patrocinios.show')->middleware('admin');
 Route::get('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'edit'])->name('patrocinios.edit')->middleware('admin');
 Route::post('/admin/patrocinio/edit/{patrocinio}', [PatrocinioController::class, 'update'])->name('patrocinios.update')->middleware('admin');
 Route::delete('/admin/patrocinio/delete/{patrocinio}', [PatrocinioController::class, 'delete'])->name('patrocinios.destroy')->middleware('admin');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* back pedido professor */
 Route::get('/admin/pedprof', [PedidoprofessorController::class, 'index'])->name('pedidosprof')->middleware('admin');
