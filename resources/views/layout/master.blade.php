@@ -22,9 +22,7 @@
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- ### SlideShow ### -->
-    <link rel="stylesheet" href="{{asset('js/splide/dist/css/splide.min.css')}}">
-    <script src="{{asset('js/splide/dist/js/splide.min.js')}}"></script>
+    
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
